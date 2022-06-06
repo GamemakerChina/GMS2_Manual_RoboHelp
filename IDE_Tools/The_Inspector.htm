@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "4.2.0_3";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>The Inspector</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
+  <script src="../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Section that covers the Inspector window"/>
+  <meta name="rh-index-keywords" content="Inspector"/>
+  <meta name="search-keywords" content="inspector"/>
+<meta name="brsnext" value="IDE_Navigation/Menus.htm"/><meta name="brsprev" value="IDE_Navigation/Recent_Windows.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="The Inspector">
+        <span>The Inspector</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>The Inspector</h1>
+  <p>The <strong>Inspector </strong>window shows all the properties associated with the selected element in the IDE. This window will show information about the element being inspected and allow you to change its various properties:</p>
+  <p><img alt="The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector.png" style="cursor: nwse-resize;"/>It can be opened from <a href="../IDE_Navigation/Menus/The_Windows_Menu.htm">The Windows Menu</a> at the top of the GameMaker window, and you can open as many as you like:</p>
+  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Opening_Windows.png"/>After opening an Inspector window, you can dock it anywhere in the IDE, or use it as a floating window:</p>
+  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Docking.gif"/></p>
+  <h2>Using the Inspector</h2>
+  <p>The Inspector is very useful for viewing and editing assets without having to rely solely on <a href="../Introduction/Workspaces.htm">Workspaces</a>. For example, you may usually edit your object code in fullscreen, and frequently navigate back into a Workspace to edit that object&#39;s properties. With the Inspector, you can view an object&#39;s details while remaining in fullscreen view:</p>
+  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Object_Editing.png"/>This makes it possible to modify an object&#39;s properties and delete/change events while editing its code in fullscreen, and also set up Parenting, Variable Definitions, and more. While this particular example only covers objects, the Inspector can do much more and allow you to edit many different kinds of assets (e.g. Sprites, Fonts, Animation Curves, etc.).</p>
+  <p>In addition to assets, you can also inspect specific elements in the IDE, such as layers in a room. Using the Inspector on room layers allows you to change its properties and apply a filter/effect to it:</p>
+  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Room_Layers.png" style="cursor: nwse-resize;"/></p>
+  <p class="note"><span class="note">NOTE</span> When you apply a filter/effect to a non-FX layer using the Inspector, it will always be applied as a &quot;single layer&quot; effect, i.e. its effect will only be applied on that particular layer and not on other layers below it.</p>
+  <h2>Multiple Inspectors</h2>
+  <p>You can open multiple Inspector windows at any time, and each one can be linked to a specific element in the IDE. To ensure that each time you click an element all open inspectors don&#39;t change to show the new selection, you must first <strong>lock </strong>each inspector window one-by-one. To do this, you would open an inspector, select an IDE element to inspect, and then click the <img class="icon" src="../assets/Images/Icons/Icon_Padlock.png"/> lock button on the inspector to lock it on the element (shown in the image below). Once you have locked an inspector, you can open another one and then repeat the process.</p>
+  <p><img alt="Locking The Inspector Window" class="center" src="../assets/Images/IDE Tools/Inspector_Lock.png"/>Note that a locked inspector window does not lock the editing of any values for the element being inspected. It simply locks the inspector to the selected element and you can continue to edit it at any time, even when the original element is not the main focus of the IDE.</p>
+  <p>Using the lock feature you can open multiple inspectors at the same time with each one being locked to a specific asset, as shown in the example below:</p>
+  <p><img class="center" src="../assets/Images/IDE Tools/Inspector_Multiple.png"/></p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../IDE_Navigation/IDE_Input.htm">IDE Input And Navigation</a></div>
+        <div style="float:right">Next: <a href="../IDE_Navigation/Menus.htm">Menus</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Micro Web Server
+Web Server
+HTML5 Server
+-->
+  <!-- TAGS
+web_server
+-->
+
+</body></html>
