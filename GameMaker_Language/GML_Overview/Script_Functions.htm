@@ -83,25 +83,28 @@
   <h1>Script Functions And Variables</h1>
   <p>Script assets are essentially a collection of one or more user defined functions or variables that you write yourself as snippets of code in the <a href="../../The_Asset_Editors/Scripts.htm">Script Editor</a>. The functions you define in a script can resolve expressions, return values or do anything else that the GameMaker Language permits, just like the built in <a href="Runtime_Functions.htm">runtime functions</a>.</p>
   <p>Script functions should generally be used if you have a block of code that you use in more than one place or object, or when you want a block of code to be used across multiple objects in a modular fashion. Using scripts to define functions means that you can change the function just once when required and the change will be &quot;picked up&quot; by every object that has a call to the function.</p>
-  <p>Scripts can also be very handy from an organizational point of view, as they permit you to create groups of functions that belong to a certain category - for example, you might have several functions all related to collisions between instances in your game, so you would create a &quot;<span class="inline">Collision_Functions</span>&quot; script and store all these functions together in it.</p>
+  <p>Scripts can also be very handy from an organisational point of view, as they permit you to create groups of functions that belong to a certain category - for example, you might have several functions all related to collisions between instances in your game, so you would create a &quot;<span class="inline">Collision_Functions</span>&quot; script and store all these functions together in it.</p>
+  <p>Also see: <a href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></p>
   <h2>Creating Functions</h2>
   <p>When creating a script with functions in it, the functions must be created using the following formats:</p>
-  <p class="code"><span>function &lt;name&gt;( &lt;parameter1&gt;, &lt;parameter2&gt;, etc... )<br/>
+  <p class="code"><span>function name( parameter1, parameter2, ... )<br/>
       {</span><br/>
-    <span>    &lt;statement1&gt;;</span><br/>
-    <span>    &lt;statement1&gt;;</span><br/>
+    <span>    statement1;</span><br/>
+    <span>    statement2;</span><br/>
     <span>    ...</span><br/>
     <span>}</span>
   </p>
   <p>or:</p>
-  <p class="code"><span><span>&lt;name&gt; = </span>function( &lt;parameter1&gt;, &lt;parameter2&gt;, etc... )</span><br/>
+  <p class="code"><span><span>name = </span>function( parameter1, parameter2, ... )</span><br/>
     <span>{</span><br/>
-    <span>    &lt;statement1&gt;;</span><br/>
-    <span>    &lt;statement1&gt;;</span><br/>
+    <span>    statement1;</span><br/>
+    <span>    statement2;</span><br/>
     <span>    ...</span><br/>
     <span>}</span>
   </p>
-  <p>In general, however, you would use the <em>first </em>form for script functions as it will define the function as specifically being a script function, meaning that it will be <strong>global </strong>in <a href="Variables_And_Variable_Scope.htm">scope</a>, be assigned a <strong>script index</strong>, and not require the <span class="inline">global</span> prefix to identify it since the compiler will recognise it as a script function. Using the second form will instead be generating a global scope <a href="Method_Variables.htm">method variable</a>, and as such it will <em>not </em>be recognised as a script function by the IDE and will require the use of the <span class="inline">global</span> prefix when being referenced in your code.</p>
+  <p class="note">To create a function in GML Visual, use <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>. Enable its &quot;Temp&quot; option to create a method variable (second syntax shown above).</p>
+  <p>In general, however, you would use the <em>first </em>form for script functions as it will define the function as specifically being a script function, meaning that it will be <strong>global </strong>in <a href="Variables_And_Variable_Scope.htm">scope</a>, be assigned a <strong>script index</strong>, and not require the <span class="inline">global</span> prefix to identify it since the compiler will recognise it as a script function.</p>
+  <p>Using the second form will instead be generating a global scope <a href="Method_Variables.htm">method variable</a>, and as such it will <em>not </em>be recognised as a script function by the IDE and will require the use of the <span class="inline">global</span> prefix when being referenced in your code.</p>
   <p class="note"><span class="note">NOTE</span> You can check this by using both forms in a script and then calling the runtime function <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> on each of them. One will be classed as a &quot;number&quot; - since it returns a script index ID - and the other will be classed as a &quot;method&quot;.</p>
   <h2>Parameters/Arguments</h2>
   <p>You can define your own parameters/arguments for a function, which will be available to the function as local variables and can be used for any purpose within that function:</p>

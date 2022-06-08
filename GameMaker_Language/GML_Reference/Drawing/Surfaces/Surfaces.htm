@@ -87,31 +87,31 @@
   <ul class="colour">
     <li>First, you should realise that surfaces (<i>except</i> the application surface) are &quot;volatile&quot;. This means that if the device or window loses focus or is minimised (good examples are when you ALT +Tab to different window and back again on Windows, or on an Android device when the app loses focus due to a call) then the surface <strong>may be destroyed</strong>. This is because it is stored <em>only</em> in the texture memory (<a class="tooltip" title="VRAM is the amount of memory available for video, ie: the memory space that can store textures and images.">VRAM</a>) and may be overwritten when the target platform needs that memory for something else which means that you should <i><b>always</b></i> have some type of fail-safe code in place, usually with the <a href="surface_exists.htm"><span class="inline">surface_exists()</span></a> function.</li>
   </ul>
-  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><strong>NOTE</strong>: This doesn&#39;t appear to happen with sprites or other visual assets (but actually does!) as they are also stored in regular memory (RAM) and when they are removed from texture memory (VRAM) they immediately get restored from regular memory when the game regains focus.</p>
+  <p class="note" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 4em"><span class="note">NOTE</span><strong> </strong>This doesn&#39;t appear to happen with sprites or other visual assets (but actually does!) as they are also stored in regular memory (RAM) and when they are removed from texture memory (VRAM) they immediately get restored from regular memory when the game regains focus.</p>
   <ul class="colour">
     <li>Second, you should note that surfaces can require large quantities of VRAM to be used, and so you should attempt to keep them as small as possible. Normally you would try and keep them no larger than the size of the view or display window.</li>
     <li>Third, you should <b>only create surfaces in the draw event</b>. If you create a surface in the Create Event of an instance, you could potentially get the <i>same</i> index as the <span class="inline">application_surface</span>. This can then cause lots of problems and confusion as you think you are using your own surface, but you are actually using the current render target. You should also always try to limit <i>drawing</i> to a surface in the draw event too, since due to the optimised way in which <span data-keyref="GameMaker Name">GameMaker</span> draws to the screen, it is recommended that you keep all draw functions <i>within the draw event</i> - this includes clearing a surface when it is first created, etc... Drawing to a surface outside of the draw event is possible and may even be necessary for some effects, but it&#39;s not how it <em>should</em> be done.</li>
     <li>Fourth, when drawing to a surface manually, the surface is <i>always</i> at the position of (0,0). This means that you may need to convert <em>absolute</em> coordinates into <em>relative</em> coordinates for the surface. For example, if you have a camera-sized surface and wish to draw something that is currently visible in the camera to that surface, you should subtract the camera view x and y coordinates from the actual x and y coordinates to get a relative position to the surface (0,0) position. So, the code would look something like this:</li>
   </ul>
-  <p class="code" style="margin-top: 0px;margin-right: 50px;margin-bottom: 0px;margin-left: 100px">if view_current = 0<br/>
-        {<br/>
+  <p class="code">if view_current = 0<br/>
+    {<br/>
         surface_set_target(surf);<br/>
         with (obj_Effect)<br/>
-            {<br/>
+        {<br/>
             var _vx = camera_get_view_x(view_camera[1]);<br/>
             var _vy = camera_get_view_y(view_camera[1]);<br/>
             draw_sprite(sprite_index, image_index, x - _vx, y - _vy);<br/>
-            }<br/>
+        }<br/>
         surface_reset_target();<br/>
-        }<br/>
+    }<br/>
     else<br/>
-        {<br/>
+    {<br/>
         draw_surface(surf, 0, 0);<br/>
-        }</p>
+    }</p>
   <ul class="colour">
     <li>Finally, it is worth noting that drawing to a surface will take into consideration the coloour <em>and</em> the alpha component of each pixel, both from the surface itself and also from what is being drawn to it. This may lead to some rather unintuitive results (for example, drawing a sprite with 0.5 alpha to a surface with 0 alpha will give a final alpha of 0.25). The reasons for this are explained on the following page, and we recommend that you read it before working with surfaces: <a href="../../../../Additional_Information/Guide_To_Using_Blendmodes.htm">Guide To Using Blendmodes</a></li>
   </ul>
-  <p class="note"><strong>NOTE</strong>: This is not true of the application surface, only user-created surfaces.</p>
+  <p class="note"><span class="note">NOTE</span> This is not true of the <a href="application_surface.htm">application surface</a>, only user-created surfaces.</p>
   <p>The basic use of a surface would be as follows:</p>
   <ul class="colour">
     <li>You first create a surface and assign its index to a variable.</li>

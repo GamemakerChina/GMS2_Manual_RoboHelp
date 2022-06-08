@@ -50,7 +50,7 @@
   <link rel="stylesheet" type="text/css" href="../../template/styles/topic.min.css"/>
   <link rel="stylesheet" type="text/css" href="../../template/Charcoal_Grey/topicheader.css"/>
   <meta name="topic-status" content="Draft"/>
-<link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
+<link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/><script src="../../../assets/scripts/main_script.js"></script>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <title>Compiler Batch Files / Scripts</title>
@@ -84,7 +84,13 @@
   </div>
   <div>
   <h1>Compiler Batch Files / Scripts</h1>
-  <p>The <span data-keyref="GameMaker Name">GameMaker</span> compiler allows you to place Batch files (Windows) or Shell scripts (on macOS and Linux) in your project directory, and executes them at various points during the compilation process as described below:</p>
+  <p>The <span data-keyref="GameMaker Name">GameMaker</span> compiler allows you to place Batch files (Windows) or Shell scripts (on macOS and Linux) in your project directory, and in the directory for each extension in your project.</p>
+  <h2>Placement</h2>
+  <p>A script file may be placed at the root of your project directory, alongside the project&#39;s <span class="inline2">.yyp</span> file.</p>
+  <p>A script file may also be placed in the directory of an extension, which may look like this: <span class="inline2">&lt;project_directory&gt;/extensions/&lt;extension_folder&gt;/</span>.</p>
+  <p>The extension versions of a script file will be executed first, and its root version will be executed last. The order in which extensions are executed can&#39;t be controlled, so an extension developer must ensure that one extension&#39;s scripts don&#39;t rely on another extension&#39;s scripts.</p>
+  <h2>Execution</h2>
+  <p>Script files with specific names, placed in any of the directories described above, are executed at various points during the compilation process:</p>
   <table cellpadding="1" style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;">
     <colgroup>
       <col style="width:33.33%"/>
@@ -127,9 +133,21 @@
         <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:33.33%;"><strong>post_package_step.sh</strong></td>
         <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:33.33%;">This is executed after the final packaging step has completed and the final ZIP file or store package has been prepared</td>
       </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:33.33%;"><strong>post_textures.bat</strong></td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:33.33%;"><strong>post_textures.sh</strong></td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:33.33%;">This is executed after the textures for your game have been generated. You can use this step to optimise your game textures manually.<br/>
+          <br/>
+          This script receives an environment variable called <span class="inline2">TexturesDir</span>, which stores the path to the generated textures.
+        </td>
+      </tr>
     </tbody>
   </table>
-  <p>These batch files/shell scripts are supported on all target platforms.</p>
+  <p>These script files are supported when building on all target platforms.</p>
+  <h2>Disabling Scripts for an Extension</h2>
+  <p>If you use multiple extensions that run scripts, for example, Steamworks and GDK, then you&#39;ll want to disable Steamworks when exporting to GDK, and vice-versa.</p>
+  <p>For that, see: <a href="../../The_Asset_Editors/Extension_Creation/Disabling_Extensions.htm">How to Disable Extensions?</a></p>
+  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">

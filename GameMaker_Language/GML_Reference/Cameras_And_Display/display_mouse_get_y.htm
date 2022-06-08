@@ -82,14 +82,15 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_mouse_get_y</h1>
-  <p>This function will return the mouse y position within the <i>screen</i>. It should be noted that this function only works properly when used on the Windows target. It can be used for HTML5 too, but will only return a value <i>relative</i> to the 0,0
-    of the canvas itself, and will not return any value while the mouse is outside of the canvas. For other devices it will return 0, and you should use the <a href="../Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline">device_mouse_raw_x()</span></a>    and <a href="../Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline">device_mouse_raw_y()</span></a> functions instead.</p>
+  <p>This function will return the mouse y position within the <i>screen</i>. It should be noted that this function only works properly when used on the Windows and macOS targets.</p>
+  <p>It can be used for HTML5 too, but will only return a value <i>relative</i> to the 0,0 of the canvas itself, and will not return any value while the mouse is outside of the canvas.</p>
+  <p>For other devices it will return 0, and you should use the <a href="../Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline">device_mouse_raw_x()</span></a> and <a href="../Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline">device_mouse_raw_y()</span></a> functions instead.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">display_mouse_get_y();</p>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">my_y = display_mouse_get_y();</p>

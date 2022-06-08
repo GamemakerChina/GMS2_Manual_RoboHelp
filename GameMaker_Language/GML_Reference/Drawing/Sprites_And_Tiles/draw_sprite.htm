@@ -82,36 +82,38 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_sprite</h1>
-  <p>This function draws the given sprite and sub-image at a position within the game room. For the sprite you can use the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> to
-    get the current sprite that is assigned to the instance running the code, or you can use any other sprite asset. The same goes for the sub-image, as this can also be set to the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a>    which will set the sub-image to that selected for the current instance sprite (note, that you can draw a different sprite and still use the sub-image value for the current instance), or you can use any other value for this to draw a specific sub-image
-    of the chosen sprite. If the value is larger than the number of sub-images, then <span data-keyref="GameMaker Name">GameMaker</span> will automatically loop the number to select the corresponding image (for example, if the sprite being drawn has 5 sub-images numbered 0 to
-    4 and we set the index value to 7, then the function will draw sub-image 3, numbered 0). Finally, the x and y position is the position within the room that the sprite will be drawn, and it is centered on the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a>    and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>.</p>
-  <p class="note"><b>NOTE</b>: This function may not work as expected when using skeleton animation sprites, and you may find that the function only draws the first frame of the default pose. You should be using the <span class="inline">draw_skeleton_*</span> functions instead.</p>
+  <p>This function draws the given sprite and sub-image at a position within the game room. For the sprite you can use the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> to get the current sprite that is assigned to the instance running the code, or you can use any other sprite asset. The same goes for the sub-image, as this can also be set to the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> which will set the sub-image to that selected for the current instance sprite (note, that you can draw a different sprite and still use the sub-image value for the current instance), or you can use any other value for this to draw a specific sub-image of the chosen sprite. If the value is larger than the number of sub-images, then <span data-keyref="GameMaker Name">GameMaker</span> will automatically loop the number to select the corresponding image (for example, if the sprite being drawn has 5 sub-images numbered 0 to 4 and we set the index value to 7, then the function will draw sub-image 3, numbered 0). Finally, the x and y position is the position within the room that the sprite will be drawn, and it is centered on the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>.</p>
+  <p class="note"><span class="note">NOTE</span> This function may not work as expected when using skeleton animation sprites, and you may find that the function only draws the first frame of the default pose. You should be using the <span class="inline">draw_skeleton_*</span> functions instead.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">draw_sprite(sprite, subimg, x, y);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>sprite</td><td><span data-keyref="Type_Asset_Sprite"><a data-rhwidget="HyperlinkPopover" href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
+        <td>sprite</td>
+        <td><span data-keyref="Type_Asset_Sprite"><a target="_blank" href="../../../../../The_Asset_Editors/Sprites.htm">Sprite Asset</a></span></td>
         <td>The index of the sprite to draw.</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>subimg</td><td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>subimg</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The sub-image (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>x</td><td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of where to draw the sprite.</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>y</td><td><span data-keyref="Type_Real"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of where to draw the sprite.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -119,9 +121,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">draw_sprite(sprite_index, image_index, x, y);<br/> draw_sprite(spr_Halo, 0, x, y-32);</p>
-  <p>This will draw the instances assigned sprite (sprite_index) with the current sub-image at the x and y position of the instance within the room. It will then draw the first frame of the sprite indexed by &quot;spr_Halo&quot; at the same x and y position
-    but 32 pixels &#39;above&#39;.</p>
+  <p class="code">draw_sprite(sprite_index, image_index, x, y);<br/>
+    draw_sprite(spr_Halo, 0, x, y-32);</p>
+  <p>This will draw the instances assigned sprite (sprite_index) with the current sub-image at the x and y position of the instance within the room. It will then draw the first frame of the sprite indexed by &quot;spr_Halo&quot; at the same x and y position but 32 pixels &#39;above&#39;.</p>
   <p> </p>
   <p> </p>
   <p> </p>

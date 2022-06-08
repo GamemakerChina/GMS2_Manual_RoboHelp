@@ -81,21 +81,26 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>clipboard_set_text</h1>
-  <p>This function will set the clipboard to hold the defined string. You can set it to an empty string &quot;&quot; to effectively clear the clipboard of text.</p>
-  <p class="note"><b>NOTE</b>: This function is only valid for the <b>Windows</b> target.</p>
+  <p>This function will set the clipboard to hold the defined string. You can set it to an empty string <span class="inline2">&quot;&quot;</span> to effectively clear the clipboard of text.</p>
+  <div data-conref="../../../assets/snippets/Note_clipboard_support.hts">
+  <p class="note"><span class="note">NOTE</span> This function is only valid on the Windows, HTML5 and Opera GX targets. On HTML5, clipboards are <a href="https://developer.mozilla.org/en-US/docs/Web/API/Clipboard#browser_compatibility">not supported on Firefox</a> without the use of an extension, and are not supported on Internet Explorer at all.</p>
+
+</div>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">clipboard_set_text(string);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>string</td><td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The text (as a string) to set the clipboard to hold.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>

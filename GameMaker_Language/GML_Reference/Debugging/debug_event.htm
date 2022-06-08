@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.19.0_2";
+    gTopicId = "8.2.2.20.0_2";
   
 //]]></script>
 
@@ -81,10 +81,14 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>debug_event</h1>
-  <p>This function generates a custom debug event that will be shown in the Graph View of the debugger when a game is being run in <a href="../../../Introduction/Debugging.htm">Debug Mode</a>. If you require messages to be displayed when <i>not</i> in debug mode, then you should be using <a href="show_debug_message.htm"><span class="inline">show_debug_message()</span></a>. It is worth noting that the function will also take two reserved strings to help perform debugging using external applications like Visual Studio. These strings are:</p>
+  <p>This function generates a custom debug event that will be shown in the Graph View of the debugger when a game is being run in <a href="../../../Introduction/Debugging.htm">Debug Mode</a>. If you require messages to be displayed when <i>not</i> in debug mode, use <a href="show_debug_message.htm"><span class="inline">show_debug_message()</span></a>.</p>
+  <p>The function will also take two reserved strings to help perform debugging using external applications like Visual Studio. These strings are:</p>
   <ul class="colour">
     <li>&quot;<span class="inline">OutputDebugOn</span>&quot; - This enables a call to <span class="inline">OutputDebugString</span> for the <b>Windows</b> target, which means that all debug output - everything you see in the Output window - can be viewed by Visual Studio or by 3rd party apps.</li>
+    <li>&quot;<span class="inline">OutputDebugOff</span>&quot; - Disables the behaviour described above.</li>
     <li>&quot;<span class="inline">BreakOnError</span>&quot; - This option is for <b>Windows YYC</b> builds only, and means that projects will <i>not</i> display the usual code error screen if the runtime detects an error, but instead just carry on and crash. This allows you to see the stacktrace within Visual Studio if debugging.</li>
+    <li>&quot;<span class="inline">ResourceCounts</span>&quot; - Lists all the currently active resources, such as Data Structures, Time Sources, Surfaces, etc.</li>
+    <li>&quot;<span class="inline">DumpMemory</span>&quot; - Gives information on the current memory usage.</li>
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
@@ -92,13 +96,15 @@
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>string</td><td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The custom debug event string to use.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>

@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.15.2.0_2";
+    gTopicId = "8.2.2.16.2.0_2";
   
 //]]></script>
 
@@ -81,21 +81,20 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ini_close</h1>
-  <p>This function should be called the moment you are finished reading or writing to any open ini file. If you do not use the function after you have used any of the ini write functions, then nothing will be written to disk, as the file information is held
-    in memory until this function is called, which forces the write. If you try to open an ini without having previously closed another one (or the same one) you will get an error too.</p>
+  <p>This function should be called the moment you are finished reading or writing to any open ini file. If you do not use the function after you have used any of the ini write functions, then nothing will be written to disk, as the file information is held in memory until this function is called, which forces the write. If you try to open an ini without having previously closed another one (or the same one) you will get an error too.</p>
   <p>The function will also return a string with the ini file encoded into it. This string can then be saved to a server and/or used again along with the function <a href="ini_open_from_string.htm"><span class="inline">ini_open_from_string()</span></a> to re-create the ini.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">ini_close();</p>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
+  <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">ini_open(&quot;savedata.ini&quot;);<br/> score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br/> ini_close();
-  </p>
-  <p>This will open &#39;savedata.ini&#39; and set score to the value under the section &quot;save1&quot; with the key &quot;score&quot; in it, then close the .ini again. Should there be no value under &quot;save1&quot;, &quot;score&quot; or there is no
-    &quot;savedata.ini&quot; file present, score will be set to 0 and a new ini_file created.</p>
+  <p class="code">ini_open(&quot;savedata.ini&quot;);<br/>
+    score = ini_read_real(&quot;save1&quot;, &quot;score&quot;, 0);<br/>
+    ini_close();</p>
+  <p>This will open &quot;savedata.ini&quot; and read a value from the section &quot;save1&quot; with the key &quot;score&quot;, then close the ini file. If there is no value under &quot;save1&quot; called &quot;score&quot; or there is no &quot;savedata.ini&quot; file present, 0 will be returned and a new ini file created.</p>
   <p> </p>
   <p> </p>
   <p> </p>

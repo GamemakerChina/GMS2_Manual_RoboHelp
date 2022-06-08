@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>new</h1>
   <p>The <span class="inline">new</span> operator can be used to create a struct with a function which is called with the given arguments. The function can then populate the struct with variables from the arguments - much like the create event of an instance will set the initial variables for the instance - and then the <span class="inline">new</span> operator will return the struct. Before using this operator it is important to note that the function given <i>must be flagged as a <span class="inline">constructor</span> function</i> otherwise the <span class="inline">new</span> operator will not create the struct (the code example below shows this, and for more information, please see the page on <a href="../Structs.htm">Structs</a>).</p>
-  <p class="note"><strong>NOTE</strong>: You can check a struct to find out which function was used to create it using the runtime function <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><span class="inline">instanceof()</span></a>.</p>
+  <p class="note"><span class="note">NOTE</span> You can check a struct to find out which function was used to create it using the runtime function <a href="../../GML_Reference/Variable_Functions/instanceof.htm"><span class="inline">instanceof()</span></a>.</p>
   <p>This operator has the following syntax:</p>
   <p class="code"><span>&lt;variable&gt; = </span>new &lt;function&gt; (&lt;argument&gt;, &lt;argument&gt;, ...);</p>
   <p>When you use the new operator along with a function, it will return a struct reference which is stored in the given variable, permitting you to access the struct and any variables that were created within it by the function.</p>

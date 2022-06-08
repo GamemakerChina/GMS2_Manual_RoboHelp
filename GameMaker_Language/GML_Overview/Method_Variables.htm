@@ -60,7 +60,7 @@
   <meta name="topic-comment" content="Page outlining the use of Method Variables"/>
   <meta name="rh-index-keywords" content="Method Variables"/>
   <meta name="search-keywords" content="Method Variables,methods,method"/>
-<meta name="brsnext" value="GameMaker_Language/GML_Overview/Functions/Static_Variables.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Overview/Script_Functions.htm"/></head>
+<meta name="brsnext" value="GameMaker_Language/GML_Overview/Script_Functions_vs_Methods.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Overview/Script_Functions.htm"/></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
@@ -82,20 +82,25 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Method Variables</h1>
   <p>A method variable is essentially a variable that has had a function assigned to it, &quot;binding&quot; the function to an instance and enabling you to use the variable to refer to the function - much like you use a <a href="Runtime_Functions.htm">runtime function name</a> to refer to a built-in GML function. The variable used can be <em>local</em>, <em>instance</em> or <em>global</em> in scope (see <a href="Variables_And_Variable_Scope.htm">here</a> for more information on variable scope).</p>
+  <p>Also see: <a href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></p>
+  <h2>Creating Methods</h2>
   <p>The syntax for creating a method variable is as follows:</p>
-  <p class="code">&lt;variablename&gt; = function(&lt;parameter1&gt;, &lt;parameter2&gt;, etc... )<br/>
-    {<br/>
-        &lt;statement1&gt;;<br/>
-        &lt;statement1&gt;;<br/>
-        ...<br/>
-    }</p>
+  <p class="code"><span><span>name = </span>function( parameter1, parameter2, ... )</span><br/>
+    <span>{</span><br/>
+    <span>    statement1;</span><br/>
+    <span>    statement2;</span><br/>
+    <span>    ...</span><br/>
+    <span>}</span>
+  </p>
   <p>or</p>
-  <p class="code">function &lt;variablename&gt;(&lt;parameter1&gt;, &lt;parameter2&gt;, etc... )<br/>
-    {<br/>
-        &lt;statement1&gt;;<br/>
-        &lt;statement1&gt;;<br/>
-        ...<br/>
-    }</p>
+  <p class="code"><span>function name( parameter1, parameter2, ... )<br/>
+      {</span><br/>
+    <span>    statement1;</span><br/>
+    <span>    statement2;</span><br/>
+    <span>    ...</span><br/>
+    <span>}</span>
+  </p>
+  <p class="note">To create a function in GML Visual, use <a href="../../Drag_And_Drop/Drag_And_Drop_Reference/Common/Declare_A_New_Function.htm">Declare A New Function</a>. Enable its &quot;Temp&quot; option to create a method variable (first syntax shown above).</p>
   <p>In general, however, you would use the <em>first </em>form for methods, and the second form for defining <a href="Script_Functions.htm">script functions</a>, since the second form will also assign a script index to the function name while the first form will be a &quot;true&quot; method (and require the use of the <a href="Variables/Global_Variables.htm">global</a> prefix if used to define a scripted function).</p>
   <p class="note"><span class="note">NOTE</span> You can check this by using both forms in project and then calling the runtime function <a href="../GML_Reference/Variable_Functions/typeof.htm">typeof()</a> on each of them. One will be classed as a &quot;number&quot; - since it returns a script index ID - and the other will be classed as a &quot;method&quot;.</p>
   <p>So, keep in mind that - in general - we will always be referring to functions that have <em>not </em>been defined with a script index when we are talking about methods and method variables. </p>
@@ -154,7 +159,7 @@
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="GML_Overview.htm">GML Overview</a></div>
-        <div style="float:right">Next: <a href="Functions/Static_Variables.htm">Static Variables</a></div>
+        <div style="float:right">Next: <a href="Script_Functions_vs_Methods.htm">Script Functions vs. Methods</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

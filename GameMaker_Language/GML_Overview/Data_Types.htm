@@ -86,12 +86,10 @@
   <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">Real Numbers</span><span data-close-text="true">Real Numbers</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">Real numbers are any value that is not a string, nor any of the other possible data types. So, 124, 45639.566546456, 0, -45.5 etc... are all examples of real numbers. All real numbers are stored as double-precision floating point values or integer
-      values (either 32 bit integers - <span class="inline">int32</span> - or 64 bit integers - <span class="inline">int64</span>), and the compiler will optimise where possible (for example, 0.0 will be optimised to the integer value of 0). When dealing
-      with any value that is not an integer, you may experience slight rounding errors due to the nature of floating point maths. For more information on this and other number related functions, please see: <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a>.</p>
+    <p class="dropspot">Real numbers are any value that is not a string, nor any of the other possible data types. So, 124, 45639.566546456, 0, -45.5 etc... are all examples of real numbers. All real numbers are stored as 64-bit double-precision floating point values (or integer values), and the compiler will optimise where possible (for example, 0.0 will be optimised to the integer value of 0).</p>
+    <p class="dropspot">When dealing with any value that is not an integer, you may experience slight rounding errors due to the nature of floating point maths. For more information on this and other number related functions, please see: <a href="../GML_Reference/Maths_And_Numbers/Number_Functions/Number_Functions.htm">GML Reference - Number Functions</a>.</p>
     <p class="note"><span class="note">NOTE</span> On the <b>HTML5</b> target, all real numbers are doubles.</p>
-    <p class="dropspot">Note that while created variables in <span data-keyref="GameMaker Name">GameMaker</span> are all stored as double-precision floating point numbers or integers, you can still use other formats when dealing with extensions. These can be passed into <span data-keyref="GameMaker Name">GameMaker</span> from an extension
-      and then checked using the appropriate <span class="inline">is_*()</span> function, a list of which can be found <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here</a>.</p>
+    <p class="dropspot">Note that while created variables in <span data-keyref="GameMaker Name">GameMaker</span> are all stored as double-precision floating point numbers or integers, you can still use other formats when dealing with extensions. These can be passed into <span data-keyref="GameMaker Name">GameMaker</span> from an extension and then checked using the appropriate <span class="inline">is_*()</span> function, a list of which can be found <a href="../GML_Reference/Variable_Functions/Variable_Functions.htm">here</a>.</p>
     <p> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true" data-skip-index="true">Boolean</span><span data-close-text="true">Boolean</span></a></p>
@@ -124,6 +122,13 @@
   <div class="droptext" data-targetname="drop-down4">
     <p class="dropspot"><label for="twelve">A method variable is a variable that has been assigned a function and it can be used exactly the same as you would use a GML runtime function. For more detailed information, please see the section <a href="Method_Variables.htm">Method Variables</a>.</label></p>
     <p class="dropspot"> </p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down13" href="#"><span data-open-text="true" data-skip-index="true">int64</span><span data-close-text="true">int64</span></a></p>
+  <div class="droptext" data-targetname="drop-down13">
+    <p class="dropspot">An &quot;int64&quot; is a 64-bit integer that can be created using <span class="inline"><a href="../GML_Reference/Variable_Functions/int64.htm">int64()</a></span> (by passing in a non-64-bit real number) or when reading a <span class="inline">buffer_u64</span> value from a <a href="../GML_Reference/Buffers/buffer_read.htm">buffer</a>.</p>
+    <p class="dropspot">This can be used in places where a 64-bit integer is strictly required, or when you want to work with <a href="../../Additional_Information/Bitwise_Operators.htm">bit-shifting</a> and need those 64 bit positions.</p>
+    <p class="dropspot">Any bitwise operations, even when run on non-64-bit values, will always return a 64-bit integer back.</p>
+    <p class="dropspot">Divisions on int64 values will also return integers (e.g.: <span class="inline2">int64(5) / int64(2) = 2</span>).</p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true" data-skip-index="true">Hexadecimal Values</span><span data-close-text="true">Hexadecimal Values</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
@@ -197,7 +202,7 @@
   </div>
   <p id="variable"><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down12" href="#"><span data-open-text="true" data-skip-index="true">Variable</span><span data-close-text="true">Variable</span></a></p>
   <div class="droptext" data-targetname="drop-down12">
-    <p class="dropspot">The &quot;Variable&quot; data type can be found on many pages in the manual, e.g. <a href="../GML_Reference/Variable_Functions/is_string.htm">in the arguments,</a> or as a <a href="../GML_Reference/Variable_Functions/array_get.htm">return value</a>. It indicates that <em>any type of value</em> is accepted, or can be returned. It&#39;s called &quot;Variable&quot; as the data type can <em>vary</em>, and is not related to actual <a href="Variables_And_Variable_Scope.htm">data variables</a>.</p>
+    <p class="dropspot">The &quot;<strong>Variable</strong>&quot; data type can be found on many pages in the manual, e.g. <a href="../GML_Reference/Variable_Functions/is_string.htm">in the arguments,</a> or as a <a href="../GML_Reference/Variable_Functions/array_get.htm">return value</a>. It indicates that <em>any type of value</em> is accepted, or can be returned. It&#39;s called &quot;Variable&quot; as the data type can <em>vary</em>, and is not related to actual <a href="Variables_And_Variable_Scope.htm">data variables</a>.</p>
   </div>
   <p> </p>
   <p>You can check the data type of any variable using the functions listed on the following the page:</p>
