@@ -38,7 +38,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "5.1.1.1";
+    gTopicId = "4.1.1.1";
   
 //]]></script>
 
@@ -97,23 +97,24 @@
     <li><strong>Allow empty tabs to close via shortcut</strong>: You can close any open Tabs using the keyboard shortcut <img alt="Icon CTRL" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="Icon CMD" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + <strong>W</strong>, but if you disable this option that shortcut will no longer work. This is enabled by default.</li>
     <li><strong>Open new resources for edit on dragging files into IDE</strong>: Certain resources (like sprites or sounds) can be dragged onto the main Workspace in the <span data-keyref="GameMaker Name">GameMaker</span> IDE and will be detected and added as a new resource in the Asset Browser. By default the corresponding resource editor will also be opened for editing when this happens, but un-checking this option will prevent the editors from being opened and you will be required to open them manually.</li>
     <li><strong>Open new resources for edit on creation</strong>: If this is checked, every time you create a new resource in the Asset Browser, the corresponding resource editor will be opened automatically. This is checked by default and un-checking it will mean that you have to manually open all newly created resources.</li>
-    <li><strong>Automatically reload changed files</strong>: If this is checked then the IDE will automatically scan and check files to see if any of them have been changed outside of <span data-keyref="GameMaker Name">GameMaker</span> and reload them if they have.</li>
+    <li><strong>Automatically reload changed files</strong>: If this is checked, the IDE will automatically scan and check files to see if any of them have been changed outside of <span data-keyref="GameMaker Name">GameMaker</span> and reload them if they have.</li>
+    <li><strong>Case-insensitive mode for project files (may affect performance)</strong>: Intended to be used to avoid issues with filename case sensitivity on non-Windows devices (macOS and Linux). Such issues can happen when transferring projects from Windows to non-Windows systems, using Git with <a href="https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreignoreCase">ignore case</a> enabled (which you should try disabling first) and/or renaming files only to change the case. This is disabled by default as it&#39;s a performance overhead and should not be required outside of the aforementioned cases.</li>
     <li><strong>Disable IDE transition animations</strong>: The <span data-keyref="GameMaker Name">GameMaker</span> IDE has a number of animated transitions for things like opening windows etc... however they are not to everyone&#39;s taste and you may experience a performance boost if they are disabled on older or under-powered machines if they are disabled. You can disable them here, and they are on by default.</li>
     <li><strong>Opt-in To Feedback Surveys</strong>: When this option is checked, you are telling <span data-keyref="GameMaker Name">GameMaker</span> that you wish to participate in feedback surveys, meaning that occasionally while working a message will be shown about the area you are working on and request a rating and feedback. This option is on by default.</li>
     <li><strong>Enable DPI Override</strong>: This option lets you override the default DPI setting with your own. You must first enable the option and then set either the <strong>Raw DPi Override</strong> value (the default value is 96) or set the <strong>Percentage of the native DPi</strong> (default value 100%), and once changed you will be prompted to restart the IDE, which may require you to save any work being done on the currently open project. Note that the DPi has a minimum percentage of 50% and a maximum of 500%, and if you you mouse over the information icon you can see the recommended maximum setting for the display being used:<br/>
       <br/>
-      <img alt="General DPi Override Recommendation" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_DPi_Override_Recomendation.png"/>Note that if you go above the recommended DPi setting for the monitor, you will be shown a notification that permits you to reset the DPi.
+      <img alt="General DPi Override Recommendation" class="center" src="../../assets/Images/Setup_And_Version/Preferences/General_DPi_Override_Recomendation.png"/>Note that if you go above the recommended DPi setting for the monitor, you will be shown a notification that permits you to reset the DPI.
     </li>
+    <li><strong>Allow empty tabs to be closed via the keyboard shortcut</strong>: If this is enabled, empty workspace tabs can be closed via its keyboard shortcut (CTRL/CMD + W). When disabled, the empty tabs cannot be closed.</li>
   </ul>
   <p>The options above are the main options available from the <strong>General </strong>preferences, but there are a number of extra options available to you in the sub-categories listed below:</p>
-  <p> </p>
   <ul class="colour">
     <li><a href="General/Background.htm">Background</a></li>
     <li><a href="General/Compiling.htm">Compiling</a></li>
     <li><a href="General/Confirm_Dialogs.htm">Confirm Dialogs</a></li>
     <li><a href="General/Debugging.htm">Debugging</a></li>
     <li><a href="General/File_Watcher.htm">File Watcher</a></li>
-    <li><a href="General/Go_To.htm">GoTo</a></li>
+    <li><a href="General/Go_To.htm">Go To</a></li>
     <li><a href="General/Help.htm">Help</a></li>
     <li><a href="General/Input.htm">Input</a></li>
     <li><a href="General/Output_Windows.htm">Output Windows</a></li>

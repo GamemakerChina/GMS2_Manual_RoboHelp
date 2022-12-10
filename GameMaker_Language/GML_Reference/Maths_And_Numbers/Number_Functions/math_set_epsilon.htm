@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.11.2.0_1";
+    gTopicId = "8.2.2.11.2.0_1";
   
 //]]></script>
 
@@ -81,12 +81,14 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>math_set_epsilon</h1>
-  <p>Epsilon is a value used to determine whether two numbers subject to rounding error are close enough to be considered &quot;equal&quot;. It is useful when dealing with floating point maths as it can reduce the &quot;rounding errors&quot; that make certain operations return values that appear incorrect or contrary to what we expect. For example, we may have added a value to the image index of a sprite and expect the result to be a single integer, but due to the nature of floating point maths, the actual final value ends up being something like 5.0000002, so when we have the following check:</p>
+  <p>The epsilon is used to determine whether two numbers subject to rounding errors are close enough to be considered &quot;equal&quot;. The default epsilon is <span class="inline2">0.00001</span>.</p>
+  <p>This is useful when dealing with floating point maths as it can reduce the &quot;rounding errors&quot; that make certain operations return values that appear incorrect or contrary to what we expect. For example, we may have added a value to the image index of a sprite and expect the result to be a single integer (5), but due to the nature of floating point maths, the actual final value ends up being something like 5.000002, so when we have the following check:</p>
   <p class="code">if image_index == 5<br/>
     {<br/>
         //do something<br/>
     }</p>
-  <p>The code does not behave as expected and returns <span class="inline">false</span>. However, if we set the epsilon value to 0.000001, the <span class="inline">image_index</span> value will be rounded to the nearest real number that is +/- 0.000001 of the original value, making the above comparison return true.</p>
+  <p>The code does not behave as expected and returns <span class="inline">false</span>. However, with the epsilon set to 0.00001, the <span class="inline">image_index</span> value is rounded to the nearest real number that is +/- 0.000001 of the original value, making the above comparison return true.</p>
+  <p>Floating point calculations may behave differently depending on the platform your game is running on. The default epsilon of <span class="inline2">0.00001</span> provides a safe range for rounding errors across different platforms.</p>
   <p>The epsilon value will be used for all the following integer <a href="../../../GML_Overview/Expressions_And_Operators.htm">operators</a>:</p>
   <ul class="colour">
     <li><span class="inline">&lt; </span>: Less than</li>

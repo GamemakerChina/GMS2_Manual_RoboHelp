@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_17";
+    gTopicId = "8.2.2.2.0_17";
   
 //]]></script>
 
@@ -81,7 +81,8 @@
 
 
   <h1><span data-field="title" data-format="default">array_last</span></h1>
-  <p>This function returns the element at the top of the array, i.e. the last element at index <span class="inline2"><a href="array_length.htm">array_length</a>(array)-1</span>.</p>
+  <p>This function returns the last element in the given array, i.e. the last element at index <span class="inline2"><a href="array_length.htm">array_length</a>(array)-1</span>.</p>
+  <p>This function does not modify the array. To remove the last element of the array while reading it, use <a href="array_pop.htm">array_pop</a>.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">array_last</span>(array);</p>
@@ -100,7 +101,7 @@
       <tr style="">
         <td style="">array</td>
         <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
-        <td style="">The array to get the last (or &quot;top&quot;) value from</td>
+        <td style="">The array to get the last value from</td>
       </tr>
     </tbody>
   </table>
@@ -109,12 +110,15 @@
   <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span> (Any valid data type that an array can hold)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var last_added_enemy = <span data-field="title" data-format="default">array_last</span>(enemies);<br/>
-    with(last_added_enemy)<br/>
+  <p class="code">var _last_added_enemy = <span data-field="title" data-format="default">array_last</span>(enemies);<br/>
+    <br/>
+    with (_last_added_enemy)<br/>
     {<br/>
         show_debug_message(string(id) + &quot; is the last enemy in the array.&quot;);<br/>
-    }</p>
-  <p>The above code gets the last enemy instance added to the array <span class="inline2">enemies</span> and stores it in a temporary variable <span class="inline2">last_added_enemy</span>. It then lets that instance display a debug message with the id of the instance.</p>
+    }
+  </p>
+  <p>The above code gets the last enemy instance added to the array <span class="inline2">enemies</span> and stores it in a temporary variable <span class="inline2">_last_added_enemy</span>. It then lets that instance display a debug message with the id of the instance.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

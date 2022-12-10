@@ -38,7 +38,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "3.0_9";
+    gTopicId = "2.0_9";
   
 //]]></script>
 
@@ -81,7 +81,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Movement And Controls</h1>
+  <h1><span data-field="title" data-format="default">Movement And Controls</span></h1>
   <p>The <a href="Drawing.htm">previous section</a> of this Quick Start Guide gave some examples for drawing things to the screen, but just drawing things isn&#39;t much good if you can&#39;t also move them around... so in this section we&#39;ll be giving you some examples of movement for your objects, as well as some basic control schemes for different types of games. All the examples are given using GML Visual as well as the GML Code, so you can use whichever you feel more comfortable with. Note that we won&#39;t be explaining things in too much depth here, as we want you to get started making stuff as quickly as possible, so we encourage you to explore any links as you go along and to use the &quot;search&quot; function of the manual to look for additional information on anything you aren&#39;t sure about.</p>
   <p>Before going any further, you might want to make a new project (either GML or GML Visual) from the <a href="../Introduction/The_Start_Page.htm">Start Page</a>, and add (or create) a few sprites as well as an object or two - as we&#39;ll be giving you some code that you can test using these - and make sure that the project has a room to place instances in. Don&#39;t worry too much about what the sprites you make look like, as even a simple white square will do, and once you&#39;ve got everything ready you can start working on the examples listed below.</p>
   <p> </p>
@@ -246,8 +246,8 @@
     <p class="dropspot">You can string multiple expressions together in &quot; <span class="inline">if</span>&quot; checks in this way, and there are multiple different ways those expressions can be evaluated (for more information please see the section on <strong>Expressions</strong> <a href="../GameMaker_Language/GML_Overview/Expressions_And_Operators.htm">here</a>).</p>
     <p class="dropspot">The next section of code stores a value for the actual movement speed in a variable and then gets a direction using the <span class="inline">_hspd </span>and <span class="inline">_vspd </span>values, which can be -1, 0, or 1. The direction function checks from (0, 0) as we aren&#39;t using room coordinates, and instead we want it to evaluate as a direction from 0° to 360° based on the variable values. The following diagram illustrates what&#39;s happening better than trying to explain it in words:</p>
     <p class="dropspot"><img alt="Example Image Showing Direction Around (0,0) Origin" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_3.png"/></p>
-    <p class="note"><span class="note">NOTE</span> Direction in <span data-keyref="GameMaker Name">GameMaker</span> is calculated <strong>counter clockwise</strong>, so 0° and 360° are to the right, 90° is up, 180° is to the right and 270° is down.</p>
-    <p class="dropspot">Finally, we use the <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span class="inline">lengthdir_x()</span></a> and <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span class="inline">lengthdir_y()</span></a> functions to actually move the variable. These are <strong> <a class="tooltip" title="A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.">vector</a>  </strong>functions that take a length (distance) and a direction and then calculate the new position on the given axis based on these values (see the function descriptions for a more in-depth explanation).</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> Direction in <span data-keyref="GameMaker Name">GameMaker</span> is calculated <strong>counter clockwise</strong>, so 0° and 360° are to the right, 90° is up, 180° is to the left and 270° is down.</p>
+    <p class="dropspot">Finally, we use the <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_x.htm"><span class="inline">lengthdir_x()</span></a> and <a href="../GameMaker_Language/GML_Reference/Maths_And_Numbers/Angles_And_Distance/lengthdir_y.htm"><span class="inline">lengthdir_y()</span></a> functions to actually move the variable. These are <strong> <a class="tooltip" title="A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.">vector</a> </strong>functions that take a length (distance) and a direction and then calculate the new position on the given axis based on these values (see the function descriptions for a more in-depth explanation).</p>
     <p class="dropspot">That&#39;s a lot to take in at once, and don&#39;t worry if you don&#39;t quite understand it all! You will in time! All that&#39;s left to do now is add an instance of this object to a room, and then press the <strong>Play </strong>button <strong> <img alt="Play Icon" class="icon" src="../assets/Images/Icons/Icon_PlayGame.png"/></strong>, and you should get silky-smooth 8 way movement without any of the issues related to moving diagonally:</p>
     <p class="dropspot"><img alt="Animation Showing Improved 8-Way Keyboard Movement" class="center" src="../assets/Images/QS_Guide/QS_MovementExample_4_4.gif"/></p>
   </div>
@@ -258,8 +258,8 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Summary.htm">Summary</a></div>
+        <div style="float:left">Back: <a href="../Content.htm">GameMaker Manual Index</a></div>
+        <div style="float:right">Next: <a href="Summary.htm">Summary</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

@@ -240,7 +240,7 @@ p.code + p.code_heading,
 p.code_plain + p.code_heading {
   margin-top: -10px;
 }
-p.note {
+p.note, div.note {
   margin-left: 30px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -250,6 +250,15 @@ p.note {
   margin-right: 30px;
   background-color: #343434;
   border-radius: 8px;
+}
+div.note p, div.note ul {
+  background-color: #343434 !important;
+}
+div.note ul {
+  padding-left: 56px;
+}
+div.note {
+  padding-top: 4px;
 }
 p.note_heading {
   margin-left: 30px;

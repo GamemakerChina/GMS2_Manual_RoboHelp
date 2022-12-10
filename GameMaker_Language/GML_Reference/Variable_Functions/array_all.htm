@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_21";
+    gTopicId = "8.2.2.2.0_21";
   
 //]]></script>
 
@@ -81,8 +81,41 @@
 
 
   <h1><span data-field="title" data-format="default">array_all</span></h1>
-  <p>This function returns <span class="inline2">true</span> if the predicate function returns <span class="inline2">true</span> for <i>all</i> of the elements in the array or a range of it.<br/>
-     </p>
+  <p>This function is used to check if all of the elements in the given array match the same condition. You check that by passing a <a href="Array_Functions.htm#h">Predicate Function</a> that runs on each element of the given array, and returns <span class="inline2">true</span> or <span class="inline2">false</span>.</p>
+  <p>This function returns <span class="inline2">true</span> if your predicate function returns <span class="inline2">true</span> for <i>all</i> of the elements in the given array range, otherwise it returns <span class="inline2">false</span>.</p>
+  <div data-conref="../../../assets/snippets/Syntax_predicate_general.hts">
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Predicate Function</span><span data-close-text="true">Predicate Function</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Function</a> that operates on the given array. The predicate function is passed the following arguments:</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(element, index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>element</td>
+          <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+          <td>The current array element&#39;s value</td>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The predicate function should return a <span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span><span style="text-align: justify;">, which affects how the original function modifies or reads the array</span><span style="text-align: justify;">.</span></p>
+    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Function</a>.</p>
+  </div>
+
+</div>
+  <p><br/>
+    
+  </p>
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index_returns_bool.hts">
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
   <h4>Syntax:</h4>
@@ -107,48 +140,24 @@
       <tr style="">
         <td style="">function</td>
         <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to use for each element</td>
+        <td style="">The <a href="Array_Functions.htm#h">Predicate Function</a> to run on each element</td>
       </tr>
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
-      </tr>
-    </tbody>
-  </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(element, index);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>element</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td>The current array element</td>
-      </tr>
-      <tr style="">
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The current array index</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
 
 </div>
-  <h4>Function Returns: </h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (whether the condition checked in the function is <strong>true</strong> or <strong>false</strong>)</p>
 
 </div>
-  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (whether the function returned <strong>true</strong> for all elements in the array or range)</p>
   <p> </p>
@@ -159,7 +168,10 @@
     }<br/>
     values = [2, 4, 8, 10, 12, 14, 18, 22, 46];<br/>
     var all_elements_are_even = array_all(values, is_even);</p>
-  <p>The above code first defines a function <span class="inline2">is_even</span> that returns <span class="inline2">true</span> if the remainder of the element by 2 is equal to 0 (i.e. it is even). It then creates an array <span class="inline2">values</span> and adds a couple of numbers to it. Finally it calls <span class="inline2"><span data-field="title" data-format="default">array_all</span></span> on the array and stores the result in a temporary variable <span class="inline2">all_elements_are_even</span>. As all values in the array are even, <span class="inline2">all_elements_are_even</span> will be set to <span class="inline2">true</span>.</p>
+  <p>The above code first defines a function <span class="inline2">is_even</span> that returns <span class="inline2">true</span> if the value is even.</p>
+  <p>It then creates an array <span class="inline2">values</span> and adds some numbers to it.</p>
+  <p>Finally it calls <span class="inline2"><span data-field="title" data-format="default">array_all</span></span> on the array and stores the result in a temporary variable <span class="inline2">all_elements_are_even</span>. As all values in the array are even, <span class="inline2">all_elements_are_even</span> will be set to <span class="inline2">true</span>.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

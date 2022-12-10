@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_26";
+    gTopicId = "8.2.2.2.0_26";
   
 //]]></script>
 
@@ -81,8 +81,8 @@
 
 
   <h1><span data-field="title" data-format="default">array_intersection</span></h1>
-  <p><span>This function returns a <strong>new</strong> array with the <a href="https://en.wikipedia.org/wiki/Intersection_(set_theory)">intersection</a> of all arrays that you provide to it.</span></p>
-  <p><span>The returned array contains the common elements with <span>duplicates </span>removed.</span></p>
+  <p><span>This function returns a <strong>new</strong> array with the <a href="https://en.wikipedia.org/wiki/Intersection_(set_theory)">intersection</a> of all arrays that you provide to it. An intersection refers to all the values that are present in all of the provided arrays.</span></p>
+  <p>The function also removes any duplicates found in the intersection, so it only returns unique values.</p>
   <div data-conref="../../../assets/snippets/function_order_not_ensured.hts">
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The order of elements in the new array is <strong>not</strong> ensured. If you need to sort the array you will need to do so afterwards.</p>
 
@@ -122,13 +122,15 @@
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (the intersection of the provided arrays)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var array1 = [1, 1, 2, 7, 12];<br/>
-    var array2 = [1, 2, 4, 5, 7];<br/>
-    var array3 = [1, 4, 5, 7];<br/>
+  <p class="code">var _array1 = [1, 1, 2, 7, 12];<br/>
+    var _array2 = [1, 2, 4, 5, 7];<br/>
+    var _array3 = [1, 4, 5, 7];<br/>
     <br/>
-    var array_intersection = <span data-field="title" data-format="default">array_intersection</span>(array1, array2, array3);
+    var _array_intersection = <span data-field="title" data-format="default">array_intersection</span>(_array1, _array2, _array3);
   </p>
-  <p>The above code first creates three temporary arrays <span class="inline2">array1</span>, <span class="inline2">array2</span> and <span class="inline2">array3</span>. It then calls <span class="inline2"><span data-field="title" data-format="default">array_intersection</span></span> to create a new array that is the intersection of these three arrays.</p>
+  <p>The above code first creates three temporary arrays <span class="inline2">_array1</span>, <span class="inline2">_array2</span> and <span class="inline2">_array3</span>. It then calls <span class="inline2"><span data-field="title" data-format="default">array_intersection</span></span> to create a new array that is the intersection of these three arrays.</p>
+  <p>The <span class="inline2">_array_intersection</span> array will be set to <span class="inline2">[1, 7]</span> as these are the unique values present throughout all three arrays.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

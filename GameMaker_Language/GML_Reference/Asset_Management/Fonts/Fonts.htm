@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.3.10";
+    gTopicId = "8.2.2.3.10";
   
 //]]></script>
 
@@ -80,9 +80,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Fonts</h1>
+  <h1><span data-field="title" data-format="default">Fonts</span></h1>
   <p><span data-keyref="GameMaker Name">GameMaker</span> has a number of functions that can be used to get information about the included font assets, as well as a further set of functions that can be used to change, add or remove fonts from your game at run-time. In particular the function <span class="inline2"><a href="font_add.htm">font_add</a></span> can be used to add non-standard fonts, like Asian glyph fonts, from a <span class="inline">*.ttf</span> or <span class="inline">*.otf</span> file.</p>
-  <p>It is worth noting is that if you add a font to your game that doesn&#39;t have the glyphs required by the text you wish to write, then the Unicode character 9647 (▯) is used to substitute those missing glyphs when rendering it in the draw event. So if your font doesn&#39;t have, for example, the º symbol, then writing 90º will actually produce 90▯.</p>
+  <div data-conref="../../../../assets/snippets/Note_Unicode_missing_glyph_replacement.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The Unicode character 9647 (▯) is used to substitute any missing <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s that you may have in your designated font when rendering it in the draw event. So if your font doesn&#39;t have, for example, the ° symbol, then writing 90° will actually produce 90▯.</p>
+
+</div>
   <p>The following functions can be used to get information about font resources:</p>
   <ul class="colour">
     <li><a href="font_get_name.htm">font_get_name</a></li>
@@ -107,7 +110,6 @@
     <li><a href="font_add.htm">font_add</a></li>
     <li><a href="font_add_sprite.htm">font_add_sprite</a></li>
     <li><a href="font_add_sprite_ext.htm">font_add_sprite_ext</a></li>
-    <li><a href="font_replace.htm">font_replace</a></li>
     <li><a href="font_replace_sprite.htm">font_replace_sprite</a></li>
     <li><a href="font_replace_sprite_ext.htm">font_replace_sprite_ext</a></li>
     <li><a href="font_delete.htm">font_delete</a></li>

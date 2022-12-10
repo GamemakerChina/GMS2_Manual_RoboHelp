@@ -38,7 +38,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "2.0_4";
+    gTopicId = "1.0_4";
   
 //]]></script>
 
@@ -96,8 +96,8 @@
     <p class="dropspot">This section lists all the available target platforms, which depends on the licence you have. It will always have at least the &quot;GX.games&quot; target.</p>
     <p class="dropspot">To select a target, simply click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> on it; this will then update the rest of the options windows to show different details depending on the platform selected. If you don&#39;t have the required module installed in the current runtime then <span data-keyref="GameMaker Name">GameMaker</span> will ask you to download and install it when you click <img alt="Icon LMB" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21"/> the target: </p>
     <p class="dropspot"><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Module_Not_Installed.png"/></p>
-    <p class="dropspot">If you select &quot;No&quot; here then the target will be reset to the previous target you had selected.</p>
-    <p class="dropspot">If you select &quot;Yes&quot; then the modules for the target will be downloaded and installed.</p>
+    <p class="dropspot">If you select &quot;<strong>No</strong>&quot; here then the target will be reset to the previous target you had selected.</p>
+    <p class="dropspot">If you select &quot;<strong>Yes</strong>&quot; then the modules for the target will be downloaded and installed.</p>
     <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> See the <a href="../Setting_Up_And_Version_Information/IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a> page for more info on how to change which modules are included.</p>
     <p class="dropspot">Specific details on compiling for each platform are given below in <a href="Compiling.htm#h2">Creating A Final Executable Package</a>.</p>
   </div>
@@ -143,7 +143,7 @@
       After you have signed in, it will start compiling your game and proceed to upload it to GX.games. You can then click on &quot;Edit Game on Opera&quot; to edit it on GX.games DevCloud and publish it:<br/>
       <img class="center" src="../assets/Images/Introduction/Compiling/gx_game_compiled.png"/>Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/4407217145105">this page</a> to learn more about the GX.games upload process, and <a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193">this page</a> for setting up the various exports, such as <a href="../Settings/YoYo_Compiler.htm">YYC</a> and Mobile.
     </li>
-    <li><strong>Windows </strong>- Compiling for the general Windows OS will first request that you choose between creating an <em>Installer </em>or a <em>Zip </em>package, where the installer will be a single executable that will install your game, and the Zip file will be a single <span class="inline">*.zip</span> format compressed file with all your game files stored within (the files will need extracted for the game to run). <img alt="Windows Compile Options" class="center" src="../assets/Images/Introduction/QS_Windows_Compile_Options.png" style="cursor: nwse-resize;"/>If you check the box marked <strong>Remember Packaging Option</strong> then <span data-keyref="GameMaker Name">GameMaker</span> will remember the choice for all future compiles (this can be reset or changed from the <a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows Preferences</a>). You can find out more from the <a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games Help Center</a>.<br/>
+    <li><strong>Windows </strong>- Compiling for the general Windows OS will first request that you choose between creating an <em>Installer </em>or a <em>Zip </em>package, where the installer will be a single executable that will install your game, and the Zip file will be a single <span class="inline">*.zip</span> format compressed file with all your game files stored within (the files will need extracted for the game to run). <img alt="Windows Compile Options" class="center" src="../assets/Images/Introduction/QS_Windows_Compile_Options.png"/>If you check the box marked <strong>Remember Packaging Option</strong> then <span data-keyref="GameMaker Name">GameMaker</span> will remember the choice for all future compiles (this can be reset or changed from the <a href="../Setting_Up_And_Version_Information/Platform_Preferences/Windows.htm">Windows Preferences</a>). You can find out more from the <a href="https://help.yoyogames.com/hc/en-us/sections/207157668">YoYo Games Help Center</a>.<br/>
       <br/>
       The Windows target only compiles 64-bit executables.
     </li>
@@ -158,7 +158,7 @@
     </li>
     <li><strong>iOS </strong>- Compiling to iOS will create an <span class="inline">xarchive</span> file which is then used in Xtools to create the final iOS package. Note that <strong>to compile for iOS you will require an Apple Mac computer running OSX or higher as well as the relevant certificates and permissions</strong>. You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/115001368747">YoYo Games Help Center</a>.</li>
     <li><strong>macOS </strong>- Compiling for the macOS target will first request that you choose between creating a <em>DMG </em>or a <em>Zip </em>file:<br/>
-      <img class="center" height="194" src="../assets/Images/Introduction/QS_macOS_Compile_Options.png" style="cursor: nesw-resize;" width="430"/>&quot;Package as DMG&quot; will build a .dmg installer package which can be used to install the game on a Mac computer. Note that during this build process you will see the installer appear on the Mac, which will disappear once the build process is complete.<br/>
+      <img class="center" src="../assets/Images/Introduction/QS_macOS_Compile_Options.png"/>&quot;Package as DMG&quot; will build a .dmg installer package which can be used to install the game on a Mac computer. Note that during this build process you will see the installer appear on the Mac, which will disappear once the build process is complete.<br/>
       <br/>
       &quot;Package as Zip&quot; will build either an <span class="inline">*.app</span> file or a <span class="inline">*.pkg</span> file, depending on whether you want to later upload it to the Mac App Store or not. As with iOS <strong>you will require an Apple Mac computer running OSX or higher as well as the relevant certificates and permissions</strong>. You can find out more from the <a href="http://help.yoyogames.com/hc/en-us/articles/235186128">YoYo Games Help Center</a>.
     </li>

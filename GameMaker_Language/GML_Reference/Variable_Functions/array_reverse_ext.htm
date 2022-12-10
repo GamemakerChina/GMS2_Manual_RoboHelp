@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_33";
+    gTopicId = "8.2.2.2.0_35";
   
 //]]></script>
 
@@ -81,14 +81,16 @@
 
 
   <h1><span data-field="title" data-format="default">array_reverse_ext</span></h1>
-  <p>This function reverses the order of the elements of (a range of) the input array.</p>
-  <p> </p>
+  <p>This function is similar to <a href="array_reverse.htm">array_reverse</a>, but instead of returning a modified array, it modifies the original array that you passed into the function.</p>
+  <p>By default, it reverse the whole array. You can reverse only a part of the array by supplying <a href="Array_Functions.htm#h1">Offset And Length</a> values.</p>
+  <p>The function returns the number of elements that were modified in the array.</p>
   <div data-conref="../../../assets/snippets/function_mutable.hts">
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements, starting at the offset position and in the direction given by the sign of the length parameter, is returned instead.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements is returned instead.</p>
 
 </div>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">array_reverse_ext</span>(arguments);</p>
+  <p class="code"><span data-field="title" data-format="default">array_reverse_ext</span>(array, [offset], [length]);</p>
   <table style="">
     <colgroup>
       <col/>
@@ -109,12 +111,12 @@
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
@@ -124,9 +126,11 @@
   <p> </p>
   <h4>Example:</h4>
   <p class="code">values = [1, 2, 3, 4, 8, 7, 6, 5];<br/>
+    <br/>
     <span data-field="title" data-format="default">array_reverse_ext</span>(values, -4, 4);
   </p>
   <p>The above code first creates an array <span class="inline2">values</span>. It then reverses the order of the last four elements using <span class="inline2"><span data-field="title" data-format="default">array_reverse_ext</span></span>.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

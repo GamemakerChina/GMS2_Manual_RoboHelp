@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.8.3";
+    gTopicId = "8.2.2.8.3";
   
 //]]></script>
 
@@ -150,6 +150,13 @@
   </ul>
   <p> </p>
   <p>Please note that on mobile devices (Android, iOS and Windows Phone), you can use the back button at any time, as it is mapped to the keyboard <b>backspace</b> which is the <span data-keyref="GameMaker Name">GameMaker</span> <a href="../Keyboard_Input/Keyboard_Input.htm">keyboard constant</a> <span class="inline">vk_backspace</span>, so you can do checks for that key and perform actions on those devices as if the back button had been used.</p>
+  <h3>Note on Mouse Coordinates</h3>
+  <div data-conref="../../../../assets/snippets/Mouse_Coordinates_Update_Frequency.hts">
+  <p>Mouse coordinates are updated every frame, however some platforms (such as macOS) use an event handler for capturing mouse position.</p>
+  <p>This means there may be frames where the mouse moved, but its position remained unchanged -- which would mean that there was no mouse event between the current and previous frame.</p>
+  <p>Due to this, you may encounter frames where the mouse coordinates are the same as the previous frame, depending on the platform.</p>
+
+</div>
   <p> </p>
   <p> </p>
   <div class="footer">

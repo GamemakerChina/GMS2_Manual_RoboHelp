@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.10.0_4";
+    gTopicId = "8.2.2.10.0_6";
   
 //]]></script>
 
@@ -81,23 +81,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>real</h1>
-  <p>This function can be used to turn a given string into a real number. When using this function, numbers, minus signs, decimal points and exponential parts in the string are taken into account, while other characters (such as letters) will cause an error
-    to be thrown. If you know, or suspect, that a string may have other characters then you can use <a href="string_digits.htm"><span class="inline">string_digits()</span></a> to remove all non-numeric characters, before using this function to turn the resulting string
-    into a real number.</p>
-  <p> </p>
+  <h1><span data-field="title" data-format="default">real</span></h1>
+  <p>This function can be used to turn a value into a real number.</p>
+  <p>When using this function on a string, numbers, minus signs, decimal points and exponential parts in the string are taken into account, while other characters (such as letters) will cause an error to be thrown. If a string may have other characters then you can use <span class="inline2"><a href="string_digits.htm">string_digits</a></span> to remove all non-numeric characters, before using this function to turn the resulting string into a real number.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> Hexadecimal numbers are also supported in a string. These strings should have a format &quot;0x00F&quot;.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function can also be used to convert some other data types to <span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span>, such as <a href="../Variable_Functions/int64.htm">int64</a>.</p>
   <h4>Syntax:</h4>
-  <p class="code">real(string);</p>
+  <p class="code"><span data-field="title" data-format="default">real</span>(string);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>string</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The string to be converted to a real value.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -105,7 +107,8 @@
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var t_str = string_digits(input_str);<br/> age = real(t_str);</p>
+  <p class="code">var t_str = string_digits(input_str);<br/>
+    age = <span data-field="title" data-format="default">real</span>(t_str);</p>
   <p>The above code will take the input string, strip it of all characters other than numbers and then set the variable &quot;age&quot; to hold the real number value of the return string.</p>
   <p> </p>
   <p> </p>
@@ -113,8 +116,8 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Strings.htm">Strings</a></div>
-        <div style="float:right">Next: <a href="string.htm">string</a></div>
+        <div style="float:left">Back: <a href="Strings.htm">Strings</a></div>
+        <div style="float:right">Next: <a href="string_byte_at.htm">string_byte_at</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

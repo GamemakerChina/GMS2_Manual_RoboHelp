@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.19.0_7";
+    gTopicId = "8.2.2.18.0_7";
   
 //]]></script>
 
@@ -80,17 +80,15 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_write</h1>
+  <h1><span data-field="title" data-format="default">buffer_write</span></h1>
   <p>This function can be used to write data to a previously created buffer. The data you write must be in agreement with the &quot;type&quot; argument of this function, meaning that you can&#39;t try to write a string as an unsigned 16bit integer, for example. The following constants can be used to define the data type:</p>
-  <table style="">
+  <table id="table" style="caption-side: top">
+    <caption>Buffer Data Type Constant</caption>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Buffer_Data_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm">Buffer Data Type Constant</a></span></th>
-      </tr>
       <tr style="">
         <th style="">Constant</th>
         <th style="">Description</th>
@@ -152,7 +150,7 @@
   <p>The function will return 0 if it succeeds or -1 if it fails.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_write(buffer, type, value)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_write</span>(buffer, type, value);</p>
   <table style="">
     <tbody>
       <tr style="">
@@ -183,9 +181,10 @@
   <p> </p>
   <h4>Example:</h4>
   <p class="code">buffer_seek(buff, buffer_seek_start, 0);<br/>
-    buffer_write(buff, buffer_s16, 0);<br/>
-    buffer_write(buff, buffer_s16, x);<br/>
-    buffer_write(buff, buffer_s16, y);</p>
+    <span data-field="title" data-format="default">buffer_write</span>(buff, buffer_s16, 0);<br/>
+    <span data-field="title" data-format="default">buffer_write</span>(buff, buffer_s16, x);<br/>
+    <span data-field="title" data-format="default">buffer_write</span>(buff, buffer_s16, y);
+  </p>
   <p>The above code finds the start of the buffer with the id stored in the variable &quot;buff&quot; them writes a series of signed 16bit integer values to it.</p>
   <p> </p>
   <p> </p>
@@ -193,7 +192,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
+        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
         <div style="float:right">Next: <a href="buffer_fill.htm">buffer_fill</a></div>
       </div>
     </div>

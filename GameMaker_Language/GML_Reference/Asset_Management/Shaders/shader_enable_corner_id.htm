@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.3.8.0_15";
+    gTopicId = "8.2.2.3.8.0_16";
   
 //]]></script>
 
@@ -81,21 +81,22 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shader_enable_corner_id</h1>
-  <p>With this function you can set a global state for all shaders being used where, when enabled, the shader &quot;steals&quot; 2 bits from the input colour values. The first is from the lower bit of the red colour value, and the second is from the lower
-    bit of the blue colour value. These values can get then be recovered in the shader to work out which vertex you are dealing with (ie: which corner).</p>
+  <p>With this function you can set a global state for all shaders being used where, when enabled, the shader &quot;steals&quot; 2 bits from the input colour values. The first is from the lower bit of the red colour value, and the second is from the lower bit of the blue colour value. These values can then be recovered in the shader to work out which vertex you are dealing with (ie: which corner).</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">shader_enable_corner_id(enable);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>enable</td><td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td>enable</td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
         <td>Enable (<span class="inline">true</span>) or disable (<span class="inline">false</span>) this function.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>

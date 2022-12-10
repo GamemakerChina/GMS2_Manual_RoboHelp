@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.4.0_9";
+    gTopicId = "8.2.2.4.0_9";
   
 //]]></script>
 
@@ -83,7 +83,7 @@
   <h1>game_save</h1>
   <p>This is a legacy function that can be used to save the current state of the game, and is not recommended for use anymore. Use the <a href="../File_Handling/File_Handling.htm">File functions</a> instead to create a custom save system where you only save and load specific game data.</p>
   <p>This function will save the game&#39;s state as it is, however it will not save any dynamic resources being used at that time, such as data structures, surfaces, assets added at runtime, etc. If such a save file is loaded, any game updates that were made after the save will not be visible, as it will restore the version of the game that was used to create the save.</p>
-  <p>Note that save files created using this function may not be supported by updated <a class="tooltip" title="The runtime in GameMaker Studio 2 is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a> versions, so replacing this function with a new save system is essential to ensure compatibility with future GameMaker updates, and for the reasons listed above, updates made to your own game.</p>
+  <p>Note that save files created using this function may not be supported by updated <a class="tooltip" title="The runtime in GameMaker is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a> versions, so replacing this function with a new save system is essential to ensure compatibility with future GameMaker updates, and for the reasons listed above, updates made to your own game.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">game_save(filename);</p>

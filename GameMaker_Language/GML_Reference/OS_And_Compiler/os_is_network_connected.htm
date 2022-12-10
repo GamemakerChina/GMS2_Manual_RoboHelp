@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.21.0_6";
+    gTopicId = "8.2.2.20.0_6";
   
 //]]></script>
 
@@ -82,29 +82,12 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">os_is_network_connected</span></h1>
-  <p>With this function you can check and see if your device currently has an internet connection.</p>
+  <p>With this function you can check if your device currently has an internet connection.</p>
   <p>It will return <span class="inline2">true</span> if it does, or <span class="inline2">false</span> if it does not. Depending on the value of the <span class="inline2">attempt_connection</span> argument and the OS, it may attempt to make a connection before returning a value.</p>
-  <p>The function has an optional argument to enable/disable it attempting to make a connection when called, and this option is currently <strong>only</strong> for the Nintendo Switch target. When set to anything other than <span class="inline2">network_connect_none</span> the function will attempt to make a connection, and when set to <span class="inline2">network_connect_none</span> it will simply be limited to checking the connection. Note that attempting to make a connection using <span class="inline2">network_connect_blocking</span> may cause the Switch OS to hang for a few seconds.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function checks the internal device API that controls connections and so may return <span class="inline2">true</span> if there is a bluetooth connection, a Wi-Fi connection, or even just a normal network connection that permits internet access.</p>
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">os_is_network_connected</span>([attempt_connection]);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>attempt_connection</td>
-        <td><a href="os_is_network_connected.htm#table">Attempt Connection Constant</a></td>
-        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> For the Nintendo Switch target <strong>only</strong>. Set this parameter to a value other than <span class="inline2">network_connect_none</span> / <span class="inline2">false</span> to attempt an OS level connection when called.</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
+  <p>The function has an optional argument to enable/disable it attempting to make a connection when called. When set to anything other than <span class="inline2">network_connect_none</span> the function will attempt to make a connection, and when set to <span class="inline2">network_connect_none</span> it will simply be limited to checking the connection. Note that attempting to make a connection using <span class="inline2">network_connect_blocking</span> may cause the OS to hang for a few seconds.</p>
+  <p>You can pass one of the following constants into the <span class="inline2">attempt_connection</span> argument:</p>
   <table id="table" style="caption-side: top">
-    <caption id="" style="border-width: 1px;border-color: #000000;border-left-width: 1px;border-top-width: 1px;border-top-color: #000000;border-right-width: 1px;border-bottom-width: 1px;border-left-color: #000000;border-right-color: #000000;border-bottom-color: #000000">Attempt Connection Constant</caption>
+    <caption id="" style="border-width: 1px;border-color: #000000;border-left-width: 1px;border-top-width: 1px;border-top-color: #000000;border-right-width: 1px;border-bottom-width: 1px;border-left-color: #000000;border-right-color: #000000;border-bottom-color: #000000"><span data-keyref="Type_Constant_AttemptConnection"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/OS_And_Compiler/os_is_network_connected.htm">Attempt Connection Constant</a></span></caption>
     <colgroup>
       <col/>
       <col/>
@@ -128,11 +111,28 @@
       </tr>
       <tr style="">
         <td style=""><span class="inline2">network_connect_passive</span></td>
-        <td style="">This will try to connect and silently fail if no succesful connection could be established.</td>
+        <td style="">This will try to connect and silently fail if no successful connection could be established.</td>
       </tr>
     </tbody>
   </table>
-  <h4>Returns:</h4>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function checks the internal device API that controls connections and so may return <span class="inline2">true</span> if there is a Bluetooth connection, a Wi-Fi connection, or even just a normal network connection that permits internet access. This means it may not always be accurate on all platforms.</p>
+  <h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default">os_is_network_connected</span>([attempt_connection]);</p>
+  <table style="">
+    <tbody>
+      <tr style="">
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr style="">
+        <td>attempt_connection</td>
+        <td><span data-keyref="Type_Constant_AttemptConnection"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/OS_And_Compiler/os_is_network_connected.htm">Attempt Connection Constant</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> Set this parameter to a value other than <span class="inline2">network_connect_none</span> to attempt an OS level connection when called.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
   <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
   <p> </p>
   <h4>Example:</h4>
@@ -141,6 +141,8 @@
         global.connected = true;<br/>
     }</p>
   <p>The above code checks to see if the device has a connection to the internet and if so it sets a global variable.</p>
+  <p> </p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

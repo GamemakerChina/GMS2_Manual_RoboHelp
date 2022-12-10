@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_27";
+    gTopicId = "8.2.2.2.0_27";
   
 //]]></script>
 
@@ -81,10 +81,41 @@
 
 
   <h1><span data-field="title" data-format="default">array_filter</span></h1>
-  <p><span>This function returns a <strong>new</strong> array that is the <i>filtered</i> version of the array (or a range of it) that you pass into it.</span></p>
-  <p><span>It only keeps those elements <span>of the original array for which the predicate function returns <span class="inline2">true</span></span>. Elements for which the predicate function returns <span class="inline2">false</span> are <strong>not</strong> added to the new array.</span></p>
-  <p>The predicate function is called for each element in the range that you provide to the function.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> See <span class="inline2"><a href="array_copy_while.htm">array_copy_while</a></span> for the function that stops execution after the first <span class="inline2">false</span> value of the predicate function.</p>
+  <p><span>This function returns a <strong>new</strong> array that is the <i>filtered</i> version of the given array (or a range of it).</span></p>
+  <p><span>You supply a <a href="Array_Functions.htm#h">Predicate Function</a> which runs for all elements in the array. It should return either <span class="inline2">true</span> or <span class="inline2">false</span> based on a condition.</span></p>
+  <p><span>Elements for which the predicate function returns <span class="inline2">true</span> are included in the returned array, and ones that get</span> <span class="inline2">false</span> are ignored.</p>
+  <p>By default the function checks the whole array. You can optionally supply <a href="Array_Functions.htm#h1">Offset And Length</a> arguments to check a part of the array, traversing the array forward or backward.</p>
+  <div data-conref="../../../assets/snippets/Syntax_predicate_general.hts">
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Predicate Function</span><span data-close-text="true">Predicate Function</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Function</a> that operates on the given array. The predicate function is passed the following arguments:</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(element, index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>element</td>
+          <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+          <td>The current array element&#39;s value</td>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The predicate function should return a <span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span><span style="text-align: justify;">, which affects how the original function modifies or reads the array</span><span style="text-align: justify;">.</span></p>
+    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Function</a>.</p>
+  </div>
+
+</div>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> See <span class="inline2"><a href="array_copy_while.htm">array_copy_while</a></span> which is similar, but stops execution after the first <span class="inline2">false</span> return of the predicate function.</p>
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index_returns_bool.hts">
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
   <h4>Syntax:</h4>
@@ -109,48 +140,24 @@
       <tr style="">
         <td style="">function</td>
         <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to use for each element</td>
+        <td style="">The <a href="Array_Functions.htm#h">Predicate Function</a> to run on each element</td>
       </tr>
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
-      </tr>
-    </tbody>
-  </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(element, index);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>element</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td>The current array element</td>
-      </tr>
-      <tr style="">
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The current array index</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
 
 </div>
-  <h4>Function Returns: </h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (whether the condition checked in the function is <strong>true</strong> or <strong>false</strong>)</p>
 
 </div>
-  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
   <p> </p>
@@ -163,7 +170,11 @@
     scores = [0, 15, 4, 78, 96, 65, 49];<br/>
     passed = <span data-field="title" data-format="default">array_filter</span>(scores, passed_the_test);
   </p>
-  <p>The above code first defines a function <span class="inline2">passed_the_test</span> that takes in an <span class="inline2">element</span> and <span class="inline2">index</span> parameter. The function returns <span class="inline2">true</span> if the value of <span class="inline2">element</span> is greater than or equal to 50 or <span class="inline2">false</span> if it is not. It then creates an array <span class="inline2">scores</span> with various values between 0 and 100. Finally it calls <span class="inline2">array_filter</span> on this array and stores the new array in a variable <span class="inline2">passed</span>.</p>
+  <p>The above code first defines a function <span class="inline2">passed_the_test</span> that takes in <span class="inline2">element</span> and <span class="inline2">index</span> parameters, which is usual for array predicate functions.</p>
+  <p>The function returns <span class="inline2">true</span> if the value of <span class="inline2">element</span> is greater than or equal to 50, otherwise it returns <span class="inline2">false</span>.</p>
+  <p>It then creates an array <span class="inline2">scores</span> with various values between 0 and 100. Finally it calls <span class="inline2">array_filter</span> on this array and stores the new array in a variable <span class="inline2">passed</span>.</p>
+  <p>The <span class="inline2">passed</span> array would only contain values from the <span class="inline2">scores</span> array that were greater than or equal to 50, satisfying the condition set in the predicate function.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

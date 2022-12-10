@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.11.4.0_10";
+    gTopicId = "8.2.2.11.4.0_10";
   
 //]]></script>
 
@@ -79,60 +79,67 @@
 
 
 
-
-
-
-
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_transform_vertex</h1>
-  <p>This function transforms a vector by a matrix. You supply the transform matrix ID (as returned by the function <a href="matrix_build.htm"><span class="inline">matrix build()</span></a>), as well as the x, y and z values for the vector to transform. The function will return
-    an <a href="../../../GML_Overview/Arrays.htm">array</a> of 3 elements where:</p>
-  <ul class="colour">
-    <li>array[0] = x</li>
-    <li>array[1] = y</li>
-    <li>array[2] = z.</li>
+  <h1><span data-field="title" data-format="default">matrix_transform_vertex</span></h1>
+  <p>This function transforms a vector by a matrix and returns the result as a new array.</p>
+  <p>It takes a transform matrix (as returned by the function <span class="inline2"><a href="matrix_build.htm">matrix_build</a></span>) and the x, y and z values of the vector to transform. It can optionally take the value of the w component.</p>
+  <p>The function returns an <a href="../../../GML_Overview/Arrays.htm">array</a> of the same size as the number of components that you provide: </p>
+  <ul class="Disc">
+    <li>An array of 3 elements where array[0] = x, array[1] = y, array[2] = z if x, y and z are provided</li>
+    <li>An array of 4 elements where array[0] = x, array[1] = y, array[2] = z, array[3] = w if x, y, z <em>and</em> w are provided</li>
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">matrix_transform_vertex(matrix, x, y, z);</p>
+  <p class="code"><span data-field="title" data-format="default">matrix_transform_vertex</span>(matrix, x, y, z, [w]);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>matrix</td><td><span data-keyref="Type_Array_Matrix"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Matrix Array</a></span></td>
+        <td>matrix</td>
+        <td><span data-keyref="Type_Array_Matrix"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/Matrix_Functions.htm">Matrix Array</a></span></td>
         <td>The matrix to use</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>x</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The x component of the transform vector</td>
-     </tr>
+        <td>x</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The x component of the vector to transform</td>
+      </tr>
       <tr style="">
-        <td>y</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The y component of the transform vector</td>
-     </tr>
+        <td>y</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The y component of the vector to transform</td>
+      </tr>
       <tr style="">
-        <td>z</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The z component of the transform vector</td>
-     </tr>
+        <td>z</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The z component of the vector to transform</td>
+      </tr>
+      <tr style="">
+        <td>w</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The w component of the vector to transform</td>
+      </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (3 elements)</p>
+  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (3 elements (x, y and z are passed) or 4 elements (x, y, z and w are passed))</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">t_matrix = matrix_build(0, 0, 0, 0, 90, 0, 1, 2, 1);<br/> verts = matrix_transform_vertex(t_matrix, x, y, z);</p>
-  <p>The above code transforms the given values using the matrix stored in the variable &quot;t_matrix&quot; and stores them in the array &quot;verts&quot;.</p>
+  <p class="code">t_matrix = matrix_build(0, 0, 0, 0, 90, 0, 1, 2, 1);<br/>
+    new_xyz = <span data-field="title" data-format="default">matrix_transform_vertex</span>(t_matrix, x, y, z);</p>
+  <p>The above code transforms the given values using the matrix stored in the variable &quot;t_matrix&quot; and stores them in the array <span class="inline2">new_xyz</span>.</p>
   <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
+        <div style="float:left">Back: <a href="Matrix_Functions.htm">Matrix Functions</a></div>
         <div style="float:right">Next: <a href="matrix_stack_is_empty.htm">matrix_stack_is_empty</a></div>
       </div>
     </div>

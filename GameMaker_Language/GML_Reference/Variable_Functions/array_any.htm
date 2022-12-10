@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "1.0_5";
+    gTopicId = "8.2.2.2.0_20";
   
 //]]></script>
 
@@ -81,7 +81,38 @@
 
 
   <h1><span data-field="title" data-format="default">array_any</span></h1>
-  <p>This function returns <span class="inline2">true</span> if the predicate function returns <span class="inline2">true</span> for <i>any</i> of the elements in the array or in a range of it.</p>
+  <p>This function is used to check if any one element in the given array matches a condition. You check that by passing a <a href="Array_Functions.htm#h">Predicate Function</a> that runs on each element of the given array, and returns <span class="inline2">true</span> or <span class="inline2">false</span>.</p>
+  <p>This function returns <span class="inline2">true</span> if the predicate function returns <span class="inline2">true</span> for at least one of the elements in the given array range.</p>
+  <div data-conref="../../../assets/snippets/Syntax_predicate_general.hts">
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Predicate Function</span><span data-close-text="true">Predicate Function</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Function</a> that operates on the given array. The predicate function is passed the following arguments:</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(element, index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>element</td>
+          <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+          <td>The current array element&#39;s value</td>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The predicate function should return a <span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span><span style="text-align: justify;">, which affects how the original function modifies or reads the array</span><span style="text-align: justify;">.</span></p>
+    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Function</a>.</p>
+  </div>
+
+</div>
   <p> </p>
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index_returns_bool.hts">
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
@@ -107,66 +138,46 @@
       <tr style="">
         <td style="">function</td>
         <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to use for each element</td>
+        <td style="">The <a href="Array_Functions.htm#h">Predicate Function</a> to run on each element</td>
       </tr>
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
-      </tr>
-    </tbody>
-  </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(element, index);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>element</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td>The current array element</td>
-      </tr>
-      <tr style="">
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The current array index</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
 
 </div>
-  <h4>Function Returns: </h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (whether the condition checked in the function is <strong>true</strong> or <strong>false</strong>)</p>
 
 </div>
-  <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (<strong>true</strong> if there is any element in the array for which the function returns <strong>true</strong>, <strong>false</strong> if there isn&#39;t any)</p>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (<strong>true</strong> if there is any element in the array for which the predicate returns <strong>true</strong>, <strong>false</strong> if there isn&#39;t any)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">instance_data =<br/>
+  <p class="code">var _array =<br/>
     [<br/>
-        {&quot;x&quot;: 14, &quot;y&quot;: 20, &quot;blend&quot;: c_red},<br/>
-        {&quot;x&quot;: 25, &quot;y&quot;: 37, &quot;blend&quot;: c_teal},<br/>
-        {&quot;x&quot;: 100, &quot;y&quot;: 88, &quot;blend&quot;: c_lime},<br/>
-        {&quot;x&quot;: 640, &quot;y&quot;: 12, &quot;blend&quot;: c_orange}<br/>
-    ];<br/>
-    var f_check_blend = function(element, index)<br/>
+        &quot;apple&quot;,<br/>
+        &quot;banana&quot;,<br/>
+        &quot;coconut&quot;,<br/>
+        &quot;dragonfruit&quot;<br/>
+    ]<br/>
+    <br/>
+    var _contains_apple = array_any(_array, function(_val, _ind)<br/>
     {<br/>
-        return (element.blend == c_red);<br/>
-    }<br/>
-    var any_red_blend = <span data-field="title" data-format="default">array_any</span>(instance_data, f_check_blend);<br/>
-    show_debug_message(&quot;Instance data contains an item with c_red blend colour: &quot; + string(any_red_blend));</p>
-  <p>The above code first creates an array <span class="inline2">instance_data</span>. Every array element is a <a href="../../GML_Overview/Structs.htm">struct</a> that stores a 2D position (&quot;x&quot; and &quot;y&quot;) and a &quot;blend&quot; colour. It then creates a predicate function <span class="inline2">f_check_blend</span> that returns <span class="inline2">true</span> when the element&#39;s &quot;blend&quot; is set to <span class="inline2">c_red</span> and <span class="inline2">false</span> if it&#39;s not. The code then executes <span class="inline2"><span data-field="title" data-format="default">array_any</span></span> on the array, using the <span class="inline2">f_check_blend</span> function, and shows a debug message with the result.</p>
+        return _val == &quot;apple&quot;<br/>
+    });<br/>
+    <br/>
+    show_debug_message(_contains_apple); // prints 1 (true)
+  </p>
+  <p>This creates an array containing strings of fruit names. We want to check if the array contains <span class="inline2">&quot;apple&quot;</span> anywhere.</p>
+  <p>The predicate function <span class="inline2">_contains_apple</span> checks if <span class="inline2">_val == &quot;apple&quot;</span> and returns the result. When this is <span class="inline2">true</span> for any one of the array&#39;s elements, <a href="array_any.htm">array_any</a> returns <span class="inline2">true</span>.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

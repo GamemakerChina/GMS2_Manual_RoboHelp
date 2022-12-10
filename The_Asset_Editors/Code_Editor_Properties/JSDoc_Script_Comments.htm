@@ -38,7 +38,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "7.5.0_3";
+    gTopicId = "6.5.0_3";
   
 //]]></script>
 
@@ -80,10 +80,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>JSDoc Script Comments</h1>
+  <h1><span data-field="title" data-format="default">JSDoc Script Comments</span></h1>
   <p>If you wish your custom functions to have code completion and to show the required arguments in a specific manner in the code editor, then you need to add some <a href="https://www.oracle.com/technical-resources/articles/java/javadoc-tool.html">JSDoc style</a> comments. These comments are used to tell the auto-complete feature how the function should be used and filled out in the <a href="../Scripts.htm">script editor</a>.</p>
-  <p>The format for a typical function header would be to have the function name, the description of the function, and then the list of the different arguments (parameters) that the function takes, making sure to start each line with a triple backslash &quot;<span class="inline">///</span>&quot; as that tells <span data-keyref="GameMaker Name">GameMaker</span> to parse the comment as being JSDoc style. You can alternatively wrap your JSDoc comments in <span class="inline">/**</span> ... <span class="inline">*/</span>, with the <span class="inline">/**</span> being on its own line.</p>
-  <p>The comments themselves need to be given an identifier (preceded by &quot;<span class="inline">@</span>&quot;) and content, and the available identifiers are as follows:</p>
+  <p class="note"><span data-conref="../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> You can generate these comments automatically using <a href="../../Setting_Up_And_Version_Information/IDE_Preferences/Feather_Settings.htm">Feather</a>&#39;s <a href="Feather_Features.htm#h1">Quick Fixes</a> menu (press <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + Q or click the <img class="icon" src="../../assets/Images/Icons/Icon_Feather.png"/> icon).</p>
+  <p>The format for a typical function header would be to have the function name, the description of the function, and then the list of the different arguments (parameters) that the function takes, making sure to start each line with a triple forward slash &quot;<span class="inline">///</span>&quot; as that tells <span data-keyref="GameMaker Name">GameMaker</span> to parse the comment as being JSDoc style. You can alternatively wrap your JSDoc comments in <span class="inline">/**</span> ... <span class="inline">*/</span>, with the <span class="inline">/**</span> being on its own line.</p>
+  <p>The comments themselves need to be given an identifier (preceded by &quot;<span class="inline">@</span>&quot;) and content. The available identifiers are as follows: </p>
   <table style="">
     <colgroup>
       <col style="width: 306px;"/>
@@ -189,7 +190,7 @@
   </p>
   <p>The <span class="inline">start_x</span> and <span class="inline">start_y</span> arguments are marked as optional, which means the code editor will now expect 2 to 4 arguments, as can be seen in the warning message:</p>
   <p><img class="center" height="150" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_Optional.png" width="537"/></p>
-  <p class="note"><span class="note">NOTE</span> You will get the same behaviour if you use optional arguments in the function declaration. See <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a> for more information.</p>
+  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> You will get the same behaviour if you use optional arguments in the function declaration. See <a href="../../GameMaker_Language/GML_Overview/Script_Functions.htm">script functions</a> for more information.</p>
   <p>Since scripts can have multiple functions in them, you can add JSDoc comments for each of them before its declaration:</p>
   <p><img alt="Multiple Functions With JSDoc Comments Example" class="center" src="../../assets/Images/Scripting_Reference/Additional_Information/JavaDoc_MultipleFunctions.png"/></p>
   <p> </p>

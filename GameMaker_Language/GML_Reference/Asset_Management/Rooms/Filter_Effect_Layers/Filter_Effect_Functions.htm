@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "9.2.2.3.14.6";
+    gTopicId = "8.2.2.3.14.6";
   
 //]]></script>
 
@@ -103,6 +103,7 @@
     var _fxshake = fx_create(_filter_to_use);
   </p>
   <p>To ensure that the latter method works, you can simply add the filter to at least one room in your project, or ensure that <span class="inline"><a href="fx_create.htm">fx_create()</a></span> is called anywhere in your project with the filter name as a string constant (and not a variable).</p>
+  <div data-conref="../../../../../assets/snippets/FX_Limitations.hts"><h2 class="">Limitations</h2><p>There is currently one limitation to keep in mind:</p><ul class="colour"><li>Filters/effects will not work when the <a href="../../../Drawing/Surfaces/application_surface_enable.htm">application surface is disabled</a>. It&#39;s enabled by default, and you shouldn&#39;t usually require disabling it, however you may do so to gain performance on mobile devices. In such cases you wouldn&#39;t be able to use filters/effects as they require the surface texture for shader manipulations.</li></ul></div>
   <h2>Function List</h2>
   <p>The following functions are used to create and manage &quot;FX Structs&quot; containing effect data:</p>
   <ul class="colour">

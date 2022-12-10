@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_18";
+    gTopicId = "8.2.2.2.0_18";
   
 //]]></script>
 
@@ -81,9 +81,28 @@
 
 
   <h1><span data-field="title" data-format="default">array_create_ext</span></h1>
-  <p><span>This function creates an array of the given size and calls the function to initialise each entry.</span></p>
-  <p>Using this function you can initialise the array with values that depend on the array index.</p>
-  <p>The function has to take 1 argument, which is the index, and return a value of type <span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span> for that index, which is the value that is placed in the array at that index.</p>
+  <p><span>This function creates an array of the given size. For each element in the new array, it calls the given callback function, and applies the return value to that element.</span></p>
+  <p>Using this function you can initialise the array with values that change depending on the array index.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="../../../assets/snippets/Syntax_predicate_general.hts#"><span data-open-text="true" data-skip-index="true">Callback function</span><span data-close-text="true">Callback function</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>The <span>callback</span> function supplied in the second argument should take 1 argument, which is the index of the current array element. It can return any type of value, which is stored in the array at that index.</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">array_create_ext</span>(size, function);</p>
@@ -107,49 +126,29 @@
       <tr style="">
         <td style="">function</td>
         <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function used to initialize each entry.</td>
+        <td style="">The <span>callback</span> function used to initialise each entry</td>
       </tr>
     </tbody>
   </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(index);</p>
-  <table style="">
-    <colgroup>
-      <col/>
-      <col/>
-      <col/>
-    </colgroup>
-    <tbody>
-      <tr style="">
-        <th style="">Argument</th>
-        <th style="">Type</th>
-        <th style="">Description</th>
-      </tr>
-      <tr style="">
-        <td style="">index</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style="">The current array index</td>
-      </tr>
-    </tbody>
-  </table>
-  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var f = function(index)<br/>
+  <p class="code">var _f = function(_index)<br/>
     {<br/>
-        return index + 1;<br/>
+        return _index + 1;<br/>
     }<br/>
-    array = <span data-field="title" data-format="default">array_create_ext</span>(100, f);<br/>
+    array = <span data-field="title" data-format="default">array_create_ext</span>(100, _f);<br/>
     show_debug_message(array);</p>
-  <p>The above code first creates a temporary function <span class="inline2">f</span> that takes in an index as the first and only argument and returns that index with 1 added to it. It then uses <span class="inline2"><span data-field="title" data-format="default">array_create_ext</span></span> with this function which creates an array filled with the integer numbers from 1 to 100.</p>
+  <p>The above code first creates a temporary function <span class="inline2">_f</span> that takes in an index as an argument, and returns that index with 1 added to it.</p>
+  <p>It then uses <span class="inline2"><span data-field="title" data-format="default">array_create_ext</span></span> with the <span class="inline2">_f</span> function which creates an array filled with the integer numbers from 1 to 100.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div>Back: <a href="Array_Functions.htm">Array Functions</a></div>
-        <div>Next: <a href="array_find_index.htm">array_find_index</a></div>
+        <div>Next: <a href="array_filter_ext.htm">array_filter_ext</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

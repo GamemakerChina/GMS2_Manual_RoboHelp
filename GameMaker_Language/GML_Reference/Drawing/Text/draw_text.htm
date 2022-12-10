@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "9.2.2.6.6.0_7";
+    gTopicId = "8.2.2.6.6.0_7";
   
 //]]></script>
 
@@ -83,28 +83,32 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>draw_text</h1>
   <p>With this function you can draw any string at any position within the room (for drawing real numbers you should use the <a href="../../Strings/string.htm"><span class="inline">string</span><span class="inline">()</span></a> function to convert them into text). To combine strings you can use <b>+</b> (see example below) and you can also use <b>\n</b> within a string to add a line break so it is drawn over multiple lines (for information on how to properly format a string and what escape characters you can use, please see <a href="../../Strings/Strings.htm">here</a>). The colour of the text and the alpha are governed by the current base alpha and colour values as set by <a href="../Colour_And_Alpha/draw_set_alpha.htm"><span class="inline">draw_set_alpha</span><span class="inline">()</span><span class="inline"></span></a> and <a href="../Colour_And_Alpha/draw_set_colour.htm"><span class="inline">draw_set_colour</span><span class="inline">()</span><span class="inline"></span></a>.</p>
-  <p class="note"><b>NOTE</b>: The actual position of the text will be influenced by the alignment values set by <a href="draw_set_halign.htm"><span class="inline"><span style="font-size:14px;">draw_set_halign</span></span><span class="inline">()</span><span class="inline"></span></a> and <a href="draw_set_valign.htm"><span class="inline"><span style="font-size:14px;">draw_set_valign</span></span><span class="inline">()</span><span class="inline"></span></a>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The actual position of the text will be influenced by the alignment values set by <a href="draw_set_halign.htm"><span class="inline"><span style="font-size:14px;">draw_set_halign</span></span><span class="inline">()</span><span class="inline"></span></a> and <a href="draw_set_valign.htm"><span class="inline"><span style="font-size:14px;">draw_set_valign</span></span><span class="inline">()</span><span class="inline"></span></a>.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">draw_text(x, y, string);</p>
   <table style="">
     <tbody>
       <tr style="">
-        <th>Argument</th><th>Type</th>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
+      </tr>
       <tr style="">
-        <td>x</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>x</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The x coordinate of the drawn string.</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>y</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>y</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The y coordinate of the drawn string.</td>
-     </tr>
+      </tr>
       <tr style="">
-        <td>string</td><td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The string to draw.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>

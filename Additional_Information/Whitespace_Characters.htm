@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/default.css"/><script src="../../assets/scripts/main_script.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>White-space Characters</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+  <meta name="rh-authors" content="Bart Teunis"/>
+  <meta name="topic-comment" content="An overview page listing the Unicode whitespace characters. For easy, clean linking (instead of inserting it somewhere on a page)."/>
+  <meta name="template" content="../assets/masterpages/Manual_Page.htt"/>
+  <meta name="search-keywords" content="unicode,escape,whitespace"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="White-space Characters">
+        <span>White-space Characters</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+  </div>
+  <div>
+  <h1><span data-field="title" data-format="default">White-space Characters</span></h1>
+  <p>The following table lists the character codes and escape sequences that <span data-keyref="GameMaker Name">GameMaker</span> considers to be white-space characters. An empty cell in the table indicates there is no escape sequence for that character code.</p>
+  <p>For a detailed list of all these characters, see <a href="https://en.wikipedia.org/wiki/Whitespace_character#Unicode">Whitespace_character</a>.</p>
+  <table cellpadding="1" id="table" style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:outset;caption-side: top">
+    <caption>Whitespace Characters</caption>
+    <colgroup>
+      <col style="width:50%"/>
+      <col style="width:50%"/>
+      <col style="width:50%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">Escape Sequence</th>
+        <th style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">Unicode Escape Sequence</th>
+        <th style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\t&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u0009&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">character tabulation (tab)</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\n&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u000A&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">line feed (new line)</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\v&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u000B&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">line tabulation (vertical tab)</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\f&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u000C&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">form feed</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\r&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u000D&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">carriage return</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot; &quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u0020&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u0085&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">next line</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u000A&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">no-break space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u1680&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">ogham space mark</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u180E&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">mongolian vowel separator</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2000&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">en quad</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2001&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">em quad</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2002&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">en space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2003&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">em space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2004&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">three-per-em space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2005&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">four-per-em space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2006&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">six-per-em space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2007&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">figure space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2008&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">punctuation space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2009&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">thin space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u200A&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">hair space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u200B&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">zero width space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u200C&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">zero width non-joiner</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u200D&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">zero width joiner</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2028&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">line separator</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2029&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">paragraph separator</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u202F&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">narrow no-break space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u205F&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">medium mathematical space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u2060&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">word joiner</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\u3000&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">ideographic space</td>
+      </tr>
+      <tr style="">
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;"> </td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">&quot;\uFEFF&quot;</td>
+        <td style="border-spacing:1px;border-top-width:1px;border-right-width:1px;border-bottom-width:1px;border-left-width:1px;border-style:inset;width:50%;">zero width non-breaking space</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Additional_Information.htm">Additional Information</a></div>
+        <div>Next: <a href="Vectors.htm">Vectors</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

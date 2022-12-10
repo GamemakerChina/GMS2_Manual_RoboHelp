@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_30";
+    gTopicId = "8.2.2.2.0_32";
   
 //]]></script>
 
@@ -81,10 +81,42 @@
 
 
   <h1><span data-field="title" data-format="default">array_filter_ext</span></h1>
-  <p><span>This mutates the input array resulting in an array with only the elements for which <span>the predicate function </span>returns <span class="inline2">true</span>.</span></p>
-  <p>The first element for which the predicate function returns <span class="inline2">true</span> is written to the index given by <span class="inline2">offset</span>, others are written to subsequent indices (with the direction given by the sign of the <span class="inline2">length</span> parameter).</p>
+  <p>This function is similar to <a href="array_filter.htm">array_filter</a>, but instead of returning a new array, it modifies the original array that was passed as an argument.</p>
+  <p><span>You supply a <a href="Array_Functions.htm#h">Predicate Function</a> which runs for all elements in the array. It should return either <span class="inline2">true</span> or <span class="inline2">false</span> based on a condition.</span></p>
+  <p>The first element for which the predicate function returns <span class="inline2">true</span> is written at the index given by <span class="inline2">offset</span>, others are written to subsequent indices (in the direction given by the sign of the <span class="inline2">length</span> parameter).</p>
+  <p>This function returns the new number of valid elements, starting at the given offset position and in the direction set by the length argument. For this function, it&#39;s the number of elements for which the predicate returned <span class="inline2">true</span>, and were written back to the array.</p>
+  <div data-conref="../../../assets/snippets/Syntax_predicate_general.hts">
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Predicate Function</span><span data-close-text="true">Predicate Function</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Function</a> that operates on the given array. The predicate function is passed the following arguments:</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(element, index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>element</td>
+          <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+          <td>The current array element&#39;s value</td>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>The predicate function should return a <span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span><span style="text-align: justify;">, which affects how the original function modifies or reads the array</span><span style="text-align: justify;">.</span></p>
+    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Function</a>.</p>
+  </div>
+
+</div>
   <div data-conref="../../../assets/snippets/function_mutable.hts">
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements, starting at the offset position and in the direction given by the sign of the length parameter, is returned instead.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements is returned instead.</p>
 
 </div>
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index_returns_bool.hts">
@@ -111,60 +143,41 @@
       <tr style="">
         <td style="">function</td>
         <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to use for each element</td>
+        <td style="">The <a href="Array_Functions.htm#h">Predicate Function</a> to run on each element</td>
       </tr>
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
-      </tr>
-    </tbody>
-  </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(element, index);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>element</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td>The current array element</td>
-      </tr>
-      <tr style="">
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The current array index</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
 
 </div>
-  <h4>Function Returns: </h4>
-  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span> (whether the condition checked in the function is <strong>true</strong> or <strong>false</strong>)</p>
 
 </div>
-  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (the number of valid elements in the array)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">function greater_than_5(element, index) {<br/>
-        return (element &gt; 5);<br/>
+  <p class="code">var _is_even = function(_element, _index) {<br/>
+        return (_element mod 2) == 0;<br/>
     }<br/>
     <br/>
-    values = [1, 2, 3, 4, 5, 6, 7, 8, 9];<br/>
-    var valid_elements = <span data-field="title" data-format="default">array_filter_ext</span>(values, greater_than_5, -2, infinity);
+    var _values = [1, 2, 3, 4, 5, 6, 7, 8, 9];<br/>
+    var _valid_elements = array_filter_ext(_values, _is_even, -2, -infinity);
   </p>
-  <p>The above code first defines a function <span class="inline2">greater_than_5</span> that takes in an element and index parameter and returns <span class="inline2">true</span> when the element is greater than 5. An array <span class="inline2">values</span> is then initialised with the digits from 1 to 9. Finally <span class="inline2"><span data-field="title" data-format="default">array_filter_ext</span></span> is called on this array with the function. It takes a starting index of -2 (the <i>one before last</i> index) and a length of <a href="../../GML_Overview/Data_Types.htm"><span class="inline2">infinity</span></a>. 8 is the value at the starting index and 9 the value after that. Both are greater than 5 so the function will return a value of 5 and store it in the temporary variable <span class="inline2">valid_elements</span>.</p>
+  <p>The above code first defines a function <span class="inline2">_is_even</span> that takes <span class="inline2">element</span> and <span class="inline2">index</span> parameters and returns <span class="inline2">true</span> when the element is an even number.</p>
+  <p>An array <span class="inline2">values</span> is then initialised with the digits from 1 to 9.</p>
+  <p>Finally <span class="inline2"><span data-field="title" data-format="default">array_filter_ext</span></span> is called on this array with the predicate function. It takes a starting index of <span class="inline2">-2</span> (the second-last index) and a length of <a href="../../GML_Overview/Data_Types.htm"><span class="inline2">-infinity</span></a>. This will start checking at 8 and go backwards to the beginning of the array.</p>
+  <p>From there the function finds 4 even numbers (<span class="inline2">8, 6, 4, 2</span>), so it returns 4 as the new valid number of elements.</p>
+  <p>Since this function mutates the original array, <span class="inline2">_values</span> becomes <span class="inline2">[1, 2, 3, 4, <strong>2, 4, 6, 8,</strong> 9]</span>, writing the even numbers into the array from the index where it started searching.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

@@ -38,7 +38,7 @@
 
     gRootRelPath = "..";
     gCommonRootRelPath = "..";
-    gTopicId = "4.0_3";
+    gTopicId = "3.0_3";
   
 //]]></script>
 
@@ -80,21 +80,21 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Updating Guide</span></h1>
+  <h1 id="h1"><span data-field="title" data-format="default">Updating Guide</span></h1>
   <p>The <span data-keyref="GameMaker Name">GameMaker</span> IDE will periodically check for updates and then download them automatically. Some of these updates will be optional and you can choose not to install them if you don&#39;t wish to or think that some of the changes may break a project that you are about to publish. However there are some updates that include important fixes or improvements that cannot be skipped and <span data-keyref="GameMaker Name">GameMaker</span> will force an update in these cases.</p>
   <p><img alt="New Version Window" class="center" src="../assets/Images/Setup_And_Version/Getting_Started_New_Version.png"/></p>
   <p><span data-keyref="GameMaker Name">GameMaker</span> is more than just an IDE and has a number of different runtime tools that it uses behind the scenes to build your games for the different target platforms available. These tools are mainly the different runners and compilers that each platform requires, and you can actually have several of each at any one time. What this means is that you can &quot;pick and choose&quot; which compiler version and which runner version to use should you have found any issues with the current one or are aiming at a very specific target version or platform.</p>
   <p>These tools will automatically update when there is a new version available, but you can then use the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a><b> </b>to select which ones you actually want to use.</p>
   <h2 id="h">Runtime Modules Dialog</h2>
   <p>Every runtime in <span data-keyref="GameMaker Name">GameMaker</span> consists of a set of modules. As you might not need all of them on your system you can select which ones to download and install, for those cases where you e.g. are working on a machine with a limited amount of disk space or have a slow internet connection.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This dialog will be shown a first time when you install a new version of <span data-keyref="GameMaker Name">GameMaker</span>. It will no longer be shown after that, unless you set the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm#h">Remember last selection of modules</a> option in the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a> to &quot;No&quot; or to &quot;Show Message&quot;.</p>
+  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This dialog will always be shown to you the first time you install any version of <span data-keyref="GameMaker Name">GameMaker</span> starting with 2022.11. The default setting is to remember your choices and not show the dialog again in future, but you can set the <b data-stringify-type="bold"></b><a href="IDE_Preferences/Runtime_Feed_Preferences.htm#h">Remember last selection of modules</a> option in the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm">Runtime Feeds Preferences</a> to &quot;No&quot; or to &quot;Show Message&quot; to make the dialog show again each time.</p>
   <p>Before installing a new runtime you will then be shown this dialog: </p>
-  <p><img class="center" height="534" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Default_Windows.png" width="340"/></p>
+  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Default_Windows.png"/></p>
   <p>Uncheck the &quot;Remember Selection&quot; checkbox in this dialog to not show it again. The selection of modules you choose here will then also be used when installing new runtimes and the <a href="IDE_Preferences/Runtime_Feed_Preferences.htm#h">Remember last selection of modules</a> option will be set to &quot;Yes&quot;.</p>
   <p>The above is the default selection of modules on Windows. The <i>base</i> module and the module <i>for the OS that you&#39;re currently developing on</i> are <i>always</i> included. They are the minimum <i>required</i> modules for <span data-keyref="GameMaker Name">GameMaker</span> to be able to build your game. All other modules are <i>optional</i>.</p>
   <p>You can quickly change this by clicking the <i>Required only</i> button: </p>
-  <p><img class="center" height="534" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Required_Only_Windows.png" width="340"/>If you want to download and install the full list of modules that is available then you can click &quot;Select All&quot; instead: </p>
-  <p><img class="center" height="534" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_All_Windows.png" width="340"/></p>
+  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_Required_Only_Windows.png"/>If you want to download and install the full list of modules that is available then you can click &quot;Select All&quot; instead: </p>
+  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Modules_All_Windows.png"/></p>
   <p>Note that, depending on the selected modules, downloading and installing a runtime can take a few minutes, but you can see a progress bar for the download at the top right of the IDE:</p>
   <p><img alt="Installing a Runtime" class="center" src="../assets/Images/Setup_And_Version/Getting_Started_Installing_Runtimes.png"/></p>
   <p> </p>

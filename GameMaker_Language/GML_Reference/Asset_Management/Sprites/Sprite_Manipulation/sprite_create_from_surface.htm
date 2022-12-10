@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "9.2.2.3.3.2.0_7";
+    gTopicId = "8.2.2.3.3.2.0_7";
   
 //]]></script>
 
@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_create_from_surface</h1>
   <p>With this function you can create a sprite from a previously initialised surface (the surface index ID value is returned when you create the surface using <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>). The x and y coordinates that you then input in the function should be relative to the (0,0) position of the <i>surface</i> (the top left corner) and not the game window (nor the view if you have one active). The width and height arguments are in pixels and define the width and height of the part of the surface to use.</p>
-  <p>Setting the &quot;removeback&quot; argument to <span class="inline">true</span> will remove a colour from the sprite, by checking the <i>bottom left</i> pixel of the sprite for the colour there and then using that as the colour to be removed.</p>
+  <p>Setting the &quot;removeback&quot; argument to <span class="inline">true</span> will remove a colour from the sprite, by checking the <i>bottom left</i> pixel of the sprite for the colour there and then using that as the colour to be removed. When &quot;removeback&quot; is enabled, the alpha channel of the surface is ignored, meaning all pixels other than the &quot;background colour&quot; ones become fully opaque.</p>
   <p>If you choose the &quot;removeback&quot; option, you may also want <span data-keyref="GameMaker Name">GameMaker</span> to smooth the edges of the sprite by setting the &quot;smooth&quot; argument to <span class="inline">true</span>. All this does is create a semi-transparent border around the edges of the sprite after it has had its background removed.</p>
   <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
   <p>By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <a href="sprite_collision_mask.htm"><span class="inline">sprite_collision_mask()</span></a>.</p>

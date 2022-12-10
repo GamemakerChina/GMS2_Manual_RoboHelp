@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "9.2.2.3.5.4";
+    gTopicId = "8.2.2.3.5.4";
   
 //]]></script>
 
@@ -80,8 +80,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Audio Groups</h1>
-  <p>Your audio assets can be grouped together from the IDE so they can be loaded and unloaded into memory as required by your game. You can create these <strong>audio groups</strong> from the <a href="../../../../../Settings/Audio_Groups.htm">Audio Groups</a> window - which can be opened from the <a href="../../../../../IDE_Navigation/Menus/The_Tools_Menu.htm"><b>Tools</b></a> menu at the top of the IDE - and you can assign your audio assets to a specific group from the <a href="../../../../../The_Asset_Editors/Sounds.htm">Sound Properties Window</a>.</p>
+  <h1><span data-field="title" data-format="default">Audio Groups</span></h1>
+  <p>Your audio assets can be grouped together from the IDE so they can be loaded and unloaded into memory as required by your game.</p>
+  <p>You can create these <strong>audio groups</strong> from the <a href="../../../../../Settings/Audio_Groups.htm">Audio Groups</a> window - which can be opened from the <a href="../../../../../IDE_Navigation/Menus/The_Tools_Menu.htm"><b>Tools</b></a> menu at the top of the IDE - and you can assign your audio assets to a specific group from the <a href="../../../../../The_Asset_Editors/Sounds.htm">Sound Properties Window</a>.</p>
+  <p>Each audio group also has its own gain. The gain of all sounds in an audio group is multiplied by that audio group&#39;s gain. The default value is 1 but it can be changed using <span class="inline2"><a href="audio_group_set_gain.htm">audio_group_set_gain</a></span> and retrieved using <span class="inline2"><a href="audio_group_get_gain.htm">audio_group_get_gain</a></span> respectively.</p>
+  <h2>Function Reference</h2>
   <p>The following functions exist to deal with using audio groups:</p>
   <ul class="colour">
     <li><a href="audio_group_load.htm">audio_group_load</a></li>
@@ -91,6 +94,7 @@
     <li><a href="audio_group_name.htm">audio_group_name</a></li>
     <li><a href="audio_group_stop_all.htm">audio_group_stop_all</a></li>
     <li><a href="audio_group_set_gain.htm">audio_group_set_gain</a></li>
+    <li><a href="audio_group_get_gain.htm">audio_group_get_gain</a></li>
   </ul>
   <p> </p>
   <p> </p>
@@ -98,8 +102,8 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a href="../Audio_Buffers/Audio_Buffers.htm">Audio Buffers</a></div>
+        <div style="float:left">Back: <a href="../Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="../Audio_Buffers/Audio_Buffers.htm">Audio Buffers</a></div>
       </div>
     </div>
     <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>

@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "9.2.2.3.12.1.0_9";
+    gTopicId = "8.2.2.3.12.1.0_9";
   
 //]]></script>
 
@@ -80,7 +80,7 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>event_type</h1>
+  <h1><span data-field="title" data-format="default">event_type</span></h1>
   <p>This <b>read-only</b> variable returns the type of event currently being executed, which can be one of the following constants:</p>
   <ul>
     <li><b>ev_create</b></li>
@@ -97,16 +97,16 @@
     <li><b>ev_draw</b></li>
   </ul>
   <p><br/>
-    For a full list of the constants that are related to the different events see <a href="event_perform.htm"><span class="inline">event_perform()</span></a>, and if you should need the event number (ie: the sub event), you should be checking the <a href="event_number.htm"><span class="inline">event_number</span></a>.</p>
+    For a full list of the constants that are related to the different events see <span class="inline2"><a href="event_perform.htm">event_perform</a></span>, and if you should need the event number (i.e. the sub event), you should be checking the <span class="inline2"><a href="event_number.htm">event_number</a></span>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">event_type;</p>
+  <p class="code"><span data-field="title" data-format="default">event_type</span>;</p>
   <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Constant_Event_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Objects/Object_Events/event_perform.htm">Event Type Constant</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">show_debug_message(&quot;Current Event = &quot; + string(event_type));</p>
+  <p class="code">show_debug_message(&quot;Current Event = &quot; + string(<span data-field="title" data-format="default">event_type</span>));</p>
   <p>The above code will show a debug message with the event type currently being performed.</p>
   <p> </p>
   <p> </p>
@@ -114,7 +114,7 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
+        <div style="float:left">Back: <a href="Generating_Object_Events.htm">Generating Object Events</a></div>
         <div style="float:right">Next: <a href="event_inherited.htm">event_inherited</a></div>
       </div>
     </div>

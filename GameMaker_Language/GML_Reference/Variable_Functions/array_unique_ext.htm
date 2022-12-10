@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_32";
+    gTopicId = "8.2.2.2.0_34";
   
 //]]></script>
 
@@ -81,10 +81,11 @@
 
 
   <h1><span data-field="title" data-format="default">array_unique_ext</span></h1>
-  <p><span>This function mutates (a range of) the input array resulting in an array without duplicates.</span></p>
-  <p> </p>
+  <p><span>This function is similar to <a href="array_unique.htm">array_unique</a>, but instead of returning a modified array, it modifies the original array that you passed into the function.</span></p>
+  <p>The function will modify the array, starting at the <span class="inline2">offset</span>, writing only the unique values it finds in the array, and ignoring duplicates.</p>
+  <p>It returns the number of elements written back to the array.</p>
   <div data-conref="../../../assets/snippets/function_mutable.hts">
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements, starting at the offset position and in the direction given by the sign of the length parameter, is returned instead.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements is returned instead.</p>
 
 </div>
   <h4>Syntax:</h4>
@@ -109,23 +110,23 @@
       <tr style="">
         <td style="">offset</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
         <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (the number of valid elements in the array)</p>
   <p> </p>
   <h4>Example:</h4>
   <p class="code">values = [1, 1, 2, 3, 4, 5, 5, 6, 7, 8, 8];<br/>
     valid_values = array_unique_ext(array);</p>
-  <p>The above code first creates an array <span class="inline2">values</span> with a couple of values in it that occur twice. It then calls <span class="inline2"><span data-field="title" data-format="default">array_unique_ext</span></span> on the array and assigns the number of valid array elements to a new variable <span class="inline2">valid_values</span>.</p>
+  <p>The above code first creates an array <span class="inline2">values</span> with a set of values. It then calls <span class="inline2"><span data-field="title" data-format="default">array_unique_ext</span></span> on the array and assigns the number of valid array elements to a new variable <span class="inline2">valid_values</span>.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">

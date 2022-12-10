@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.19.0_23";
+    gTopicId = "8.2.2.18.0_23";
   
 //]]></script>
 
@@ -87,9 +87,9 @@
     <li>&quot;<b>showdialog</b>&quot; - The value for this option is a boolean <span class="inline">true</span> or <span class="inline">false</span>. If set to <span class="inline">true</span>, when you save <i>or</i> load <span data-keyref="GameMaker Name">GameMaker</span> will show the System UI, otherwise it will do a quicksave/quickload with no UI shown. You normally only need this if you&#39;re supporting multiple save slots to allow the user to pick a slot, but if you just support one slot per user, set this to <span class="inline">false</span>.</li>
     <li>&quot;<b>savepadindex</b>&quot; - For this option you would specify the <i>pad index</i> of the player who is saving <i>or</i> loading and the system will write data to and read data from this player&#39;s save folder.</li>
     <li>&quot;<b>saveslotsize</b>&quot; - This option requires that you specify the actual size in bytes you want to save (so you can do a <a href="buffer_seek.htm"><span class="inline">buffer_seek()</span></a> and <a href="buffer_tell.htm"><span class="inline">buffer_tell()</span></a> to get that, for example). Note that it is not obligatory to supply this value as all saves are pre-assigned a minimum space, which usually varies with the target platform.</li>
-    <li>&quot;<strong>ps_create_backup</strong>&quot; - <em>(PlayStation only)</em> - Setting this to <span class="inline">true</span> makes sure that the save data is backed up when the save directory is unmounted (i.e. when the <span class="inline"><a href="buffer_async_group_end.htm">buffer_async_group_end()</a></span> function is called). See the console documentation for more information.</li>
+    <li>These are some options for PlayStation only. Please refer to <a href="https://help.yoyogames.com/hc/en-us/articles/216756278">this Helpdesk article</a> for information (you&#39;ll need to be logged in with your developer access account).</li>
   </ul>
-  <p class="note"><b>IMPORTANT!</b> This function is currently only valid for the PSVita, PS4 and XBox One target modules. On all the other targets it will do nothing.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function is only valid for PlayStation, Xbox and Nintendo Switch targets. On all the other targets it will do nothing.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_async_group_option(option, value);</p>

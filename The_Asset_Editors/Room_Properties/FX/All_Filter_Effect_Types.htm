@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "7.4.1.0_1";
+    gTopicId = "6.4.1.0_1";
   
 //]]></script>
 
@@ -86,13 +86,16 @@
   <h1>FX Types &amp; Parameters</h1>
   <p>This page lists all the Filter/Effect types provided in <span data-keyref="GameMaker Name">GameMaker</span>, along with the following information about each FX:</p>
   <ul class="colour">
-    <li>Internal name (e.g. <span class="inline2">&quot;_filter_tintfilter&quot;</span>) which can be passed into <span class="inline"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">fx_create()</a></span> to create an FX at runtime</li>
-    <li>Description</li>
-    <li>Example image</li>
-    <li>IDE Parameters, which can be edited through the <a href="../Layer_Properties.htm">Layer Properties</a></li>
-    <li>Runtime Parameters, which can be used to modify FXs at runtime, using the <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter and Effect Functions</a>
+    <li><strong>Internal name</strong> (a string, e.g. <span class="inline2">&quot;_filter_tintfilter&quot;</span>) which can be passed into <span class="inline"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">fx_create()</a></span> to create an FX at runtime</li>
+    <li><strong>Description</strong></li>
+    <li><strong>Example image/video</strong></li>
+    <li><strong>IDE Parameters</strong>, which can be edited through the <a href="../Layer_Properties.htm">Layer Properties</a></li>
+    <li><strong>Runtime Parameters</strong>, which can be used to modify FXs through code, using the <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter and Effect Functions</a>
       <ul>
-        <li>The Runtime parameters also mention their types, so you know what type of data to apply to which parameter.</li>
+        <li>Each parameter has a type, so you know what type of data to supply to which parameter. Real numbers are used for single values, and arrays are used for vector (<span class="inline2">[x, y, <em>z<strong>*</strong></em>]</span>) and colour (<span class="inline2">[r, g, b, <em>a<strong>*</strong></em>]</span>) parameters. Samplers are used to pass <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Information/sprite_get_texture.htm">textures</a>.<br/>
+          <br/>
+          <em><strong>*</strong>Not always present</em>
+        </li>
       </ul>
     </li>
   </ul>
@@ -117,6 +120,27 @@
           <th style="width: 473px;">Example</th>
           <th style="width: 197px;">IDE Parameters</th>
           <th style="width: 317px;">Runtime Parameters</th>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Blocks Background</strong><br/>
+            <br/>
+            &quot;_filter_blocks&quot;
+          </td>
+          <td style="width: 252px;">Creates a background with tiled 3D blocks.</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/blocks_background.png"/></td>
+          <td style="width: 197px;">View Position<br/>
+            Perspective<br/>
+            Shading<br/>
+            Face Lighting<br/>
+            Block Tiles<br/>
+            Blocks Texture</td>
+          <td style="width: 317px;"><span class="inline">g_BlocksPosition</span> (Array)<br/>
+            <span class="inline">g_BlocksPerspective</span> (Real)<br/>
+            <span class="inline">g_BlocksShading</span> (Real)<br/>
+            <span class="inline">g_BlocksFaceLight</span> (Array)<br/>
+            <span class="inline">g_BlocksTiles</span> (Array)<br/>
+            <span class="inline">g_BlocksTexture</span> (Sampler)
+          </td>
         </tr>
         <tr style="">
           <td style="width: 118px;"><strong>Boxes</strong><br/>
@@ -332,6 +356,19 @@
           </td>
         </tr>
         <tr style="">
+          <td style="width: 118px;"><strong>Hue</strong><br/>
+            <br/>
+            &quot;_filter_hue&quot;
+          </td>
+          <td style="width: 252px;">Allows you to shift the hue and change the saturation.</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/hue.png"/></td>
+          <td style="width: 197px;">Hue Shift<br/>
+            Saturation</td>
+          <td style="width: 317px;"><span class="inline">g_HueShift</span> (Real)<br/>
+            <span class="inline">g_HueSaturation</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
           <td style="width: 118px;"><strong>Large Blur</strong><br/>
             <br/>
             &quot;_filter_large_blur&quot;
@@ -374,6 +411,39 @@
           </td>
         </tr>
         <tr style="">
+          <td style="width: 118px;"><strong>Old Film</strong><br/>
+            <br/>
+            &quot;_filter_old_film&quot;
+          </td>
+          <td style="width: 252px;">Creates an old film filter.</td>
+          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/old_film.mp4" width="480" height="320" controls=""></video></td>
+          <td style="width: 197px;">Flicker Intensity<br/>
+            Flicker Speed<br/>
+            Jitter Intensity<br/>
+            Saturation<br/>
+            Speck Intensity<br/>
+            Bar Scale<br/>
+            Bar Speed<br/>
+            Bar Frequency<br/>
+            Ring Scale<br/>
+            Ring Sharpness<br/>
+            Ring Intensity<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_OldFilmFlickerIntensity</span> (Real)<br/>
+            <span class="inline">g_OldFilmFlickerSpeed</span> (Real)<br/>
+            <span class="inline">g_OldFilmJitterIntensity</span> (Real)<br/>
+            <span class="inline">g_OldFilmSaturation</span> (Real)<br/>
+            <span class="inline">g_OldFilmSpeckIntensity</span> (Real)<br/>
+            <span class="inline">g_OldFilmBarScale</span> (Real)<br/>
+            <span class="inline">g_OldFilmBarSpeed</span> (Real)<br/>
+            <span class="inline">g_OldFilmBarFrequency</span> (Real)<br/>
+            <span class="inline">g_OldFilmRingScale</span> (Real)<br/>
+            <span class="inline">g_OldFilmRingSharpness</span> (Real)<br/>
+            <span class="inline">g_OldFilmRingIntensity</span> (Real)<br/>
+            <span class="inline">g_OldFilmTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
           <td style="width: 118px;"><strong>Outline</strong><br/>
             <br/>
             &quot;_filter_outline&quot;
@@ -386,6 +456,50 @@
           <td style="width: 317px;"><span class="inline">g_OutlineColour</span> (Array)<br/>
             <span class="inline">g_OutlineRadius</span> (Real)<br/>
             <span class="inline">g_OutlinePixelScale</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Panorama Background</strong><br/>
+            <br/>
+            &quot;_filter_panorama&quot;
+          </td>
+          <td style="width: 252px;">Allows you to draw a panorama image with perspective parameters.</td>
+          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/panorama.mp4" width="480" height="320" controls=""></video></td>
+          <td style="width: 197px;">View Direction<br/>
+            Perspective<br/>
+            Cylinder<br/>
+            Panorama Texture</td>
+          <td style="width: 317px;"><span class="inline">g_PanoramaDirection</span> (Array)<br/>
+            <span class="inline">g_PanoramaPerspective</span> (Real)<br/>
+            <span class="inline">g_PanoramaCylinder</span> (Real)<br/>
+            <span class="inline">g_OldFilmTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Parallax Background</strong><br/>
+            <br/>
+            &quot;_filter_parallax&quot;
+          </td>
+          <td style="width: 252px;">Allows you to draw an image with a flat 3D perspective, with fog and texture depth parameters.</td>
+          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/parallax.mp4" width="480" height="320" controls=""></video></td>
+          <td style="width: 197px;">View Direction<br/>
+            Perspective<br/>
+            View Position<br/>
+            Texture Scale<br/>
+            Texture Depth<br/>
+            Fog Colour<br/>
+            Fog Range<br/>
+            Fog Depth<br/>
+            Parallax Texture</td>
+          <td style="width: 317px;"><span class="inline">g_ParallaxDirection</span> (Array)<br/>
+            <span class="inline">g_ParallaxPerspective</span> (Real)<br/>
+            <span class="inline">g_ParallaxPosition</span> (Array)<br/>
+            <span class="inline">g_ParallaxScale</span> (Real)<br/>
+            <span class="inline">g_ParallaxDepth</span> (Real)<br/>
+            <span class="inline">g_ParallaxFogColour</span> (Array)<br/>
+            <span class="inline">g_ParallaxFogRange</span> (Array)<br/>
+            <span class="inline">g_ParallaxFogDepth</span> (Real)<br/>
+            <span class="inline">g_ParallaxTexture</span> (Sampler)
           </td>
         </tr>
         <tr style="">
@@ -423,6 +537,25 @@
             <span class="inline">g_RGBNoiseAnimation</span> (Real)<br/>
             <span class="inline">g_RGBNoiseColour</span> (Array)<br/>
             <span class="inline">g_RGBNoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Ripples</strong><br/>
+            <br/>
+            &quot;_filter_ripples&quot;
+          </td>
+          <td style="width: 252px;">Creates an animated ripple effect.</td>
+          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/ripples.mp4" width="480" height="320" controls=""></video></td>
+          <td style="width: 197px;">Position<br/>
+            Speed<br/>
+            Widt<br/>
+            Amplitude<br/>
+            Radius</td>
+          <td style="width: 317px;"><span class="inline">g_RipplesPosition</span> (Array)<br/>
+            <span class="inline">g_RipplesSpeed</span> (Real)<br/>
+            <span class="inline">g_RipplesWidth</span> (Real)<br/>
+            <span class="inline">g_RipplesAmplitude</span> (Real)<br/>
+            <span class="inline">g_RipplesRadius</span> (Real)
           </td>
         </tr>
         <tr style="">

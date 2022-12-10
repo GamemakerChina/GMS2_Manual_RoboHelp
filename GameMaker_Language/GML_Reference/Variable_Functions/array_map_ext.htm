@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "9.2.2.2.0_31";
+    gTopicId = "8.2.2.2.0_33";
   
 //]]></script>
 
@@ -81,17 +81,43 @@
 
 
   <h1><span data-field="title" data-format="default">array_map_ext</span></h1>
-  <p>This mutates the input array resulting in (part of) the array&#39;s elements being modified according to the predicate function.</p>
-  <p>The first element for which the predicate function returns true is written to the index given by <span class="inline2">offset</span>, others are written to subsequent indices (with the direction given by the sign of the <span class="inline2">length</span> parameter).</p>
+  <p>This function is similar to <a href="array_map.htm">array_map</a>, but instead of returning a new array, it modifies the original array that was passed as an argument.</p>
+  <p><span>You supply a callback function which runs for all elements in the array. It can return any value which is applied back to the original array, starting</span> at the index given by <span class="inline2">offset</span>, in the direction given by the sign of the <span class="inline2">length</span> parameter.</p>
+  <p>This function returns the new number of valid elements, starting at the given offset position and in the direction set by the length argument. For this function, it&#39;s the number of elements modified in the given range.</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="../../../assets/snippets/Syntax_predicate_general.hts#"><span data-open-text="true" data-skip-index="true">Callback Function</span><span data-close-text="true">Callback Function</span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p>The callback function you pass into this function should take the following arguments:</p>
+    <h4>Syntax:</h4>
+    <p class="code">function(element, index);</p>
+    <table class=" cke_show_border" style="">
+      <tbody>
+        <tr style="">
+          <th>Argument</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr style="">
+          <td>element</td>
+          <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+          <td>The current array element</td>
+        </tr>
+        <tr style="">
+          <td>index</td>
+          <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+          <td>The current array index</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>This callback function should return a value of <span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span> type that will be applied back to the array element.</p>
+  </div>
   <div data-conref="../../../assets/snippets/function_mutable.hts">
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements, starting at the offset position and in the direction given by the sign of the length parameter, is returned instead.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This function <i>mutates</i> the input array, i.e. changes it directly. Existing array elements in the range given by the offset and length parameter might be overwritten. For performance reasons the array is <strong>not</strong> resized and the new number of <i>valid</i> elements is returned instead.</p>
 
 </div>
-  <div data-conref="../../../assets/snippets/Syntax_signature_element_returns_any.hts">
-  <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
-  <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">array_map_ext</span>(array, function, [offset], [length]);</p>
-  <table style="">
+  <p> </p>
+  <div data-conref="../../../assets/snippets/Syntax_Callback_function.hts"><h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default" title="Field [title]" data-tcx-title="Field [title]">array_map_ext</span>(array, function, [offset], [length]);</p>
+  <table class=" cke_show_border" style="">
     <colgroup>
       <col/>
       <col/>
@@ -105,60 +131,37 @@
       </tr>
       <tr style="">
         <td style="">array</td>
-        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td style=""><span data-keyref="Type_Array" title="Variable [Type_Array]" data-tcx-title="Variable [Type_Array]"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
         <td style="">The array to use</td>
       </tr>
       <tr style="">
         <td style="">function</td>
-        <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to use for each element</td>
+        <td style=""><span data-keyref="Type_Function" title="Variable [Type_Function]" data-tcx-title="Variable [Type_Function]"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
+        <td style="">The callback function to run on each element</td>
       </tr>
       <tr style="">
         <td style="">offset</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+        <td style=""><span data-keyref="Type_Real" title="Variable [Type_Real]" data-tcx-title="Variable [Type_Real]"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts" title="Snippet [assets/snippets/Tag_optional.hts]" data-tcx-title="Snippet [assets/snippets/Tag_optional.hts]"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1" title="Cross-reference [I:/yy_Manual_Repo/Manual/contents/GameMaker_Language/GML_Reference/Variable_Functions/Array_Functions.htm#h1]" data-tcx-title="Cross-reference [I:/yy_Manual_Repo/Manual/contents/GameMaker_Language/GML_Reference/Variable_Functions/Array_Functions.htm#h1]">Offset And Length</a></td>
       </tr>
       <tr style="">
         <td style="">length</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
+        <td style=""><span data-keyref="Type_Real" title="Variable [Type_Real]" data-tcx-title="Variable [Type_Real]"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts" title="Snippet [assets/snippets/Tag_optional.hts]" data-tcx-title="Snippet [assets/snippets/Tag_optional.hts]"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1" title="Cross-reference [I:/yy_Manual_Repo/Manual/contents/GameMaker_Language/GML_Reference/Variable_Functions/Array_Functions.htm#h1]" data-tcx-title="Cross-reference [I:/yy_Manual_Repo/Manual/contents/GameMaker_Language/GML_Reference/Variable_Functions/Array_Functions.htm#h1]">Offset And Length</a></td>
       </tr>
     </tbody>
-  </table>
-  <h4>Function Syntax:</h4>
-  <p class="code">function(element, index);</p>
-  <table style="">
-    <tbody>
-      <tr style="">
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-      <tr style="">
-        <td>element</td>
-        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
-        <td>The current array element</td>
-      </tr>
-      <tr style="">
-        <td>index</td>
-        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>The current array index</td>
-      </tr>
-    </tbody>
-  </table>
-
-</div>
-  <h4>Function Returns: </h4>
-  <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></p>
-
-</div>
+  </table></div>
+  <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (the number of valid elements in the array)</p>
   <p> </p>
+  <div class="droptext" data-targetname="drop-down"> </div>
   <h4>Example:</h4>
-  <p class="code">values = [7, 4, 11, 9, 12, 21, 17, 1, 2, 3];<br/>
-    elements = array_map_ext(values, sqr, 2, 5);</p>
-  <p>The above code first creates an array <span class="inline2">values</span> with a couple of numbers. It then applies the built-in <span class="inline2"><a href="../Maths_And_Numbers/Number_Functions/sqr.htm">sqr</a></span> function to a range of the array using <span class="inline2"><span data-field="title" data-format="default">array_map_ext</span></span>. After the function has executed the array <span class="inline2">values</span> will hold in indices 2 to 6 the square of the values that were originally there.</p>
+  <p class="code">var _values = [7, 4, 11, 9, 12, 21, 17, 1, 2, 3];<br/>
+    elements = array_map_ext(_values, sqr, 2, 5);</p>
+  <p>The above code first creates an array <span class="inline2">values</span> with a set of numbers. It then applies the built-in <span class="inline2"><a href="../Maths_And_Numbers/Number_Functions/sqr.htm">sqr</a></span> function to a range of the array using <span class="inline2"><span data-field="title" data-format="default">array_map_ext</span></span>.</p>
+  <p>After the function has executed the array <span class="inline2">values</span> will hold in indices 2 to 6 the square of the values that were originally there.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
