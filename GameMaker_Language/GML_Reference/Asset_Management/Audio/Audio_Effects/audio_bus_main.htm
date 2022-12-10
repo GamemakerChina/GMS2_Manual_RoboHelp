@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">audio_bus_main</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css" data-condition="Export:Beta"/>
+  <script src="../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta name="rh-authors" content="INSERT_AUTHOR" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="INSERT_DESCRIPTION" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="audio_bus_main" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="audio_bus_main" data-condition="Export:Beta"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_bus_main">
+        <span>audio_bus_main</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Export:Beta"><span data-field="title" data-format="default">audio_bus_main</span></h1>
+  <p data-condition="Export:Beta">This built-in struct represents the main audio bus used by <span data-keyref="GameMaker Name">GameMaker</span>.</p>
+  <p data-condition="Export:Beta">The main bus represents the main mix in <span data-keyref="GameMaker Name">GameMaker</span>&#39;s audio, which is the combination of all currently active sound sources after they have been processed (to apply effects, positioning, doppler effect etc.) and all emitters. All of GM&#39;s audio ends up on this bus.</p>
+  <p data-condition="Export:Beta">Any audio effect that you apply to the main bus will be heard on all sounds, as all buses are routed to this one.</p>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Syntax:</h4>
+  <p class="code" data-condition="Export:Beta"><span data-field="title" data-format="default">audio_bus_main</span></p>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Returns:</h4>
+  <p class="code" data-condition="Export:Beta"><a href="AudioBus.htm">AudioBus Struct</a></p>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Example:</h4>
+  <p class="code" data-condition="Export:Beta">var _ef_reverb = audio_effect_create(AudioEffectType.Reverb1);<br/>
+    audio_bus_main.effects[0] = _ef_reverb;</p>
+  <p data-condition="Export:Beta">The above code first creates a new audio effect and stores it in a temporary variable <span class="inline2">_ef_reverb</span>. It then assigns this new effect as the first effect on the main audio bus&#39;s <span class="inline2">effects</span> array.</p>
+  <p data-condition="Export:Beta"> </p>
+  <p data-condition="Export:Beta"> </p>
+  <div class="footer" data-condition="Export:Beta">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
+        <div>Next: <a href="AudioBus.htm">AudioBus Struct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_bus_main
+-->
+  <!-- TAGS
+audio_bus_main
+-->
+
+</body></html>

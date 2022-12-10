@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "9.2.2.3.5.3.0_6";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css" data-condition="Export:Beta"/><script src="../../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">AudioEffectType Enum</title>
+  <meta name="topic-status" content="Draft" data-condition="Export:Beta"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css" data-condition="Export:Beta"/>
+  <meta name="rh-authors" content="Bart Teunis" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="Page documenting the AudioEffectType enum" data-condition="Export:Beta"/>
+  <meta http-equiv="Content-Language" content="en-UK" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="AudioEffectType" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="AudioEffectType" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+  <meta name="template" content="../../../../../assets/masterpages/Manual_Page.htt" data-condition="Export:Beta"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AudioEffectType Enum">
+        <span>AudioEffectType Enum</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Export:Beta">
+  </div>
+  <div data-condition="Export:Beta">
+  <h1><span data-field="title" data-format="default">AudioEffectType Enum</span></h1>
+  <p>This is one of the built-in <a href="../../../../GML_Overview/Variables/Constants.htm#enumhead">Enums</a> that <span data-keyref="GameMaker Name">GameMaker</span> provides. Pass a value of this enum to <span class="inline2"><a href="audio_effect_create.htm">audio_effect_create</a></span> to determine the type of audio effect that you want to create.</p>
+  <p>Below is a list of audio effects that are currently available to choose from.</p>
+  <h2 id="h2">AudioEffectType.Bitcrusher</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Bitcrusher">bitcrusher</a> effect to create <strong>distortion</strong>. It does this in two ways: using sample rate reduction and resolution reduction.</p>
+  <p>Sample rate reduction reduces the quality of the audio by <a class="tooltip" title="Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.">downsampling</a> it. This leads to distortion.</p>
+  <p>Resolution reduction reduces the quality of the audio by decreasing the number of bits to represent a sample. As there are less bits to store the same value, some information is lost. This also leads to distortion.</p>
+  <p>See <a href="AudioEffect.htm#h">Distortion (AudioEffectType.Bitcrusher)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h1">AudioEffectType.Delay</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Delay_(audio_effect)">delay</a> effect, which delays the input signal by a given amount of time and mixes this delayed version with the original signal.</p>
+  <p>See <a href="AudioEffect.htm#h1">Delay (AudioEffectType.Delay)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h5">AudioEffectType.Gain</h2>
+  <p>This is a gain effect, which amplifies the input signal by the given gain factor.</p>
+  <p>See <a href="AudioEffect.htm#h2">Gain (AudioEffectType.Gain)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h4">AudioEffectType.HPF2</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/High-pass_filter">high-pass filter</a> (shortened to <i>HPF</i>). A filter is used for filtering out certain frequencies.</p>
+  <p>A high-pass filter lets higher frequencies pass and mutes lower frequencies. The frequency at which this happens is called the <i>cutoff</i> frequency. All frequencies below this frequency are filtered.</p>
+  <p>A whistle at a high pitch is an example of a high frequency.</p>
+  <p>See <a href="AudioEffect.htm#h3">HPF (AudioEffectType.HPF2)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h3">AudioEffectType.LPF2</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Low-pass_filter">low-pass</a> filter (shortened to <i>LPF</i>). A filter is used for filtering out certain frequencies.</p>
+  <p>A low-pass filter lets lower frequencies pass and mutes higher frequencies. The frequency at which this happens is called the <i>cutoff</i> frequency. All frequencies above this frequency are filtered.</p>
+  <p>Bass and drum kicks are typically low frequencies in audio.</p>
+  <p>See <a href="AudioEffect.htm#h4">LPF (AudioEffectType.LPF2)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h">AudioEffectType.Reverb1</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Reverb_effect">reverb</a> effect. It combines the original signal with a reverberated version of it. High frequencies can be <i>dampened</i> (reduced).</p>
+  <p>A reverb effect is typically used to change the environment in which the audio is heard. You can configure reverb to make the environment appear anywhere between a small room and a grand hall or a vast open space.</p>
+  <p>See <a href="AudioEffect.htm#h5">Reverb (AudioEffectType.Reverb1)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
+        <div>Next: <a href="audio_effect_create.htm">audio_effect_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

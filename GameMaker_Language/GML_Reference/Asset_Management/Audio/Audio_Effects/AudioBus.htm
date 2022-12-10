@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "9.2.2.3.5.3.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">AudioBus Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css" data-condition="Export:Beta"/>
+  <script src="../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta name="rh-authors" content="Bart Teunis" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="Reference page for the AudioBus struct" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="AudioBus" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="AudioBus" data-condition="Export:Beta"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AudioBus Struct">
+        <span>AudioBus Struct</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Export:Beta"><span data-field="title" data-format="default">AudioBus Struct</span></h1>
+  <p data-condition="Export:Beta">The <span data-field="title" data-format="default">AudioBus Struct</span> struct stores information about an audio bus in <span data-keyref="GameMaker Name">GameMaker</span> and is used to access it.</p>
+  <p data-condition="Export:Beta">An audio bus is what <span data-keyref="GameMaker Name">GameMaker</span> uses to process the audio that it plays.</p>
+  <p data-condition="Export:Beta">The main audio bus always exists and can be accessed through the built-in struct <span class="inline2"><a href="audio_bus_main.htm">audio_bus_main</a></span>. A new bus can be created from <span class="inline2"><a href="audio_bus_create.htm">audio_bus_create</a></span>.</p>
+  <div data-conref="../../../../../assets/snippets/Note_GM_Managed_Structs.hts" data-condition="Export:Beta">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This is a built-in struct, and as such <span data-keyref="GameMaker Name">GameMaker</span> has more control over its contents. This means access to its members is limited and some values may change automatically if invalid values were assigned. You may also have to create and destroy this struct through built-in functions provided by <span data-keyref="GameMaker Name">GameMaker</span> instead of the <span class="inline2"><a href="../../../../GML_Overview/Language_Features/new.htm">new</a></span> and <span class="inline2"><a href="../../../../GML_Overview/Language_Features/delete.htm">delete</a></span> operators.</p>
+
+</div>
+  <h2 data-condition="Export:Beta">Struct Members</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="">Member</th>
+        <th style="">Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr style="">
+        <td style="">bypass</td>
+        <td style=""><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="">Whether the bus should be bypassed.<br/>
+          This passes the audio input through the bus to the output, bypassing all effects and gain scaling.</td>
+      </tr>
+      <tr style="">
+        <td style="">gain</td>
+        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style=""><span>The gain value applied to the output of the bus (0-1).</span></td>
+      </tr>
+      <tr style="">
+        <td style=""><span>effects</span></td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <a href="AudioEffect.htm">AudioEffect Struct</a> structs</td>
+        <td style="">This allows access to the audio effects on the bus.<br/>
+          You can set, get and rearrange effects by manipulating this array.<br/>
+          The array size is fixed to 8, allowing a maximum of 8 effects. Attempting to access an out-of-range index throws an error.<br/>
+          Effect slots can be cleared by assigning <span data-keyref="Type_Undefined"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">undefined</a></span> to them.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p data-condition="Export:Beta"> </p>
+  <p data-condition="Export:Beta"> </p>
+  <div class="footer" data-condition="Export:Beta">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
+        <div>Next: <a href="AudioEffect.htm">AudioEffect Struct</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+AudioBus
+-->
+  <!-- TAGS
+AudioBus
+-->
+
+</body></html>

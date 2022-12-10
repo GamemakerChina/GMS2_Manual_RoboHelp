@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">AudioEffect Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" data-condition="Export:Beta"/>
+  <script src="../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta name="rh-authors" content="Bart Teunis" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="Reference page for the AudioEffect struct" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="AudioEffect" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="AudioEffect" data-condition="Export:Beta"/>
+  <meta name="template" content="assets/masterpages/Manual_Page.htt" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="AudioEffect Struct">
+        <span>AudioEffect Struct</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1 data-condition="Export:Beta"><span data-field="title" data-format="default">AudioEffect Struct</span></h1>
+  <p data-condition="Export:Beta">An AudioEffect struct stores the parameters used by an audio effect. You can change these values to adjust the effect in real-time.</p>
+  <p data-condition="Export:Beta">This struct must be created using the <span class="inline2"><a href="audio_effect_create.htm">audio_effect_create</a></span> function. The parameters that are available in the struct depend on the type of audio effect that you pass to the function (see <span class="inline2"><a href="AudioEffectType.htm">AudioEffectType Enum</a></span>).</p>
+  <div data-conref="../../../../../assets/snippets/Note_GM_Managed_Structs.hts" data-condition="Export:Beta">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This is a built-in struct, and as such <span data-keyref="GameMaker Name">GameMaker</span> has more control over its contents. This means access to its members is limited and some values may change automatically if invalid values were assigned. You may also have to create and destroy this struct through built-in functions provided by <span data-keyref="GameMaker Name">GameMaker</span> instead of the <span class="inline2"><a href="../../../../GML_Overview/Language_Features/new.htm">new</a></span> and <span class="inline2"><a href="../../../../GML_Overview/Language_Features/delete.htm">delete</a></span> operators.</p>
+
+</div>
+  <p data-condition="Export:Beta">All structs of this type have a <span class="inline2">type</span> and <span class="inline2">bypass</span> property. All other properties are specific to certain types of effects.</p>
+  <p data-condition="Export:Beta">Below is a list of struct members depending on the type of effect created.</p>
+  <h2 id="h5" data-condition="Export:Beta">Reverb (<a href="AudioEffectType.htm#h">AudioEffectType.Reverb1</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h">AudioEffectType.Reverb1</a> for Reverb.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>bypass</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed (ignored).</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>size</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;">The size of the space [range: 0.0 - 1.0].<br/>
+          <br/>
+          Larger sizes mean more reflections and a longer reverberation.
+        </td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>damp</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The amount that higher frequencies should be attenuated [range: 0.0 - 1.0].</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>mix</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The proportion of the original/reverberated signal in the output [range: 0.0 - 1.0].<br/>
+            <br/>
+            A value of 0.0 gives 100% of the original signal, a value of 1.0 gives 100% of the reverberated signal. A value of 0.5 results in 50% of the original and 50% of the reverberated signal.</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="h1" data-condition="Export:Beta">Delay (<a href="AudioEffectType.htm#h1">AudioEffectType.Delay</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h1">AudioEffectType.Delay</a> for Delay.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>bypass</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed<span> (ignored)</span>.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>time</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The length of the delay (in seconds).</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>feedback</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The proportion of the delayed signal which is fed back into the delay line [range: 0.0 - 1.0].</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">mix</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The proportion of the original/delayed signal in the output [range: 0.0 - 1.0].<br/>
+            <br/>
+            <span>A value of 0.0 gives 100% of the original signal, a value of 1.0 gives 100% the delayed signal. A value of 0.5 results in 50% of the original and 50% of the <span><span>delayed</span></span> signal.</span></span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="h" data-condition="Export:Beta">Distortion (<a href="AudioEffectType.htm#h2">AudioEffectType.Bitcrusher</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h2">AudioEffectType.Bitcrusher</a> for Distortion.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">bypass</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed<span> (ignored)</span>.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">drive</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The input gain going into the effect.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">factor</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The factor by which <span>the original signal is </span>downsampled [range: 0.0 - 100.0].<br/>
+            <br/>
+            <span>This is rounded down to an integer.</span></span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">resolution</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The bit depth at which <span>the signal is </span>resampled [range: 1.0 - 16.0].<br/>
+            <br/>
+            <span>This is rounded down to an integer.</span></span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">mix</td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The proportion of the original/distorted signal in the output [range: 0.0 - 1.0].<br/>
+            <br/>
+            <span><span>A value of 0.0 gives 100% of the original signal, a value of 1.0 gives 100% the <span>distorted</span> signal. A value of 0.5 results in 50% of the original and 50% of the <span><span><span>distorted</span></span></span> signal.</span></span></span></td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="h4" data-condition="Export:Beta">LPF (<a href="AudioEffectType.htm#h3">AudioEffectType.LPF2</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h3">AudioEffectType.LPF2</a> for LPF.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>bypass</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed<span> (ignored)</span>.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>cutoff</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The cutoff frequency of the filter. Frequencies higher than the cutoff will be attenuated.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>q</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;">The quality factor of the filter [range: 1.0 - 100.0].<br/>
+          <br/>
+          This is a dimensionless parameter which indicates how peaked (in gain) the frequency is around the cutoff. The greater the value, the greater the peak.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="h3" data-condition="Export:Beta">HPF (<a href="AudioEffectType.htm#h4">AudioEffectType.HPF2</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h4">AudioEffectType.HPF2</a> for HPF.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>bypass</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed<span> (ignored)</span>.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>cutoff</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The cutoff frequency of the filter. Frequencies higher than the cutoff will be attenuated.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>q</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;">The quality factor of the filter [range: 1.0 - 100.0].<br/>
+          <br/>
+          This is a dimensionless parameter which indicates how peaked (in gain) the frequency is around the cutoff. The greater the value, the greater the peak.
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 id="h2" data-condition="Export:Beta">Gain (<a href="AudioEffectType.htm#h5">AudioEffectType.Gain</a>)</h2>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="width:33.33%;">Variable</th>
+        <th style="width:33.33%;">Type</th>
+        <th style="width:33.33%;">Description</th>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;">type</td>
+        <td style="width:33.33%;"><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="width:33.33%;">A <i>read-only</i> property that stores the type of audio effect stored in this struct. It is set to <a href="AudioEffectType.htm#h5">AudioEffectType.Gain</a> for Gain.</td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>bypass</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="width:33.33%;"><span>Whether the effect should be bypassed<span> (ignored)</span>.</span></td>
+      </tr>
+      <tr style="">
+        <td style="width:33.33%;"><span>gain</span></td>
+        <td style="width:33.33%;"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style="width:33.33%;"><span>The gain value applied to the input signal.</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p data-condition="Export:Beta"> </p>
+  <p data-condition="Export:Beta"> </p>
+  <!--</div>-->
+  <div class="footer" data-condition="Export:Beta">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
+        <div>Next: <a href="AudioEffectType.htm">AudioEffectType Enum</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+AudioEffect
+-->
+  <!-- TAGS
+AudioEffect
+-->
+
+</body></html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.2.2.0_28";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>array_map</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="INSERT_AUTHOR"/>
+  <meta name="topic-comment" content="INSERT_DESCRIPTION"/>
+  <meta name="rh-index-keywords" content="array_map"/>
+  <meta name="search-keywords" content="array_map"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="array_map">
+        <span>array_map</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1><span data-field="title" data-format="default">array_map</span></h1>
+  <p>This function returns a <strong>new</strong> array with a modified version of the elements in the array or a range of it.</p>
+  <p>The new value to be used for every index is given by the predicate function.</p>
+  <p> </p>
+  <div data-conref="../../../assets/snippets/Syntax_signature_element_returns_any.hts">
+  <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
+  <h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default">array_map</span>(array, function, [offset], [length]);</p>
+  <table style="">
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="">Argument</th>
+        <th style="">Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr style="">
+        <td style="">array</td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td style="">The array to use</td>
+      </tr>
+      <tr style="">
+        <td style="">function</td>
+        <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
+        <td style="">The function to use for each element</td>
+      </tr>
+      <tr style="">
+        <td style="">offset</td>
+        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or the starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>.</td>
+      </tr>
+      <tr style="">
+        <td style="">length</td>
+        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2 &gt; 1 &gt; 0 instead of 0 &gt; 1 &gt; 2).</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Function Syntax:</h4>
+  <p class="code">function(element, index);</p>
+  <table style="">
+    <tbody>
+      <tr style="">
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr style="">
+        <td>element</td>
+        <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
+        <td>The current array element</td>
+      </tr>
+      <tr style="">
+        <td>index</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The current array index</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+  <h4>Function Returns: </h4>
+  <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></p>
+
+</div>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">function vowel_or_consonant(element, index)<br/>
+    {<br/>
+        static vowels = [&quot;a&quot;, &quot;e&quot;, &quot;i&quot;, &quot;o&quot;, &quot;u&quot;];<br/>
+        var is_a_vowel = array_any(vowels, method({&quot;letter&quot;: element}, function(element, index) {return (letter == element);}));<br/>
+        return is_a_vowel ? &quot;vowel&quot; : &quot;consonant&quot;;<br/>
+    }<br/>
+    letters = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;, &quot;f&quot;, &quot;g&quot;, &quot;h&quot;, &quot;i&quot;];<br/>
+    letter_type = array_map(letters, vowel_or_consonant);</p>
+  <p>The above code first creates a function <span class="inline2">vowel_or_consonant</span> that checks if the given element (which must be a valid letter) is a vowel. It does that by using <span class="inline2"><a href="array_any.htm">array_any</a></span>. If the letter is found, the function returns the string &quot;vowel&quot;, if it is not it returns the string &quot;consonant&quot;. It then creates an array <span class="inline2">letters</span> with the first letters of the alphabet. Finally it calls <span class="inline2"><span data-field="title" data-format="default">array_map</span></span> on the <span class="inline2">letters</span> array with the <span class="inline2">vowel_or_consonant</span> function and assigns the result to <span class="inline2">letter_type</span>. This array will contain the text &quot;vowel&quot; or &quot;consonant&quot;, depending on whether the element in the original array was a vowel or a consonant.</p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Array_Functions.htm">Array Functions</a></div>
+        <div>Next: <a href="array_unique.htm">array_unique</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+array_map
+-->
+  <!-- TAGS
+array_map
+-->
+
+</body></html>

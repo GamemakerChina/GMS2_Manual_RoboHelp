@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.2.2.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>array_copy</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander"/>
+  <meta name="topic-comment" content="Page explaining the function array_copy"/>
+  <meta name="rh-index-keywords" content="array_copy"/>
+  <meta name="search-keywords" content="array_copy"/>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/array_equals.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Variable_Functions/array_create.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="array_copy">
+        <span>array_copy</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>array_copy</h1>
+  <p>With this function you can copy all or part of an array into another array at any position. You need to supply both the source and the destination arrays (both need to have been created previously), as well as a position within the source array to copy from and a position within the destination array to copy to. Finally you need to specify the length of the array (or the length of the part that you want) to copy. If the data being copied exceeds the length of the destination array, the array will be extended to accept the data.</p>
+  <p>This function can also be used for multi-dimension arrays, as long as you specify which dimension you want to copy when you supply the array index, following this pattern:</p>
+  <p class="code">// Copy to the first dimension of an array<br/>
+    // from the second dimension of an array<br/>
+    array_copy(item_array, 0, inventory_array[0], 0, len);<br/>
+    <br/>
+    // Copy to the third dimension of an array<br/>
+    // from the first dimension of an array<br/>
+    array_copy(item_array[0][0], 0, inventory_array, 0, len);<br/>
+    <br/>
+    // etc...
+  </p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">array_copy(dest, dest_index, src, src_index, length);</p>
+  <table style="">
+    <tbody>
+      <tr style="">
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr style="">
+        <td>dest</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td>The ID of the array to copy to.</td>
+      </tr>
+      <tr style="">
+        <td>dest_index</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The index within the array to copy to.</td>
+      </tr>
+      <tr style="">
+        <td>src</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td>The ID of the array to copy from.</td>
+      </tr>
+      <tr style="">
+        <td>src_index</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The index with the array to start copying from.</td>
+      </tr>
+      <tr style="">
+        <td>length</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The length (number of array indices) to copy.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">if !array_equals(inventory_array, item_array)<br/>
+    {<br/>
+        var len = array_length(inventory_array);<br/>
+        array_copy(item_array, 0, inventory_array, 0, len);<br/>
+    }</p>
+  <p>The above code will check two arrays to see if they hold equivalent values, and if they do not then the code will copy the entire contents of the array &quot;inventory_array&quot; into the array &quot;item_array&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Array_Functions.htm">Array Functions</a></div>
+        <div style="float:right">Next: <a href="array_equals.htm">array_equals</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+array_copy
+-->
+  <!-- TAGS
+array_copy
+-->
+
+</body></html>

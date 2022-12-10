@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "6.4.0_4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/default.css"/><script src="../../assets/scripts/main_script.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>YoYo Compiler</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+  <meta name="rh-authors" content="Bart Teunis"/>
+  <meta name="topic-comment" content="Overview page for the YoYo Compiler (YYC)"/>
+  <meta name="template" content="../assets/masterpages/Manual_Page.htt"/>
+  <meta name="search-keywords" content="yyc,yoyo compiler,compiler,compile"/>
+  <meta name="rh-index-keywords" content="yyc,yoyo compiler"/>
+<meta name="brsnext" value="The_Asset_Editors/The_Asset_Editors.htm"/><meta name="brsprev" value="Settings/Command_Line_Parameters.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="YoYo Compiler">
+        <span>YoYo Compiler</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+  </div>
+  <div>
+  <h1><span data-field="title" data-format="default">YoYo Compiler</span></h1>
+  <p>The <span data-field="title" data-format="default">YoYo Compiler</span> (YYC) is a special compiler for creating executable packages that use <a class="tooltip" title="Machine code is code that is directly executed by a CPU without the need for interpretation by an interpreter. It is the lowest level of code and contains the instructions that the processor executes.
+It is specific to a processor architecture. As a consequence, it is optimized. It can also be generated from source code in a higher level programming language by a compiler.
+In GameMaker the YoYo Compiler can be used to generate an executable containing optimized machine code for a variety of platforms.">machine code</a> instead of interpreted code and a runner (which is what the <span data-keyref="GameMaker Name">GameMaker</span> VM compile uses). Compiled code is faster to run, but takes more time to compile the executable.</p>
+  <h2>Licence</h2>
+  <p>Your <span data-keyref="GameMaker Name">GameMaker</span> licence may or may not include the YoYo Compiler. To find out, see the Help Center page <a href="https://help.yoyogames.com/hc/en-us/articles/115002637011">Which Subscription Is Right For Me?</a>.</p>
+  <h2>Setting Up The SDK</h2>
+  <p>In order for the <span data-field="title" data-format="default">YoYo Compiler</span> to be able to compile for the target platform, you will need to have the correct <a class="tooltip" title="SDK stands for &#39;Software Development Kit&#39;. This usually refers to a collection of software and/or packages used for developing applications for a specific device or operating system.">SDK</a>s installed.</p>
+  <p>For a general overview on this, see the following Help Center page: <a href="https://help.yoyogames.com/hc/en-us/articles/227860547">GameMaker Required SDKs</a>.</p>
+  <p>Information on the SDKs required per platform can be found in the Help Center as well: </p>
+  <ul class="Disc">
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/4625548722193-Setting-Up-For-Opera-GX">GX.games</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186048-Setting-Up-For-Windows">Windows</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186128">macOS</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/235186168">Ubuntu</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/115001368727">Android</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/115001368747">iOS (Including iPadOS)</a></li>
+    <li><a href="https://help.yoyogames.com/hc/en-us/articles/360025349592">tvOS</a></li>
+  </ul>
+  <h2>Building a project with YYC</h2>
+  <p>Once you have the <a class="tooltip" title="SDK stands for &#39;Software Development Kit&#39;. This usually refers to a collection of software and/or packages used for developing applications for a specific device or operating system.">SDK</a>s set up correctly you can change the Output option for the selected platform to YYC: </p>
+  <p><img class="center_shadow" src="../assets/Images/Introduction/QS_TargetYYC.png"/></p>
+  <p>In case the current runtime doesn&#39;t include the YYC module for the platform you want to build for you will be asked to install it first: </p>
+  <p><img class="center" src="../assets/Images/Setup_And_Version/Preferences/Runtime_Module_Not_Installed_YYC.png"/></p>
+  <p>After that you can create the executable from <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">The Build Menu</a> as with the VM output.</p>
+  <p>If the path to the <a class="tooltip" title="SDK stands for &#39;Software Development Kit&#39;. This usually refers to a collection of software and/or packages used for developing applications for a specific device or operating system.">SDK</a> wasn&#39;t configured correctly you may get an error like the following (the image shows the message on the Windows platform): </p>
+  <p><img class="center_shadow" height="86" src="../assets/Images/Introduction/QS_Debug_CompileError_VSPath.png" style="cursor: nesw-resize;" width="941"/></p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> needs to know the location of the files needed to build an executable on the selected platform. In case this hasn&#39;t been set up correctly, a compile error is shown.</p>
+  <p>To verify that the paths have been set correctly for the selected platform, you can check the <a href="../Setting_Up_And_Version_Information/Platform_Preferences.htm">Platform Preferences</a>.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Runner_Details/Runner_Details.htm">Runner &amp; Compiler</a></div>
+        <div>Next: <a href="../The_Asset_Editors/The_Asset_Editors.htm">The Asset Editors</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

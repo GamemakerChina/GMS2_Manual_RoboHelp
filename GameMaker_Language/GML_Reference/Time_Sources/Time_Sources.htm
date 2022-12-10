@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.2.12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/><script src="../../../../assets/scripts/main_script.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>Time Sources</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <meta name="template" content="../../../assets/masterpages/Manual_Page.htt"/>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
+  <meta name="topic-comment" content="Page detailing Time Sources in GML"/>
+  <meta name="rh-index-keywords" content="Time Source"/>
+  <meta name="search-keywords" content="Time Sources"/>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Time_Sources/Built_In_Time_Sources.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/matrix_stack_top.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Time Sources">
+        <span>Time Sources</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+  </div>
+  <div>
+  <h1>Time Sources</h1>
+  <p>A &quot;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&quot; is a custom timer you create. It runs for a given period of time, and at the end, it expires.</p>
+  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> (TS) has the ability to call a custom method (&quot;callback&quot;) on expiring.</p>
+  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Time_Sources/time_sources_flow.png"/>It&#39;s also able to repeat a certain of amount of times, or forever. Each repetition of a <span data-keyref="Type_Resource_TimeSource">Time Source</span> is known as a &quot;rep&quot;.</p>
+  <h2>How to Use Time Sources?</h2>
+  <p>Create and start a <span data-keyref="Type_Resource_TimeSource">Time Source</span> that calls a custom method:</p>
+  <ul class="colour">
+    <li>Call <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a> / <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Create Time Source</a> to create a <span data-keyref="Type_Resource_TimeSource">Time Source</span>
+      <ul>
+        <li>Specify whether this inherits from the Global <span data-keyref="Type_Resource_TimeSource">Time Source</span>, the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span> or a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span></li>
+        <li>Specify the period of time it runs for, and the units used (seconds or frames)</li>
+        <li>Specify a custom method or script function, with an argument array to pass into that method</li>
+        <li>Optionally, specify the number of times it should repeat
+          <ul>
+            <li>By default it runs only once</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> / <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that <span data-keyref="Type_Resource_TimeSource">Time Source</span> immediately, or call it later when you need it to start</li>
+  </ul>
+  <p>Doing this will cause the <span data-keyref="Type_Resource_TimeSource">Time Source</span> to run, and after the specified period, it will expire and call your specified method.</p>
+  <h2>Built-In Time Sources</h2>
+  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> can inherit from either of the two built-in <span data-keyref="Type_Resource_TimeSource">Time Source</span>s, or from a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
+  <p>See: <a href="Built_In_Time_Sources.htm">Built-In Time Sources</a></p>
+  <h2 id="h">Simple Timers</h2>
+  <p>While setting up a time source doesn&#39;t take many lines of code, it can be convenient to quickly set up and manage a timer using a single function.</p>
+  <p>The following two functions provide a simpler, shorthand way of creating a <span data-keyref="Type_Resource_TimeSource">Time Source</span> and stopping it: </p>
+  <ul class="Disc">
+    <li><a href="call_later.htm">call_later</a></li>
+    <li><a href="call_cancel.htm">call_cancel</a></li>
+  </ul>
+  <p class="note"><span class="note">NOTE</span> You cannot use the <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions with the <span data-keyref="Type_Resource_TimeSource">Time Source</span> IDs used by these functions. See <a href="call_later.htm">call_later</a> for more information.</p>
+  <h2>Function List</h2>
+  <p>The following functions are used to create and modify <span data-keyref="Type_Resource_TimeSource">Time Source</span>s:</p>
+  <ul class="colour">
+    <li><a href="time_source_create.htm">time_source_create</a></li>
+    <li><a href="time_source_destroy.htm">time_source_destroy</a></li>
+    <li><a href="time_source_start.htm">time_source_start</a></li>
+    <li><a href="time_source_stop.htm">time_source_stop</a></li>
+    <li><a href="time_source_pause.htm">time_source_pause</a></li>
+    <li><a href="time_source_resume.htm">time_source_resume</a></li>
+    <li><a href="time_source_reconfigure.htm">time_source_reconfigure</a></li>
+    <li><a href="time_source_reset.htm">time_source_reset</a></li>
+    <li><a href="time_source_get_children.htm">time_source_get_children</a></li>
+    <li><a href="time_source_get_parent.htm">time_source_get_parent</a></li>
+    <li><a href="time_source_get_period.htm">time_source_get_period</a></li>
+    <li><a href="time_source_get_reps_completed.htm">time_source_get_reps_completed</a></li>
+    <li><a href="time_source_get_reps_remaining.htm">time_source_get_reps_remaining</a></li>
+    <li><a href="time_source_get_state.htm">time_source_get_state</a></li>
+    <li><a href="time_source_get_time_remaining.htm">time_source_get_time_remaining</a></li>
+    <li><a href="time_source_get_units.htm">time_source_get_units</a></li>
+    <li><a href="time_source_exists.htm">time_source_exists</a></li>
+  </ul>
+  <p>Each <span class="inline2">get_*</span> function will return <span class="inline2">undefined</span> if the specified <span data-keyref="Type_Resource_TimeSource">Time Source</span> doesn&#39;t exist.</p>
+  <p>The following helper functions are provided for converting time periods:</p>
+  <ul class="colour">
+    <li><a href="time_seconds_to_bpm.htm">time_seconds_to_bpm</a></li>
+    <li><a href="time_bpm_to_seconds.htm">time_bpm_to_seconds</a></li>
+  </ul>
+  <p> </p>
+  <p>Also see: <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Time_Sources_(GML_Visual).htm">GML Visual - Time Sources</a></p>
+  <h2>Constants</h2>
+  <p>The following constants are used with <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions:</p>
+  <ul class="colour">
+    <li><a href="Built_In_Time_Sources.htm">Built-In Time Sources</a></li>
+    <li><a href="Time_Source_Units.htm">Time Source Units</a></li>
+    <li><a href="Time_Source_Expiry_Types.htm">Time Source Expiry Types</a></li>
+    <li><a href="Time_Source_States.htm">Time Source States</a></li>
+  </ul>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="../GML_Reference.htm">GML Code Reference</a></div>
+        <div>Next: <a href="../Physics/Physics.htm">Physics</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

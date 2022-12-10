@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.2.2.3.15.0_2";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>extension_get_option_value</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
+  <meta name="topic-comment" content="Page outlining the function extension_get_option_value"/>
+  <meta name="rh-index-keywords" content="extension_get_option_value"/>
+  <meta name="search-keywords" content="extension_get_option_value"/>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Extensions/extension_get_option_names.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Extensions/extension_get_options.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="extension_get_option_value">
+        <span>extension_get_option_value</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>extension_get_option_value</h1>
+  <p>This function returns the value of the given <a href="../../../../The_Asset_Editors/Extension_Creation/Creating_An_Extension.htm#h1">option</a> in the extension with the given name.</p>
+  <p>The function will return <span class="inline2">undefined</span> if the provided extension name is invalid.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">extension_get_option_value(extension_name, option_name);</p>
+  <table style="">
+    <tbody>
+      <tr style="">
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr style="">
+        <td>extension_name</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The name of your extension asset as a string</td>
+      </tr>
+      <tr style="">
+        <td>option_name</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The name of the option to read</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Any"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">var _enabled = extension_get_option_value(&quot;MyExtension&quot;, &quot;enabled&quot;);</p>
+  <p>This code gets the value of the <span class="inline2">enabled</span> option in the <span class="inline2">MyExtension</span> extension.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Extensions.htm">Extensions</a></div>
+        <div style="float:right">Next: <a href="extension_get_option_names.htm">extension_get_option_names</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+extension_get_option_value
+-->
+  <!-- TAGS
+extension_get_option_value
+-->
+
+</body></html>

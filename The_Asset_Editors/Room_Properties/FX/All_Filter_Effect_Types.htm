@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "7.4.1.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/><script src="../../../../assets/scripts/main_script.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>FX Types &amp; Parameters</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <meta name="template" content="../../../assets/masterpages/Manual_Page.htt"/>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
+  <meta name="topic-comment" content="Page listing all FXs provided with GameMaker"/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content="filters, effects, types, fx"/>
+<meta name="brsnext" value="The_Asset_Editors/Scripts.htm"/><meta name="brsprev" value="The_Asset_Editors/Room_Properties/Filters_and_Effects.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="FX Types &amp; Parameters">
+        <span>FX Types &amp; Parameters</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+  </div>
+  <div>
+  <h1>FX Types &amp; Parameters</h1>
+  <p>This page lists all the Filter/Effect types provided in <span data-keyref="GameMaker Name">GameMaker</span>, along with the following information about each FX:</p>
+  <ul class="colour">
+    <li>Internal name (e.g. <span class="inline2">&quot;_filter_tintfilter&quot;</span>) which can be passed into <span class="inline"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/fx_create.htm">fx_create()</a></span> to create an FX at runtime</li>
+    <li>Description</li>
+    <li>Example image</li>
+    <li>IDE Parameters, which can be edited through the <a href="../Layer_Properties.htm">Layer Properties</a></li>
+    <li>Runtime Parameters, which can be used to modify FXs at runtime, using the <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Filter_Effect_Layers/Filter_Effect_Functions.htm">Filter and Effect Functions</a>
+      <ul>
+        <li>The Runtime parameters also mention their types, so you know what type of data to apply to which parameter.</li>
+      </ul>
+    </li>
+  </ul>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">View Filters table</span><span data-close-text="true">View Filters table</span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <table style="width: 95%;">
+      <colgroup>
+        <col style="width: 118px;"/>
+        <col style="width: 252px;"/>
+        <col style="width: 473px;"/>
+        <col style="width: 197px;"/>
+        <col style="width: 317px;"/>
+      </colgroup>
+      <tbody>
+        <tr style="">
+          <th colspan="5" style="width: 118px;">Filters</th>
+        </tr>
+        <tr style="">
+          <th style="width: 118px;">Type</th>
+          <th style="width: 252px;">Description</th>
+          <th style="width: 473px;">Example</th>
+          <th style="width: 197px;">IDE Parameters</th>
+          <th style="width: 317px;">Runtime Parameters</th>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Boxes</strong><br/>
+            <br/>
+            &quot;_filter_boxes&quot;
+          </td>
+          <td style="width: 252px;">Creates a tiled boxes effect with optional animation.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Boxes.png"/></td>
+          <td style="width: 197px;">Scale<br/>
+            Size<br/>
+            Displacement<br/>
+            Animation Speed<br/>
+            Angle<br/>
+            Rotation Speed<br/>
+            Roundness<br/>
+            Colour Speed<br/>
+            Colour Count<br/>
+            Sharpness<br/>
+            Colour Palette</td>
+          <td style="width: 317px;"><span class="inline">g_BoxesScale</span> (Real)<br/>
+            <span class="inline">g_BoxesSize</span> (Real)<br/>
+            <span class="inline">g_BoxesDisplacement</span> (Real)<br/>
+            <span class="inline">g_BoxesSpeed</span> (Real)<br/>
+            <span class="inline">g_BoxesAngle</span> (Real)<br/>
+            <span class="inline">g_BoxesRotation</span> (Array)<br/>
+            <span class="inline">g_BoxesRoundness</span> (Real)<br/>
+            <span class="inline">g_BoxesColourSpeed</span> (Real)<br/>
+            <span class="inline">g_BoxesColours</span> (Real)<br/>
+            <span class="inline">g_BoxesSharpness</span> (Real)<br/>
+            <span class="inline">g_BoxesPalette</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Colour Balance</strong><br/>
+            <br/>
+            &quot;_filter_colour_balance&quot;
+          </td>
+          <td style="width: 252px;">Allows you to balance the highlights, midtones and shadows of the game.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Colour_Balance.png"/></td>
+          <td style="width: 197px;">Shadows RGB<br/>
+            Midtones RGB<br/>
+            Highlights RGB</td>
+          <td style="width: 317px;"><span class="inline">g_ColourBalanceShadows</span> (Array)<br/>
+            <span class="inline">g_ColourBalanceMidtones</span> (Array)<br/>
+            <span class="inline">g_ColourBalanceHighlights</span> (Array)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Colour Tint</strong><br/>
+            <br/>
+            &quot;_filter_tintfilter&quot;<strong></strong>
+          </td>
+          <td style="width: 252px;">Applies a colour tint to the rendered content.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/colour tint.png"/></td>
+          <td style="width: 197px;">Tint colour</td>
+          <td style="width: 317px;"><span class="inline">g_TintCol</span> (Array)</td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Colourise</strong><br/>
+            <br/>
+            &quot;_filter_colourise&quot;
+          </td>
+          <td style="width: 252px;">Changes everything to appear with the given hue and saturation.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/colourise.png"/></td>
+          <td style="width: 197px;">Intensity<br/>
+            Tint colour</td>
+          <td style="width: 317px;"><span class="inline">g_Intensity</span> (Real)<br/>
+            <span class="inline">g_TintCol</span> (Array)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Constrast</strong><br/>
+            <br/>
+            &quot;_filter_contrast&quot;
+          </td>
+          <td style="width: 252px;">Allows you to change the contrast and brightness of the rendered content.</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/contrast.png"/></td>
+          <td style="width: 197px;">Contrast<br/>
+            Brightness</td>
+          <td style="width: 317px;"><span class="inline">g_ContrastIntensity</span> (Real)<br/>
+            <span class="inline">g_ContrastBrightness</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Desaturate</strong><br/>
+            <br/>
+            &quot;_filter_greyscale&quot;
+          </td>
+          <td style="width: 252px;">Reduces the saturation of the rendered content by the specified intensity value.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/desat.png"/></td>
+          <td style="width: 197px;">Intensity</td>
+          <td style="width: 317px;"><span class="inline">g_Intensity</span> (Real)</td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Distort</strong><br/>
+            <br/>
+            &quot;_filter_distort&quot;
+          </td>
+          <td style="width: 252px;">Applies distortion to the game, using a texture image.</td>
+          <td style="width: 473px;"><img alt="lol" src="../../../assets/Images/Asset_Editors/FXs/distort.png" title="lol"/></td>
+          <td style="width: 197px;">Scale<br/>
+            Amount<br/>
+            Offset<br/>
+            Distort texture</td>
+          <td style="width: 317px;"><span class="inline">g_DistortScale</span> (Real)<br/>
+            <span class="inline">g_DistortAmount</span> (Real)<br/>
+            <span class="inline">g_DistortOffset</span> (Real)<br/>
+            <span class="inline">g_DistortTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Dots Background</strong><br/>
+            <br/>
+            &quot;_filter_dots&quot;
+          </td>
+          <td style="width: 252px;">Applies a dotted effect to your game, with optional animation. You can create a noise effect by setting the scale to a low value.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/dots.png"/></td>
+          <td style="width: 197px;">Scale<br/>
+            Size<br/>
+            Offset<br/>
+            Displacement<br/>
+            Animation Speed<br/>
+            Colour Speed<br/>
+            Colour Count<br/>
+            Sharpness<br/>
+            Colour Palette</td>
+          <td style="width: 317px;"><span class="inline">g_DotsScale</span> (Real)<br/>
+            <span class="inline">g_DotsSize</span> (Real)<br/>
+            <span class="inline">g_DotsOffset</span> (Real)<br/>
+            <span class="inline">g_DotsDisplacement</span> (Real)<br/>
+            <span class="inline">g_DotsSpeed</span> (Real)<br/>
+            <span class="inline">g_DotsColourSpeed</span> (Real)<br/>
+            <span class="inline">g_DotsColours</span> (Real)<br/>
+            <span class="inline">g_DotsSharpness</span> (Real)<br/>
+            <span class="inline">g_DotsPalette</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Edge Detect</strong><br/>
+            <br/>
+            &quot;_filter_edgedetect&quot;
+          </td>
+          <td style="width: 252px;">Uses edge detection so only the edges in your game are visible.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/edge.png"/></td>
+          <td style="width: 197px;">Threshold</td>
+          <td style="width: 317px;"><span class="inline">g_Threshold</span> (Real)</td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Fractal Noise</strong><br/>
+            <br/>
+            &quot;_filter_fractal_noise&quot;
+          </td>
+          <td style="width: 252px;">Displays fractal noise with animation support</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/fractalnoise.png"/></td>
+          <td style="width: 197px;">Scale<br/>
+            Persistence<br/>
+            Offset<br/>
+            Animation Speed<br/>
+            Tint Colour<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_FractalNoiseScale</span> (Real)<br/>
+            <span class="inline">g_FractalNoisePersistence</span> (Real)<br/>
+            <span class="inline">g_FractalNoiseOffset</span> (Array)<br/>
+            <span class="inline">g_FractalNoiseSpeed</span> (Real)<br/>
+            <span class="inline">g_FractalNoiseTintColour</span> (Array)<br/>
+            <span class="inline">g_FractalNoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Gradient</strong><br/>
+            <br/>
+            &quot;_filter_gradient&quot;
+          </td>
+          <td style="width: 252px;">Creates a gradient with the selected colours and mode. Transparent colours are supported.</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/gradient.png"/></td>
+          <td style="width: 197px;">Start Colour<br/>
+            End Colour<br/>
+            Start Point (0 - 1)<br/>
+            End Point (0 - 1)<br/>
+            Gradient Mode</td>
+          <td style="width: 317px;"><span class="inline">g_GradientColour1</span> (Array)<br/>
+            <span class="inline">g_GradientColour2</span> (Array)<br/>
+            <span class="inline">g_GradientPosition1</span> (Array)<br/>
+            <span class="inline">g_GradientPosition2</span> (Array)<br/>
+            <span class="inline">g_GradientMode</span> (Real, 0 to 5)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Heat Haze</strong><br/>
+            <br/>
+            &quot;_filter_heathaze&quot;
+          </td>
+          <td style="width: 252px;">Creates an animated heat haze effect and is useful for displaying hot environments.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/heat.png"/></td>
+          <td style="width: 197px;">Distort 1 Speed<br/>
+            Distort 2 Speed<br/>
+            Distort 1 Scale<br/>
+            Distort 2 Scale<br/>
+            Distort 1 Amount<br/>
+            Distort 2 Amount<br/>
+            Chroma Spread<br/>
+            Camera Offset Scale<br/>
+            Distort Texture</td>
+          <td style="width: 317px;"><span class="inline">g_Distort1Speed</span> (Real)<br/>
+            <span class="inline">g_Distort2Speed</span> (Real)<br/>
+            <span class="inline">g_Distort1Scale</span> (Real)<br/>
+            <span class="inline">g_Distort2Scale</span> (Real)<br/>
+            <span class="inline">g_Distort1Amount</span> (Real)<br/>
+            <span class="inline">g_Distort2Amount</span> (Real)<br/>
+            <span class="inline">g_ChromaSpreadAmount</span> (Real)<br/>
+            <span class="inline">g_CamOffsetScale</span> (Real)<br/>
+            <span class="inline">g_DistortTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Large Blur</strong><br/>
+            <br/>
+            &quot;_filter_large_blur&quot;
+          </td>
+          <td style="width: 252px;">Blurs the image.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/largeblur.png"/></td>
+          <td style="width: 197px;">Radius<br/>
+            Noise texture</td>
+          <td style="width: 317px;"><span class="inline">g_Radius</span> (Real)<br/>
+            <span class="inline">g_NoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Linear Blur</strong><br/>
+            <br/>
+            &quot;_filter_linear_blur&quot;
+          </td>
+          <td style="width: 252px;">Creates a linear blur effect controlled by the given vector values (X and Y, between -128 and 128).</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/linearblur.png"/></td>
+          <td style="width: 197px;">Vector<br/>
+            Noise texture</td>
+          <td style="width: 317px;"><span class="inline">g_LinearBlurVector</span> (Array)<br/>
+            <span class="inline">g_NoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>LUT Colour Grading</strong><br/>
+            <br/>
+            &quot;_filter_lut_colour&quot;
+          </td>
+          <td style="width: 252px;">Allows you to apply LUT colour grading using a texture as the lookup table (LUT).<br/>
+            <br/>
+            You can look up (heh) LUT textures on the internet to use in your game.
+          </td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/lut.png"/></td>
+          <td style="width: 197px;">Intensity<br/>
+            LUT Texture</td>
+          <td style="width: 317px;"><span class="inline">g_LUTColourIntensity</span> (Real)<br/>
+            <span class="inline">g_LUTColourTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Outline</strong><br/>
+            <br/>
+            &quot;_filter_outline&quot;
+          </td>
+          <td style="width: 252px;">Creates an outline around the opaque contents of the layer. Use this as a <a href="../Filters_and_Effects.htm#h">Single-Layer FX</a> for the best effect.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/outline.png"/></td>
+          <td style="width: 197px;">Outline colour<br/>
+            Radius<br/>
+            Pixel scale</td>
+          <td style="width: 317px;"><span class="inline">g_OutlineColour</span> (Array)<br/>
+            <span class="inline">g_OutlineRadius</span> (Real)<br/>
+            <span class="inline">g_OutlinePixelScale</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Pixelate</strong><br/>
+            <br/>
+            &quot;_filter_pixelate&quot;
+          </td>
+          <td style="width: 252px;">Makes the rendered content look pixelated, allowing you to change the size of each pixel. This gives the rendered content a low resolution look.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/pixel.png"/></td>
+          <td style="width: 197px;">Cell Size</td>
+          <td style="width: 317px;"><span class="inline">g_CellSize</span> (Real)</td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Posterise</strong><br/>
+            <br/>
+            &quot;_filter_posterise&quot;
+          </td>
+          <td style="width: 252px;">Applies a posterisation effect to the rendered content, allowing you to change the max colour levels for each hue.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/poster.png"/></td>
+          <td style="width: 197px;">Colour Levels</td>
+          <td style="width: 317px;"><span class="inline">g_ColourLevels</span> (Real)</td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>RGB Noise</strong><br/>
+            <br/>
+            &quot;_filter_rgbnoise&quot;
+          </td>
+          <td style="width: 252px;">Displays coloured noise with optional animation.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_RGBNoise.png"/></td>
+          <td style="width: 197px;">Intensity<br/>
+            Animation<br/>
+            Tint Colour<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_RGBNoiseIntensity</span> (Real)<br/>
+            <span class="inline">g_RGBNoiseAnimation</span> (Real)<br/>
+            <span class="inline">g_RGBNoiseColour</span> (Array)<br/>
+            <span class="inline">g_RGBNoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Screen Shake</strong><br/>
+            <br/>
+            &quot;_filter_screenshake&quot;
+          </td>
+          <td style="width: 252px;">Makes the rendered content shake to simulate a camera shake effect. Works best when controlled at runtime.</td>
+          <td style="width: 473px;"><video src="../../../assets/Images/Asset_Editors/FXs/screenshake.mp4" width="480" height="320" controls=""></video></td>
+          <td style="width: 197px;">Magnitude<br/>
+            Shake speed<br/>
+            Noise texture</td>
+          <td style="width: 317px;"><span class="inline">g_Magnitude</span> (Real)<br/>
+            <span class="inline">g_ShakeSpeed</span> (Real)<br/>
+            <span class="inline">g_NoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Stripes Background</strong><br/>
+            <br/>
+            &quot;_filter_stripes&quot;
+          </td>
+          <td style="width: 252px;">Creates an opaque, striped background effect.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/stripes.png"/></td>
+          <td style="width: 197px;">Width<br/>
+            Direction<br/>
+            Offset<br/>
+            Displacement<br/>
+            Animation Speed<br/>
+            Wave Scale<br/>
+            Wave Amplitude<br/>
+            Colour Count<br/>
+            Sharpness<br/>
+            Colour Palette</td>
+          <td style="width: 317px;"><span class="inline">g_StripesWidth</span> (Real)<br/>
+            <span class="inline">g_StripesDirection</span> (Real)<br/>
+            <span class="inline">g_StripesOffset</span> (Real)<br/>
+            <span class="inline">g_StripesDisplacement</span> (Real)<br/>
+            <span class="inline">g_StripesSpeed</span> (Real)<br/>
+            <span class="inline">g_StripesFrequency</span> (Real)<br/>
+            <span class="inline">g_StripesAmplitude</span> (Real)<br/>
+            <span class="inline">g_StripesColours</span> (Real)<br/>
+            <span class="inline">g_StripesSharpness</span> (Real)<br/>
+            <span class="inline">g_StripesPalette</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Twirl Distort</strong><br/>
+            <br/>
+            &quot;_filter_twirl_distort&quot;
+          </td>
+          <td style="width: 252px;">Creates a twirl distort effect at the center of the camera (+ the offset).</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/twirl.png"/></td>
+          <td style="width: 197px;">Angle<br/>
+            Radius<br/>
+            Offset</td>
+          <td style="width: 317px;"><span class="inline">g_DistortAngle</span> (Real)<br/>
+            <span class="inline">g_DistortRadius</span> (Real)<br/>
+            <span class="inline">g_DistortOffset</span> (Real)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Twist Blur</strong><br/>
+            <br/>
+            &quot;_filter_twist_blur&quot;
+          </td>
+          <td style="width: 252px;">Applies a Twist Blur filter.</td>
+          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/twistblur.png"/></td>
+          <td style="width: 197px;">Position<br/>
+            Intensity<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_TwistBlurCenter</span> (Array)<br/>
+            <span class="inline">g_TwistBlurIntensity</span> (Real)<br/>
+            <span class="inline">g_TwistBlurTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Underwater</strong><br/>
+            <br/>
+            &quot;_filter_underwater&quot;
+          </td>
+          <td style="width: 252px;">Makes the rendered content look like it is underwater.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/water.png"/></td>
+          <td style="width: 197px;">Distort 1 Speed<br/>
+            Distort 2 Speed<br/>
+            Distort 1 Scale<br/>
+            Distort 2 Scale<br/>
+            Distort 1 Amount<br/>
+            Distort 2 Amount<br/>
+            Chroma Spread<br/>
+            Camera Offset Scale<br/>
+            Glint Colour<br/>
+            Tint Colour<br/>
+            Add Colour<br/>
+            Distort Texture</td>
+          <td style="width: 317px;"><span class="inline">g_Distort1Speed</span> (Real)<br/>
+            <span class="inline">g_Distort2Speed</span> (Real)<br/>
+            <span class="inline">g_Distort1Scale</span> (Real)<br/>
+            <span class="inline">g_Distort2Scale</span> (Real)<br/>
+            <span class="inline">g_Distort1Amount</span> (Real)<br/>
+            <span class="inline">g_Distort2Amount</span> (Real)<br/>
+            <span class="inline">g_ChromaSpreadAmount</span> (Real)<br/>
+            <span class="inline">g_CamOffsetScale</span> (Real)<br/>
+            <span class="inline">g_GlintCol</span> (Array)<br/>
+            <span class="inline">g_TintCol</span> (Array)<br/>
+            <span class="inline">g_AddCol</span> (Array)<br/>
+            <span class="inline">g_DistortTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Vignette</strong><br/>
+            <br/>
+            &quot;_filter_vignette&quot;
+          </td>
+          <td style="width: 252px;">Displays a vignette around your game, with the ability to change the texture displayed on the Vignette.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Vignette.png"/></td>
+          <td style="width: 197px;">Edges<br/>
+            Sharpness<br/>
+            Vignette Texture</td>
+          <td style="width: 317px;"><span class="inline">g_VignetteEdges</span> (Array)<br/>
+            <span class="inline">g_VignetteSharpness</span> (Real)<br/>
+            <span class="inline">g_VignetteTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>White Noise</strong><br/>
+            <br/>
+            &quot;_filter_whitenoise&quot;
+          </td>
+          <td style="width: 252px;">Adds white noise, with optional animation.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/whitenenoise.png" style="cursor: nwse-resize;"/></td>
+          <td style="width: 197px;">Intensity<br/>
+            Animation<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_WhiteNoiseIntensity</span> (Real)<br/>
+            <span class="inline">g_WhiteNoiseAnimation</span> (Real)<br/>
+            <span class="inline">g_WhiteNoiseTexture</span> (Sampler)
+          </td>
+        </tr>
+        <tr style="">
+          <td style="width: 118px;"><strong>Zoom Blur</strong><br/>
+            <br/>
+            &quot;_filter_zoom_blur&quot;
+          </td>
+          <td style="width: 252px;">Displays a zooming motion blur filter.</td>
+          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Zoom_Blur.png"/></td>
+          <td style="width: 197px;">Position<br/>
+            Intensity<br/>
+            Focus Radius<br/>
+            Noise Texture</td>
+          <td style="width: 317px;"><span class="inline">g_ZoomBlurCenter</span> (Array)<br/>
+            <span class="inline">g_ZoomBlurIntensity</span> (Real)<br/>
+            <span class="inline">g_ZoomBlurFocusRadius</span> (Real)<br/>
+            <span class="inline">g_ZoomBlurTexture</span> (Sampler)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">View Effects Table</span><span data-close-text="true">View Effects Table</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <table style="width: 95%;" class=" cke_show_border">
+      <colgroup>
+        <col/>
+        <col style="width: 166px;"/>
+        <col style="width: 286px;"/>
+        <col style="width: 318px;"/>
+        <col/>
+      </colgroup>
+      <tbody>
+        <tr style="">
+          <th colspan="5" style="">Effects (in-game only)</th>
+        </tr>
+        <tr style="">
+          <th style="">Type</th>
+          <th style="width: 166px;">Description</th>
+          <th style="width: 286px;">Example</th>
+          <th style="width: 318px;">IDE Parameters</th>
+          <th style="">Runtime Parameters</th>
+        </tr>
+        <tr style="">
+          <td style=""><strong>Windblown Particles</strong><br/>
+            <br/>
+            &quot;_effect_windblown_particles&quot;
+          </td>
+          <td style="width: 166px;">Creates a windblown particles effect, showing a leaf sprite by default.<br/>
+            <br/>
+            This is an Effect and can&#39;t be previewed in the Room Editor.
+          </td>
+          <td style="width: 286px;"><video src="../../../assets/Images/Asset_Editors/FXs/windblown_particles.mp4" width="336" height="224" controls=""></video></td>
+          <td style="width: 318px;">Sprite<br/>
+            Number of particles<br/>
+            Spawn time<br/>
+            Spawn all at start<br/>
+            Warmup frames<br/>
+            Particle mass Min<br/>
+            Particle mass Max<br/>
+            Particle sprite scale (Start)<br/>
+            Particle sprite scale (End)<br/>
+            Particle colour 1<br/>
+            Particle colour 1 Alt<br/>
+            Particle colour 2<br/>
+            Particle colour 2 Alt<br/>
+            Particle colour 2 Pos<br/>
+            Particle colour 2 Enabled<br/>
+            Particle colour 3<br/>
+            Particle colour 3 Alt<br/>
+            Particle colour 3 Pos<br/>
+            Particle colour 3 Enabled<br/>
+            Particle colour 4<br/>
+            Particle colour 4 Alt<br/>
+            Particle initial velocity x Min<br/>
+            Particle initial velocity x Max<br/>
+            Particle initial velocity y Min<br/>
+            Particle initial velocity y Max<br/>
+            Particle initial rotation Min<br/>
+            Particle initial rotation Max<br/>
+            Particle rotation speed Min<br/>
+            Particle rotation speed Max<br/>
+            Particle align with velocity<br/>
+            Particle lifetime Min<br/>
+            Particle lifetime Max<br/>
+            Particle update skip<br/>
+            Particle spawn border margin<br/>
+            Particle source blend<br/>
+            Particle dest blend<br/>
+            Draw trails only<br/>
+            Trail spawn chance<br/>
+            Trail lifetime Min<br/>
+            Trail lifetime Max<br/>
+            Trail thickness Min<br/>
+            Trail thickness Max<br/>
+            Trail colour 1<br/>
+            Trail colour 1 Alt<br/>
+            Trail colour 2<br/>
+            Trail colour 2 Alt<br/>
+            Trail colour 2 Pos<br/>
+            Trail colour 2 Enabled<br/>
+            Trail colour 3<br/>
+            Trail colour 3 Alt<br/>
+            Trail colour 3 Pos<br/>
+            Trail colour 3 Enabled<br/>
+            Trail colour 4<br/>
+            Trail colour 4 Alt<br/>
+            Trail min segment length<br/>
+            Trail source blend<br/>
+            Trail dest blend<br/>
+            Number of blowers<br/>
+            Blower size Min<br/>
+            Blower size Max<br/>
+            Blower speed Min<br/>
+            Blower speed Max<br/>
+            Blower rotation speed Min<br/>
+            Blower rotation speed Max<br/>
+            Blower force Min<br/>
+            Blower force Max<br/>
+            Blower camera offset scale<br/>
+            Force grid resolution X<br/>
+            Force grid resolution Y<br/>
+            Wind force X<br/>
+            Wind force Y<br/>
+            Particle drag<br/>
+            Gravity<br/>
+            Enable debug mode</td>
+          <td style=""><span class="inline">param_sprite</span> (Sprite)<br/>
+            <span class="inline">param_num_particles</span> (Real)<br/>
+            <span class="inline">param_particle_spawn_time</span> (Real)<br/>
+            <span class="inline">param_particle_spawn_all_at_start</span> (Bool)<br/>
+            <span class="inline">param_warmup_frames</span> (Real)<br/>
+            <span class="inline">param_particle_mass_min</span> (Real)<br/>
+            <span class="inline">param_particle_mass_max</span> (Real)<br/>
+            <span class="inline">param_particle_start_sprite_scale</span> (Real)<br/>
+            <span class="inline">param_particle_end_sprite_scale</span> (Real)<br/>
+            <span class="inline">param_particle_col_1</span> (Array)<br/>
+            <span class="inline">param_particle_col_alt_1</span> (Array)<br/>
+            <span class="inline">param_particle_col_2</span> (Array)<br/>
+            <span class="inline">param_particle_col_alt_2</span> (Array)<br/>
+            <span class="inline">param_particle_col_2_pos</span> (Real)<br/>
+            <span class="inline">param_particle_col_enabled_2</span> (Bool)<br/>
+            <span class="inline">param_particle_col_3</span> (Array)<br/>
+            <span class="inline">param_particle_col_alt_3</span> (Array)<br/>
+            <span class="inline">param_particle_col_3_pos</span> (Real)<br/>
+            <span class="inline">param_particle_col_enabled_3</span> (Bool)<br/>
+            <span class="inline">param_particle_col_4</span> (Array)<br/>
+            <span class="inline">param_particle_col_alt_4</span> (Array)<br/>
+            <span class="inline">param_particle_initial_velocity_range_x_min</span> (Real)<br/>
+            <span class="inline">param_particle_initial_velocity_range_x_max</span> (Real)<br/>
+            <span class="inline">param_particle_initial_velocity_range_y_min</span> (Real)<br/>
+            <span class="inline">param_particle_initial_velocity_range_y_max</span> (Real)<br/>
+            <span class="inline">param_particle_initial_rotation_min</span> (Real)<br/>
+            <span class="inline">param_particle_initial_rotation_max</span> (Real)<br/>
+            <span class="inline">param_particle_rot_speed_min</span> (Real)<br/>
+            <span class="inline">param_particle_rot_speed_max</span> (Real)<br/>
+            <span class="inline">param_particle_align_vel</span> (Real)<br/>
+            <span class="inline">param_particle_lifetime_min</span> (Real)<br/>
+            <span class="inline">param_particle_lifetime_max</span> (Real)<br/>
+            <span class="inline">param_particle_update_skip</span> (Real)<br/>
+            <span class="inline">param_particle_spawn_border_prop</span> (Real)<br/>
+            <span class="inline">param_particle_src_blend</span> (<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span>)<br/>
+            <span class="inline">param_particle_dest_blend</span> (<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span>)<br/>
+            <span class="inline">param_trails_only</span> (Bool)<br/>
+            <span class="inline">param_trail_chance</span> (Real)<br/>
+            <span class="inline">param_trail_lifetime_min</span> (Real)<br/>
+            <span class="inline">param_trail_lifetime_max</span> (Real)<br/>
+            <span class="inline">param_trail_thickness_min</span> (Real)<br/>
+            <span class="inline">param_trail_thickness_max</span> (Real)<br/>
+            <span class="inline">param_trail_col_1</span> (Array)<br/>
+            <span class="inline">param_trail_col_alt_1</span> (Array)<br/>
+            <span class="inline">param_trail_col_2</span> (Array)<br/>
+            <span class="inline">param_trail_col_alt_2</span> (Array)<br/>
+            <span class="inline">param_trail_col_2_pos</span> (Real)<br/>
+            <span class="inline">param_trail_col_enabled_2</span> (Bool)<br/>
+            <span class="inline">param_trail_col_3</span> (Array)<br/>
+            <span class="inline">param_trail_col_alt_3</span> (Array)<br/>
+            <span class="inline">param_trail_col_3_pos</span> (Real)<br/>
+            <span class="inline">param_trail_col_enabled_3</span> (Bool)<br/>
+            <span class="inline">param_trail_col_4</span> (Array)<br/>
+            <span class="inline">param_trail_col_alt_4</span> (Array)<br/>
+            <span class="inline">param_trail_min_segment_length</span> (Real)<br/>
+            <span class="inline">param_trail_src_blend</span> (<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span>)<br/>
+            <span class="inline">param_trail_dest_blend</span> (<span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span>)<br/>
+            <span class="inline">param_num_blowers</span> (Real)<br/>
+            <span class="inline">param_blower_size_min</span> (Real)<br/>
+            <span class="inline">param_blower_size_max</span> (Real)<br/>
+            <span class="inline">param_blower_speed_min</span> (Real)<br/>
+            <span class="inline">param_blower_speed_max</span> (Real)<br/>
+            <span class="inline">param_blower_rot_speed_min</span> (Real)<br/>
+            <span class="inline">param_blower_rot_speed_max</span> (Real)<br/>
+            <span class="inline">param_blower_force_min</span> (Real)<br/>
+            <span class="inline">param_blower_force_max</span> (Real)<br/>
+            <span class="inline">param_blower_camvec_scale</span> (Real)<br/>
+            <span class="inline">param_force_grid_sizex</span> (Real)<br/>
+            <span class="inline">param_force_grid_sizey</span> (Real)<br/>
+            <span class="inline">param_wind_vector_x</span> (Real)<br/>
+            <span class="inline">param_wind_vector_y</span> (Real)<br/>
+            <span class="inline">param_dragcoeff</span> (Real)<br/>
+            <span class="inline">param_grav_accel</span> (Real)<br/>
+            <span class="inline">param_debug_grid</span> (Bool)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="../Filters_and_Effects.htm">Filters and Effects</a></div>
+        <div>Next: <a href="../../Scripts.htm">Scripts</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

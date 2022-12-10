@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "9.2.2.2.0_25";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>array_union</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="INSERT_AUTHOR"/>
+  <meta name="topic-comment" content="INSERT_DESCRIPTION"/>
+  <meta name="rh-index-keywords" content="array_union"/>
+  <meta name="search-keywords" content="array_union"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="array_union">
+        <span>array_union</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1><span data-field="title" data-format="default">array_union</span></h1>
+  <p><span>This function returns a <i>new</i> array that is the <a href="https://en.wikipedia.org/wiki/Union_(set_theory)">union</a> of all provided arrays.</span></p>
+  <p><span><span>The returned array contains all unique elements, i.e. with <span>duplicates </span>removed.</span></span></p>
+  <div data-conref="../../../assets/snippets/function_order_not_ensured.hts">
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The order of elements in the new array is <strong>not</strong> ensured. If you need to sort the array you will need to do so afterwards.</p>
+
+</div>
+  <h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default">array_union</span>(array1, array2 [, array3, ... array_n]);</p>
+  <table style="">
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="">Argument</th>
+        <th style="">Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr style="">
+        <td style="">array1</td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td style="">The first array</td>
+      </tr>
+      <tr style="">
+        <td style="">array2</td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td style="">The second array</td>
+      </tr>
+      <tr style="">
+        <td style="">[array3, ..., array_n]</td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> Additional arrays</td>
+      </tr>
+    </tbody>
+  </table>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (the union of the provided arrays)</p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">a1 = [1, 2, 3, 4, 5];<br/>
+    a2 = [3, 4, 5, 6, 7, 8];<br/>
+    a3 = [5, 6, 7, 8, 9, 10, 11];<br/>
+    <br/>
+    a4 = <span data-field="title" data-format="default">array_union</span>(a1, a2, a3);
+  </p>
+  <p>The above code first creates 3 arrays <span class="inline2">a1</span>, <span class="inline2">a2</span> and <span class="inline2">a3</span>. It then takes the union of these arrays and stores the result in a new array <span class="inline2">a4</span>.</p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Array_Functions.htm">Array Functions</a></div>
+        <div>Next: <a href="array_intersection.htm">array_intersection</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+array_union
+-->
+  <!-- TAGS
+array_union
+-->
+
+</body></html>

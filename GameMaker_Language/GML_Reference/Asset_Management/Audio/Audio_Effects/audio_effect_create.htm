@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../../..";
+    gCommonRootRelPath = "../../../../..";
+    gTopicId = "9.2.2.3.5.3.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">audio_effect_create</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <link rel="stylesheet" type="text/css" href="../../../../../assets/css/default.css" data-condition="Export:Beta"/>
+  <script src="../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta name="rh-authors" content="Bart Teunis" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="Reference page for audio_effect_create" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="audio_effect_create" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="audio_effect_create" data-condition="Export:Beta"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="audio_effect_create">
+        <span>audio_effect_create</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1 data-condition="Export:Beta"><span data-field="title" data-format="default">audio_effect_create</span></h1>
+  <p id="p" data-condition="Export:Beta">This function creates a new audio effect and returns the <a href="AudioEffect.htm">AudioEffect Struct</a> through which you can access and modify it.</p>
+  <p data-condition="Export:Beta">For a list of possible audio effects that you can create, see <a href="AudioEffectType.htm">AudioEffectType Enum</a>.</p>
+  <p data-condition="Export:Beta">The members of the returned struct are dependent on the type of audio effect created. For all possible audio effect structs, see: <a href="AudioEffect.htm">AudioEffect Struct</a></p>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Syntax:</h4>
+  <p class="code" data-condition="Export:Beta"><span data-field="title" data-format="default">audio_effect_create</span>(type);</p>
+  <table data-condition="Export:Beta" style="">
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr style="">
+        <th style="">Argument</th>
+        <th style="">Type</th>
+        <th style="">Description</th>
+      </tr>
+      <tr style="">
+        <td style="">type</td>
+        <td style=""><a href="AudioEffectType.htm">AudioEffectType Enum</a></td>
+        <td style="">The type of audio effect to create (e.g. <span class="inline2">AudioEffectType.Reverb1</span>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Returns:</h4>
+  <p class="code" data-condition="Export:Beta"><a href="AudioEffect.htm">AudioEffect Struct</a></p>
+  <p data-condition="Export:Beta"> </p>
+  <h4 data-condition="Export:Beta">Example:</h4>
+  <p class="code" data-condition="Export:Beta">var _ef_distortion = audio_effect_create(AudioEffectType.Bitcrusher);<br/>
+    _ef_distortion.gain = 1.1;<br/>
+    _ef_distortion.factor = 20;<br/>
+    _ef_distortion.resolution = 8;<br/>
+    _ef_distortion.mix = 0.5;<br/>
+    audio_bus_main.effects[0] = _ef_distortion;</p>
+  <p data-condition="Export:Beta">The above code first creates a new distortion effect of type <a href="AudioEffectType.htm#h2">AudioEffectType.Bitcrusher</a> using <span class="inline2"><a href="audio_effect_create.htm">audio_effect_create</a></span>. It then configures the effect by setting the effect&#39;s parameters.<br/>
+    Finally it assigns the effect to the main audio bus, which starts processing the effect.</p>
+  <p data-condition="Export:Beta"> </p>
+  <div class="footer" data-condition="Export:Beta">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
+        <div>Next: <a href="audio_bus_create.htm">audio_bus_create</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+audio_effect_create
+-->
+  <!-- TAGS
+audio_effect_create
+-->
+
+</body></html>

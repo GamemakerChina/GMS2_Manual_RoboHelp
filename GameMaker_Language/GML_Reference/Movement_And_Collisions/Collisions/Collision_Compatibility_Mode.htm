@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "9.2.2.5.3.0_24";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Collision Compatibility Mode</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
+  <meta name="topic-comment" content="Page describing the Collision Compatibility Mode"/>
+  <meta name="rh-index-keywords" content="Collision Compatibility"/>
+  <meta name="search-keywords" content="Collision, Compatibility, Mode, integer collisions, floating point collisions, rounded bounding box"/>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/Drawing.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Movement_And_Collisions/Collisions/rectangle_in_circle.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Collision Compatibility Mode">
+        <span>Collision Compatibility Mode</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <span>Click here to see this page in full context</span>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Collision Compatibility Mode</h1>
+  <p>In the <a href="../../../../Settings/Game_Options.htm">General Game Options</a> for your project, you can enable &quot;<strong>Collision Compatibility Mode</strong>&quot; to switch to the legacy collision system. You would only need to do this if you noticed odd behaviour with collisions in your existing project(s) after upgrading to <span data-keyref="GameMaker Name">GameMaker</span> 2022.1, which changed how collisions work.</p>
+  <p><img alt="Collision Compatibility Mode option in Game Options" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_compatibility_mode.png"/></p>
+  <h2>Changes in Collisions</h2>
+  <p>In the legacy collision system, all bounding box coordinates were rounded to integers and were &quot;exclusive&quot;, i.e. they would exclude the bottom-most and right-most edges of a collision mask. For example, the bounding box for a 16x16 collision mask would be generated from <span class="inline2">(0, 0)</span> to <span class="inline2">(15, 15)</span> (relative). This would work fine for instances that used only integer values for positioning and scaling, however using <a class="tooltip" title="Floating point numbers are numbers that contain decimal points. For example, the numbers 5.5, 0.001, and -2,345.6789 are floating point numbers. Numbers that do not have decimal places are called integers (e.g. 2, 56, 1400).">floating point</a> values would cause unexpected behaviour and a slight disconnect between rendering and collision checking, as GameMaker would then always round the bounding box values for performing collision checks.</p>
+  <p>In the current collision system, bounding box values are not rounded and are used as-is, meaning collisions are more accurate and behave as one would expect. Bounding boxes are also &quot;inclusive&quot; now, i.e. they include the bottom-most and right-most edges. For example, the bounding box for a 16x16 collision mask is now generated from <span class="inline2">(0.0, 0.0)</span> to <span class="inline2">(16.0, 16.0)</span> (relative).</p>
+  <h2>Compatibility Mode</h2>
+  <p>The collision changes explained above may cause some existing projects to break, which you can easily fix by enabling the <strong>Collision Compatibility Mode</strong> for such projects so the legacy collision system is used; however it is recommended to test and upgrade your collision code to work with the new system as it should allow your game to have more accurate and logical collisions.</p>
+  <p>For projects that are new or do not use existing collision code, there is no need to enable this option.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
+        <div style="float:right">Next: <a href="place_empty.htm">place_empty</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Collision Compatibility Mode
+-->
+  <!-- TAGS
+Collision Compatibility Mode
+-->
+
+</body></html>
