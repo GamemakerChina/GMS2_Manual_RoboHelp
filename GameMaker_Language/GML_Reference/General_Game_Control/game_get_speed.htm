@@ -55,7 +55,7 @@
   <title>game_get_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="This page outlines the function game_get_speed"/>
   <meta name="rh-index-keywords" content="game_get_speed,gamespeed_fps,gamespeed_microseconds"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/General_Game_Control/game_set_speed.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/General_Game_Control/game_save_buffer.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>game_get_speed</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,26 +83,26 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>game_get_speed</h1>
   <p>This function can be used to get the game speed as either the number of game frames to run per second or as the number of micro seconds per game frame. Note that this is <b>not</b> the actual running speed FPS value (for that use the <a href="../Debugging/fps_real.htm"><span class="inline">fps_real</span></a> variable) but rather the number of game frames (FPS) that the game will attempt to maintain each second, or the length of each game frame in microseconds that the game will try to maintain (MPF). When you use this function you need to give one of the following constants which will determine the type of the return value:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_GameSpeed"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm">Game Speed Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_GameSpeed"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm">Game Speed Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gamespeed_fps</span></td>
-        <td style="">Gets the game speed using frames per second.</td>
+      <tr>
+        <td><span class="inline">gamespeed_fps</span></td>
+        <td>Gets the game speed using frames per second.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gamespeed_microseconds</span></td>
-        <td style="">Gets the game speed using microseconds per frame.</td>
+      <tr>
+        <td><span class="inline">gamespeed_microseconds</span></td>
+        <td>Gets the game speed using microseconds per frame.</td>
       </tr>
     </tbody>
   </table>
@@ -110,14 +110,14 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">game_get_speed(type);</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>type</td>
         <td><span data-keyref="Type_Constant_GameSpeed"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm">Game Speed Constant</a></span></td>
         <td>The type of method used to get the game speed (see the constants above).</td>
@@ -144,7 +144,7 @@
         <div style="float:right">Next: <a href="game_set_speed.htm">game_set_speed</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_get_speed

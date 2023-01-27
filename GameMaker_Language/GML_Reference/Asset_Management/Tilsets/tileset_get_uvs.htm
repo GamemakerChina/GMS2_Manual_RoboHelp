@@ -55,7 +55,7 @@
   <title>tileset_get_uvs</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page explaining the function tileset_get_uvs"/>
   <meta name="rh-index-keywords" content="tileset_get_uvs"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/Audio.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Tilsets/tileset_get_texture.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>tileset_get_uvs</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -81,8 +81,8 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tileset_get_uvs</h1>
-  <p>This function returns an <a href="../../../GML_Overview/Arrays.htm">array</a> with the UV coordinates and other data for the texture of the given tile set on the texture page. The function returns an array with the following 8 elements:</p>
+  <h1><span data-field="title" data-format="default">tileset_get_uvs</span></h1>
+  <p>This function returns an <a href="../../../GML_Overview/Arrays.htm">array</a> with the UV coordinates and other data for the texture of the given tile set on the texture page. The array contains the following 8 elements:</p>
   <ul class="colour">
     <li>[0] = left</li>
     <li>[1] = top</li>
@@ -96,17 +96,19 @@
   <p>This array can then be used in other draw functions, particularly when working in 3D or using the <a href="../../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">2D primitive</a> functions, as well as when working with the <a href="../Shaders/Shaders.htm">Shader</a> functions.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">tileset_get_uvs(tileset);</p>
-  <table style="">
+  <p class="code"><span data-field="title" data-format="default">tileset_get_uvs</span>(tileset);</p>
+  <table>
     <tbody>
-      <tr style="">
-        <th>Argument</th><th>Type</th>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
-      <tr style="">
-        <td>tileset</td><td><span data-keyref="Type_Asset_Tile_Set"><a target="_blank" href="../../../../../The_Asset_Editors/Tile_Sets.htm">Tile Set Asset</a></span></td>
+      </tr>
+      <tr>
+        <td>tileset</td>
+        <td><span data-keyref="Type_Asset_Tile_Set"><a target="_blank" href="../../../../../The_Asset_Editors/Tile_Sets.htm">Tile Set Asset</a></span></td>
         <td>The index of the tile set to use.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -114,19 +116,22 @@
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (1D, 8 elements)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var tex = tileset_get_uvs(tl_Grass);<br/> tex_left = tex[0];<br/> tex_top = tex[1];<br/> tex_right = tex[2];<br/> tex_bottom = tex[3];</p>
+  <p class="code">var tex = <span data-field="title" data-format="default">tileset_get_uvs</span>(tl_Grass);<br/>
+    tex_left = tex[0];<br/>
+    tex_top = tex[1];<br/>
+    tex_right = tex[2];<br/>
+    tex_bottom = tex[3];</p>
   <p>The above code will store the UV coordinates for the given tile set in a local array and then assign the values to instance variables.</p>
-  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Sets.htm">Tile Sets</a></div>
-        <div style="float:right">Next: <a href="tileset_get_name.htm">tileset_get_name</a></div>
+        <div style="float:left">Back: <a href="Tile_Sets.htm">Tile Sets</a></div>
+        <div style="float:right">Next: <a href="tileset_get_info.htm">tileset_get_info</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 tileset_get_uvs

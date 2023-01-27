@@ -55,7 +55,7 @@
   <title>Guide To Using Buffers</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains how buffers work"/>
   <meta name="rh-index-keywords" content="Guide To Using Buffers"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Additional_Information/Guide_To_Using_Particles.htm"/><meta name="brsprev" value="Additional_Information/Vectors.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Guide To Using Buffers</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -86,28 +86,28 @@
   <p class="note"><strong>NOTE</strong>: Restarting the game will not clear or delete the buffer! But it will prevent any further access to the previously created buffer as the ID handle will have been lost, causing a memory leak which will crash your game eventually. So, when re-starting a game, remember to delete any buffers first.</p>
   <p><span data-keyref="GameMaker Name">GameMaker</span> permits the creation of four different buffer types. The reason for this is that buffers are designed to be a highly optimised temporary storage medium, and as such you should create a buffer that is appropriate to the type of data that you wish it to store, otherwise you could get errors or cause a bottleneck in your code. Before explaining this further, let&#39;s look at the four available buffer types (defined as <strong>constants </strong>in GML):</p>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Constant</th>
         <th>description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_fixed</span></td>
         <td><br/>
           A buffer of a fixed size in bytes. The size is set when the buffer is created and cannot be changed again.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_grow</span></td>
         <td><br/>
           A buffer that will <i>grow</i> dynamically as data is added. You create it with an initial size (which should be an approximation of the size of the data expected to be stored), and then it will expand to accept further data that overflows this initial size.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_wrap</span></td>
         <td><br/>
           A buffer where the data will <i>wrap</i>. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_fast</span></td>
         <td><br/>
           This is a special &quot;stripped down&quot; buffer that is extremely fast to read/write to. However it can only be used with <span class="inline"><span class="inline">buffer_u8</span></span> data types, and must be 1 byte aligned. (Information on <b>data types</b> and <b>byte alignment</b> can be found further down this page).</td>
@@ -123,89 +123,70 @@
     That would create a fixed buffer of 16384 bytes and byte-aligned to 2, with the function returning a unique ID value that is stored in a variable for later referencing of this buffer.</p>
   <p>When reading and writing data to a buffer, you do it in &quot;chunks&quot; of data defined by their &quot;data type&quot;. The &quot;data type&quot; sets the number of bytes allocated within the buffer for the value being written, and it is essential that you get this correct otherwise you will get some very strange results (or even errors) for your code.</p>
   <p>Buffers are written to (and read from) <strong>sequentially</strong>, in that one piece of data is written after another, with each piece of data being of a set type. This means that you should ideally be aware of what data you are writing to the buffer at all times. These data types are defined in GML by the following constants:</p>
-  <p> </p>
-  <table style="">
+  <div data-conref="../assets/snippets/buffer_data_type_constants.hts">
+  <table style="caption-side: top">
+    <caption><span data-keyref="Type_Constant_Buffer_Data_Type"><a target="_blank" href="../../GameMaker_Language/GML_Reference/Buffers/buffer_write.htm">Buffer Data Type Constant</a></span></caption>
     <tbody>
-      <tr style="">
-        <th>Data Type Constant</th>
-        <th>Bytes</th>
+      <tr>
+        <th>Constant</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_u8</span></td>
-        <td>1</td>
-        <td><br/>
-          An unsigned, 8bit integer. This is a positive value from 0 to 255.</td>
+        <td>An unsigned, 8bit integer. This is a positive value from 0 to 255.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_s8</span></td>
-        <td>1</td>
-        <td><br/>
-          A signed, 8bit integer. This can be a positive or negative value from -128 to 127 (0 is classed as positive).</td>
+        <td>A signed, 8bit integer. This can be a positive or negative value from -128 to 127 (0 is classed as positive).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_u16</span></td>
-        <td>2</td>
-        <td><br/>
-          An unsigned, 16bit integer. This is a positive value from 0 - 65,535.</td>
+        <td>An unsigned, 16bit integer. This is a positive value from 0 - 65,535.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_s16</span></td>
-        <td>2</td>
-        <td><br/>
-          A signed, 16bit integer. This can be a positive or negative value from -32,768 to 32,767 (0 is classed as positive).</td>
+        <td>A signed, 16bit integer. This can be a positive or negative value from -32,768 to 32,767 (0 is classed as positive).</td>
       </tr>
-      <tr style="">
-        <td><span class="inline">buffer_f16</span></td>
-        <td>2</td>
-        <td><br/>
-          A 16bit floating point number. This can be a positive or negative value within the range of +/- 65504. <b>(Not currently supported!)</b></td>
-      </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_u32</span></td>
-        <td>4</td>
-        <td><br/>
-          An unsigned, 32bit integer. This is a positive value from 0 to 4,294,967,295.</td>
+        <td>An unsigned, 32bit integer. This is a positive value from 0 to 4,294,967,295.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_s32</span></td>
-        <td>4</td>
-        <td><br/>
-          A signed, 32bit integer. This can be a positive or negative value from -2,147,483,648 to 2,147,483,647 (0 is classed as positive).</td>
+        <td>A signed, 32bit integer. This can be a positive or negative value from -2,147,483,648 to 2,147,483,647 (0 is classed as positive).</td>
       </tr>
-      <tr style="">
-        <td><span class="inline">buffer_f32</span></td>
-        <td>4</td>
-        <td><br/>
-          A 32bit floating point number. This can be a positive or negative value within the range of +/-16777216.</td>
-      </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_u64</span></td>
-        <td>8</td>
-        <td><br/>
-          A 64bit unsigned integer value.<b>(Not currently supported by all buffer functions!)</b></td>
+        <td>An unsigned 64bit integer. This is a positive value from 0 to 18,446,744,073,709,551,615.</td>
       </tr>
-      <tr style="">
+      <tr>
+        <td><span class="inline">buffer_f16</span></td>
+        <td>A 16bit float. This can be a positive or negative value within the range of +/- 65504.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">buffer_f32</span></td>
+        <td>A 32bit float. This can be a positive or negative value within the range of +/-16777216.</td>
+      </tr>
+      <tr>
         <td><span class="inline">buffer_f64</span></td>
-        <td>8</td>
-        <td><br/>
-          A 64bit floating point number.</td>
+        <td>A 64bit float.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_bool</span></td>
-        <td>1</td>
-        <td><br/>
-          A boolean value. Can only be either 1 or 0 (<span class="inline">true</span> or <span class="inline">false</span>)</td>
+        <td>A boolean value, can only be either 1 or 0 (<span class="inline">true</span> or <span class="inline">false</span>). It is stored in a single byte (8bit)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">buffer_string</span></td>
-        <td>N/A</td>
-        <td><br/>
-          This is a UTF-8 null terminated (0x00) string. Basically a GameMaker string is dumped in the buffer, and a 0 is put at the end.</td>
+        <td>A string of any size, including a final null terminating character</td>
+      </tr>
+      <tr>
+        <td><span class="inline">buffer_text</span></td>
+        <td>A string of any size, without the final null terminating character</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+
+</div>
   <p>So, say you have created a buffer and you want to write information to it, then you would use something like the following code:</p>
   <p class="code">buffer_write(buff, buffer_bool, global.Sound);<br/>
     buffer_write(buff, buffer_bool, global.Music);<br/>
@@ -224,7 +205,6 @@
   <p>However, if you write another piece of data, also 1 byte in size, <em>then </em>do a buffer tell, you&#39;ll get an offset of 5 bytes (even though you have only written 2 bytes of data) as the alignment has padded the data to align it with the 4 byte buffer alignment.</p>
   <p>Basically, what this means is that alignment will only affect <em>where </em>things are written to, so if you do a buffer tell after you write something, it&#39;ll return the current write position which immediately follows the data you&#39;ve previously written. Note, however, that if you then write another piece of data, internally the buffer will move the write position along to the next multiple of the alignment size before actually writing the piece of data.</p>
   <p>Below we have a couple of examples of how to use buffers in a project:</p>
-  <p> </p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Buffer Checkpoint</span><span data-close-text="true">Buffer Checkpoint</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">A simple example of how a buffer can be used in any <span data-keyref="GameMaker Name">GameMaker</span> game for any platform, is the function <a href="../GameMaker_Language/GML_Reference/General_Game_Control/game_save_buffer.htm"><span class="inline">game_save_buffer()</span></a>. This function will take a &quot;snapshot&quot; of the current game state and save it to a pre-defined buffer, which can then be read from to load the game at that point again.</p>
@@ -285,7 +265,7 @@
         <div style="float:right">Next: <a href="Bitwise_Operators.htm">Bitwise Operators</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers

@@ -628,7 +628,7 @@ div.topic-state.loading {
 
 .custom-button-0 a {
   background-image: url("custom_button_place_holder.png");
-  background-image: url(expand_all.svg);
+  background-image: url(bug-report-final.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain; }
@@ -642,7 +642,7 @@ body.media-landscape div.header div.custom-button-0 {
 
 .custom-button-1 a {
   background-image: url("custom_button_place_holder.png");
-  background-image: url(removesearch_mark.svg);
+  background-image: url(expand_all.svg);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain; }
@@ -656,7 +656,7 @@ body.media-landscape div.header div.custom-button-1 {
 
 .custom-button-2 a {
   background-image: url("custom_button_place_holder.png");
-  background-image: url(print_desktop.png);
+  background-image: url(removesearch_mark.svg);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain; }
@@ -670,7 +670,7 @@ body.media-landscape div.header div.custom-button-2 {
 
 .custom-button-3 a {
   background-image: url("custom_button_place_holder.png");
-  background-image: undefined;
+  background-image: url(print_desktop.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain; }

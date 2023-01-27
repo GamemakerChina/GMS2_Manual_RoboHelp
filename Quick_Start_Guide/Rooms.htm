@@ -55,7 +55,7 @@
   <title>Rooms</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Overview of the room editor."/>
   <meta name="rh-index-keywords" content="Quick Start - Rooms"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="Quick_Start_Guide/Drawing.htm"/><meta name="brsprev" value="Quick_Start_Guide/Sequences.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>Rooms</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -91,29 +91,29 @@
       When you click a layer in the Layer Editor its properties, that depend on the layer type, are shown and can be changed here. This window permits you to change those properties and edit how the layer will be <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a>.</li>
   </ul>
   <p>We&#39;ve mentioned that there are different layer types, so let&#39;s just go over what they are and how they can be used when building your games:</p>
-  <table class="icons" style="">
+  <table class="icons">
     <tbody>
-      <tr style="">
+      <tr>
         <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Background.png"/></td>
         <td class="icons"><strong>Background Layer</strong></td>
         <td class="text">The background layer is a layer that can be filled with a <em>single </em>colour or a <em>single </em>image. It can be moved and positioned within the room, and you can have multiple background layers. Generally this is used, as the name suggests, to generate a constant background for all the other layers in the room. By Default a new room will always contain a background layer, but you can remove it if you don&#39;t need it.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Instances.png"/></td>
         <td class="icons"><strong>Instance Layer</strong></td>
         <td class="text">The instance layer is where you place all the instances of the objects that you require for the game. To add an instance to a layer, simply click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the object in the asset browser and then drag it into the room editor workspace. When you release the mouse button, an instance of that object will have been added to the room. By Default a new room will always contain an instance layer, but you can remove it if you don&#39;t need it.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Tilemap.png"/></td>
         <td class="icons"><strong>Tile Map Layer</strong></td>
         <td class="text"><span>After having created a <a class="tooltip" title="A tile set is a collection of square or rectangular graphical assets laid out on a grid as a single image. Each item in the grid can then be placed multiple times in a room to create a larger scene called the &#39;tile map&#39;.">tile sets</a>, you need to add the tiles to your room, which is done by creating a <a class="tooltip" title="The tile map is the name given to a collection of tiles taken from a tile set and used to create levels in a game.">tile map</a> layer. A tile map layer is a layer that permits you to add tiles from any of the tile set assets that you have created and will be set up automatically to use a grid the size of the tile set cells. You can only add a single tile to each grid cell, so if you require multiple tiles to occupy the same space, then you should be using multiple tile map layers.</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Path.png"/></td>
         <td class="icons"><strong>Path Layer</strong></td>
         <td class="text"><span>The path layer is the only one that does not actually get rendered when you run your game. This layer is more of a &quot;convenience&quot; layer for helping you to create or edit <strong>Path </strong>assets, since it permits you to add or edit paths within the actual room space.</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img src="../assets/Images/Icons/Icon_Layer_Asset.png"/></td>
         <td class="icons"><strong>Asset Layer</strong></td>
         <td class="text">Sometimes you want a nice graphical effect but don&#39;t want the overhead of using an instance or don&#39;t need it to do anything other than draw itself. You could use a tile map, but given that tile maps are restricted to using a grid and only a single image per grid cell, they can be a bit restrictive. This is when you would use the asset layer. The asset layer simply takes a sprite resource and draws it using the parameters that you set when you add it into the room. Sprites and sequences can be added to this layer the same way that instances of objects are added to the instance layer, ie: you click <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on the sprite in the asset browser and then drag it into the room editor workspace.</td>
@@ -144,7 +144,7 @@
         <div style="float:right">Next: <a href="Drawing.htm">Drawing</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Rooms

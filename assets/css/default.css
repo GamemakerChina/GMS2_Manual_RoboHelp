@@ -287,7 +287,7 @@ span.inline {
   font-weight: 700;
   font-size: 17px;
 }
-span.inline2 {
+span.inline2, span.inline3_func {
   font-family: menlo, consolas, monospace;
   background: #181818;
   color: #cfcfcf;
@@ -304,10 +304,13 @@ span.inline2 {
   position: relative;
   bottom: 2px;
 }
+span.inline3_func > a::after, span.inline3_func > span::after {
+  content: "()";
+}
 a span.inline2 {
   color: #04de80;
 }
-td span.inline2 {
+td span.inline2, td span.inline3_func {
   background: #282828;
 }
 tt {

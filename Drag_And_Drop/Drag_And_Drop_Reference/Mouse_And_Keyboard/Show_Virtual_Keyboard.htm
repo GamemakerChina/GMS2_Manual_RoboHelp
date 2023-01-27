@@ -55,7 +55,7 @@
   <title>Show Virtual Keyboard</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains the Show Virtual Keyboard action"/>
   <meta name="rh-index-keywords" content="GML Visual Action - Show Virtual Keyboard"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Drag_And_Drop/Drag_And_Drop_Reference/Mouse_And_Keyboard/Hide_Virtual_Keyboard.htm"/><meta name="brsprev" value="Drag_And_Drop/Drag_And_Drop_Reference/Mouse_And_Keyboard/If_Key_Released.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Show Virtual Keyboard</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -84,37 +84,37 @@
   <p>This action can be used to show the virtual keyboard on the device running the game. When you call this action you will be asked to provide one of the following constants for each of the first three arguments:</p>
   <ul class="colour">
     <li><b>Keyboard type</b>: This constant is used to set which key-set will be available on the virtual keyboard. The available keyboard types are:
-      <table style="">
+      <table>
         <tbody>
-          <tr style="">
+          <tr>
             <th>Keyboard Type</th>
             <th>Description</th>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_default</span></td>
             <td>The default keyboard type for the current system.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_ascii</span></td>
             <td>An ASCII-only keyboard.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_url</span></td>
             <td>A normal keyboard optimized for URL entry. Usually features a &quot;.com&quot; or other domain keys, as well as &quot;/&quot; and &quot;.&quot; keys.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_email</span></td>
             <td>A normal keyboard optimized for e-mail entry. Usually features &quot;@&quot; and &quot;.&quot; characters.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_numbers</span></td>
             <td>A numbers-only keyboard, usually displayed as a number pad.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_phone</span></td>
             <td>A phone pad keyboard. Usually numbers-only with the &quot;*&quot; and &quot;#&quot; keys.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_type_phone_name</span></td>
             <td>A keyboard optimized for entering both a phone number and a name. Usually similar to an ASCII keyboard, but with a limited special characters selection.</td>
           </tr>
@@ -122,57 +122,57 @@
       </table>
     </li>
     <li><b>Return type</b>: This constant is used to set what is shown on the return/action key of the virtual keyboard. The available return types are:
-      <table style="">
+      <table>
         <tbody>
-          <tr style="">
+          <tr>
             <th>Return Type</th>
             <th>Description</th>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_default</span></td>
             <td>The default return key title for the current system.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_go</span></td>
             <td>Sets the return key title to &quot;Go&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_google</span></td>
             <td>Sets the return key title to &quot;Google&quot;, or to a generic search icon in some cases.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_join</span></td>
             <td>Sets the return key title to &quot;Go&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_next</span></td>
             <td>Sets the return key title to &quot;Next&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_route</span></td>
             <td>Sets the return key title to &quot;Route&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_search</span></td>
             <td>Sets the return key title to &quot;Search&quot;, or to a generic search icon in some cases.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_send</span></td>
             <td>Sets the return key title to &quot;Send&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_yahoo</span></td>
             <td>Sets the return key title to &quot;Yahoo&quot;, or to a generic search icon in some cases.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_done</span></td>
             <td>Sets the return key title to &quot;Done&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_continue</span></td>
             <td>Sets the return key title to &quot;Continue&quot;.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_emergency</span></td>
             <td>Sets the return key title to &quot;Emergency Call&quot;.</td>
           </tr>
@@ -180,25 +180,25 @@
       </table>
     </li>
     <li><b>Autocapitalization type</b>: This constant is used to determine how the words typed via the virtual keyboard should be autocapitalized. The available autocapitalization types are:
-      <table style="">
+      <table>
         <tbody>
-          <tr style="">
+          <tr>
             <th>Autocapitalization Type</th>
             <th>Description</th>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_autocapitalize_none</span></td>
             <td>Autocapitalization is disabled.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_autocapitalize_words</span></td>
             <td>Words will be auto-capitalized.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_autocapitalize_sentences</span></td>
             <td>Sentences will be auto-capitalized.</td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_autocapitalize_characters</span></td>
             <td>All characters will be capitalized.</td>
           </tr>
@@ -210,26 +210,26 @@
   <p>It is important to note too that the user will get different keyboards with different capabilities depending on the platform OS, with the following caveats for use per target:</p>
   <ul class="colour">
     <li><b>Android / Amazon Fire</b>: On Android, the keyboard type <span class="inline">kbv_type_phone_name</span> is not supported and will display an ASCII keyboard instead, and the return key type can only be <span class="inline">kbv_returnkey_go</span>, <span class="inline">kbv_returnkey_search</span>, <span class="inline">kbv_returnkey_next</span>, <span class="inline">kbv_returnkey_send</span> or <span class="inline">kbv_returnkey_done</span>. If other return key types are used on that platform, the system will default to the replacement return keys listed below:
-      <table style="">
+      <table>
         <tbody>
-          <tr style="">
+          <tr>
             <th>Unavailable return key</th>
             <th>Replacement key</th>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_google</span><br/>
               <span class="inline">kbv_returnkey_yahoo</span>
             </td>
             <td><span class="inline">kbv_returnkey_search</span></td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_join</span><br/>
               <span class="inline">kbv_returnkey_route</span><br/>
               <span class="inline">kbv_returnkey_emergency</span>
             </td>
             <td><span class="inline">kbv_returnkey_go</span></td>
           </tr>
-          <tr style="">
+          <tr>
             <td><span class="inline">kbv_returnkey_continue</span></td>
             <td><span class="inline">kbv_returnkey_next</span></td>
           </tr>
@@ -257,25 +257,25 @@
   <p><img alt="Show Virtual Keyboard Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Mouse_And_Keyboard/a_VirtualKeyboard_Show.png"/></p>
   <h4>Arguments:</h4>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>keyboard_type</td>
         <td>Determines the key-set available on the virtual keyboard.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>return_key_type</td>
         <td>Determines what is shown on the return/action key of the virtual keyboard.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>autocapitalization_type</td>
         <td>Determines how/if the words typed via the virtual keyboard will be autocapitalized.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>predictive_text_enabled</td>
         <td>Set to <span class="inline">true</span>/<span class="inline">false</span> to enable/disable predictive text input.</td>
       </tr>
@@ -294,7 +294,7 @@
         <div style="float:right">Next: <a href="Hide_Virtual_Keyboard.htm">Hide Virtual Keyboard</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Show Virtual Keyboard

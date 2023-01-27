@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "8.2.1.2.0_1";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Static Struct</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
+  <meta name="topic-comment" content="Page explaining static structs for constructor functions"/>
+  <meta name="rh-index-keywords" content="Static Structs"/>
+  <meta name="search-keywords" content="Static Structs, static_get, static_set, is_instanceof"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="Static Struct">
+        <span>Static Struct</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1><span data-field="title" data-format="default">Static Struct</span></h1>
+  <p>Every function has a &quot;static struct&quot;, where its static variables are stored. You can get that struct using <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/static_get.htm">static_get</a></span>:</p>
+  <p class="code">function counter() {<br/>
+        static count = 0;<br/>
+        return count ++;<br/>
+    }<br/>
+    <br/>
+    repeat (10) counter()<br/>
+    <br/>
+    // Get static struct of counter()<br/>
+    var _static_counter = static_get(counter);<br/>
+    <br/>
+    // Both of these read the same variable<br/>
+    show_debug_message(counter.count); // 10<br/>
+    show_debug_message(_static_counter.count); // 10
+  </p>
+  <p>This is also true for <a href="../Structs.htm#constr">constructor functions</a>. Each constructor has a static struct, where its static variables and static methods are stored.</p>
+  <p>Every struct created from the constructor accesses its static variables from that static struct.</p>
+  <h2 id="h">Static Chain</h2>
+  <p>When you use constructor inheritance, those constructors form a &quot;static chain&quot; - a chain of static structs where each child links to its parent.</p>
+  <p>For example, let&#39;s say you have a constructor <span class="inline2">item</span>, and a constructor <span class="inline2">potion</span> which is a child of <span class="inline2">item</span>:</p>
+  <p class="code">function item() constructor {}<br/>
+    <br/>
+    function potion() : item() constructor {}<br/>
+    <br/>
+    var _potion = new potion();
+  </p>
+  <p>You can get the static struct of <span class="inline2">potion</span> using <span class="inline2">static_get(potion)</span> - this is where the static variables for <span class="inline2">potion</span> are stored. Let&#39;s call this <span class="inline2">static_potion</span>.</p>
+  <p>Now, if you call <span class="inline2">static_get(static_potion)</span>, you will get the static struct for <span class="inline2">item</span>! This is the same struct you would get from <span class="inline2">static_get(item)</span>.</p>
+  <p class="code">function item () constructor {}<br/>
+    function potion () : item () constructor {}<br/>
+    <br/>
+    var _potion = new potion();<br/>
+    var _static_potion = static_get(potion);<br/>
+    <br/>
+    show_debug_message(static_get(item) == static_get(_static_potion)); // true (1)
+  </p>
+  <p>This is because <span class="inline2">item</span> is the parent of the <span class="inline2">potion</span> constructor, so the static struct for <span class="inline2">item</span> is linked to the static struct for <span class="inline2">potion</span>.</p>
+  <h2>Checking Inheritance</h2>
+  <p>You can use <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/is_instanceof.htm">is_instanceof</a></span> to check if a struct belongs to the given constructor, or has the constructor as a parent.</p>
+  <p>This is done by checking if your struct has the given constructor&#39;s static struct anywhere in its static chain.</p>
+  <div data-conref="../../../assets/snippets/is_instanceof_example.hts">
+  <p class="code">function item() constructor {}<br/>
+    <br/>
+    function potion() : item() constructor {}<br/>
+    <br/>
+    function enemy() constructor {}<br/>
+    <br/>
+    var _potion = new potion();<br/>
+    <br/>
+    show_debug_message(is_instanceof(_potion, potion)); // true (1)<br/>
+    show_debug_message(is_instanceof(_potion, item)); // true (1)<br/>
+    show_debug_message(is_instanceof(_potion, enemy)); // false (0)
+  </p>
+  <p>The above code shows three constructors: <span class="inline2">item</span>, <span class="inline2">potion</span> which is a child of <span class="inline2">item</span>, and <span class="inline2">enemy</span>, which is a separate constructor.</p>
+  <p>It creates a struct from the <span class="inline2">potion</span> constructor. Using <span class="inline2">is_instanceof()</span>, we can check that the new struct:</p>
+  <ul class="colour">
+    <li>is a <span class="inline2">potion</span></li>
+    <li>is an <span class="inline2">item</span></li>
+    <li>is not an <span class="inline2">enemy</span></li>
+  </ul>
+  <p>This way you can check whether a struct &quot;is&quot; something, as <strong>a potion is an item</strong>, so it returns <span class="inline2">true</span> for both constructors. However if wouldn&#39;t be true the other way around: <strong>an item is not a potion</strong>.</p>
+
+</div>
+  <h2 id="h1">Changing The Static Struct</h2>
+  <p>The function <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/static_set.htm">static_set</a></span> is provided to let you change the static struct of a function (constructor or not). This way you can change what static variables are available to a constructor and its structs, and also change the &quot;static chain&quot; that a constructor belongs to.</p>
+  <p>The recommended use-case for this function is deserialisation. If you&#39;re loading structs from JSON, those structs won&#39;t belong to any constructors, however you can change that by using <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/static_set.htm">static_set</a></span> to &quot;apply&quot; a constructor to a struct, so that that struct receives its shared static variables and you can run <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/is_instanceof.htm">is_instanceof</a></span> to check its kind.</p>
+  <div data-conref="../../../assets/snippets/static_set_example.hts"><p class="code">var _potion = <span class="misspell-word">json_parse</span>(&quot;{ \&quot;rarity\&quot;\ : 3 }&quot;);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // false (0)<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>var _static_potion = static_get(potion);<br data-tcx-user-gemerated="true"/>static_set(_potion, _static_potion);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // true (1)</p><p>In the code above, upon loading the potion struct, it&#39;s only created as a simple struct and doesn&#39;t belong to a constructor, nor does it have any static variables.</p><p>After applying the static struct for <span class="inline2">potion</span> to it, it becomes an instance of <span class="inline2">potion</span> (as tested with <span class="inline2"><span class="misspell-word">is_instanceof</span>()</span>) and also gets any static variables and static methods contained in the <span class="inline2">potion</span> constructor.</p></div>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Back: <a href="../Structs.htm">Structs</a></div>
+        <div style="float:right">Next: <a href="../Struct_Forbidden_Variables.htm">Struct Forbidden Variables</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+Static Structs
+-->
+  <!-- TAGS
+static_structs
+-->
+
+</body></html>

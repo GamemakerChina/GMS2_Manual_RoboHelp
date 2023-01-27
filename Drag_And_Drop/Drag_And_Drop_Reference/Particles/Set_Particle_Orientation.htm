@@ -55,7 +55,7 @@
   <title>Set Particle Orientation</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains the Set Particle Orientation action"/>
   <meta name="rh-index-keywords" content="GML Visual Action - Set Particle Orientation"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Gravity.htm"/><meta name="brsprev" value="Drag_And_Drop/Drag_And_Drop_Reference/Particles/Set_Particle_Direction.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Set Particle Orientation</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -96,33 +96,33 @@
   <h4>Action Syntax:</h4>
   <p><img alt="Set Particle Orientation Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Particle_Orientation.png"/></p>
   <h4>Arguments:</h4>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>Type</td>
         <td>The unique ID value for the particle type to set the orientation of</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Min Angle</td>
         <td>The minimum orientation for the particle type (from -360 to +360, default 0)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Max Angle</td>
         <td>The maximum orientation for the particle type (from -360 to +360, default 360)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Increase</td>
         <td>The value to add on to the particle type orientation every game frame (can be negative, minimum +/-0.01)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Wiggle</td>
         <td>The maximum value to randomly be added or subtracted from the particles orientation per step (+/-20).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Relative To Direction</td>
         <td>Whether to set the particle image angle relative to the direction of the particle&#39;s motion (enabled) or not (disabled).</td>
       </tr>
@@ -142,7 +142,7 @@
         <div style="float:right">Next: <a href="Set_Particle_Gravity.htm">Set Particle Gravity</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Particle Orientation

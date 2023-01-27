@@ -55,7 +55,7 @@
   <title>Workspaces</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="GameMaker Workspaces Overview"/>
   <meta name="rh-index-keywords" content="Workspaces"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Introduction/The_Asset_Browser.htm"/><meta name="brsprev" value="Introduction/The_Start_Page.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Workspaces</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -119,67 +119,67 @@
   <p> </p>
   <h1>Quick Buttons</h1>
   <p>Below we list the quick buttons that are available by default with <span data-keyref="GameMaker Name">GameMaker</span>. These buttons can be found at the top of the IDE and represent many of the most common commands that you&#39;ll be using while working in <span data-keyref="GameMaker Name">GameMaker</span> to make your workflow smoother (note that most of these buttons have an equivalent <a href="../IDE_Navigation/Menus.htm">menu option</a> too):</p>
-  <table class="icons" style="">
+  <table class="icons">
     <tbody>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Home Icon" class="icon" src="../assets/Images/Icons/Icon_Home.png"/></td>
         <td class="text">Opens the Start Page in a new workspace</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="New Project Icon" src="../assets/Images/Icons/Icon_NewProject.png"/></td>
         <td class="text">Create a new project.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Open Project" src="../assets/Images/Icons/Icon_OpenProject.png"/></td>
         <td class="text">Open a previously created project.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Save Project" src="../assets/Images/Icons/Icon_Save.png"/></td>
         <td class="text">Save the current project. Note that by default <span data-keyref="GameMaker Name">GameMaker</span> will save your project automatically (depending on the <a href="../Setting_Up_And_Version_Information/IDE_Preferences.htm">Preferences</a> that you have set) and this button is simply so you can force a save at any time.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Debug Project" src="../assets/Images/Icons/Icon_Debug.png"/></td>
         <td class="text">Clicking this will test-run your current project along with the debug module. Use this to test and debug your game. You can find more about the debug module from the section on the <a href="../IDE_Tools/The_Debugger.htm">Debugger</a>.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Test Play Game" src="../assets/Images/Icons/Icon_PlayGame.png"/></td>
         <td class="text">Clicking this will test-run your project on the chosen target platform.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Stop Game Test" src="../assets/Images/Icons/Icon_StopGame.png"/></td>
         <td class="text">This button can be used to cancel the compilation of your games to the target module, or (on certain targets only) to stop the game while it is running after it has been compiled.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Clean Compiler Cache Icon" src="../assets/Images/Icons/Icon_Clean.png"/></td>
         <td class="text">Pressing this button will clear the current asset compiler cache. <span data-keyref="GameMaker Name">GameMaker</span> stores images, sounds, scripts etc... between use in a cache so as to save time when testing your game as it will only re-compile those things that have been changed before testing. However, this cache may become corrupted or &quot;stale&quot; over time, or you may wish to do a full test with no caching being done previously, in which case you can clear the cache by pressing this button.
           <div class="note"><b>IMPORTANT</b>: It is recommended that you always clear the cache before creating the executable for any target platform.</div>
         </td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Game Options" height="24" src="../assets/Images/Icons/Icon_GameOptions.png" width="24"/></td>
         <td class="text">Clicking this will open up the <a href="../Settings/Game_Options.htm">Main Game Options Editor</a>. Note that this is only the main, general, options for the current project, but you may also have platform specific options being listed as a part of the <a href="The_Asset_Browser.htm">Asset Browser</a>.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Help Icon" height="24" src="../assets/Images/Icons/Icon_Help.png" width="24"/></td>
         <td class="text">Click this to open the manual (or alternatively, press  <img alt="Icon F1" class="icon" height="20" src="../assets/Images/Icons/Icon_f1.png" width="55"/>).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Zoom Out Icon" src="../assets/Images/Icons/Icon_ZoomOut.png"/></td>
         <td class="text">This will zoom the focused workspace out to make everything smaller (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/>).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Zoom Reset Icon" src="../assets/Images/Icons/Icon_ZoomReset.png"/></td>
         <td class="text">This will reset the focused workspace to be 1:1 again.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Zoom In Icon" height="24" src="../assets/Images/Icons/Icon_ZoomIn.png" width="24"/></td>
         <td class="text">This will zoom the focused workspace in to make everything larger (you can also achieve this holding down <img alt="CTRL Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> /  <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> and using the mouse wheel <img alt="MMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_MMB.png" width="21"/>).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Open Close Docks Icon" src="../assets/Images/Icons/Icon_Docking.png"/></td>
         <td class="text">This will toggle all the docked elements between hidden and unhidden.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Laptop Mode" src="../assets/Images/Icons/Icon_LaptopMode.png"/></td>
         <td class="text">This will toggle laptop mode on and off (This will only appear if you are currently using a laptop - see the section on <a href="../IDE_Navigation/IDE_Input.htm">IDE Input</a> for more details)</td>
       </tr>
@@ -194,7 +194,7 @@
         <div style="float:right">Next: <a href="The_Asset_Browser.htm">The Asset Browser</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Workspaces

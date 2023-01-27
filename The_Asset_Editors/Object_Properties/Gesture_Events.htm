@@ -59,11 +59,11 @@
   <meta name="rh-index-keywords" content="Objects - Gesture Events,event_data"/>
   <meta name="search-keywords" content="flick,pan,rotate,gesture,gesture events,tap"/>
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css"/>
-  <script src="../../assets/scripts/main_script.js"></script>
+  <script src="../../assets/scripts/main_script.js" type="module"></script>
 <meta name="brsnext" value="The_Asset_Editors/Object_Properties/Parent_Objects.htm"/><meta name="brsprev" value="The_Asset_Editors/Object_Properties/Async_Events/System.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Gesture Events</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -94,94 +94,94 @@
     <p class="dropspot">The &quot;Tap&quot;, &quot;Drag&quot; and &quot;Flick&quot; events are all based on a single touch or mouse click on the screen and the <span class="inline">event_data</span> DS Map will contain the following keys:</p>
     <ul class="dropspotlist">
     </ul>
-    <table class=" cke_show_border" style="">
+    <table class=" cke_show_border">
       <tbody>
-        <tr style="">
+        <tr>
           <th>Key</th>
           <th>Description</th>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">gesture</span>&quot;</td>
           <td><br/> This is an ID value that is <i>unique</i> to the gesture that is in play. This allows you to link the different parts of multi-part gestures (such as drag start, dragging and drag end) together.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">touch</span>&quot;</td>
           <td><br/> This is the index of the touch that is being used for the gesture. In general this will start at 0 and increase for each finger that is held down, then reset back to 0 when all fingers are removed, but if the user is touching the screen
             anywhere else when this event is triggered by another touch, then the value will be greater than 0.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">posX</span>&quot;</td>
           <td><br/> This is the room-space X position of the touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">posY</span>&quot;</td>
           <td><br/> This is the room-space Y position of the touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawposX</span>&quot;</td>
           <td><br/> This is the <i>raw</i> window-space X position of the touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawposY</span>&quot;</td>
           <td><br/> This is the <i>raw</i> window-space Y position of the touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guiposX</span>&quot;</td>
           <td><br/> This is the gui-space X position of the touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guiposY</span>&quot;</td>
           <td><br/> This is the gui-space Y position of the touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">diffX</span>&quot;</td>
           <td><br/> This is the room-space X difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">diffY</span>&quot;</td>
           <td><br/> This is the room-space Y difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawdiffX</span>&quot;</td>
           <td><br/> This is the raw X difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawdiffY</span>&quot;</td>
           <td><br/> This is the raw Y difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guidiffX</span>&quot;</td>
           <td><br/> This is the gui-space X difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guidiffY</span>&quot;</td>
           <td><br/> This is the gui-space Y difference between the position of the current touch and the position of the last touch in this gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">viewstartposX</span>&quot;</td>
           <td><br/> This is the room X start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">viewstartposY</span>&quot;</td>
           <td><br/> This is the room Y start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawstartposX</span>&quot;</td>
           <td><br/> This is the raw X start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">rawstartposY</span>&quot;</td>
           <td><br/> This is the raw Y start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guistartposX</span>&quot;</td>
           <td><br/> This is the gui-space X start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">guistartposY</span>&quot;</td>
           <td><br/> This is the gui-space Y start position of the current gesture.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;<span class="inline">isflick</span>&quot;</td>
           <td><b><br/>
               Only available in the Drag End event</b>. This is set to 1 if the end of the drag is detected as a flick, meaning that you don&#39;t need a separate <b>Flick Event</b> if you&#39;re handling dragging anyway.</td>
@@ -290,102 +290,102 @@
     <p class="dropspot">When two touches and a movement are detected with the above criteria, a Pinch Event will be triggered, and in each of the events the <span class="inline">event_data</span> DS Map will be populated with the following keys:</p>
     <ul class="dropspotlist">
     </ul>
-    <table class=" cke_show_border" style="">
+    <table class=" cke_show_border">
       <tbody>
-        <tr style="">
+        <tr>
           <th>Key</th>
           <th>Description</th>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;gesture&quot;</td>
           <td><br/> This is an ID value that is <i>unique</i> to the gesture that is in play. This allows you to link the different parts of multi-part gestures (such as drag start, dragging and drag end) together.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;touch1&quot;</td>
           <td><br/> This is the index of the first touch that is being used as part of the pinch gesture. In general this will be 0, but if the user is touching the screen anywhere else when this event is triggered by another touch, then the value will be
             greater than 0.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;touch2&quot;</td>
           <td><br/> This is the index of the second touch that is being used as part of the pinch gesture. In general this will be 1 more than the value for touch1, but may be some other value depending on the number of touches being detected elsewhere.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posX1&quot;</td>
           <td><br/> This is the room-space X position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posY1&quot;</td>
           <td><br/> This is the room-space Y position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposX1&quot;</td>
           <td><br/> This is the <i>raw</i> window-space X position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposY1&quot;</td>
           <td><br/> This is the <i>raw</i> window-space Y position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposX1&quot;</td>
           <td><br/> This is the gui-space X position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposY1&quot;</td>
           <td><br/> This is the gui-space Y position of the second touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posX2&quot;</td>
           <td><br/> This is the room-space X position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posY2&quot;</td>
           <td><br/> This is the room-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposX2&quot;</td>
           <td><br/> This is the <i>raw</i> window-space X position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposY2&quot;</td>
           <td><br/> This is the <i>raw</i> window-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposX2&quot;</td>
           <td><br/> This is the gui-space X position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposY2&quot;</td>
           <td><br/> This is the gui-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;midpointX&quot;</td>
           <td><br/> The X position of the mid point between the two touches in room space.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;midpointY&quot;</td>
           <td><br/> The Y position of the mid point between the two touches in room space.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawmidpointX&quot;</td>
           <td><br/> This is the raw window-space X position of the mid point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawmidpointY&quot;</td>
           <td><br/> This is the raw window-space Y position of the mid point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guimidpointX&quot;</td>
           <td><br/> This the gui-space X position of the mid point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guimidpointY&quot;</td>
           <td><br/> This the gui-space Y position of the mid point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;relativescale&quot;</td>
           <td><br/> This is difference in scale compared to the last event in this gesture (so for <b>Pinch In</b> events this will always be smaller than 1.0, whereas for <b>Pinch Out</b> events it will always be larger than 1.0)</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;absolutescale&quot;</td>
           <td><br/> This is the scale compared to where the fingers were when the gesture started (so if the distance between the fingers has halved then this will be 0.5 whereas if the distance has doubled it will be 2.0).</td>
         </tr>
@@ -442,102 +442,102 @@
     <p class="dropspot">When two touches and a movement are detected with the above criteria, a Rotate Event will be triggered, and in each of the events the <span class="inline">event_data</span> DS Map will be populated with the following keys:</p>
     <ul class="dropspotlist">
     </ul>
-    <table class=" cke_show_border" style="">
+    <table class=" cke_show_border">
       <tbody>
-        <tr style="">
+        <tr>
           <th>Key</th>
           <th>Description</th>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;gesture&quot;</td>
           <td><br/> This is an ID value that is <i>unique</i> to the gesture that is in play. This allows you to link the different parts of multi-part gestures (such as drag start, dragging and drag end) together.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;touch1&quot;</td>
           <td><br/> This is the index of the first touch that is being used as part of the pinch gesture. In general this will be 0, but if the user is touching the screen anywhere else when this event is triggered by another touch, then the value will be
             greater than 0.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;touch2&quot;</td>
           <td><br/> This is the index of the second touch that is being used as part of the pinch gesture. In general this will be 1 more than the value for touch1, but may be some other value depending on the number of touches being detected elsewhere.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posX1&quot;</td>
           <td><br/> This is the room-space X position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posY1&quot;</td>
           <td><br/> This is the room-space Y position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposX1&quot;</td>
           <td><br/> This is the <i>raw</i> window-space X position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_x.htm"><span class="inline"><span class="inline">device_mouse_raw_x()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposY1&quot;</td>
           <td><br/> This is the <i>raw</i> window-space Y position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_raw_y.htm"><span class="inline"><span class="inline">device_mouse_raw_y()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposX1&quot;</td>
           <td><br/> This is the gui-space X position of the first touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_x_to_gui.htm"><span class="inline"><span class="inline">device_mouse_x_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposY1&quot;</td>
           <td><br/> This is the gui-space Y position of the second touch (equivalent to getting the mouse position using <a href="../../GameMaker_Language/GML_Reference/Game_Input/Device_Input/device_mouse_y_to_gui.htm"><span class="inline"><span class="inline">device_mouse_y_to_gui()</span></span></a>).</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posX2&quot;</td>
           <td><br/> This is the room-space X position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;posY2&quot;</td>
           <td><br/> This is the room-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposX2&quot;</td>
           <td><br/> This is the <i>raw</i> window-space X position of the first touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawposY2&quot;</td>
           <td><br/> This is the <i>raw</i> window-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposX2&quot;</td>
           <td><br/> This is the gui-space X position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guiposY2&quot;</td>
           <td><br/> This is the gui-space Y position of the second touch.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;pivotX&quot;</td>
           <td><br/> The X position of the rotation pivot point in room space.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;pivotY&quot;</td>
           <td><br/> The Y position of the rotation pivot point in room space.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawpivotX&quot;</td>
           <td><br/> This is the raw window-space X position of the rotational pivot point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;rawpivotY&quot;</td>
           <td><br/> This is the raw window-space Y position of the rotational pivot point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guipivotX&quot;</td>
           <td><br/> This the gui-space X position of the rotational pivot point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;guipivotY&quot;</td>
           <td><br/> This the gui-space Y position of the rotational pivot point.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;relativeangle&quot;</td>
           <td><br/> This is difference in rotation compared to the last event in this gesture, measured in degrees</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>&quot;absoluteangle&quot;</td>
           <td><br/> This is the difference in angle compared to where the fingers were when the gesture started, measured in degrees. So, for example, if the fingers have rotated a quarter-circle since the start of the gesture then this value will be 90°
             or -90°, depending on the direction of rotation.</td>
@@ -589,7 +589,7 @@
         <div style="float:right">Next: <a href="Event_Order.htm">Event Order</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gesture Events

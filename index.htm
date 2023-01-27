@@ -5,12 +5,17 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, user-scalable=yes"/>
 		<meta name="generator" content="Adobe RoboHelp 2020"/>
-		<title>GameMaker Manual</title>
+		<title>GameMaker Manual (BETA)</title>
 		
 			<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico"/>
 		
+		<script>//<![CDATA[
+
+			gCSHRedirectHTM = 'csh-redirect.htm'
 		
+//]]></script>
 		<link rel="StyleSheet" href="template/Charcoal_Grey/layout.css" type="text/css"/>
+		<script type="text/javascript" src="template/scripts/csh-trigger.min.js"></script>
 		<script type="text/javascript" src="template/scripts/rh.min.js"></script>
 		<script type="text/javascript" src="template/scripts/common.min.js"></script>
 		<script type="text/javascript" src="template/scripts/layout.min.js"></script>
@@ -45,7 +50,7 @@
 			</a>
 			<div class="title">
 				<a data-click="$hc.goToHome()" data-attr="title:@KEY_LNG.HomeButton; href: rh.model.get(rh.consts(&#39;KEY_LOGO_URL&#39;)) || rh.consts(&#39;DEFAULT_TOPIC&#39;)" tabindex="0">
-					GameMaker Manual
+					GameMaker Manual (BETA)
 				</a>
 			</div>
 			<div class="brs-holder">
@@ -91,8 +96,8 @@
 				<li data-rif="item.type === &#39;item&#39; || item.type === &#39;remoteitem&#39;" data-i-class="$toc.class(item)" data-class="inactive: @bookid != &#39;#{@pid}&#39;" data-childorder="#{childOrder}" data-rhtags="#{$toc.tags(item)}" data-itemid="#{@id}" role="presentation">
 					<a data-itext="item.name" data-i-href="$toc.url(item, &#39;#{@id}&#39;)" data-haslink="#{Boolean(item.url)}" role="treeitem"></a>
 				</li>
-				<li class="book" data-rif="item.type === &#39;book&#39;" data-class="active: @bookid == &#39;#{@id}&#39;; inactive: @bookid != &#39;#{@pid}&#39; &amp;&amp; @bookid != &#39;#{@id}&#39;" data-haslink="#{Boolean(item.url)}" data-childorder="#{childOrder}" data-itemkey="#{$toc.key(item.absRef, item.key)}" data-itemid="#{@id}" data-itemlevel="#{@level}" data-rhtags="#{$toc.tags(item)}" role="treeitem" data-attr="aria-expanded: @show_child#{@id} == true ? true : false; tabindex: @active_bookid == &#39;#{@pid}&#39; || @active_bookid == &#39;#{@id}&#39; || @KEY_SCREEN_DESKTOP ? 0 : -1" data-iattr="aria-labelledby: &#39;#{@id}&#39;; aria-owns:&#39;child-#{@id}&#39;">
-					<a data-itext="item.name" data-i-href="$toc.url(item, &#39;#{@id}&#39;)" data-iattr="id: &#39;#{@id}&#39;"></a>
+				<li class="book" data-rif="item.type === &#39;book&#39;" data-class="active: @bookid == &#39;#{@id}&#39;; inactive: @bookid != &#39;#{@pid}&#39; &amp;&amp; @bookid != &#39;#{@id}&#39;" data-childorder="#{childOrder}" data-itemkey="#{$toc.key(item.absRef, item.key)}" data-itemid="#{@id}" data-itemlevel="#{@level}" data-rhtags="#{$toc.tags(item)}" role="treeitem" data-attr="aria-expanded: @show_child#{@id} == true ? true : false; tabindex: @active_bookid == &#39;#{@pid}&#39; || @active_bookid == &#39;#{@id}&#39; || @KEY_SCREEN_DESKTOP ? 0 : -1" data-iattr="aria-labelledby: &#39;#{@id}&#39;; aria-owns:&#39;child-#{@id}&#39;">
+					<a data-itext="item.name" data-i-href="$toc.url(item, &#39;#{@id}&#39;)" data-iattr="id: &#39;#{@id}&#39;" data-haslink="#{Boolean(item.url)}"></a>
 				</li>
 				<li class="child max-height-transition" data-rif="item.key" data-class="show: @show_child#{@id}" data-childorder="#{childOrder}" role="presentation">
 					<ul class="child" data-child="$toc.key(item.absRef, item.key)" data-css="display: @show_child#{@id} == true ? null : &#39;none&#39;" role="group" data-iattr="id: &#39;child-#{@id}&#39;"></ul>
@@ -251,7 +256,7 @@
 				</div>
 			</div>
 			<div class="wSearchResultFooter">
-				<div class="wSearchResultPaginator" data-if="@KEY_PAGINATOR_SHOW_PREV_PAGE || @KEY_PAGINATOR_SHOW_NEXT_PAGE">
+				<div class="wSearchResultPaginator" data-if="(@KEY_PAGINATOR_SHOW_PREV_PAGE || @KEY_PAGINATOR_SHOW_NEXT_PAGE) &amp;&amp; !(@KEY_SEARCH_PROGRESS)">
 					<button class="wSearchResultPaginatorPrevLink" href="#" data-click="@EVT_CHANGE_SEARCH_PAGE(&#39;previous&#39;)" data-css="visibility: @KEY_PAGINATOR_SHOW_PREV_PAGE ? null : &#39;hidden&#39;" data-attr="title: @KEY_LNG.PrevSearchResults">
 						<span class="wSearchResultPaginatorPrevIcon"></span>
 					</button>

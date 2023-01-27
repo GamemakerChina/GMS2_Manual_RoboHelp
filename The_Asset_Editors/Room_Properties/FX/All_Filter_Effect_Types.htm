@@ -64,7 +64,7 @@
 <meta name="brsnext" value="The_Asset_Editors/Scripts.htm"/><meta name="brsprev" value="The_Asset_Editors/Room_Properties/Filters_and_Effects.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>FX Types &amp; Parameters</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -111,30 +111,30 @@
         <col style="width: 317px;"/>
       </colgroup>
       <tbody>
-        <tr style="">
-          <th colspan="5" style="width: 118px;">Filters</th>
+        <tr>
+          <th colspan="5">Filters</th>
         </tr>
-        <tr style="">
-          <th style="width: 118px;">Type</th>
-          <th style="width: 252px;">Description</th>
-          <th style="width: 473px;">Example</th>
-          <th style="width: 197px;">IDE Parameters</th>
-          <th style="width: 317px;">Runtime Parameters</th>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Example</th>
+          <th style="">IDE Parameters</th>
+          <th>Runtime Parameters</th>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Blocks Background</strong><br/>
+        <tr>
+          <td><strong>Blocks Background</strong><br/>
             <br/>
             &quot;_filter_blocks&quot;
           </td>
-          <td style="width: 252px;">Creates a background with tiled 3D blocks.</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/blocks_background.png"/></td>
-          <td style="width: 197px;">View Position<br/>
+          <td>Creates a background with tiled 3D blocks.</td>
+          <td> <img src="../../../assets/Images/Asset_Editors/FXs/blocks_background.png"/></td>
+          <td style="">View Position<br/>
             Perspective<br/>
             Shading<br/>
             Face Lighting<br/>
             Block Tiles<br/>
             Blocks Texture</td>
-          <td style="width: 317px;"><span class="inline">g_BlocksPosition</span> (Array)<br/>
+          <td><span class="inline">g_BlocksPosition</span> (Array)<br/>
             <span class="inline">g_BlocksPerspective</span> (Real)<br/>
             <span class="inline">g_BlocksShading</span> (Real)<br/>
             <span class="inline">g_BlocksFaceLight</span> (Array)<br/>
@@ -142,14 +142,14 @@
             <span class="inline">g_BlocksTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Boxes</strong><br/>
+        <tr>
+          <td><strong>Boxes</strong><br/>
             <br/>
             &quot;_filter_boxes&quot;
           </td>
-          <td style="width: 252px;">Creates a tiled boxes effect with optional animation.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Boxes.png"/></td>
-          <td style="width: 197px;">Scale<br/>
+          <td>Creates a tiled boxes effect with optional animation.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/FX_Boxes.png"/></td>
+          <td style="">Scale<br/>
             Size<br/>
             Displacement<br/>
             Animation Speed<br/>
@@ -160,7 +160,7 @@
             Colour Count<br/>
             Sharpness<br/>
             Colour Palette</td>
-          <td style="width: 317px;"><span class="inline">g_BoxesScale</span> (Real)<br/>
+          <td><span class="inline">g_BoxesScale</span> (Real)<br/>
             <span class="inline">g_BoxesSize</span> (Real)<br/>
             <span class="inline">g_BoxesDisplacement</span> (Real)<br/>
             <span class="inline">g_BoxesSpeed</span> (Real)<br/>
@@ -173,92 +173,92 @@
             <span class="inline">g_BoxesPalette</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Colour Balance</strong><br/>
+        <tr>
+          <td><strong>Colour Balance</strong><br/>
             <br/>
             &quot;_filter_colour_balance&quot;
           </td>
-          <td style="width: 252px;">Allows you to balance the highlights, midtones and shadows of the game.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Colour_Balance.png"/></td>
-          <td style="width: 197px;">Shadows RGB<br/>
+          <td>Allows you to balance the highlights, midtones and shadows of the game.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/FX_Colour_Balance.png"/></td>
+          <td style="">Shadows RGB<br/>
             Midtones RGB<br/>
             Highlights RGB</td>
-          <td style="width: 317px;"><span class="inline">g_ColourBalanceShadows</span> (Array)<br/>
+          <td><span class="inline">g_ColourBalanceShadows</span> (Array)<br/>
             <span class="inline">g_ColourBalanceMidtones</span> (Array)<br/>
             <span class="inline">g_ColourBalanceHighlights</span> (Array)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Colour Tint</strong><br/>
+        <tr>
+          <td><strong>Colour Tint</strong><br/>
             <br/>
             &quot;_filter_tintfilter&quot;<strong></strong>
           </td>
-          <td style="width: 252px;">Applies a colour tint to the rendered content.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/colour tint.png"/></td>
-          <td style="width: 197px;">Tint colour</td>
-          <td style="width: 317px;"><span class="inline">g_TintCol</span> (Array)</td>
+          <td>Applies a colour tint to the rendered content.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/colour tint.png"/></td>
+          <td style="">Tint colour</td>
+          <td><span class="inline">g_TintCol</span> (Array)</td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Colourise</strong><br/>
+        <tr>
+          <td style=""><strong>Colourise</strong><br/>
             <br/>
             &quot;_filter_colourise&quot;
           </td>
-          <td style="width: 252px;">Changes everything to appear with the given hue and saturation.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/colourise.png"/></td>
-          <td style="width: 197px;">Intensity<br/>
+          <td>Changes everything to appear with the given hue and saturation.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/colourise.png"/></td>
+          <td style="">Intensity<br/>
             Tint colour</td>
-          <td style="width: 317px;"><span class="inline">g_Intensity</span> (Real)<br/>
+          <td><span class="inline">g_Intensity</span> (Real)<br/>
             <span class="inline">g_TintCol</span> (Array)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Constrast</strong><br/>
+        <tr>
+          <td style=""><strong>Constrast</strong><br/>
             <br/>
             &quot;_filter_contrast&quot;
           </td>
-          <td style="width: 252px;">Allows you to change the contrast and brightness of the rendered content.</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/contrast.png"/></td>
-          <td style="width: 197px;">Contrast<br/>
+          <td>Allows you to change the contrast and brightness of the rendered content.</td>
+          <td> <img src="../../../assets/Images/Asset_Editors/FXs/contrast.png"/></td>
+          <td style="">Contrast<br/>
             Brightness</td>
-          <td style="width: 317px;"><span class="inline">g_ContrastIntensity</span> (Real)<br/>
+          <td><span class="inline">g_ContrastIntensity</span> (Real)<br/>
             <span class="inline">g_ContrastBrightness</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Desaturate</strong><br/>
+        <tr>
+          <td style=""><strong>Desaturate</strong><br/>
             <br/>
             &quot;_filter_greyscale&quot;
           </td>
-          <td style="width: 252px;">Reduces the saturation of the rendered content by the specified intensity value.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/desat.png"/></td>
-          <td style="width: 197px;">Intensity</td>
-          <td style="width: 317px;"><span class="inline">g_Intensity</span> (Real)</td>
+          <td>Reduces the saturation of the rendered content by the specified intensity value.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/desat.png"/></td>
+          <td style="">Intensity</td>
+          <td><span class="inline">g_Intensity</span> (Real)</td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Distort</strong><br/>
+        <tr>
+          <td style=""><strong>Distort</strong><br/>
             <br/>
             &quot;_filter_distort&quot;
           </td>
-          <td style="width: 252px;">Applies distortion to the game, using a texture image.</td>
-          <td style="width: 473px;"><img alt="lol" src="../../../assets/Images/Asset_Editors/FXs/distort.png" title="lol"/></td>
-          <td style="width: 197px;">Scale<br/>
+          <td>Applies distortion to the game, using a texture image.</td>
+          <td><img alt="lol" src="../../../assets/Images/Asset_Editors/FXs/distort.png" title="lol"/></td>
+          <td style="">Scale<br/>
             Amount<br/>
             Offset<br/>
             Distort texture</td>
-          <td style="width: 317px;"><span class="inline">g_DistortScale</span> (Real)<br/>
+          <td><span class="inline">g_DistortScale</span> (Real)<br/>
             <span class="inline">g_DistortAmount</span> (Real)<br/>
             <span class="inline">g_DistortOffset</span> (Real)<br/>
             <span class="inline">g_DistortTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Dots Background</strong><br/>
+        <tr>
+          <td style=""><strong>Dots Background</strong><br/>
             <br/>
             &quot;_filter_dots&quot;
           </td>
-          <td style="width: 252px;">Applies a dotted effect to your game, with optional animation. You can create a noise effect by setting the scale to a low value.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/dots.png"/></td>
-          <td style="width: 197px;">Scale<br/>
+          <td>Applies a dotted effect to your game, with optional animation. You can create a noise effect by setting the scale to a low value.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/dots.png"/></td>
+          <td style="">Scale<br/>
             Size<br/>
             Offset<br/>
             Displacement<br/>
@@ -267,7 +267,7 @@
             Colour Count<br/>
             Sharpness<br/>
             Colour Palette</td>
-          <td style="width: 317px;"><span class="inline">g_DotsScale</span> (Real)<br/>
+          <td><span class="inline">g_DotsScale</span> (Real)<br/>
             <span class="inline">g_DotsSize</span> (Real)<br/>
             <span class="inline">g_DotsOffset</span> (Real)<br/>
             <span class="inline">g_DotsDisplacement</span> (Real)<br/>
@@ -278,30 +278,30 @@
             <span class="inline">g_DotsPalette</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Edge Detect</strong><br/>
+        <tr>
+          <td style=""><strong>Edge Detect</strong><br/>
             <br/>
             &quot;_filter_edgedetect&quot;
           </td>
-          <td style="width: 252px;">Uses edge detection so only the edges in your game are visible.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/edge.png"/></td>
-          <td style="width: 197px;">Threshold</td>
-          <td style="width: 317px;"><span class="inline">g_Threshold</span> (Real)</td>
+          <td>Uses edge detection so only the edges in your game are visible.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/edge.png"/></td>
+          <td style="">Threshold</td>
+          <td><span class="inline">g_Threshold</span> (Real)</td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Fractal Noise</strong><br/>
+        <tr>
+          <td style=""><strong>Fractal Noise</strong><br/>
             <br/>
             &quot;_filter_fractal_noise&quot;
           </td>
-          <td style="width: 252px;">Displays fractal noise with animation support</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/fractalnoise.png"/></td>
-          <td style="width: 197px;">Scale<br/>
+          <td>Displays fractal noise with animation support</td>
+          <td> <img src="../../../assets/Images/Asset_Editors/FXs/fractalnoise.png"/></td>
+          <td style="">Scale<br/>
             Persistence<br/>
             Offset<br/>
             Animation Speed<br/>
             Tint Colour<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_FractalNoiseScale</span> (Real)<br/>
+          <td><span class="inline">g_FractalNoiseScale</span> (Real)<br/>
             <span class="inline">g_FractalNoisePersistence</span> (Real)<br/>
             <span class="inline">g_FractalNoiseOffset</span> (Array)<br/>
             <span class="inline">g_FractalNoiseSpeed</span> (Real)<br/>
@@ -309,33 +309,33 @@
             <span class="inline">g_FractalNoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Gradient</strong><br/>
+        <tr>
+          <td style=""><strong>Gradient</strong><br/>
             <br/>
             &quot;_filter_gradient&quot;
           </td>
-          <td style="width: 252px;">Creates a gradient with the selected colours and mode. Transparent colours are supported.</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/gradient.png"/></td>
-          <td style="width: 197px;">Start Colour<br/>
+          <td>Creates a gradient with the selected colours and mode. Transparent colours are supported.</td>
+          <td> <img src="../../../assets/Images/Asset_Editors/FXs/gradient.png"/></td>
+          <td style="">Start Colour<br/>
             End Colour<br/>
             Start Point (0 - 1)<br/>
             End Point (0 - 1)<br/>
             Gradient Mode</td>
-          <td style="width: 317px;"><span class="inline">g_GradientColour1</span> (Array)<br/>
+          <td><span class="inline">g_GradientColour1</span> (Array)<br/>
             <span class="inline">g_GradientColour2</span> (Array)<br/>
             <span class="inline">g_GradientPosition1</span> (Array)<br/>
             <span class="inline">g_GradientPosition2</span> (Array)<br/>
             <span class="inline">g_GradientMode</span> (Real, 0 to 5)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Heat Haze</strong><br/>
+        <tr>
+          <td style=""><strong>Heat Haze</strong><br/>
             <br/>
             &quot;_filter_heathaze&quot;
           </td>
-          <td style="width: 252px;">Creates an animated heat haze effect and is useful for displaying hot environments.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/heat.png"/></td>
-          <td style="width: 197px;">Distort 1 Speed<br/>
+          <td>Creates an animated heat haze effect and is useful for displaying hot environments.</td>
+          <td><img src="../../../assets/Images/Asset_Editors/FXs/heat.png"/></td>
+          <td style="">Distort 1 Speed<br/>
             Distort 2 Speed<br/>
             Distort 1 Scale<br/>
             Distort 2 Scale<br/>
@@ -344,7 +344,7 @@
             Chroma Spread<br/>
             Camera Offset Scale<br/>
             Distort Texture</td>
-          <td style="width: 317px;"><span class="inline">g_Distort1Speed</span> (Real)<br/>
+          <td><span class="inline">g_Distort1Speed</span> (Real)<br/>
             <span class="inline">g_Distort2Speed</span> (Real)<br/>
             <span class="inline">g_Distort1Scale</span> (Real)<br/>
             <span class="inline">g_Distort2Scale</span> (Real)<br/>
@@ -355,69 +355,69 @@
             <span class="inline">g_DistortTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Hue</strong><br/>
+        <tr>
+          <td style=""><strong>Hue</strong><br/>
             <br/>
             &quot;_filter_hue&quot;
           </td>
-          <td style="width: 252px;">Allows you to shift the hue and change the saturation.</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/hue.png"/></td>
-          <td style="width: 197px;">Hue Shift<br/>
+          <td>Allows you to shift the hue and change the saturation.</td>
+          <td> <img src="../../../assets/Images/Asset_Editors/FXs/hue.png"/></td>
+          <td style="">Hue Shift<br/>
             Saturation</td>
-          <td style="width: 317px;"><span class="inline">g_HueShift</span> (Real)<br/>
+          <td><span class="inline">g_HueShift</span> (Real)<br/>
             <span class="inline">g_HueSaturation</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Large Blur</strong><br/>
+        <tr>
+          <td style=""><strong>Large Blur</strong><br/>
             <br/>
             &quot;_filter_large_blur&quot;
           </td>
-          <td style="width: 252px;">Blurs the image.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/largeblur.png"/></td>
-          <td style="width: 197px;">Radius<br/>
+          <td style="">Blurs the image.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/largeblur.png"/></td>
+          <td style="">Radius<br/>
             Noise texture</td>
-          <td style="width: 317px;"><span class="inline">g_Radius</span> (Real)<br/>
+          <td><span class="inline">g_Radius</span> (Real)<br/>
             <span class="inline">g_NoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Linear Blur</strong><br/>
+        <tr>
+          <td style=""><strong>Linear Blur</strong><br/>
             <br/>
             &quot;_filter_linear_blur&quot;
           </td>
-          <td style="width: 252px;">Creates a linear blur effect controlled by the given vector values (X and Y, between -128 and 128).</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/linearblur.png"/></td>
-          <td style="width: 197px;">Vector<br/>
+          <td style="">Creates a linear blur effect controlled by the given vector values (X and Y, between -128 and 128).</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/linearblur.png"/></td>
+          <td style="">Vector<br/>
             Noise texture</td>
-          <td style="width: 317px;"><span class="inline">g_LinearBlurVector</span> (Array)<br/>
+          <td><span class="inline">g_LinearBlurVector</span> (Array)<br/>
             <span class="inline">g_NoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>LUT Colour Grading</strong><br/>
+        <tr>
+          <td style=""><strong>LUT Colour Grading</strong><br/>
             <br/>
             &quot;_filter_lut_colour&quot;
           </td>
-          <td style="width: 252px;">Allows you to apply LUT colour grading using a texture as the lookup table (LUT).<br/>
+          <td style="">Allows you to apply LUT colour grading using a texture as the lookup table (LUT).<br/>
             <br/>
             You can look up (heh) LUT textures on the internet to use in your game.
           </td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/lut.png"/></td>
-          <td style="width: 197px;">Intensity<br/>
+          <td style=""> <img src="../../../assets/Images/Asset_Editors/FXs/lut.png"/></td>
+          <td style="">Intensity<br/>
             LUT Texture</td>
-          <td style="width: 317px;"><span class="inline">g_LUTColourIntensity</span> (Real)<br/>
+          <td><span class="inline">g_LUTColourIntensity</span> (Real)<br/>
             <span class="inline">g_LUTColourTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Old Film</strong><br/>
+        <tr>
+          <td style=""><strong>Old Film</strong><br/>
             <br/>
             &quot;_filter_old_film&quot;
           </td>
-          <td style="width: 252px;">Creates an old film filter.</td>
-          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/old_film.mp4" width="480" height="320" controls=""></video></td>
-          <td style="width: 197px;">Flicker Intensity<br/>
+          <td style="">Creates an old film filter.</td>
+          <td style=""> <video src="../../../assets/Images/Asset_Editors/FXs/old_film.mp4" width="480" height="320" controls=""></video></td>
+          <td style="">Flicker Intensity<br/>
             Flicker Speed<br/>
             Jitter Intensity<br/>
             Saturation<br/>
@@ -429,7 +429,7 @@
             Ring Sharpness<br/>
             Ring Intensity<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_OldFilmFlickerIntensity</span> (Real)<br/>
+          <td><span class="inline">g_OldFilmFlickerIntensity</span> (Real)<br/>
             <span class="inline">g_OldFilmFlickerSpeed</span> (Real)<br/>
             <span class="inline">g_OldFilmJitterIntensity</span> (Real)<br/>
             <span class="inline">g_OldFilmSaturation</span> (Real)<br/>
@@ -443,46 +443,49 @@
             <span class="inline">g_OldFilmTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Outline</strong><br/>
+        <tr>
+          <td style=""><strong>Outline</strong><br/>
             <br/>
             &quot;_filter_outline&quot;
           </td>
-          <td style="width: 252px;">Creates an outline around the opaque contents of the layer. Use this as a <a href="../Filters_and_Effects.htm#h">Single-Layer FX</a> for the best effect.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/outline.png"/></td>
-          <td style="width: 197px;">Outline colour<br/>
+          <td style="">Creates an outline around the opaque contents of the layer. Use this as a <a href="../Filters_and_Effects.htm#h">Single-Layer FX</a> for the best effect.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/outline.png"/></td>
+          <td style="">Outline colour<br/>
             Radius<br/>
             Pixel scale</td>
-          <td style="width: 317px;"><span class="inline">g_OutlineColour</span> (Array)<br/>
+          <td><span class="inline">g_OutlineColour</span> (Array)<br/>
             <span class="inline">g_OutlineRadius</span> (Real)<br/>
             <span class="inline">g_OutlinePixelScale</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Panorama Background</strong><br/>
+        <tr>
+          <td style=""><strong>Panorama Background</strong><br/>
             <br/>
             &quot;_filter_panorama&quot;
           </td>
-          <td style="width: 252px;">Allows you to draw a panorama image with perspective parameters.</td>
-          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/panorama.mp4" width="480" height="320" controls=""></video></td>
-          <td style="width: 197px;">View Direction<br/>
+          <td style="">Allows you to draw a panorama image with perspective parameters.</td>
+          <td style=""> <video src="../../../assets/Images/Asset_Editors/FXs/panorama.mp4" width="480" height="320" controls=""></video></td>
+          <td style="">View Direction<br/>
             Perspective<br/>
             Cylinder<br/>
             Panorama Texture</td>
-          <td style="width: 317px;"><span class="inline">g_PanoramaDirection</span> (Array)<br/>
+          <td><span class="inline">g_PanoramaDirection</span> (Array)<br/>
             <span class="inline">g_PanoramaPerspective</span> (Real)<br/>
             <span class="inline">g_PanoramaCylinder</span> (Real)<br/>
             <span class="inline">g_OldFilmTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Parallax Background</strong><br/>
+        <tr>
+          <td style=""><strong>Parallax Background</strong><br/>
             <br/>
             &quot;_filter_parallax&quot;
           </td>
-          <td style="width: 252px;">Allows you to draw an image with a flat 3D perspective, with fog and texture depth parameters.</td>
-          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/parallax.mp4" width="480" height="320" controls=""></video></td>
-          <td style="width: 197px;">View Direction<br/>
+          <td style="">Allows you to draw an image with a flat 3D perspective, with fog and texture depth parameters.<br/>
+            <br/>
+            (<span data-conref="../../../assets/snippets/Tag_warning.hts"><span class="warning">WARNING</span></span> This filter can be slow on lower-end hardware, so you should be careful using it.)
+          </td>
+          <td style=""> <video src="../../../assets/Images/Asset_Editors/FXs/parallax.mp4" width="480" height="320" controls=""></video></td>
+          <td style="">View Direction<br/>
             Perspective<br/>
             View Position<br/>
             Texture Scale<br/>
@@ -491,7 +494,7 @@
             Fog Range<br/>
             Fog Depth<br/>
             Parallax Texture</td>
-          <td style="width: 317px;"><span class="inline">g_ParallaxDirection</span> (Array)<br/>
+          <td><span class="inline">g_ParallaxDirection</span> (Array)<br/>
             <span class="inline">g_ParallaxPerspective</span> (Real)<br/>
             <span class="inline">g_ParallaxPosition</span> (Array)<br/>
             <span class="inline">g_ParallaxScale</span> (Real)<br/>
@@ -502,85 +505,85 @@
             <span class="inline">g_ParallaxTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Pixelate</strong><br/>
+        <tr>
+          <td style=""><strong>Pixelate</strong><br/>
             <br/>
             &quot;_filter_pixelate&quot;
           </td>
-          <td style="width: 252px;">Makes the rendered content look pixelated, allowing you to change the size of each pixel. This gives the rendered content a low resolution look.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/pixel.png"/></td>
-          <td style="width: 197px;">Cell Size</td>
-          <td style="width: 317px;"><span class="inline">g_CellSize</span> (Real)</td>
+          <td style="">Makes the rendered content look pixelated, allowing you to change the size of each pixel. This gives the rendered content a low resolution look.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/pixel.png"/></td>
+          <td style="">Cell Size</td>
+          <td><span class="inline">g_CellSize</span> (Real)</td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Posterise</strong><br/>
+        <tr>
+          <td style=""><strong>Posterise</strong><br/>
             <br/>
             &quot;_filter_posterise&quot;
           </td>
-          <td style="width: 252px;">Applies a posterisation effect to the rendered content, allowing you to change the max colour levels for each hue.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/poster.png"/></td>
-          <td style="width: 197px;">Colour Levels</td>
-          <td style="width: 317px;"><span class="inline">g_ColourLevels</span> (Real)</td>
+          <td style="">Applies a posterisation effect to the rendered content, allowing you to change the max colour levels for each hue.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/poster.png"/></td>
+          <td style="">Colour Levels</td>
+          <td><span class="inline">g_ColourLevels</span> (Real)</td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>RGB Noise</strong><br/>
+        <tr>
+          <td style=""><strong>RGB Noise</strong><br/>
             <br/>
             &quot;_filter_rgbnoise&quot;
           </td>
-          <td style="width: 252px;">Displays coloured noise with optional animation.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_RGBNoise.png"/></td>
-          <td style="width: 197px;">Intensity<br/>
+          <td style="">Displays coloured noise with optional animation.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/FX_RGBNoise.png"/></td>
+          <td style="">Intensity<br/>
             Animation<br/>
             Tint Colour<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_RGBNoiseIntensity</span> (Real)<br/>
+          <td><span class="inline">g_RGBNoiseIntensity</span> (Real)<br/>
             <span class="inline">g_RGBNoiseAnimation</span> (Real)<br/>
             <span class="inline">g_RGBNoiseColour</span> (Array)<br/>
             <span class="inline">g_RGBNoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Ripples</strong><br/>
+        <tr>
+          <td style=""><strong>Ripples</strong><br/>
             <br/>
             &quot;_filter_ripples&quot;
           </td>
-          <td style="width: 252px;">Creates an animated ripple effect.</td>
-          <td style="width: 473px;"> <video src="../../../assets/Images/Asset_Editors/FXs/ripples.mp4" width="480" height="320" controls=""></video></td>
-          <td style="width: 197px;">Position<br/>
+          <td style="">Creates an animated ripple effect.</td>
+          <td style=""> <video src="../../../assets/Images/Asset_Editors/FXs/ripples.mp4" width="480" height="320" controls=""></video></td>
+          <td style="">Position<br/>
             Speed<br/>
             Widt<br/>
             Amplitude<br/>
             Radius</td>
-          <td style="width: 317px;"><span class="inline">g_RipplesPosition</span> (Array)<br/>
+          <td><span class="inline">g_RipplesPosition</span> (Array)<br/>
             <span class="inline">g_RipplesSpeed</span> (Real)<br/>
             <span class="inline">g_RipplesWidth</span> (Real)<br/>
             <span class="inline">g_RipplesAmplitude</span> (Real)<br/>
             <span class="inline">g_RipplesRadius</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Screen Shake</strong><br/>
+        <tr>
+          <td style=""><strong>Screen Shake</strong><br/>
             <br/>
             &quot;_filter_screenshake&quot;
           </td>
-          <td style="width: 252px;">Makes the rendered content shake to simulate a camera shake effect. Works best when controlled at runtime.</td>
-          <td style="width: 473px;"><video src="../../../assets/Images/Asset_Editors/FXs/screenshake.mp4" width="480" height="320" controls=""></video></td>
-          <td style="width: 197px;">Magnitude<br/>
+          <td style="">Makes the rendered content shake to simulate a camera shake effect. Works best when controlled at runtime.</td>
+          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/screenshake.mp4" width="480" height="320" controls=""></video></td>
+          <td style="">Magnitude<br/>
             Shake speed<br/>
             Noise texture</td>
-          <td style="width: 317px;"><span class="inline">g_Magnitude</span> (Real)<br/>
+          <td><span class="inline">g_Magnitude</span> (Real)<br/>
             <span class="inline">g_ShakeSpeed</span> (Real)<br/>
             <span class="inline">g_NoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Stripes Background</strong><br/>
+        <tr>
+          <td style=""><strong>Stripes Background</strong><br/>
             <br/>
             &quot;_filter_stripes&quot;
           </td>
-          <td style="width: 252px;">Creates an opaque, striped background effect.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/stripes.png"/></td>
-          <td style="width: 197px;">Width<br/>
+          <td style="">Creates an opaque, striped background effect.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/stripes.png"/></td>
+          <td style="">Width<br/>
             Direction<br/>
             Offset<br/>
             Displacement<br/>
@@ -590,7 +593,7 @@
             Colour Count<br/>
             Sharpness<br/>
             Colour Palette</td>
-          <td style="width: 317px;"><span class="inline">g_StripesWidth</span> (Real)<br/>
+          <td><span class="inline">g_StripesWidth</span> (Real)<br/>
             <span class="inline">g_StripesDirection</span> (Real)<br/>
             <span class="inline">g_StripesOffset</span> (Real)<br/>
             <span class="inline">g_StripesDisplacement</span> (Real)<br/>
@@ -602,44 +605,44 @@
             <span class="inline">g_StripesPalette</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Twirl Distort</strong><br/>
+        <tr>
+          <td style=""><strong>Twirl Distort</strong><br/>
             <br/>
             &quot;_filter_twirl_distort&quot;
           </td>
-          <td style="width: 252px;">Creates a twirl distort effect at the center of the camera (+ the offset).</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/twirl.png"/></td>
-          <td style="width: 197px;">Angle<br/>
+          <td style="">Creates a twirl distort effect at the center of the camera (+ the offset).</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/twirl.png"/></td>
+          <td style="">Angle<br/>
             Radius<br/>
             Offset</td>
-          <td style="width: 317px;"><span class="inline">g_DistortAngle</span> (Real)<br/>
+          <td><span class="inline">g_DistortAngle</span> (Real)<br/>
             <span class="inline">g_DistortRadius</span> (Real)<br/>
             <span class="inline">g_DistortOffset</span> (Real)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Twist Blur</strong><br/>
+        <tr>
+          <td style=""><strong>Twist Blur</strong><br/>
             <br/>
             &quot;_filter_twist_blur&quot;
           </td>
-          <td style="width: 252px;">Applies a Twist Blur filter.</td>
-          <td style="width: 473px;"> <img src="../../../assets/Images/Asset_Editors/FXs/twistblur.png"/></td>
-          <td style="width: 197px;">Position<br/>
+          <td style="">Applies a Twist Blur filter.</td>
+          <td style=""> <img src="../../../assets/Images/Asset_Editors/FXs/twistblur.png"/></td>
+          <td style="">Position<br/>
             Intensity<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_TwistBlurCenter</span> (Array)<br/>
+          <td><span class="inline">g_TwistBlurCenter</span> (Array)<br/>
             <span class="inline">g_TwistBlurIntensity</span> (Real)<br/>
             <span class="inline">g_TwistBlurTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Underwater</strong><br/>
+        <tr>
+          <td style=""><strong>Underwater</strong><br/>
             <br/>
             &quot;_filter_underwater&quot;
           </td>
-          <td style="width: 252px;">Makes the rendered content look like it is underwater.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/water.png"/></td>
-          <td style="width: 197px;">Distort 1 Speed<br/>
+          <td style="">Makes the rendered content look like it is underwater.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/water.png"/></td>
+          <td style="">Distort 1 Speed<br/>
             Distort 2 Speed<br/>
             Distort 1 Scale<br/>
             Distort 2 Scale<br/>
@@ -651,7 +654,7 @@
             Tint Colour<br/>
             Add Colour<br/>
             Distort Texture</td>
-          <td style="width: 317px;"><span class="inline">g_Distort1Speed</span> (Real)<br/>
+          <td><span class="inline">g_Distort1Speed</span> (Real)<br/>
             <span class="inline">g_Distort2Speed</span> (Real)<br/>
             <span class="inline">g_Distort1Scale</span> (Real)<br/>
             <span class="inline">g_Distort2Scale</span> (Real)<br/>
@@ -665,48 +668,48 @@
             <span class="inline">g_DistortTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Vignette</strong><br/>
+        <tr>
+          <td style=""><strong>Vignette</strong><br/>
             <br/>
             &quot;_filter_vignette&quot;
           </td>
-          <td style="width: 252px;">Displays a vignette around your game, with the ability to change the texture displayed on the Vignette.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Vignette.png"/></td>
-          <td style="width: 197px;">Edges<br/>
+          <td style="">Displays a vignette around your game, with the ability to change the texture displayed on the Vignette.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/FX_Vignette.png"/></td>
+          <td style="">Edges<br/>
             Sharpness<br/>
             Vignette Texture</td>
-          <td style="width: 317px;"><span class="inline">g_VignetteEdges</span> (Array)<br/>
+          <td><span class="inline">g_VignetteEdges</span> (Array)<br/>
             <span class="inline">g_VignetteSharpness</span> (Real)<br/>
             <span class="inline">g_VignetteTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>White Noise</strong><br/>
+        <tr>
+          <td style=""><strong>White Noise</strong><br/>
             <br/>
             &quot;_filter_whitenoise&quot;
           </td>
-          <td style="width: 252px;">Adds white noise, with optional animation.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/whitenenoise.png" style="cursor: nwse-resize;"/></td>
-          <td style="width: 197px;">Intensity<br/>
+          <td style="">Adds white noise, with optional animation.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/whitenenoise.png" style="cursor: nwse-resize;"/></td>
+          <td style="">Intensity<br/>
             Animation<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_WhiteNoiseIntensity</span> (Real)<br/>
+          <td><span class="inline">g_WhiteNoiseIntensity</span> (Real)<br/>
             <span class="inline">g_WhiteNoiseAnimation</span> (Real)<br/>
             <span class="inline">g_WhiteNoiseTexture</span> (Sampler)
           </td>
         </tr>
-        <tr style="">
-          <td style="width: 118px;"><strong>Zoom Blur</strong><br/>
+        <tr>
+          <td style=""><strong>Zoom Blur</strong><br/>
             <br/>
             &quot;_filter_zoom_blur&quot;
           </td>
-          <td style="width: 252px;">Displays a zooming motion blur filter.</td>
-          <td style="width: 473px;"><img src="../../../assets/Images/Asset_Editors/FXs/FX_Zoom_Blur.png"/></td>
-          <td style="width: 197px;">Position<br/>
+          <td style="">Displays a zooming motion blur filter.</td>
+          <td style=""><img src="../../../assets/Images/Asset_Editors/FXs/FX_Zoom_Blur.png"/></td>
+          <td style="">Position<br/>
             Intensity<br/>
             Focus Radius<br/>
             Noise Texture</td>
-          <td style="width: 317px;"><span class="inline">g_ZoomBlurCenter</span> (Array)<br/>
+          <td><span class="inline">g_ZoomBlurCenter</span> (Array)<br/>
             <span class="inline">g_ZoomBlurIntensity</span> (Real)<br/>
             <span class="inline">g_ZoomBlurFocusRadius</span> (Real)<br/>
             <span class="inline">g_ZoomBlurTexture</span> (Sampler)
@@ -726,27 +729,27 @@
         <col/>
       </colgroup>
       <tbody>
-        <tr style="">
+        <tr>
           <th colspan="5" style="">Effects (in-game only)</th>
         </tr>
-        <tr style="">
-          <th style="">Type</th>
-          <th style="width: 166px;">Description</th>
-          <th style="width: 286px;">Example</th>
-          <th style="width: 318px;">IDE Parameters</th>
-          <th style="">Runtime Parameters</th>
+        <tr>
+          <th>Type</th>
+          <th style="">Description</th>
+          <th>Example</th>
+          <th>IDE Parameters</th>
+          <th>Runtime Parameters</th>
         </tr>
-        <tr style="">
+        <tr>
           <td style=""><strong>Windblown Particles</strong><br/>
             <br/>
             &quot;_effect_windblown_particles&quot;
           </td>
-          <td style="width: 166px;">Creates a windblown particles effect, showing a leaf sprite by default.<br/>
+          <td>Creates a windblown particles effect, showing a leaf sprite by default.<br/>
             <br/>
             This is an Effect and can&#39;t be previewed in the Room Editor.
           </td>
-          <td style="width: 286px;"><video src="../../../assets/Images/Asset_Editors/FXs/windblown_particles.mp4" width="336" height="224" controls=""></video></td>
-          <td style="width: 318px;">Sprite<br/>
+          <td style=""><video src="../../../assets/Images/Asset_Editors/FXs/windblown_particles.mp4" width="336" height="224" controls=""></video></td>
+          <td>Sprite<br/>
             Number of particles<br/>
             Spawn time<br/>
             Spawn all at start<br/>
@@ -820,7 +823,7 @@
             Particle drag<br/>
             Gravity<br/>
             Enable debug mode</td>
-          <td style=""><span class="inline">param_sprite</span> (Sprite)<br/>
+          <td><span class="inline">param_sprite</span> (Sprite)<br/>
             <span class="inline">param_num_particles</span> (Real)<br/>
             <span class="inline">param_particle_spawn_time</span> (Real)<br/>
             <span class="inline">param_particle_spawn_all_at_start</span> (Bool)<br/>
@@ -908,7 +911,7 @@
         <div>Next: <a href="../../Scripts.htm">Scripts</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 -->

@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.3.10.0_13";
+    gTopicId = "8.2.2.3.10.0_12";
   
 //]]></script>
 
@@ -55,7 +55,7 @@
   <title>font_cache_glyph</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Bart Teunis"/>
   <meta name="topic-comment" content="Manual page for the font_cache_glyph function"/>
   <meta name="rh-index-keywords" content="font_cache_glyph"/>
@@ -64,7 +64,7 @@
 </head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>font_cache_glyph</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,31 +83,31 @@
   <h1><span data-field="title" data-format="default">font_cache_glyph</span></h1>
   <p>This function lets you pre-cache a character glyph from a font.</p>
   <p>If you don&#39;t pre-cache a character using this function, it&#39;s automatically cached before it&#39;s drawn for the first time.</p>
-  <p>This function returns a struct with the x and y position of the glyph on the font&#39;s texture page, e.g. <span class="inline2">{ x : 208, y : 62 }</span>. To get a handle to the texture page that the cached glyph is on you can use <span class="inline2"><a href="font_get_texture.htm">font_get_texture</a></span>.</p>
+  <p>This function returns a struct with the x and y position of the glyph on the font&#39;s texture page, e.g. <span class="inline2">{ x : 208, y : 62 }</span>. To get a handle to the texture page that the cached glyph is on you can use <span class="inline3_func"><a href="font_get_texture.htm">font_get_texture</a></span>.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">font_cache_glyph</span>(font, glyph_index);</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="">Argument</th>
-        <th style="">Type</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style="">font</td>
-        <td style=""><span data-keyref="Type_Asset_Font"><a target="_blank" href="../../../../../The_Asset_Editors/Fonts.htm">Font Asset</a></span></td>
-        <td style="">The font to cache a character or glyph from</td>
+      <tr>
+        <td>font</td>
+        <td><span data-keyref="Type_Asset_Font"><a target="_blank" href="../../../../../The_Asset_Editors/Fonts.htm">Font Asset</a></span></td>
+        <td>The font to cache a character or glyph from</td>
       </tr>
-      <tr style="">
-        <td style="">glyph_index</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style="">The index (or character code) of the glyph to cache (see <span class="inline2"><a href="../../Strings/ord.htm">ord</a></span>/<span class="inline2"><a href="../../Strings/string_ord_at.htm">string_ord_at</a></span>)</td>
+      <tr>
+        <td>glyph_index</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>The index (or character code) of the glyph to cache (see <span class="inline3_func"><a href="../../Strings/ord.htm">ord</a></span>/<span class="inline3_func"><a href="../../Strings/string_ord_at.htm">string_ord_at</a></span>)</td>
       </tr>
     </tbody>
   </table>
@@ -124,10 +124,10 @@
     <div class="buttons">
       <div class="clear">
         <div>Back: <a href="Fonts.htm">Fonts</a></div>
-        <div>Next: <a href="font_add_enable_aa.htm">font_add_enable_aa</a></div>
+        <div>Next: <a href="font_add.htm">font_add</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 font_cache_glyph

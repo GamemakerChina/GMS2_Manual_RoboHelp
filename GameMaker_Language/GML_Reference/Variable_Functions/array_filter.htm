@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.2.0_27";
+    gTopicId = "8.2.2.2.0_31";
   
 //]]></script>
 
@@ -55,16 +55,16 @@
   <title>array_filter</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
-  <meta name="rh-authors" content="INSERT_AUTHOR"/>
-  <meta name="topic-comment" content="INSERT_DESCRIPTION"/>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content=""/>
+  <meta name="topic-comment" content=""/>
   <meta name="rh-index-keywords" content="array_filter"/>
   <meta name="search-keywords" content="array_filter"/>
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
 </head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>array_filter</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -82,28 +82,28 @@
 
   <h1><span data-field="title" data-format="default">array_filter</span></h1>
   <p><span>This function returns a <strong>new</strong> array that is the <i>filtered</i> version of the given array (or a range of it).</span></p>
-  <p><span>You supply a <a href="Array_Functions.htm#h">Predicate Function</a> which runs for all elements in the array. It should return either <span class="inline2">true</span> or <span class="inline2">false</span> based on a condition.</span></p>
+  <p><span>You supply a <a href="Array_Functions.htm#h">Predicate Method</a> which runs for all elements in the array. It should return either <span class="inline2">true</span> or <span class="inline2">false</span> based on a condition.</span></p>
   <p><span>Elements for which the predicate function returns <span class="inline2">true</span> are included in the returned array, and ones that get</span> <span class="inline2">false</span> are ignored.</p>
   <p>By default the function checks the whole array. You can optionally supply <a href="Array_Functions.htm#h1">Offset And Length</a> arguments to check a part of the array, traversing the array forward or backward.</p>
   <div data-conref="../../../assets/snippets/Syntax_predicate_general.hts">
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Predicate Function</span><span data-close-text="true">Predicate Function</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Function</a> that operates on the given array. The predicate function is passed the following arguments:</p>
+    <p>This function takes a <a href="Array_Functions.htm#h">Predicate Method</a> that operates on the given array. The predicate function is passed the following arguments:</p>
     <h4>Syntax:</h4>
     <p class="code">function(element, index);</p>
-    <table class=" cke_show_border" style="">
+    <table class=" cke_show_border">
       <tbody>
-        <tr style="">
+        <tr>
           <th>Argument</th>
           <th>Type</th>
           <th>Description</th>
         </tr>
-        <tr style="">
+        <tr>
           <td>element</td>
           <td><span data-keyref="Type_Any"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable">Any</a></span></td>
           <td>The current array element&#39;s value</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>index</td>
           <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
           <td>The current array index</td>
@@ -111,7 +111,7 @@
       </tbody>
     </table>
     <p>The predicate function should return a <span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span><span style="text-align: justify;">, which affects how the original function modifies or reads the array</span><span style="text-align: justify;">.</span></p>
-    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Function</a>.</p>
+    <p>See information and examples on <a href="Array_Functions.htm#h">Predicate Method</a>.</p>
   </div>
 
 </div>
@@ -120,37 +120,37 @@
   <div data-conref="../../../assets/snippets/Syntax_signature_element_index.hts">
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">array_filter</span>(array, function, [offset], [length]);</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="">Argument</th>
-        <th style="">Type</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style="">array</td>
-        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
-        <td style="">The array to use</td>
+      <tr>
+        <td>array</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td>The array to use</td>
       </tr>
-      <tr style="">
-        <td style="">function</td>
-        <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The <a href="Array_Functions.htm#h">Predicate Function</a> to run on each element</td>
+      <tr>
+        <td>function</td>
+        <td><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
+        <td>The <a href="Array_Functions.htm#h">Predicate Method</a> to run on each element</td>
       </tr>
-      <tr style="">
-        <td style="">offset</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
+      <tr>
+        <td>offset</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
-      <tr style="">
-        <td style="">length</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
+      <tr>
+        <td>length</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
       </tr>
     </tbody>
   </table>
@@ -183,7 +183,7 @@
         <div>Next: <a href="array_map.htm">array_map</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 array_filter

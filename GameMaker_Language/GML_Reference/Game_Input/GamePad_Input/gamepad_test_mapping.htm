@@ -55,7 +55,7 @@
   <title>gamepad_test_mapping</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for gamepad_test_mapping"/>
   <meta name="rh-index-keywords" content="gamepad_test_mapping"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_remove_mapping.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_get_mapping.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>gamepad_test_mapping</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -100,89 +100,89 @@
     <li><span class="inline">h&lt;N&gt;.&lt;mask&gt;</span> - This represents a hat of the gamepad, where the &lt;N&gt; represents a hat from 0 to <a href="gamepad_hat_count.htm"><span class="inline">gamepad_hat_count()</span></a> -1, and the <span class="inline">&lt;mask&gt;</span> will be either 1, 2, 4, or 8.</li>
   </ul>
   <p>Each input value should be bound to an SDL name, which is expressed as <span class="inline">&lt;&gt;abstract-gp-name&gt;</span>, which in turn is bound to a GML constant. The table below shows the equivalence between the SDL name and the <span data-keyref="GameMaker Name">GameMaker</span> constant:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>SDL Name</th>
         <th>GML Name</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">a</span></td>
         <td>gp_face1</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">b</span></td>
         <td>gp_face2</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">x</span></td>
         <td>gp_face3</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">y</span></td>
         <td>gp_face4</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">leftshoulder</span></td>
         <td>gp_shoulderl</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">lefttrigger</span></td>
         <td>gp_shoulderlb</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">rightshoulder</span></td>
         <td>gp_shoulderr</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">righttrigger</span></td>
         <td>gp_shoulderrb</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">guide</span></td>
         <td>gp_select</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">start</span></td>
         <td>gp_start</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">leftstick</span></td>
         <td>gp_stickl</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">rightstick</span></td>
         <td>gp_stickr</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">dpup</span></td>
         <td>gp_padu</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">dpdown</span></td>
         <td>gp_padl</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">dpleft</span></td>
         <td>gp_padr</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">dpright</span></td>
         <td>gp_padd</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">leftx</span></td>
         <td>gp_axislh</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">lefty</span></td>
         <td>gp_axislv</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">rightx</span></td>
         <td>gp_axisrh</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">righty</span></td>
         <td>gp_axisrv</td>
       </tr>
@@ -194,19 +194,19 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gamepad_test_mapping(index, mapping_string);</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>index</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>Which gamepad index &quot;slot&quot; to set.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>mapping_string</td>
         <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The map string to use (see the description for more information).</td>
@@ -238,7 +238,7 @@
         <div style="float:right">Next: <a href="gamepad_remove_mapping.htm">gamepad_remove_mapping</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_test_mapping

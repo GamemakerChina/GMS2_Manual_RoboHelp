@@ -55,7 +55,7 @@
   <title>window_handle</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for window_handle"/>
   <meta name="rh-index-keywords" content="window_handle"/>
@@ -64,7 +64,7 @@
 </head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>window_handle</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,25 +83,25 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>window_handle</h1>
   <p>With this function you can get the internal Windows id value (the HWND, a <i>pointer</i>). This function is really only useful for extension writers who need the <span class="inline">window handle</span> to call Windows API&#39;s in DLL code (the returned pointer should be cast into a string and then in the C++ just cast it to an HWND). The table below shows the platforms supported along with what they return:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Platform</th>
         <th>Returns</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>Windows</td>
         <td>Window HWND</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>macOS</td>
         <td>NSWindow class</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Ubuntu (Linux)</td>
         <td>XWindow handle</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>HTML5</td>
         <td>Canvas ID</td>
       </tr>
@@ -127,7 +127,7 @@
         <div style="float:right">Next: <a href="../The_Game_Window/window_get_caption.htm">window_get_caption</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 window_handle

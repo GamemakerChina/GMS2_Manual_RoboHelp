@@ -55,7 +55,7 @@
   <title>game_set_speed</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="This page outlines the function game_set_speed"/>
   <meta name="rh-index-keywords" content="game_set_speed,gamespeed_fps,gamespeed_microseconds"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/General_Game_Control/highscore_add.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>game_set_speed</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -82,17 +82,17 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>game_set_speed</h1>
   <p>This function can be used to set the game speed. You can set this in one of two ways - as either game frames per second (FPS) or as microseconds per game frame (MPF) - using one of the following two constants:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gamespeed_fps</span></td>
         <td>Sets the game speed using frames per second.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gamespeed_microseconds</span></td>
         <td>Sets the game speed using microseconds per frame.</td>
       </tr>
@@ -105,19 +105,19 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">game_set_speed(speed, type);</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>speed</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The new game speed (as either FPS or MPF).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>type</td>
         <td><span data-keyref="Type_Constant_GameSpeed"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/General_Game_Control/game_get_speed.htm">Game Speed Constant</a></span></td>
         <td>The type of method used to set the game speed (see the constants above).</td>
@@ -148,7 +148,7 @@
         <div style="float:right">Next: <a href="highscore_add.htm">highscore_add</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 game_set_speed

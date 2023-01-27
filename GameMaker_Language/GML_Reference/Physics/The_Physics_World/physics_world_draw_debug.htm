@@ -55,7 +55,7 @@
   <title>physics_world_draw_debug</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for physics_world_draw_debug"/>
   <meta name="rh-index-keywords" content="physics_world_draw_debug,phy_debug_render_aabb,phy_debug_render_collision_pairs,phy_debug_render_coms,phy_debug_render_core_shapes,phy_debug_render_joints,phy_debug_render_obb,phy_debug_render_shapes"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_draw_debug.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_update_speed.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>physics_world_draw_debug</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,46 +83,46 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_world_draw_debug</h1>
   <p>This function will draw a representation of the physics world system of the room to help with debugging when you are having trouble getting the physics scene to work right. Sometimes the problem can be in the rendering part of your game, for example a sprite may be drawn at the wrong position or rotation, giving the appearance of incorrect physics, or it may be that your calculations are not correct. Either way, this function will help you to find and resolve the problem by drawing what is going on in your physics system. To do this, you need tell it which part of the system to draw, and this is done by passing a value created from the bits stored in various &quot;flag&quot; constants:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Phy_Debug"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">Physics Debug Flag</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Phy_Debug"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">Physics Debug Flag</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Flag</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Flag</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_aabb</span></td>
-        <td style="">This shows the absolute bounding box of each fixture in relation to the room axis</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_aabb</span></td>
+        <td>This shows the absolute bounding box of each fixture in relation to the room axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_collision_pairs</span></td>
-        <td style="">This will show any fixtures that are currently in collision</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_collision_pairs</span></td>
+        <td>This will show any fixtures that are currently in collision</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_coms</span></td>
-        <td style="">This marks the center of mass of each fixture in the room</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_coms</span></td>
+        <td>This marks the center of mass of each fixture in the room</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_core_shapes</span></td>
-        <td style="">Shows the basic shapes that make up the fixtures in the room</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_core_shapes</span></td>
+        <td>Shows the basic shapes that make up the fixtures in the room</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_joints</span></td>
-        <td style="">This will draw each of the joints of all fixtures in the room</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_joints</span></td>
+        <td>This will draw each of the joints of all fixtures in the room</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_obb</span></td>
-        <td style="">This shows the relative bounding box for the fixtures in the room</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_obb</span></td>
+        <td>This shows the relative bounding box for the fixtures in the room</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">phy_debug_render_shapes</span></td>
-        <td style="">This shows the actual shapes that make up fixtures within the room</td>
+      <tr>
+        <td><span class="inline">phy_debug_render_shapes</span></td>
+        <td>This shows the actual shapes that make up fixtures within the room</td>
       </tr>
     </tbody>
   </table>
@@ -133,14 +133,14 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">physics_world_draw_debug(flag)</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>flag</td>
         <td><span data-keyref="Type_Constant_Phy_Debug"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Physics/The_Physics_World/physics_world_draw_debug.htm">Physics Debug Flag</a></span>(s)</td>
         <td>The flag value for showing different debug features</td>
@@ -165,7 +165,7 @@
         <div style="float:right">Next: <a href="physics_draw_debug.htm">physics_draw_debug</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 physics_world_draw_debug

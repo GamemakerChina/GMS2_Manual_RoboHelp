@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.21.0_2";
+    gTopicId = "8.2.2.22.0_2";
   
 //]]></script>
 
@@ -55,7 +55,7 @@
   <title>debug_event</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for debug_event"/>
   <meta name="rh-index-keywords" content="debug_event"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Debugging/debug_get_callstack.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Debugging/debug_mode.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>debug_event</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -87,20 +87,92 @@
     <li>&quot;<span class="inline">OutputDebugOn</span>&quot; - This enables a call to <span class="inline">OutputDebugString</span> for the <b>Windows</b> target, which means that all debug output - everything you see in the Output window - can be viewed by Visual Studio or by 3rd party apps.</li>
     <li>&quot;<span class="inline">OutputDebugOff</span>&quot; - Disables the behaviour described above.</li>
     <li>&quot;<span class="inline">BreakOnError</span>&quot; - This option is for <b>Windows YYC</b> builds only, and means that projects will <i>not</i> display the usual code error screen if the runtime detects an error, but instead just carry on and crash. This allows you to see the stack trace within Visual Studio if debugging.</li>
-    <li>&quot;<span class="inline">ResourceCounts</span>&quot; - Lists all the currently active resources, such as Data Structures, Time Sources, Surfaces, etc.</li>
-    <li>&quot;<span class="inline">DumpMemory</span>&quot; - Gives information on the current memory usage.</li>
+    <li>&quot;<span class="inline">ResourceCounts</span>&quot; - Lists all the currently active resources, such as Data Structures, Time Sources, Surfaces, etc. Also returns a struct (info given below).</li>
+    <li>&quot;<span class="inline">DumpMemory</span>&quot; - Gives information on the current memory usage. Also returns a struct (info given below).</li>
   </ul>
+  <p> </p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">ResourceCounts</span><span data-close-text="true">ResourceCounts</span></a></p>
+  <div class="droptext" data-targetname="drop-down">
+    <p class="dropspot">When you call <span class="inline2">debug_event</span> with the <span class="inline2">&quot;ResourceCounts&quot;</span> argument, it returns a struct with information about all the active resources in your game.</p>
+    <p class="dropspot">Each resource is represented with three properties:</p>
+    <ul class="colour">
+      <li class="dropspot"><span class="inline2">&quot;&lt;resource&gt;Count&quot;</span>: The number of resources of this type that exist when the function is called</li>
+      <li class="dropspot"><span class="inline2">&quot;&lt;resource&gt;MaxIndex&quot;</span>: The maximum valid integer index that exists for the resource</li>
+      <li class="dropspot"><span class="inline2">&quot;&lt;resource&gt;ArrayAllocatedSize&quot;</span>: The highest number of resources that were ever created for the given resource type</li>
+    </ul>
+    <p class="dropspot">The struct has the following members:</p>
+    <ul class="colour">
+      <li class="dropspot"><span class="inline2">listCount</span></li>
+      <li class="dropspot"><span class="inline2">listMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">listArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">mapCount</span></li>
+      <li class="dropspot"><span class="inline2">mapMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">mapArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">queueCount</span></li>
+      <li class="dropspot"><span class="inline2">queueMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">queueArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">gridCount</span></li>
+      <li class="dropspot"><span class="inline2">gridMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">gridArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">priorityCount</span></li>
+      <li class="dropspot"><span class="inline2">priorityMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">priorityArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">stackCount</span></li>
+      <li class="dropspot"><span class="inline2">stackMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">stackArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">mpGridCount</span></li>
+      <li class="dropspot"><span class="inline2">mpGridMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">mpGridArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">bufferCount</span></li>
+      <li class="dropspot"><span class="inline2">bufferMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">bufferArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">surfaceCount</span></li>
+      <li class="dropspot"><span class="inline2">audioEmitterCount</span></li>
+      <li class="dropspot"><span class="inline2">audioEmitterMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">audioEmitterArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">partSystemCount</span></li>
+      <li class="dropspot"><span class="inline2">partSystemMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">partSystemArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">partEmitterCount</span></li>
+      <li class="dropspot"><span class="inline2">partTypeCount</span></li>
+      <li class="dropspot"><span class="inline2">partTypeMaxIndex</span></li>
+      <li class="dropspot"><span class="inline2">partTypeArrayAllocatedSize</span></li>
+      <li class="dropspot"><span class="inline2">timeSourceCount</span></li>
+      <li class="dropspot"><span class="inline2">spriteCount</span></li>
+      <li class="dropspot"><span class="inline2">pathCount</span></li>
+      <li class="dropspot"><span class="inline2">fontCount</span></li>
+      <li class="dropspot"><span class="inline2">roomCount</span></li>
+      <li class="dropspot"><span class="inline2">timelineCount</span></li>
+    </ul>
+    <p class="dropspot"> </p>
+    <ul class="colour">
+    </ul>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">DumpMemory </span><span data-close-text="true">DumpMemory </span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">When you call <span class="inline2">debug_event</span> with the <span class="inline2">&quot;DumpMemory&quot;</span> argument, it returns a struct with information about your game&#39;s memory usage.</p>
+    <p class="dropspot">The members of the struct will differ based on the platform, however all platforms will at least have the following values in the struct (in bytes):</p>
+    <ul class="colour">
+      <li class="dropspot"><span class="inline2">totalUsed</span>: How much memory your game is using at the moment</li>
+      <li class="dropspot"><span class="inline2">free</span>: How much allocated memory is unused</li>
+      <li class="dropspot"><span class="inline2">peakUsage</span>: The highest amount of memory your game used since it was started</li>
+    </ul>
+    <p class="dropspot">The way these values are measured is different on each platform.</p>
+    <ul class="colour">
+    </ul>
+  </div>
+  <p> </p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">debug_event</span>(string)</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>string</td>
         <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The custom debug event string to use.</td>
@@ -109,7 +181,7 @@
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p class="code"><span data-keyref="Type_Struct"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Structs.htm">Struct</a></span> (for some options) or <span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4><b>Example:</b></h4>
   <p class="code">if !surface_exists(global.EffectsSurface)<br/>
@@ -128,7 +200,7 @@
         <div style="float:right">Next: <a href="debug_get_callstack.htm">debug_get_callstack</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 debug_event

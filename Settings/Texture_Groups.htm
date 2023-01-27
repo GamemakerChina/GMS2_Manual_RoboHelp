@@ -55,7 +55,7 @@
   <title>Texture Groups</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains how to use Texture Groups
 "/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="Settings/Texture_Information/Texture_Pages.htm"/><meta name="brsprev" value="Settings/Audio_Groups.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>Texture Groups</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@
   <p>Texture groups other than the &quot;Default&quot; one can also be deleted at any time, which will move their contents into the &quot;Default&quot; group (if you delete a group by mistake you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;<span class="inline">Z</span>&quot; to undo the action).</p>
   <h2>Editing a Texture Group</h2>
   <p>Once you have added assets into a Texture Group, you will see them listed on the left of the main Texture Group editor window, and clicking on any of the sprites in this list will show them in the image preview window on the right. This is particularly helpful when working on large projects and you need to be able to see which images have been assigned to which group.</p>
-  <p>If the images assigned to the group have multiple sub-images (i.e.: they are animated), then only the first sub-image is shown in the preview window. You can also right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on an asset to open a small menu giving you the option to move it to another texture group or open the editor for that asset.</p>
+  <p>If the images assigned to the group have multiple sub-images (i.e. they are animated), then only the first sub-image is shown in the preview window. You can also right click <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on an asset to open a small menu giving you the option to move it to another texture group or open the editor for that asset.</p>
   <p>Even though the assets are shown in the list as being separate, all Sprites, Tile Sets and Fonts will be added to the same texture page (or pages), and cannot get an individual page for each asset type. The only exception to this rule is when a sprite asset has been flagged as being for a &quot;<strong>Separate Texture Page</strong>&quot;, in which case it will be given its own individual texture page (see the section on &quot;Texture Settings&quot; in the <a href="../The_Asset_Editors/Sprites.htm">Sprite Editor</a> for more details).</p>
   <h2>Texture Group vs. Texture Page</h2>
   <p>A single <strong>texture group</strong> can have multiple <strong>texture pages</strong> -- they are not equivalent.</p>
@@ -131,11 +131,6 @@
   <p><img class="center" src="../assets/Images/Settings/Texture_Groups_Exports.png"/>Other than those settings you can also choose to export (or not) any given texture group to any given platform by simply checking or un-checking the appropriate boxes from the <strong>Use Group On...</strong> section of the window. Note though that the <span class="inline">&lt;Default&gt;</span> texture group is <em>always exported to every platform</em>, and you can&#39;t check/un-check any of them (only custom texture groups permit this).</p>
   <p>Texture Groups are also linked to the <a href="Configurations.htm">Configurations</a> settings. What this means is that you can define texture groups for each individual configuration of your game, and then set the sprite, tile set or font resource assignments to these different groups and it will be &quot;remembered&quot; when you change to a different configuration. The same will happen to any export options that you have chosen in the Texture Group window, so you can set the texture groups to export to specific platforms on a per-configuration basis.</p>
   <p>One use for this is, for example, that you could make an iPad configuration and for that create 2048x2048px texture pages (setting this up via the <a href="Game_Options.htm">Game Options</a>). You would then assign all the graphics assets to the appropriate texture group, and when finished, you would then change to a different configuration (for HTML5, for example) and from the Texture Group window, create new texture groups that are 512x512px, assigning the assets to these new groups. There is also a button at the bottom of the page that permits you to copy texture group settings from one configuration to another.</p>
-  <p>Finally, texture groups are only relevant to <a class="tooltip" title="A bitmap is the term used to describe any static image that is comprised of coloured pixels that are stored as bits (unlike vector images which are stored using mathematical algorithms). PNG, JPG and BMP are example of bitmap images, while SWF would be an example of a vector image.">bitmap</a> images, and non-bitmap sprites will not be assigned to texture groups. Some of them will already have their own unique texture page (skeleton animation sprites) while others just don&#39;t require textures as they are comprised of <a class="tooltip" title="A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.">vector</a><span class="glossextra">s</span>. For more information please see the following section:</p>
-  <ul class="colour">
-    <li><a href="Texture_Information/Non-Bitmap_Sprites.htm">Non-Bitmap Sprites</a></li>
-  </ul>
-  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
@@ -145,7 +140,7 @@
         <div style="float:right">Next: <a href="Game_Options.htm">Game Options</a> </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Texture Groups

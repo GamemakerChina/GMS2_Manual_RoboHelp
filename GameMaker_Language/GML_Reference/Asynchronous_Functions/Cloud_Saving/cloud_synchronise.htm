@@ -55,7 +55,7 @@
   <title>cloud_synchronise</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for cloud_synchronise"/>
   <meta name="rh-index-keywords" content="cloud_synchronise"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asynchronous_Functions/Cloud_Saving/cloud_string_save.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asynchronous_Functions/Cloud_Saving/Cloud_Saving.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>cloud_synchronise</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -92,39 +92,39 @@
     <li><b>&quot;errorString&quot;: </b>returns an Error String for any error.</li>
   </ul>
   <p>The exact meaning of the returned &quot;status&quot; map entry is explained in the following table:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Status Value</th>
         <th>errorString / resultString</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>-1</td>
         <td>errorString = &quot;Not logged in to &lt;SERVICE&gt;&quot;</td>
         <td>You have not successfully logged in to the given Cloud Service</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>0</td>
         <td>resultString = recovered data</td>
         <td>New game data downloaded from the cloud (following a cloud_synchronise call)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>1</td>
         <td>resultString = &quot;AlreadySynchronized&quot;</td>
         <td>No new data since you last called cloud_synchronise</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>2</td>
         <td>resultString = &quot;ConflictDeferral&quot;</td>
         <td>A conflict was encountered, but the gamer chose to ignore it</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>3</td>
         <td>resultString = &quot;GameUploadSuccess&quot;</td>
         <td>data from <a href="cloud_string_save.htm"><span class="inline">cloud_string_save()</span></a> or <a href="cloud_file_save.htm"><span class="inline">cloud_file_save()</span></a> was successfully uploaded to the cloud</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>-n</td>
         <td>errorString = Description of error</td>
         <td>Any other negative number means a synchronisation failure</td>
@@ -169,7 +169,7 @@
         <div style="float:right">Next: <a href="cloud_string_save.htm">cloud_string_save</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 cloud_synchronise

@@ -55,7 +55,7 @@
   <title>Obsolete Functions</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains the various Obsolete Functions"/>
   <meta name="rh-index-keywords" content="Obsolete Functions"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language.htm"/><meta name="brsprev" value="Additional_Information/Compatibility_Scripts.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Obsolete Functions</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -85,9 +85,9 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Backgrounds</span><span data-close-text="true">Backgrounds</span></a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">In legacy GameMaker you had a separate <strong>background </strong>resource, where you could add images to be used as backgrounds. In <span data-keyref="GameMaker Name">GameMaker</span> all images are considered sprites, and the use you put them too will depend on the layer they are assigned to in the room. This means that there is no longer a &quot;background&quot; resource, and it also means that the following functions are obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>draw_background</td>
           <td style="">draw_background_ext</td>
           <td style="">draw_background_<br/>
@@ -95,7 +95,7 @@
           <td>draw_background_<br/>
             stretched_ext</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>draw_background_<br/>
             part</td>
           <td style="">draw_background_<br/>
@@ -105,7 +105,7 @@
           <td>draw_background_<br/>
             tiled</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>draw_background_<br/>
             tiled_ext</td>
           <td style="">background_name</td>
@@ -113,7 +113,7 @@
           <td>background_get_<br/>
             name</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>draw_background</td>
           <td style="">draw_background_ext</td>
           <td style="">draw_background_<br/>
@@ -121,7 +121,7 @@
           <td>draw_background_<br/>
             stretched_ext</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_get_<br/>
             width</td>
           <td style="">background_get_<br/>
@@ -131,7 +131,7 @@
           <td>background_get_<br/>
             smooth</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_get_<br/>
             preload</td>
           <td style="">background_get_uvs</td>
@@ -140,7 +140,7 @@
           <td>background_set_alpha_<br/>
             from_background</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_create_<br/>
             from_surface</td>
           <td style="">background_create_<br/>
@@ -150,7 +150,7 @@
           <td>background_create_<br/>
             gradient</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_add</td>
           <td style="">background_replace</td>
           <td style="">background_add_<br/>
@@ -158,13 +158,13 @@
           <td>background_replace_<br/>
             alpha</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_delete</td>
           <td style="">background_duplicate</td>
           <td style="">background_assign</td>
           <td>background_save</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_prefetch</td>
           <td style="">background_<br/>
             prefetch_multi</td>
@@ -172,7 +172,7 @@
           <td>background_flush_<br/>
             multi</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>room_set_background</td>
           <td style="">room_set_<br/>
             background_colour</td>
@@ -181,10 +181,10 @@
       </tbody>
     </table>
     <p class="dropspot">Legacy GameMaker lso had a number of different background variables that accessed the global background array. These are no longer required in <span data-keyref="GameMaker Name">GameMaker</span>:</p>
-    <table style="">
+    <table>
       <tbody>
         
-        <tr style="">
+        <tr>
           <td>background_<br/>
             index[0..7]</td>
           <td>background_<br/>
@@ -194,7 +194,7 @@
           <td>background_<br/>
             blend[0..7]</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_x[0..7]</td>
           <td>background_y[0..7]</td>
           <td>background_<br/>
@@ -202,7 +202,7 @@
           <td>background_<br/>
             showcolour</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_<br/>
             foreground[0..7]</td>
           <td>background_<br/>
@@ -212,7 +212,7 @@
           <td>background_<br/>
             htiled[0..7]</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_<br/>
             vtiled[0..7]</td>
           <td>background_<br/>
@@ -222,7 +222,7 @@
           <td>background_<br/>
             xscale[0..7]</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>background_<br/>
             yscale[0..7]</td>
         </tr>
@@ -234,63 +234,63 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">Tiles</span><span data-close-text="true">Tiles</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
     <p class="dropspot">As with backgrounds (explained above) the <strong>tile </strong>resource from legacy GameMaker no longer exists, and instead we have <strong>Tile Sets</strong> in <span data-keyref="GameMaker Name">GameMaker</span>. In legacy GameMaker, tiles used a background resource and were placed at different depths in the room editor or through code, however the method used was not terribly flexible and was also not that efficient. To address these issues, in <span data-keyref="GameMaker Name">GameMaker</span> tilesets are now created from a sprite resource, and can have various different properties (like animation or auto-tiling). They are then placed on a tilemap layer within the room editor or through code. Due to these changes the following functions are now obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>tile_get_x</td>
           <td>tile_get_y</td>
           <td>tile_get_left</td>
           <td>tile_get_top</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_get_width</td>
           <td>tile_get_height</td>
           <td>tile_get_depth</td>
           <td>tile_get_visible</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_get_xscale</td>
           <td>tile_get_yscale</td>
           <td>tile_get_alpha</td>
           <td>tile_get_background</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_set_visible</td>
           <td>tile_set_background</td>
           <td>tile_set_region</td>
           <td>tile_set_position</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_set_depth</td>
           <td>tile_set_scale</td>
           <td>tile_set_blend</td>
           <td>tile_set_alpha</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_get_count</td>
           <td>tile_get_id</td>
           <td>tile_get_ids</td>
           <td>tile_get_ids_at_depth</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_add</td>
           <td>tile_exists</td>
           <td>tile_delete</td>
           <td>tile_layer_hide</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_layer_show</td>
           <td>tile_layer_delete</td>
           <td>tile_layer_shift</td>
           <td>tile_layer_find</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>tile_layer_delete_at</td>
           <td>tile_layer_depth</td>
           <td>room_tile_add</td>
           <td>room_tile_add_ext</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>room_tile_clear</td>
         </tr>
       </tbody>
@@ -301,12 +301,12 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true" data-skip-index="true">Objects</span><span data-close-text="true">Objects</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">The way objects are treated in <span data-keyref="GameMaker Name">GameMaker</span> has changed slightly due to the introduction of layers in the room editor. There still exists the &quot;depth&quot; variable, but it is now only really used for compatibility and you can no longer get or set the depth for objects, only instances. This makes the following functions obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>object_get_depth</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>object_set_depth</td>
         </tr>
       </tbody>
@@ -317,45 +317,45 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true" data-skip-index="true">Sounds</span><span data-close-text="true">Sounds</span></a></p>
   <div class="droptext" data-targetname="drop-down3">
     <p class="dropspot">Legacy GameMaker had two different sound API&#39;s, one which used the deprecated <span class="inline">sound_</span> functions (that was only really valid for the HTML5 target platform), and the other which used the <span class="inline">audio_</span> functions. The audio API has been improved and expanded in <span data-keyref="GameMaker Name">GameMaker</span>, making the legacy functions listed below obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>sound_name</td>
           <td>sound_exists</td>
           <td>sound_get_name</td>
           <td>sound_get_kind</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>sound_get_preload</td>
           <td>sound_exists</td>
           <td>sound_restore</td>
           <td>sound_delete</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>sound_play</td>
           <td>sound_loop</td>
           <td>sound_stop</td>
           <td>sound_stop_all</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>sound_isplaying</td>
           <td>sound_volume</td>
           <td>sound_fade</td>
           <td>sound_global_volume</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>audio_music_gain</td>
           <td>audio_music_is_playing</td>
           <td>audio_new_system</td>
           <td>audio_old_system</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>audio_pause_music</td>
           <td>audio_play_music</td>
           <td>audio_resume_music</td>
           <td>audio_stop_music</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>audio_system</td>
         </tr>
       </tbody>
@@ -366,28 +366,28 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#"><span data-open-text="true" data-skip-index="true">D3D</span><span data-close-text="true">D3D</span></a></p>
   <div class="droptext" data-targetname="drop-down4">
     <p class="dropspot">When using 3D models or primitives in legacy GameMaker, you had to use the <span class="inline">d3d_</span> functions. These used an obsolete API for drawing and in many cases were not related strictly to Direct 3D API, or even to using 3D itself. With the advent of vertex buffers, matrices and cameras in <span data-keyref="GameMaker Name">GameMaker</span>, the following functions have been made obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
         
-        <tr style="">
+        <tr>
           <td>d3d_start</td>
           <td>d3d_end</td>
           <td>d3d_set_perspective</td>
           <td>d3d_set_hidden</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_set_depth</td>
           <td>d3d_set_lighting</td>
           <td>d3d_set_shading</td>
           <td>d3d_set_fog</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_set_culling</td>
           <td>d3d_set_zwriteenable</td>
           <td>d3d_set_projection</td>
           <td>d3d_set_projection_ext</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_set_projection_<br/>
             ortho</td>
           <td>d3d_set_projection_<br/>
@@ -397,7 +397,7 @@
           <td>d3d_transform_<br/>
             set_translation</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_transform_set_<br/>
             scaling</td>
           <td>d3d_transform_<br/>
@@ -407,7 +407,7 @@
           <td>d3d_transform_<br/>
             set_rotation_z</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_transform_set_<br/>
             rotation_axis</td>
           <td>d3d_transform_<br/>
@@ -417,7 +417,7 @@
           <td>d3d_transform_<br/>
             add_rotation_x</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_transform_add_<br/>
             rotation_y</td>
           <td>d3d_transform_<br/>
@@ -427,7 +427,7 @@
           <td>d3d_transform_<br/>
             stack_clear</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_transform_stack_<br/>
             empty</td>
           <td>d3d_transform_<br/>
@@ -437,7 +437,7 @@
           <td>d3d_transform_<br/>
             stack_top</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_transform_stack_<br/>
             discard</td>
           <td>d3d_transform_vertex</td>
@@ -446,20 +446,20 @@
           <td>d3d_light_define_<br/>
             direction</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_light_define_point</td>
           <td>d3d_light_enable</td>
           <td>d3d_primitive_begin</td>
           <td>d3d_primitive_<br/>
             begin_texture</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_primitive_end</td>
           <td>d3d_vertex</td>
           <td>d3d_vertex_color</td>
           <td>d3d_vertex_colour</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_vertex_texture</td>
           <td>d3d_vertex_texture_<br/>
             color</td>
@@ -467,7 +467,7 @@
             colour</td>
           <td>d3d_vertex_normal</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_vertex_normal_<br/>
             color</td>
           <td>d3d_vertex_normal_<br/>
@@ -477,26 +477,26 @@
           <td>d3d_vertex_normal_<br/>
             texture_color</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_vertex_normal_<br/>
             texture_colour</td>
           <td>d3d_draw_block</td>
           <td>d3d_draw_cylinder</td>
           <td>d3d_draw_cone</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_draw_ellipsoid</td>
           <td>d3d_draw_wall</td>
           <td>d3d_draw_floor</td>
           <td>d3d_model_create</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_destroy</td>
           <td>d3d_model_clear</td>
           <td>d3d_model_load</td>
           <td>d3d_model_save</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_draw</td>
           <td>d3d_model_primitive_<br/>
             begin</td>
@@ -504,7 +504,7 @@
             primitive_end</td>
           <td>d3d_model_vertex</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_vertex_<br/>
             color</td>
           <td>d3d_model_vertex_<br/>
@@ -514,7 +514,7 @@
           <td>d3d_model_vertex_<br/>
             texture_color</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_vertex_<br/>
             texture_colour</td>
           <td>d3d_model_vertex_<br/>
@@ -524,7 +524,7 @@
           <td>d3d_model_vertex_<br/>
             normal_colour</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_vertex_<br/>
             normal_texture</td>
           <td>d3d_model_vertex_<br/>
@@ -533,13 +533,13 @@
             normal_texture_colour</td>
           <td>d3d_model_block</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_cylinder</td>
           <td>d3d_model_cone</td>
           <td>d3d_model_ellipsoid</td>
           <td>d3d_model_wall</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>d3d_model_floor</td>
         </tr>
       </tbody>
@@ -550,21 +550,21 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true" data-skip-index="true">View Variables And Window Functions</span><span data-close-text="true">View Variables And Window Functions</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
     <p class="dropspot">With the advent of the camera functions in <span data-keyref="GameMaker Name">GameMaker</span>, it means that a number of view variables are no longer required, specifically those referring to the view into the room rather than the view_port (which is still used). There are also a few functions for controlling how things are displayed that were available in legacy versions of GameMaker Studio which are also no longer appropriate. These variables and functions are listed below:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>view_object</td>
           <td>view_angle</td>
           <td>view_xview</td>
           <td>view_yview</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>view_hview</td>
           <td>view_wview</td>
           <td>view_hborder</td>
           <td>view_vborder</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>view_hspeed</td>
           <td>view_vspeed</td>
           <td>display_set_windows_<br/>
@@ -572,7 +572,7 @@
           <td>display_get_windows_<br/>
             vertex_buffer_method</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>display_set_windows_<br/>
             alternate_sync</td>
           <td>display_get_windows_<br/>
@@ -587,16 +587,16 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true" data-skip-index="true">3rd Party Support</span><span data-close-text="true">3rd Party Support</span></a></p>
   <div class="droptext" data-targetname="drop-down6">
     <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> moves a lot of built in functionality from previous versions into <a href="../The_Asset_Editors/Extensions.htm">extensions</a>, meaning that the following 3rd party support functions are considered obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>ads_enable</td>
           <td>ads_disable</td>
           <td>ads_move</td>
           <td>ads_get_display_<br/>
             width</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>ads_get_display_<br/>
             height</td>
           <td>ads_interstitial_<br/>
@@ -605,7 +605,7 @@
             display</td>
           <td>ads_setup</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>ads_engagement_<br/>
             available</td>
           <td>ads_engagement_<br/>
@@ -614,7 +614,7 @@
             active</td>
           <td>ads_event</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>ads_event_preload</td>
           <td>ads_set_reward_<br/>
             callback</td>
@@ -623,7 +623,7 @@
           <td>playhaven_hide_<br/>
             notification_badge</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>playhaven_position_<br/>
             notification_badge</td>
           <td>playhaven_update_<br/>
@@ -633,13 +633,13 @@
           <td>pocketchange_display_<br/>
             shop</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>analytics_event</td>
           <td>analytics_event_ext</td>
           <td>facebook_init</td>
           <td>facebook_login</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>facebook_request_<br/>
             publish_permissions</td>
           <td>facebook_request_<br/>
@@ -648,14 +648,14 @@
             permission</td>
           <td>facebook_status</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>facebook_accesstoken</td>
           <td>facebook_user_id</td>
           <td>facebook_graph_<br/>
             request</td>
           <td>facebook_dialog</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>facebook_send_invite<span style="display: none;"> </span><span style="display: none;"> </span></td>
           <td>facebook_post_<br/>
             message <span style="display: none;"> </span><span style="display: none;"> </span></td>
@@ -663,35 +663,35 @@
           <td>facebook_launch_<br/>
             offerwall <span style="display: none;"> </span></td>
         </tr>
-        <tr style="">
+        <tr>
           <td>iap_event_queue<span style="display: none;"> </span></td>
           <td>iap_files_purchased<span style="display: none;"> </span></td>
           <td>iap_is_downloaded<span style="display: none;"> </span></td>
           <td>iap_product_files<span style="display: none;"> </span></td>
         </tr>
-        <tr style="">
+        <tr>
           <td>iap_product_status<span style="display: none;"> </span></td>
           <td>iap_store_status<span style="display: none;"> </span></td>
           <td>iap_data</td>
           <td>iap_activate</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>iap_status</td>
           <td>iap_enumerate_products</td>
           <td>iap_restore_all</td>
           <td>iap_acquire</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>iap_consume</td>
           <td>iap_product_details</td>
           <td>iap_purchase_details</td>
           <td> </td>
         </tr>
-        <tr style="">
+        <tr>
           <td>immersion_play_effect</td>
           <td>immersion_stop</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>achievement_*</td>
           <td>win8_*</td>
           <td>uwp_appbar_*</td>
@@ -704,215 +704,215 @@
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down7" href="#"><span data-open-text="true" data-skip-index="true"><span data-keyref="GML_Visual">GML Visual</span> Actions</span><span data-close-text="true"><span data-keyref="GML_Visual">GML Visual</span> Actions</span></a></p>
   <div class="droptext" data-targetname="drop-down7">
     <p class="dropspot">Both legacy GameMaker and <span data-keyref="GameMaker Name">GameMaker</span> have a visual scripting <strong>GML Visual</strong> interface for creating your games, however the way it is handled in <span data-keyref="GameMaker Name">GameMaker</span> is quite different to the previous methods used. Previously, all GML Visual actions had their own corresponding function which worked &quot;behind the scenes&quot; to get the desired results, however this was not very transparent and added in extra overheads to the function calls, resulting in poorer performance. In <span data-keyref="GameMaker Name">GameMaker</span> this has been changed, and now all actions compile to pure code (and can be shown as such if required), meaning that the following action functions are obsolete:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <td>action_path_old</td>
           <td>action_set_sprite</td>
           <td>action_draw_font</td>
           <td>action_draw_font_old</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_fill_color</td>
           <td>action_fill_colour</td>
           <td>action_line_color</td>
           <td>action_line_colour</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_highscore</td>
           <td>action_set_relative</td>
           <td>action_move</td>
           <td>action_set_motion</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_set_hspeed</td>
           <td>action_set_vspeed</td>
           <td>action_set_gravity</td>
           <td>action_set_friction</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_move_point</td>
           <td>action_move_to</td>
           <td>action_move_start</td>
           <td>action_move_random</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_snap</td>
           <td>action_wrap</td>
           <td>action_reverse_xdir</td>
           <td>action_reverse_ydir</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_move_contact</td>
           <td>action_bounce</td>
           <td>action_path</td>
           <td>action_path_end</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_path_position</td>
           <td>action_path_speed</td>
           <td>action_linear_step</td>
           <td>action_potential_step</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_kill_object</td>
           <td>action_create_object</td>
           <td>action_create_object_motion</td>
           <td>action_create_object_random</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_change_object</td>
           <td>action_kill_position</td>
           <td>action_sprite_set</td>
           <td>action_sprite_transform</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_sprite_color</td>
           <td>action_sprite_colour</td>
           <td>action_sound</td>
           <td>action_end_sound</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_if_sound</td>
           <td>action_another_room</td>
           <td>action_current_room</td>
           <td>action_previous_room</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_next_room</td>
           <td>action_if_previous_room</td>
           <td>action_if_next_room</td>
           <td>action_set_alarm</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_sleep</td>
           <td>action_set_timeline</td>
           <td>action_timeline_set</td>
           <td>action_timeline_start</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_timeline_stop</td>
           <td>action_timeline_pause</td>
           <td>action_set_timeline_position</td>
           <td>action_set_timeline_speed</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_message</td>
           <td>action_show_info</td>
           <td>action_show_video</td>
           <td>action_end_game</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_restart_game</td>
           <td>action_save_game</td>
           <td>action_load_game</td>
           <td>action_replace_sprite</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_replace_sound</td>
           <td>action_replace_<br/>
             background</td>
           <td>action_if_empty</td>
           <td>action_if_collision</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_if</td>
           <td>action_if_number</td>
           <td>action_if_object</td>
           <td>action_if_question</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_if_dice</td>
           <td>action_if_mouse</td>
           <td>action_if_aligned</td>
           <td>action_execute_script</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_inherited</td>
           <td>action_if_variable</td>
           <td>action_draw_variable</td>
           <td>action_set_score</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_if_score</td>
           <td>action_draw_score</td>
           <td>action_highscore_show</td>
           <td>action_highscore_clear</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_set_life</td>
           <td>action_if_life</td>
           <td>action_draw_life</td>
           <td>action_draw_life_images</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_set_health</td>
           <td>action_if_health</td>
           <td>action_draw_health</td>
           <td>action_set_caption</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_partsyst_create</td>
           <td>action_partsyst_destroy</td>
           <td>action_partsyst_clear</td>
           <td>action_parttype_create_old</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_parttype_create</td>
           <td>action_parttype_color</td>
           <td>action_parttype_colour</td>
           <td>action_parttype_life</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_parttype_speed</td>
           <td>action_parttype_gravity</td>
           <td>action_parttype_secondary</td>
           <td>action_partemit_create</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_partemit_destroy</td>
           <td>action_partemit_burst</td>
           <td>action_partemit_stream</td>
           <td>action_cd_play</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_cd_stop</td>
           <td>action_cd_pause</td>
           <td>action_cd_resume</td>
           <td>action_cd_present</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_cd_playing</td>
           <td>action_set_cursor</td>
           <td>action_webpage</td>
           <td>action_splash_web</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_draw_sprite</td>
           <td>action_draw_background</td>
           <td>action_draw_text</td>
           <td>action_draw_text_transformed</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_draw_rectangle</td>
           <td>action_draw_gradient_hor</td>
           <td>action_draw_gradient_vert</td>
           <td>action_draw_ellipse</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_draw_<br/>
             ellipse_gradient</td>
           <td>action_draw_line</td>
           <td>action_draw_arrow</td>
           <td>action_color</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_colour</td>
           <td>action_font</td>
           <td>action_fullscreen</td>
           <td>action_snapshot</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>action_effect</td>
         </tr>
       </tbody>
@@ -922,35 +922,35 @@
   </div>
   <p> </p>
   <p>The following built-in global variables are also obsolete, although they are still considered reserved variables in GML so that the IDE can recognise them and flag them for updating/removing when a legacy project that uses them is imported (as are the variables listed under the Views and the Backgrounds sections, above):</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td>gamemaker_registered</td>
         <td style="">gamemaker_progamemaker_<br/>
           version</td>
         <td style="">secure_mode</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>show_health</td>
         <td style="">show_score</td>
         <td style="">show_lives</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>caption_score</td>
         <td style="">caption_lives</td>
         <td style="">caption_health</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>argument_relative</td>
         <td style="">room_caption</td>
         <td style="">room_speed</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>transition_steps</td>
         <td style="">transition_kind</td>
         <td style="">game_guid</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>error_last</td>
         <td style="">error_occurred</td>
         <td style="">buffer_surface_copy</td>
@@ -967,7 +967,7 @@
         <div style="float:right">Next: <a href="The_File_System.htm">The File System</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Obsolete Functions

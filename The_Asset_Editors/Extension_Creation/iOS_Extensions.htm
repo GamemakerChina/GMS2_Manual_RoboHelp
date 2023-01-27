@@ -55,7 +55,7 @@
   <title>iOS / tvOS Extensions</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js"></script>
+  <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how iOS extensions work"/>
   <meta name="rh-index-keywords" content="Extensions - Creating iOS / tvOS Extensions"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="The_Asset_Editors/Extension_Creation/Extended_Examples.htm"/><meta name="brsprev" value="The_Asset_Editors/Extension_Creation/Android_Extensions.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>iOS / tvOS Extensions</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -146,40 +146,40 @@
     YYTvosLSApplicationQueriesSchemesArray
   </p>
   <p>The runtime location where the code is injected will depend on the type of the tag:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col style="width: 174px;"/>
       <col style="width: 760px;"/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="width: 174px;">Tag Type</th>
-        <th style="width: 760px;">Injection Path</th>
+      <tr>
+        <th style="">Tag Type</th>
+        <th style="">Injection Path</th>
       </tr>
-      <tr style="">
-        <td style="width: 174px;"><b>Entitlements</b></td>
-        <td style="width: 760px;">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
+      <tr>
+        <td style=""><b>Entitlements</b></td>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
           <span>${YYXCodeProjName}.entitlements</span>
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 174px;"><b>info.plist</b></td>
-        <td style="width: 760px;">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
+      <tr>
+        <td style=""><b>info.plist</b></td>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
           Supporting Files\<span>${YYXCodeProjName}-Info.plist</span></td>
       </tr>
-      <tr style="">
-        <td style="width: 174px;"><strong>infoPlist.strings</strong></td>
-        <td style="width: 760px;">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
+      <tr>
+        <td style=""><strong>infoPlist.strings</strong></td>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br/>
           en.lproj\InfoPlist.strings</td>
       </tr>
-      <tr style="">
-        <td style="width: 174px;"><strong>project.pbxproj</strong></td>
-        <td style="width: 760px;">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br/>
+      <tr>
+        <td style=""><strong>project.pbxproj</strong></td>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br/>
           project.pbxproj</td>
       </tr>
-      <tr style="">
-        <td style="width: 174px;"><strong>xcscheme</strong></td>
-        <td style="width: 760px;">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br/>
+      <tr>
+        <td style=""><strong>xcscheme</strong></td>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br/>
           xcshareddata\xcschemes\${YYXCodeProjName}.xcscheme</td>
       </tr>
     </tbody>
@@ -202,7 +202,7 @@
         <div style="float:right">Next: <a href="Extended_Examples.htm">Source Examples</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 iOS Extensions

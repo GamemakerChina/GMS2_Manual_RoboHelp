@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../../..";
     gCommonRootRelPath = "../../../../..";
-    gTopicId = "8.2.2.3.5.3.0_6";
+    gTopicId = "8.2.2.3.5.3.0_7";
   
 //]]></script>
 
@@ -66,7 +66,7 @@
 </head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -74,7 +74,7 @@
         <span>AudioEffectType Enum</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -86,11 +86,14 @@
   </div>
   <div>
   <h1><span data-field="title" data-format="default">AudioEffectType Enum</span></h1>
-  <p>This is one of the built-in <a href="../../../../GML_Overview/Variables/Constants.htm#enumhead">Enums</a> that <span data-keyref="GameMaker Name">GameMaker</span> provides. Pass a value of this enum to <span class="inline2"><a href="audio_effect_create.htm">audio_effect_create</a></span> to determine the type of audio effect that you want to create.</p>
+  <p>This is one of the built-in <a href="../../../../GML_Overview/Variables/Constants.htm#enumhead">Enums</a> that <span data-keyref="GameMaker Name">GameMaker</span> provides. Pass a value of this enum to <span class="inline3_func"><a href="audio_effect_create.htm">audio_effect_create</a></span> to determine the type of audio effect that you want to create.</p>
   <p>Below is a list of audio effects that are currently available to choose from.</p>
   <h2 id="h2">AudioEffectType.Bitcrusher</h2>
-  <p>This is a <a href="https://en.wikipedia.org/wiki/Bitcrusher">bitcrusher</a> effect to create <strong>distortion</strong>. It does this in two ways: using sample rate reduction and resolution reduction.</p>
-  <p>Sample rate reduction reduces the quality of the audio by <a class="tooltip" title="Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.">downsampling</a> it. This leads to distortion.</p>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Bitcrusher">bitcrusher</a> effect to create <strong>distortion</strong>. It does this in four steps (or <i>stages</i>), that take place in the following order: </p>
+  <p>Gain <span><span><b>→</b></span></span> Clipper <span><span><b>→</b></span></span> Sample rate reduction <span><span><b>→</b></span></span> Resolution reduction</p>
+  <p>First the gain factor is applied to the input signal.</p>
+  <p>The resulting signal is then <a href="https://en.wikipedia.org/wiki/Clipping_(audio)">clipped</a> between -1 and 1 (essentially doing <span class="inline3_func"><a href="../../../Maths_And_Numbers/Number_Functions/clamp.htm">clamp</a></span> on every sample). This is the first step that introduces distortion.</p>
+  <p>Next, sample rate reduction reduces the quality of the audio by <a class="tooltip" title="Downsampling is the process of reducing samples in audio and, more generally, in signals. For audio it means that samples are thrown away and less samples remain, leading to a loss of information. The sample frequency of the audio is lowered as well as the quality of the audio. This change distorts the audio.">downsampling</a> it. This leads to distortion.</p>
   <p>Resolution reduction reduces the quality of the audio by decreasing the number of bits to represent a sample. As there are less bits to store the same value, some information is lost. This also leads to distortion.</p>
   <p>See <a href="AudioEffect.htm#h">Distortion (AudioEffectType.Bitcrusher)</a> for the full list of properties that you can adjust for this effect type.</p>
   <h2 id="h1">AudioEffectType.Delay</h2>
@@ -113,16 +116,20 @@
   <p>This is a <a href="https://en.wikipedia.org/wiki/Reverb_effect">reverb</a> effect. It combines the original signal with a reverberated version of it. High frequencies can be <i>dampened</i> (reduced).</p>
   <p>A reverb effect is typically used to change the environment in which the audio is heard. You can configure reverb to make the environment appear anywhere between a small room and a grand hall or a vast open space.</p>
   <p>See <a href="AudioEffect.htm#h5">Reverb (AudioEffectType.Reverb1)</a> for the full list of properties that you can adjust for this effect type.</p>
+  <h2 id="h6">AudioEffectType.Tremolo</h2>
+  <p>This is a <a href="https://en.wikipedia.org/wiki/Tremolo_(electronic_effect)">tremolo</a> effect. It makes use of an <a href="AudioLFOType.htm#LFO">LFO</a> (Low-Frequency Oscillator) to modulate audio effect parameters at audio rates (as opposed to game-frame rates).</p>
+  <p>A tremolo effect changes the amplitude of a sound.</p>
+  <p>See <a href="AudioEffect.htm#h6">Tremolo (AudioEffectType.Tremolo)</a> for the full list of properties that you can adjust for this effect type.</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div>Back: <a href="Audio_Effects.htm">Audio Effects</a></div>
-        <div>Next: <a href="audio_effect_create.htm">audio_effect_create</a></div>
+        <div>Next: <a href="AudioLFOType.htm#h">AudioLFOType Enum</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
 
 </div>

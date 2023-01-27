@@ -55,7 +55,7 @@
   <title>Play Audio</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains the Play Audio action"/>
   <meta name="rh-index-keywords" content="GML Visual Action - Play Audio"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Drag_And_Drop/Drag_And_Drop_Reference/Audio/Stop_Audio.htm"/><meta name="brsprev" value="Drag_And_Drop/Drag_And_Drop_Reference/Audio/Audio_Actions.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Play Audio</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -87,34 +87,34 @@
   <h4>Action Syntax:</h4>
   <p><img alt="Play Audio Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Audio/a_Audio_Play_Audio.png"/></p>
   <h4>Arguments:</h4>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>Sound</td>
         <td>The sound asset to play</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Loop</td>
         <td>Whether to loop the sound or not (off by default)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Target</td>
         <td>The target variable to store the return value</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Gain</td>
         <td>Value for the gain multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Offset</td>
         <td>The time (in seconds) to set the start point to (default 0). Values beyond the end of the sound are clamped to its length.<br/>
           The sound asset&#39;s offset (track position) is used when this field if left blank.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Pitch</td>
         <td>The pitch multiplier (default 1). The gain multiplier set here is multiplied with the sound asset&#39;s gain multiplier</td>
       </tr>
@@ -136,7 +136,7 @@
         <div style="float:right">Next: <a href="Stop_Audio.htm">Stop Audio</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Play Audio

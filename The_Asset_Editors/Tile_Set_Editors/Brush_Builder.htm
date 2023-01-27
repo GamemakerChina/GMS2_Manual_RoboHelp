@@ -55,7 +55,7 @@
   <title>Brush Builder</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js"></script>
+  <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how the tile set editor brush builder works"/>
   <meta name="rh-index-keywords" content="Tile Sets - Brush Builder"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="The_Asset_Editors/Tile_Set_Editors/Animated_Tiles.htm"/><meta name="brsprev" value="The_Asset_Editors/Tile_Sets.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Brush Builder</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -101,18 +101,18 @@
     workspace, along with additional drawing tools):</p>
   <table class="icons" style="margin-left: 32auto">
     <tbody>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Pencil Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Draw.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>Pencil</strong></td>
         <td class="text">This is the pencil tool. It uses the selected tile to paint in the Brushes window with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and you can erase with the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21"/>.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Eraser Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Erase.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>Eraser</strong></td>
         <td class="text">With the eraser tool you can use the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> to erase a given tile in the Brushes window. Essentially, all this does is set the tile index to 0, which is
           the reserved &quot;empty&quot; tile.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Selection Tool Icon" height="24" src="../../assets/Images/Icons/Icon_TileSelect.png" style="margin-left: 24px;" width="24"/></td>
         <td class="icons"><strong>Selection</strong></td>
         <td class="text">This is the selection tool, which can be used to define an area of the Brushes window for working on. You can click the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> and then drag the mouse
@@ -120,28 +120,28 @@
           ( <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png" width="55"/> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55"/> + &quot;
           <font face="Lucida Console"><span style="font-size: 16px;"><b>V</b></span></font>&quot;) them, which will then switch the tool to the Pencil and permit you to &quot;paint&quot; with them.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Autotile Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Auto.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>AutoTile</strong></td>
         <td class="text">Clicking this tool enables the <strong>Auto tiling</strong> paint style. When this is active you can select any tile from the Autotile Libraries tab, and then paint it into the Brushes window and <span data-keyref="GameMaker Name">GameMaker</span> will automatically change it
           to match the surrounding tiles, as long as you have correctly set up the <a href="Auto_Tiles.htm">Auto Tile Tab</a>. Note that selecting a tile from the tile set that is not part of the autotile libraries will reset the drawing tool to the standard
           Pencil tool.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Flip Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Flip.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>Flip</strong></td>
         <td class="text">Clicking the Flip tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot;<span class="inline">X</span>&quot; ) will flip the tile or tiles currently
           selected for drawing along the <em>horizontal </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will flip). If you have no tile selected for drawing, but do have a group of tiles selected
           in the brush window, then the flip tool will Flip the selected tiles.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Mirror Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Mirror.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>Mirror</strong></td>
         <td class="text">Clicking the Mirror tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Y</span>&quot; ) will mirror the tile(s) currently
           selected for drawing along the <em>vertical </em>axis, without changing drawing tool (if you have a custom brush selected for drawing, the whole brush will mirror). If you have no tile selected for drawing, but do have a group of tiles selected
           in the brush window, then the Mirror tool will mirror the selected tiles.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Rotate Tool Icon" src="../../assets/Images/Icons/Icon_Tile_Rotate.png" style="margin-left: 24px;"/></td>
         <td class="icons"><strong>Rotate</strong></td>
         <td class="text">Clicking the Rotate tool with the left mouse button <img alt="LMB Icon" class="icon" src="../../assets/Images/Icons/Icon_LMB.png"/> (or using the keyboard shortcut &quot; <span class="inline">Z</span>&quot; ) will rotate the tile(s) currently
@@ -164,7 +164,7 @@
         <div style="float:right">Next: <a href="Animated_Tiles.htm">Animated Tiles</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Tile Brushes

@@ -55,7 +55,7 @@
   <title>The Asset Browser</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="GameMaker Asset Browser Overview"/>
   <meta name="rh-index-keywords" content="Asset Browser"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Introduction/Compiling.htm"/><meta name="brsprev" value="Introduction/Workspaces.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>The Asset Browser</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -278,25 +278,25 @@
   <div class="droptext" data-targetname="drop_down22">
     <p class="dropspot">Shaders are a very powerful tool that can be used to manipulate the graphics that your game renders to the screen, permitting incredibly fast effects that can range from, for example, adding a subtle colour hue to a sprite, right up to full screen distortion effects. Basically it&#39;s a two-part program that runs directly on the graphics card itself, making it very fast since the GPU is doing all the work and freeing up CPU cycles for your game code. The full shader is comprised of a vertex shader program, and a fragment shader program (also known as a pixel shader). Both of these tiny programs work together in order to manipulate what the graphics card renders to the screen. This then permits you to manipulate in real time the position, colour, and alpha values that are actually rendered into the display buffer.</p>
     <p class="dropspot"><span data-keyref="GameMaker Name">GameMaker</span> supports the following shader languages:</p>
-    <table style="">
+    <table>
       <tbody>
-        <tr style="">
+        <tr>
           <th>Shader Language</th>
           <th>Target Platform</th>
         </tr>
-        <tr style="">
+        <tr>
           <td>GLSL ES </td>
           <td>All target platforms</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>GLSL</td>
           <td>Mac and Ubuntu (Linux)</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>HLSL11</td>
           <td>Windows, XboxOne</td>
         </tr>
-        <tr style="">
+        <tr>
           <td>PSSL</td>
           <td>Playstation 4</td>
         </tr>
@@ -374,7 +374,7 @@
         <div style="float:right">Next: <a href="Compiling.htm">Compiling</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Assets

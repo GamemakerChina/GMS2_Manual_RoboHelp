@@ -59,11 +59,11 @@
   <meta name="rh-index-keywords" content="Objects - Async Cloud Event"/>
   <meta name="search-keywords" content="cloud,ev_web_cloud"/>
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
 <meta name="brsnext" value="The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm"/><meta name="brsprev" value="The_Asset_Editors/Object_Properties/Async_Events/Audio_Recording.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Cloud</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -96,39 +96,39 @@
   </ul>
   <p>The exact meaning of the returned &quot;status&quot; map entry is explained in the following table:</p>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Status Value</th>
         <th>errorString / resultString</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>-1</td>
         <td>errorString = &quot;Not logged in to &lt;SERVICE&gt;&quot;</td>
         <td>You have not successfully logged in to the given Cloud Service</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>0</td>
         <td>resultString = recovered data</td>
         <td>New game data downloaded from the cloud (following a <span class="inline">cloud_synchronise()</span> call)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>1</td>
         <td>resultString = &quot;AlreadySynchronized&quot;</td>
         <td>No new data since you last called cloud_synchronise</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>2</td>
         <td>resultString = &quot;ConflictDeferral&quot;</td>
         <td>A conflict was encountered, but the gamer chose to ignore it</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>3</td>
         <td>resultString = &quot;GameUploadSuccess&quot;</td>
         <td>data from <span class="inline">cloud_string_save()</span> or <span class="inline">cloud_file_save()</span> was successfully uploaded to the cloud</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>-n</td>
         <td>errorString = Description of error</td>
         <td>Any other negative number means a synchronisation failure</td>
@@ -145,7 +145,7 @@
         <div style="float:right">Next: <a href="Dialog.htm">Dialog</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Cloud Event

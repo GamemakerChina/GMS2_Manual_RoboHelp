@@ -55,7 +55,7 @@
   <title>Movement</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference section for Movement functions and variables"/>
   <meta name="rh-index-keywords" content=""/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Movement_And_Collisions/Movement/motion_add.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Movement_And_Collisions/Movement_And_Collisions.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Movement</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -80,8 +80,10 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Movement</h1>
-  <p>In any game, movement and position are of paramount importance and so <span data-keyref="GameMaker Name">GameMaker</span> has a complete selection of functions to deal with every situation. The two main ways of moving an instance is to either set the actual position or to set a speed/direction vector, and this can be done either using the built in variables instance variables or to use specific movement functions. Both of these options are explained in the sections listed below:</p>
+  <h1><span data-field="title" data-format="default">Movement</span></h1>
+  <p>In any game, movement and position are of paramount importance and so <span data-keyref="GameMaker Name">GameMaker</span> has a complete selection of functions to deal with every situation.</p>
+  <p>The two main ways of moving an instance is to either set the actual position or to set a speed/direction vector, and this can be done either using the built-in instance variables or to use specific movement functions. Both of these options are explained in the sections listed below.</p>
+  <h2>Instance Variables</h2>
   <p>The following variables are all included &quot;built in&quot; to every instance and can be read and modified to change different behaviours when the instance is moving (they will affect the speed and direction vectors):</p>
   <ul class="colour">
     <li><a href="../../Asset_Management/Instances/Instance_Variables/direction.htm">direction</a></li>
@@ -102,7 +104,7 @@
     <li><a href="../../Asset_Management/Instances/Instance_Variables/xstart.htm">xstart</a></li>
     <li><a href="../../Asset_Management/Instances/Instance_Variables/ystart.htm">ystart</a></li>
   </ul>
-  <p> </p>
+  <h2>Functions</h2>
   <p>The following functions can all be used to move an instance in some way, with some affecting the speed/direction vectors and others affecting the actual x/y position within the room directly:</p>
   <ul class="colour">
     <li><a href="motion_add.htm">motion_add</a></li>
@@ -118,18 +120,18 @@
     <li><a href="move_snap.htm">move_snap</a></li>
     <li><a href="move_wrap.htm">move_wrap</a></li>
     <li><a href="place_snapped.htm">place_snapped</a></li>
+    <li><a href="move_and_collide.htm">move_and_collide</a></li>
   </ul>
-  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
         <div style="float:left">Back: <a href="../Movement_And_Collisions.htm">Movement And Collisions</a></div>
-        <div style="float:right">Next: <a href="../Motion_Planning/Motion_Planning.htm">Motion Planning</a></div>
+        <div style="float:right">Next: <a href="../Motion_Planning/Motion_Planning.htm">Motion Planning</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Movement

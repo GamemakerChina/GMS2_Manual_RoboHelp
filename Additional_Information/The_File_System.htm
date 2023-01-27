@@ -55,7 +55,7 @@
   <title>The File System</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains how the GMS file system works for compiled games"/>
   <meta name="rh-index-keywords" content="The File System"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Additional_Information/Bitwise_Operators.htm"/><meta name="brsprev" value="Additional_Information/Best_Practices_When_Programming.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>The File System</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@
   <p>You should also know that each target platform has its own save area where files and directories can be written to and read from. Below is a list of those areas for each target when sandboxed:</p>
   <ul class="colour">
     <li><strong>Windows</strong>: Windows has all files in the <span class="inline">%localappdata%\&lt;Game Name&gt;</span> directory (on Windows 7 this is the <span class="inline">/Users/&lt;User Name&gt;/AppData/Local/&lt;Game Name&gt;</span> directory).</li>
-    <li><strong>HTML5</strong>: Everything is done through the local storage.</li>
+    <li><strong>HTML5</strong>,<strong> GX.games</strong>: Everything is done through the local storage.</li>
     <li><strong>macOS</strong>: Storage will depend on whether the application is sandboxed or not (following Apple&#39;s rules, with the path usually being <span class="inline">~/Library/Application Support/&lt;Game Name&gt;</span>).</li>
     <li><strong>Ubuntu (Linux)</strong>: Files are stored in the <span class="inline">Home/.config/gamename</span> where &quot;Home&quot; is the users home directory - <span class="inline">/home/&lt;username&gt;</span></li>
     <li><strong>iOS</strong> / <strong>tvOS</strong>: Storage is the standard location (as viewed through iTunes).</li>
@@ -127,7 +127,7 @@
         <div style="float:right">Next: <a href="Bitwise_Operators.htm">Bitwise Operators And Binary</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The File System

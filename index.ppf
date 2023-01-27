@@ -550,10 +550,6 @@
     </topic>
     
     <topic>
-      Settings\Texture_Information\Non-Bitmap_Sprites.htm
-    </topic>
-    
-    <topic>
       Settings\Configurations.htm
     </topic>
     
@@ -827,6 +823,14 @@
     
     <topic>
       The_Asset_Editors\Sprite_Properties\Nine_Slices.htm
+    </topic>
+    
+    <topic>
+      The_Asset_Editors\Sprite_Properties\Sprite_Strips.htm
+    </topic>
+    
+    <topic>
+      Settings\Texture_Information\Non-Bitmap_Sprites.htm
     </topic>
     
     <topic>
@@ -1275,6 +1279,10 @@
     
     <topic>
       Drag_And_Drop\Drag_And_Drop_Reference\Movement\Add_Motion.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Movement\Move_And_Collide.htm
     </topic>
     
     <topic>
@@ -2126,6 +2134,98 @@
     </topic>
     
     <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Rollback_Actions.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Create_Game.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Join_Game.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Start_Game.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Leave_Game.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Define_Input.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Define_Input_Frame_Delay.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Define_Mock_Input.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Define_Player.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Display_Events.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Get_Info.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Get_Input.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\If_Key_Down_(Rollback).htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\If_Key_Pressed_(Rollback).htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\If_Key_Up_(Rollback).htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\If_Rollback_Event_Fired.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Sync_On_Frame.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Use_Random_Input.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Use_Manual_Start.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Send_Message.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Use_Player_Prefs.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Set_Player_Prefs.htm
+    </topic>
+    
+    <topic>
+      Drag_And_Drop\Drag_And_Drop_Reference\Rollback\Get_Player_Prefs.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GameMaker_Language_Index.htm
     </topic>
     
@@ -2227,6 +2327,10 @@
     
     <topic>
       GameMaker_Language\GML_Overview\Structs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Overview\Structs\Static_Structs.htm
     </topic>
     
     <topic>
@@ -2394,6 +2498,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\method_call.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\is_string.htm
     </topic>
     
@@ -2458,6 +2566,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\is_instanceof.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\typeof.htm
     </topic>
     
@@ -2471,6 +2583,14 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\int64.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\static_get.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\static_set.htm
     </topic>
     
     <topic>
@@ -2514,7 +2634,27 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_get_index.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_contains.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_contains_ext.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\array_sort.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_reverse.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_shuffle.htm
     </topic>
     
     <topic>
@@ -2543,10 +2683,6 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\array_last.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Variable_Functions\array_create_ext.htm
     </topic>
     
     <topic>
@@ -2598,7 +2734,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Variable_Functions\array_reverse.htm
+      GameMaker_Language\GML_Reference\Variable_Functions\array_create_ext.htm
     </topic>
     
     <topic>
@@ -2615,6 +2751,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Variable_Functions\array_reverse_ext.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Variable_Functions\array_shuffle_ext.htm
     </topic>
     
     <topic>
@@ -3070,11 +3210,27 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_exists.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_create.htm
     </topic>
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_create_colour.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_replace.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_replace_colour.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Sprites\Skeletal_Animation\Attachments\skeleton_attachment_destroy.htm
     </topic>
     
     <topic>
@@ -3202,7 +3358,15 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Tilsets\tileset_get_info.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Properties.htm
     </topic>
     
     <topic>
@@ -3218,7 +3382,19 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_length.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_is_playable.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_play_sound.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_play_sound_ext.htm
     </topic>
     
     <topic>
@@ -3258,11 +3434,19 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_create_stream.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_gain.htm
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_destroy_stream.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_get_gain.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_pitch.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_get_pitch.htm
     </topic>
     
     <topic>
@@ -3282,39 +3466,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_length.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_pitch.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_get_pitch.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_is_playable.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_falloff_set_model.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_gain.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_sound_get_gain.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_master_gain.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_get_master_gain.htm
     </topic>
     
     <topic>
@@ -3322,7 +3474,19 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_get_master_gain.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_channel_num.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_falloff_set_model.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_system_is_available.htm
     </topic>
     
     <topic>
@@ -3330,7 +3494,11 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_system_is_available.htm
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_create_stream.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\audio_destroy_stream.htm
     </topic>
     
     <topic>
@@ -3486,6 +3654,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Effects\audio_bus_get_emitters.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Effects\AudioBus.htm
     </topic>
     
@@ -3498,7 +3670,19 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Effects\AudioLFOType.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Groups\Audio_Groups.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Groups\audiogroup_default.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Groups\audio_group_name.htm
     </topic>
     
     <topic>
@@ -3515,10 +3699,6 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Groups\audio_group_load_progress.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Audio\Audio_Groups\audio_group_name.htm
     </topic>
     
     <topic>
@@ -3966,6 +4146,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_exists.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_get_name.htm
     </topic>
     
@@ -3994,6 +4178,10 @@
     </topic>
     
     <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_get_info.htm
+    </topic>
+    
+    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_get_texture.htm
     </topic>
     
@@ -4002,27 +4190,7 @@
     </topic>
     
     <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_get_info.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_exists.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_set_cache_size.htm
-    </topic>
-    
-    <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_cache_glyph.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_add_enable_aa.htm
-    </topic>
-    
-    <topic>
-      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_add_get_enable_aa.htm
     </topic>
     
     <topic>
@@ -4051,6 +4219,26 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_texture_page_size.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_set_cache_size.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_add_enable_aa.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_add_get_enable_aa.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_enable_sdf.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Asset_Management\Fonts\font_get_sdf_enabled.htm
     </topic>
     
     <topic>
@@ -5383,6 +5571,10 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Movement_And_Collisions\Movement\place_snapped.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Movement_And_Collisions\Movement\move_and_collide.htm
     </topic>
     
     <topic>
@@ -9787,6 +9979,170 @@
     
     <topic>
       GameMaker_Language\GML_Reference\Networking\network_destroy.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Multiplayer.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Creating_Multiplayer.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_System.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Defining_Inputs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Constraints.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Events.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Errors.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Preferences.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\Rollback_Functions.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_create_game.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_join_game.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_start_game.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_leave_game.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_define_input.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_define_input_frame_delay.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_define_mock_input.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_define_player.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_display_events.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_get_info.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_get_input.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_sync_on_frame.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_use_random_input.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_use_manual_start.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_chat.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_use_player_prefs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_set_player_prefs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Functions\rollback_get_player_prefs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\Rollback_Variables.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_avatar_s.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_avatar_url.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_id.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_local.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_type.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_user_id.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\player_prefs.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\managed.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\rollback_.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\rollback_confirmed_frame.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\rollback_current_frame.htm
+    </topic>
+    
+    <topic>
+      GameMaker_Language\GML_Reference\Rollback\Rollback_Variables\rollback_game_running.htm
     </topic>
     
     <topic>

@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.18.0_2";
+    gTopicId = "8.2.2.19.0_2";
   
 //]]></script>
 
@@ -55,7 +55,7 @@
   <title>buffer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for buffer_create"/>
   <meta name="rh-index-keywords" content="buffer_create,buffer_fixed,buffer_grow,buffer_wrap,buffer_fast,buffer_vbuffer"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Buffers/buffer_create_from_vertex_buffer.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Buffers/buffer_exists.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>buffer_create</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,38 +83,38 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_create</h1>
   <p>You use this function to allocate a portion of memory as a buffer in your game, with the function returning the unique <i>buffer id</i> that should be stored in a variable and used for all further function calls to the buffer. The buffer can then be used to store different types of data (specified when you write to the buffer using the <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> function, with the following constants being used to define the buffer type:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Buffer_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer Type Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Buffer_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer Type Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">buffer_fixed</span></td>
-        <td style="">A buffer of fixed size.</td>
+      <tr>
+        <td><span class="inline">buffer_fixed</span></td>
+        <td>A buffer of fixed size.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">buffer_grow</span></td>
-        <td style="">A buffer that will &quot;grow&quot; dynamically as data is added</td>
+      <tr>
+        <td><span class="inline">buffer_grow</span></td>
+        <td>A buffer that will &quot;grow&quot; dynamically as data is added</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">buffer_wrap</span></td>
-        <td style="">A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
+      <tr>
+        <td><span class="inline">buffer_wrap</span></td>
+        <td>A buffer where the data will &quot;wrap&quot;. When the data being added reaches the limit of the buffer size, the overwrite will be placed back at the start of the buffer, and further writing will continue from that point.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">buffer_fast</span></td>
-        <td style="">Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <span class="inline">buffer_u8</span> <a href="buffer_read.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
+      <tr>
+        <td><span class="inline">buffer_fast</span></td>
+        <td>Special &quot;stripped&quot; buffer that is extremely fast to read/write to. Can only be used with <span class="inline">buffer_u8</span> <a href="buffer_read.htm">data types</a>, and <i>must</i> be 1 byte aligned.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">buffer_vbuffer</span></td>
-        <td style="">This type of buffer is to be used as a vertex buffer only.</td>
+      <tr>
+        <td><span class="inline">buffer_vbuffer</span></td>
+        <td>This type of buffer is to be used as a vertex buffer only.</td>
       </tr>
     </tbody>
   </table>
@@ -133,24 +133,24 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_create(size, type, alignment)</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>size</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The size (in bytes) of the buffer.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>type</td>
         <td><span data-keyref="Type_Constant_Buffer_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Buffers/buffer_create.htm">Buffer Type Constant</a></span></td>
         <td>The type of buffer to create (see the constants list above).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>alignment</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The byte alignment for the buffer</td>
@@ -174,7 +174,7 @@
         <div style="float:right">Next: <a href="buffer_create_from_vertex_buffer.htm">buffer_create_from_vertex_buffer</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_create

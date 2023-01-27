@@ -55,7 +55,7 @@
   <title>vertex_format_add_custom</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference for vertex_format_add_custom"/>
   <meta name="rh-index-keywords" content="vertex_format_add_custom,vertex_type_float1,vertex_type_float2,vertex_type_float3,vertex_type_float4,vertex_type_colour,vertex_type_ubyte4,vertex_usage_position,vertex_usage_colour,vertex_usage_normal,vertex_usage_textcoord,vertex_usage_blendweight,vertex_usage_blendindices,vertex_usage_depth,vertex_usage_tangent,vertex_usage_binormal,vertex_usage_fog,vertex_usage_sample"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_end.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_normal.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>vertex_format_add_custom</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -82,103 +82,103 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>vertex_format_add_custom</h1>
   <p>This function permits you to use a custom data type for specific vertex format attributes as part of the new vertex format being created. The available values to use are defined by the data type constant that you choose, listed below:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Data Type Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Data Type Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_float1</span></td>
-        <td style="">A single floating point value</td>
+      <tr>
+        <td><span class="inline">vertex_type_float1</span></td>
+        <td>A single floating point value</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_float2</span></td>
-        <td style="">Two floating point values</td>
+      <tr>
+        <td><span class="inline">vertex_type_float2</span></td>
+        <td>Two floating point values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_float3</span></td>
-        <td style="">Three floating point values</td>
+      <tr>
+        <td><span class="inline">vertex_type_float3</span></td>
+        <td>Three floating point values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_float4</span></td>
-        <td style="">Four floating point values</td>
+      <tr>
+        <td><span class="inline">vertex_type_float4</span></td>
+        <td>Four floating point values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_colour</span></td>
-        <td style="">Four component values (r, g, b, a)</td>
+      <tr>
+        <td><span class="inline">vertex_type_colour</span></td>
+        <td>Four component values (r, g, b, a)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_type_ubyte4</span></td>
-        <td style="">Four component unsigned byte values (from 0 to 255)</td>
+      <tr>
+        <td><span class="inline">vertex_type_ubyte4</span></td>
+        <td>Four component unsigned byte values (from 0 to 255)</td>
       </tr>
     </tbody>
   </table>
   <p><br/>
     The use that these constants will be put too also needs to be defined so that the values can be &quot;bound&quot; properly within the shader being created. This is necessary due to the fact that DX and OpenGL have different requirements so if you don&#39;t bind them properly, they won&#39;t come through right in the shader. The available usage constants that you can choose are listed below and those you use will depend on the specifics of the shader being created:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Usage Type Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Usage Type Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_position</span></td>
-        <td style="">position values (x, y, z)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_position</span></td>
+        <td>position values (x, y, z)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_colour</span></td>
-        <td style="">colour values (r, g, b, a)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_colour</span></td>
+        <td>colour values (r, g, b, a)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_normal</span></td>
-        <td style="">vertex normal values (nx, ny, nz)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_normal</span></td>
+        <td>vertex normal values (nx, ny, nz)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_textcoord</span></td>
-        <td style="">UV coordinates (u, v)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_textcoord</span></td>
+        <td>UV coordinates (u, v)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_blendweight</span></td>
-        <td style="">the blendweight of the input matrix (for skeletal animation, for example)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_blendweight</span></td>
+        <td>the blendweight of the input matrix (for skeletal animation, for example)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_blendindices</span></td>
-        <td style="">the indices of the matrices to use (for skeletal animation, for example)</td>
+      <tr>
+        <td><span class="inline">vertex_usage_blendindices</span></td>
+        <td>the indices of the matrices to use (for skeletal animation, for example)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_depth</span></td>
-        <td style="">vertex depth buffer value</td>
+      <tr>
+        <td><span class="inline">vertex_usage_depth</span></td>
+        <td>vertex depth buffer value</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_tangent</span></td>
-        <td style="">tangent values</td>
+      <tr>
+        <td><span class="inline">vertex_usage_tangent</span></td>
+        <td>tangent values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_binormal</span></td>
-        <td style="">binormal values</td>
+      <tr>
+        <td><span class="inline">vertex_usage_binormal</span></td>
+        <td>binormal values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_fog</span></td>
-        <td style="">fog values</td>
+      <tr>
+        <td><span class="inline">vertex_usage_fog</span></td>
+        <td>fog values</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">vertex_usage_sample</span></td>
-        <td style="">sampler index</td>
+      <tr>
+        <td><span class="inline">vertex_usage_sample</span></td>
+        <td>sampler index</td>
       </tr>
     </tbody>
   </table>
@@ -212,19 +212,19 @@
   </ul>
   <h4>Syntax:</h4>
   <p class="code">vertex_format_add_custom(type, usage);</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>type</td>
         <td><span data-keyref="Type_Constant_Draw_Vertex_Data_Type"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Data Type Constant</a></span></td>
         <td>The data type that this custom vertex data will hold (see the <b><i>type constants</i></b> listed above).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>usage</td>
         <td><span data-keyref="Type_Constant_Draw_Vertex_Usage"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Drawing/Primitives/vertex_format_add_custom.htm">Vertex Usage Type Constant</a></span></td>
         <td>The use that the data will get(see the <b><i>usage constants</i></b> listed above).</td>
@@ -251,7 +251,7 @@
         <div style="float:right">Next: <a href="vertex_format_end.htm">vertex_format_end</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_format_add_custom

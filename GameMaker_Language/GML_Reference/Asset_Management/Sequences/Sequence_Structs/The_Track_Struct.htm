@@ -55,7 +55,7 @@
   <title>The Track Struct</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page outlining The Track Struct"/>
   <meta name="rh-index-keywords" content="Sequence Track Struct"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Struct.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Sequence_Instance_Struct.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>The Track Struct</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,142 +83,142 @@
   <h1>The Track Struct</h1>
   <p>The track struct can be used either for top-level <i></i><a class="tooltip" title="A track in the sequences track panel that holds a single asset, either a sprite, a sound, an instance, or a sequence.">asset track</a><span class="glossextra">s</span> or for sub-track <i></i><a class="tooltip" title="A track that has been assigned to an asset track in the track panel and that changes a single parameter for the asset track it&#39;s linked to, like the position, or the image index.">parameter tracks</a>, and the behaviour of the track is defined by two things, its <b>name</b> and its <b>type</b>. Track <a href="../../../../GML_Overview/Structs.htm">structs</a> are created using the function <a href="../sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a> and can be retrieved from sequence assets using the <span class="inline">activeTracks</span> property from the <a href="The_Sequence_Instance_Struct.htm">Sequence Instance Struct</a> or the <span class="inline">tracks</span> property from the <a href="The_Sequence_Object_Struct.htm">Sequence Object Struct</a>.</p>
   <p>The properties available in the track struct are:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col style="width: 167px;"/>
       <col style="width: 909px;"/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="3" style=""><span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span></th>
+      <tr>
+        <th colspan="3"><span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Variable</th>
-        <th style="width: 167px;">Type</th>
-        <th style="width: 909px;">Description</th>
+      <tr>
+        <th>Variable</th>
+        <th style="">Type</th>
+        <th style="">Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">type</span></td>
-        <td style="width: 167px;"><span data-keyref="Type_Constant_Sequence_Track_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm#type">Sequence Track Type Constant</a></span></td>
-        <td style="width: 909px;">This contains a <span data-keyref="Type_Constant_Sequence_Track_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm#type">Sequence Track Type Constant</a></span> that describes the type of track this is. This can be any one of the constants given under the &quot;Type&quot; section below.</td>
+      <tr>
+        <td><span class="inline">type</span></td>
+        <td style=""><span data-keyref="Type_Constant_Sequence_Track_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm#type">Sequence Track Type Constant</a></span></td>
+        <td style="">This contains a <span data-keyref="Type_Constant_Sequence_Track_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm#type">Sequence Track Type Constant</a></span> that describes the type of track this is. This can be any one of the constants given under the &quot;Type&quot; section below.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">name</span></td>
-        <td style="width: 167px;"><span data-keyref="Type_String"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td style="width: 909px;">When creating a &quot;top-level&quot; asset track, the name you give here can be any string that you require to identify the track. However, for parameter tracks, you need to specify specific strings to tell <span data-keyref="GameMaker Name">GameMaker</span> what kind of parameter track you are creating. This is expanded upon under the &quot;Name&quot; section below.</td>
+      <tr>
+        <td><span class="inline">name</span></td>
+        <td style=""><span data-keyref="Type_String"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td style="">When creating a &quot;top-level&quot; asset track, the name you give here can be any string that you require to identify the track. However, for parameter tracks, you need to specify specific strings to tell <span data-keyref="GameMaker Name">GameMaker</span> what kind of parameter track you are creating. This is expanded upon under the &quot;Name&quot; section below.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">tracks</span></td>
-        <td style="width: 167px;"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s</td>
-        <td style="width: 909px;">This property allows access to the list of tracks which are children of this track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s is returned, and when setting this property an array of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s should be specified.</td>
+      <tr>
+        <td><span class="inline">tracks</span></td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s</td>
+        <td style="">This property allows access to the list of tracks which are children of this track. When getting this property an <a href="../../../../GML_Overview/Arrays.htm">array</a> of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s is returned, and when setting this property an array of <span data-keyref="Type_Struct_Sequence_Track"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm">Sequence Track Struct</a></span>s should be specified.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">visible</span></td>
-        <td style="width: 167px;"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
-        <td style="width: 909px;">This indicates whether this track is visible (the value is <span class="inline">true</span>) or not (the value is <span class="inline">false</span>). You can get or set this value and if a track not visible then none of its child tracks will be drawn either.</td>
+      <tr>
+        <td><span class="inline">visible</span></td>
+        <td style=""><span data-keyref="Type_Bool"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td style="">This indicates whether this track is visible (the value is <span class="inline">true</span>) or not (the value is <span class="inline">false</span>). You can get or set this value and if a track not visible then none of its child tracks will be drawn either.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">keyframes</span></td>
-        <td style="width: 167px;"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Keyframe"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Struct.htm">Sequence Keyframe Struct</a></span>s</td>
-        <td style="width: 909px;">This property allows access to the list of <a href="The_Keyframe_Struct.htm">keyframe structs</a> for the track. When getting this property an array of keyframe structs is returned, and when setting this property an array of keyframe structs should be specified.</td>
+      <tr>
+        <td><span class="inline">keyframes</span></td>
+        <td style=""><span data-keyref="Type_Array"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> of <span data-keyref="Type_Struct_Sequence_Keyframe"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Keyframe_Struct.htm">Sequence Keyframe Struct</a></span>s</td>
+        <td style="">This property allows access to the list of <a href="The_Keyframe_Struct.htm">keyframe structs</a> for the track. When getting this property an array of keyframe structs is returned, and when setting this property an array of keyframe structs should be specified.</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h2 id="type">Type</h2>
   <p>The <span class="inline">type</span> property can be any one of the following constants (these constants are also used when generating <a href="../sequence_keyframe_new.htm">keyframes</a> and <a href="../sequence_keyframedata_new.htm">keyframe data</a>):</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th colspan="3"><span data-keyref="Type_Constant_Sequence_Track_Type"><a target="_blank" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Sequences/Sequence_Structs/The_Track_Struct.htm#type">Sequence Track Type Constant</a></span></th>
       </tr>
-      <tr style="">
+      <tr>
         <th>Constant</th>
         <th>Description</th>
         <th>Value</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_graphic</span></td>
         <td>This is a graphics (sprite) asset track.</td>
         <td>1</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_audio</span></td>
         <td>This is an audio asset track.</td>
         <td>2</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_instance</span></td>
         <td>This is an instance asset track.</td>
         <td>14</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_sequence</span></td>
         <td>This is a sequence asset track.</td>
         <td>7</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_clipmask</span></td>
         <td>This is a clip mask group asset track.</td>
         <td>8</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_clipmask_mask</span></td>
         <td>This is a clip mask sprite asset track used for generating the clip mask.</td>
         <td>9</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_clipmask_subject</span></td>
         <td>This is a clip mask sprite asset track that is being masked.</td>
         <td>10</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_group</span></td>
         <td>This group folder asset track.</td>
         <td>11</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_colour</span></td>
         <td>This is a colour data parameter track.</td>
         <td>4</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_real</span></td>
         <td>This is a real number parameter track.</td>
         <td>3</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_message</span></td>
         <td>This is a broadcast message track.</td>
         <td>15</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_moment</span></td>
         <td>This is an event/moment track.</td>
         <td>16</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_text</span></td>
         <td>This is a text track.</td>
         <td>17</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_bool</span></td>
         <td>Not used currently.</td>
         <td>5</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_string</span></td>
         <td>Not used currently.</td>
         <td>6</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_spriteframes</span></td>
         <td>Not used currently.</td>
         <td>13</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">seqtracktype_empty</span></td>
         <td>Not used currently.</td>
         <td>12</td>
@@ -256,7 +256,7 @@
         <div style="float:right">Next: <a href="The_Keyframe_Struct.htm">The Keyframe Struct</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 The Track Struct

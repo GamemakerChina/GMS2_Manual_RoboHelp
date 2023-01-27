@@ -52,10 +52,10 @@
   <meta name="topic-status" content="Draft"/>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Fonts</title>
+  <title>The Font Editor</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how the font editor works"/>
   <meta name="rh-index-keywords" content="Font Editor"/>
@@ -63,15 +63,15 @@
 <meta name="brsnext" value="The_Asset_Editors/Notes.htm"/><meta name="brsprev" value="The_Asset_Editors/Extension_Creation/Extended_Examples.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
-      <div class="title" title="Fonts">
-        <span>Fonts</span>
+      <div class="title" title="The Font Editor">
+        <span>The Font Editor</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -80,49 +80,38 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>The Font Editor</h1>
+  <h1><span data-field="title" data-format="default">The Font Editor</span></h1>
   <p><img alt="The Font Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts.png"/></p>
   <p>When you want to draw text in your game this text is drawn in a standard Arial 12 point <a class="tooltip" title="A font is a collection of graphical glyphs used to represent text in a language. Fonts can be different weights, sizes, and styles and are used to display any written content in a project.">font</a>, but to make more interesting or unique looking texts you will probably want to use different fonts. So, to use different fonts that you have on your computer you must create a <strong>font asset</strong> in <span data-keyref="GameMaker Name">GameMaker</span>. This is done by right clicking <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21"/> on the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and selecting &quot;<em>Create&quot; -</em>&gt;<em> &quot;Font</em>&quot;. For each font asset you create you specify a particular type of font from your computer which can then be used in your game using the action or code to set a font for drawing.</p>
   <p>When you first create a font resource the font editor window will open with the following options:</p>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#"><span data-open-text="true" data-skip-index="true">Details</span><span data-close-text="true">Details</span></a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you can give your font a unique name (alpha numeric characters and the &quot;_&quot; under-bar symbol only), as well as choose the font to use. The font must be installed on your machine and due to licensing issues, <span data-keyref="GameMaker Name">GameMaker</span> does not
-      store the actual font files with the project file by default, but rather the font is <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a> to a <a href="../Settings/Texture_Information/Texture_Pages.htm">texture page</a> as a series
-      of bitmap glyphs. The texture page will be assigned to a <a href="../Settings/Texture_Groups.htm">texture group</a>, which you can choose from the <strong>Group</strong> option here too.</p>
-    <p class="dropspot">If you want to distribute the actual font file ( <span class="inline">*.ttf</span> or <span class="inline">*.otf</span> only) along with the project when making a Marketplace asset or for any other reason, you can check the option <strong>Copy To Project</strong>. This
-      will open the file explorer where you can select the font file and it will then be added to the files bundled with the project.</p>
-    <p class="note"><strong>IMPORTANT!</strong> You should only use fonts that you are <strong>legally permitted and licensed to redistribute or use in your project</strong>.</p>
+    <p class="dropspot">Here you can give your font a unique name (alpha numeric characters and the &quot;_&quot; under-bar symbol only), as well as choose the font to use. The font must be installed on your machine and due to licensing issues, <span data-keyref="GameMaker Name">GameMaker</span> does not store the actual font files with the project file by default, but rather the font is <a class="tooltip" title="When something is rendered in GameMaker Studio 2, it generally means that it has simply been &#39;drawn to the display buffer&#39; or &#39;drawn to a surface&#39;.  Rendering can also refer to the process of turning some kind of vector source (like a font) into a bitmap image,.">rendered</a> to a <a href="../Settings/Texture_Information/Texture_Pages.htm">texture page</a> as a series of bitmap glyphs. The texture page will be assigned to a <a href="../Settings/Texture_Groups.htm">texture group</a>, which you can choose from the <strong>Group</strong> option here too.</p>
+    <p class="dropspot">If you want to distribute the actual font file ( <span class="inline">*.ttf</span> or <span class="inline">*.otf</span> only) along with the project when making a Marketplace asset or for any other reason, you can check the option <strong>Copy To Project</strong>. This will open the file explorer where you can select the font file and it will then be added to the files bundled with the project.</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> You should only use fonts that you are <strong>legally permitted and licensed to redistribute or use in your project</strong>.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">Presets</span><span data-close-text="true">Presets</span></a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">In this section you can set the size (in points - default is 12pt) and whether the font should be drawn as bold or italic or have <a class="tooltip" title="This is a technique used to smooth otherwise jagged lines or textures by blending the color of an edge with the color of the pixels around it. The result should be a more pleasing and realistic appearance, depending on the intensity of the effect.">anti-aliasing</a> applied. The preview window on the right
-      will show you the text approximately as it will look in your game with the size and transforms you have specified.</p>
-    <p class="dropspot"><br/>
-    </p>
+    <p class="dropspot">In this section you can set the size (in points - default is 12pt) and whether the font should be drawn as bold or italic or have <a class="tooltip" title="This is a technique used to smooth otherwise jagged lines or textures by blending the color of an edge with the color of the pixels around it. The result should be a more pleasing and realistic appearance, depending on the intensity of the effect.">anti-aliasing</a> applied. The preview window on the right will show you the text approximately as it will look in your game with the size and transforms you have specified.</p>
+    <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true" data-skip-index="true">Range Controls</span><span data-close-text="true">Range Controls</span></a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">When creating a font resource it&#39;s rare that you&#39;ll want to include every single glyph for the font. This is why <span data-keyref="GameMaker Name">GameMaker</span> defaults to using only the characters from 32 till 127 of the chosen font as this gives us the numbers and
-      the small and capital letters along with certain punctuation marks. You can, however, change the character range used to help optimise your games ie: if you only need the numbers from a specific font, then <em>only </em>select the numbers. To do
-      this, you should first click the <strong>Delete </strong>button to clear the current range (you may need to select the range for this to work by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on it in the
-      preview window) and then click on the <strong>Add </strong>button to add a new range. This will open the following chained window:<br/>
-    </p>
+    <p class="dropspot">When creating a font resource it&#39;s rare that you&#39;ll want to include every single glyph for the font. This is why <span data-keyref="GameMaker Name">GameMaker</span> defaults to using only the characters from 32 till 127 of the chosen font as this gives us the numbers and the small and capital letters along with certain punctuation marks. You can, however, change the character range used to help optimise your games ie: if you only need the numbers from a specific font, then <em>only </em>select the numbers. To do this, you should first click the <strong>Delete </strong>button to clear the current range (you may need to select the range for this to work by clicking <img alt="LMB Icon" class="icon" src="../assets/Images/Icons/Icon_LMB.png"/> on it in the preview window) and then click on the <strong>Add </strong>button to add a new range. This will open the following chained window:</p>
     <p class="dropspot"><img alt="Font Range Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Fonts_Range.png"/>This window has some buttons to help you establish a standard range for your font:</p>
     <p class="dropspot">   - The <em>Normal </em>range from 32 till 127<br/>
-      <br/>    - The <em>ASCII </em>range from 0 till 255<br/>
-      <br/>    - The <em>Digits </em>range that only contains the 10 digits<br/>
-      <br/>    - The <em>Letters </em>range that contains all upper-case and lower-case letters only<br/>
+      <br/>
+         - The <em>ASCII </em>range from 0 till 255<br/>
+      <br/>
+         - The <em>Digits </em>range that only contains the 10 digits<br/>
+      <br/>
+         - The <em>Letters </em>range that contains all upper-case and lower-case letters only
     </p>
-    <p class="dropspot">Other ranges can be used by typing in the first and last character index of the range you wish to set in the character range input boxes (if a character does not lie in the range it is replaced by a space). Apart from these buttons and input boxes,
-      you also have two further options which are especially useful:<br/>
-    </p>
+    <p class="dropspot">Other ranges can be used by typing in the first and last character index of the range you wish to set in the character range input boxes (if a character does not lie in the range it is replaced by a space). Apart from these buttons and input boxes, you also have two further options which are especially useful:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><strong>From Code</strong>: if you click on this button and then click OK, <span data-keyref="GameMaker Name">GameMaker</span> will automatically parse your game code for strings and then create different character ranges to cover all the text in your game. Note that it looks for
-        all strings (either within &quot;&quot; or &#39;&#39;) and so may also include file names in the character ranges.<br/>
-      </li>
-      <li class="dropspot"><strong>From File</strong>: this works similarly to the &quot;from code&quot; option explained above. If you click on it, you will be asked to supply a file, and then once that is done you should click on OK. <span data-keyref="GameMaker Name">GameMaker</span> will then parse the
-        file and create character ranges for the text found within it.</li>
+      <li class="dropspot"><strong>From Code</strong>: if you click on this button and then click OK, <span data-keyref="GameMaker Name">GameMaker</span> will automatically parse your game code for strings and then create different character ranges to cover all the text in your game. Note that it looks for all strings (either within &quot;&quot; or &#39;&#39;) and so may also include file names in the character ranges.</li>
+      <li class="dropspot"><strong>From File</strong>: this works similarly to the &quot;from code&quot; option explained above. If you click on it, you will be asked to supply a file, and then once that is done you should click on OK. <span data-keyref="GameMaker Name">GameMaker</span> will then parse the file and create character ranges for the text found within it.</li>
     </ul>
     <p class="dropspot">Note that you can manually edit the text range by adding or deleting text glyphs into the preview window directly.</p>
     <p class="dropspot"> </p>
@@ -160,16 +149,8 @@
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#"><span data-open-text="true" data-skip-index="true">Preview</span><span data-close-text="true">Preview</span></a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">The
-      <strong>Preview Window</strong> is where you can see a preview of the font, either as a sample of text, or as a texture. When the
-      <strong>Preview Mode </strong>is set to
-      <em>Sample</em>, you can type in any text that you want to test directly into the preview window to see how it looks, while selecting
-      <em>Game Preview </em>will show the rendered texture image that was generated for the font. If no image is present, then you should click the
-      <strong>Regenerate </strong>button to generate the texture.
-    </p>
-    <p class="dropspot">Note that the texture image can be different to the sample, since the texture will
-      <em>not</em> be regenerated unless explicitly told to. This means that after you have initially generated a font texture, changes made to the font resource will not be carried over to the game unless the texture is regenerated.
-    </p>
+    <p class="dropspot">The <strong>Preview Window</strong> is where you can see a preview of the font, either as a sample of text, or as a texture. When the <strong>Preview Mode </strong>is set to <em>Sample</em>, you can type in any text that you want to test directly into the preview window to see how it looks, while selecting <em>Game Preview </em>will show the rendered texture image that was generated for the font. If no image is present, then you should click the <strong>Regenerate </strong>button to generate the texture.</p>
+    <p class="dropspot">Note that the texture image can be different to the sample, since the texture will <em>not</em> be regenerated unless explicitly told to. This means that after you have initially generated a font texture, changes made to the font resource will not be carried over to the game unless the texture is regenerated.</p>
     <p class="dropspot"> </p>
   </div>
   <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down6" href="#"><span data-open-text="true" data-skip-index="true">Range Preview</span><span data-close-text="true">Range Preview</span></a></p>
@@ -182,11 +163,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a href="Notes.htm">Notes</a></div>
+        <div style="float:left">Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
+        <div style="float:right">Next: <a href="Notes.htm">Notes</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Font Editor

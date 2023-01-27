@@ -10,8 +10,11 @@
 		<% if(favicon && favicon.path && favicon.mediaType) { %>
 			<link rel='shortcut icon' type='<%= favicon.mediaType %>' href='<%= favicon.path %>' />
 		<% } %>
-		
+		<script>
+			gCSHRedirectHTM = '<%= gCSHRedirectHTM %>'
+		</script>
 		<link rel="StyleSheet" href="template/<%= layout.name %>/layout<%= html.rtl ? '-rtl' : '' %>.css" type="text/css" />
+		<script type="text/javascript" src="template/scripts/csh-trigger.min.js"></script>
 		<script type="text/javascript" src="template/scripts/rh.min.js"></script>
 		<script type="text/javascript" src="template/scripts/common.min.js"></script>
 		<script type="text/javascript" src="template/scripts/layout.min.js"></script>
@@ -92,8 +95,8 @@
 						data-rhtags="#{$toc.tags(item)}" data-itemid="#{@id}" role="presentation">
 					<a data-itext="item.name" data-i-href="$toc.url(item, '#{@id}')"  data-haslink="#{Boolean(item.url)}"  role="treeitem"></a>
 				</li>
-				<li class="book" data-rif="item.type === 'book'" data-class="active: @bookid == '#{@id}'; inactive: @bookid != '#{@pid}' &amp;&amp; @bookid != '#{@id}'" data-haslink="#{Boolean(item.url)}"  data-childorder="#{childOrder}" data-itemkey="#{$toc.key(item.absRef, item.key)}" data-itemid="#{@id}" data-itemlevel="#{@level}" data-rhtags="#{$toc.tags(item)}"  role="treeitem" data-attr="aria-expanded: @show_child#{@id} == true ? true : false; tabindex: @active_bookid == '#{@pid}' || @active_bookid == '#{@id}' || @KEY_SCREEN_DESKTOP ? 0 : -1" data-iattr="aria-labelledby: '#{@id}'; aria-owns:'child-#{@id}'">
-					<a data-itext="item.name" data-i-href="$toc.url(item, '#{@id}')" data-iattr="id: '#{@id}'"></a>
+				<li class="book" data-rif="item.type === 'book'" data-class="active: @bookid == '#{@id}'; inactive: @bookid != '#{@pid}' &amp;&amp; @bookid != '#{@id}'"  data-childorder="#{childOrder}" data-itemkey="#{$toc.key(item.absRef, item.key)}" data-itemid="#{@id}" data-itemlevel="#{@level}" data-rhtags="#{$toc.tags(item)}"  role="treeitem" data-attr="aria-expanded: @show_child#{@id} == true ? true : false; tabindex: @active_bookid == '#{@pid}' || @active_bookid == '#{@id}' || @KEY_SCREEN_DESKTOP ? 0 : -1" data-iattr="aria-labelledby: '#{@id}'; aria-owns:'child-#{@id}'">
+					<a data-itext="item.name" data-i-href="$toc.url(item, '#{@id}')" data-iattr="id: '#{@id}'" data-haslink="#{Boolean(item.url)}"></a>
 				</li>
 				<li class="child max-height-transition" data-rif="item.key" data-class="show: @show_child#{@id}" data-childorder="#{childOrder}" role="presentation">
 					<ul class="child" data-child="$toc.key(item.absRef, item.key)" data-css="display: @show_child#{@id} == true ? null : 'none'" role="group" data-iattr="id: 'child-#{@id}'"></ul>
@@ -254,7 +257,7 @@
 				</div>
 			</div>
 			<div class="wSearchResultFooter">
-				<div class="wSearchResultPaginator" data-if="@KEY_PAGINATOR_SHOW_PREV_PAGE || @KEY_PAGINATOR_SHOW_NEXT_PAGE">
+				<div class="wSearchResultPaginator" data-if="(@KEY_PAGINATOR_SHOW_PREV_PAGE || @KEY_PAGINATOR_SHOW_NEXT_PAGE) && !(@KEY_SEARCH_PROGRESS)">
 					<button class="wSearchResultPaginatorPrevLink" href="#" data-click="@EVT_CHANGE_SEARCH_PAGE('previous')" data-css="visibility: @KEY_PAGINATOR_SHOW_PREV_PAGE ? null : 'hidden'" data-attr="title: @KEY_LNG.PrevSearchResults">
 						<span class="wSearchResultPaginatorPrevIcon"></span>
 					</button>

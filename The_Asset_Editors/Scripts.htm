@@ -55,7 +55,7 @@
   <title>Scripts</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page detailing how the script editor works"/>
   <meta name="rh-index-keywords" content="Script Editor"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="The_Asset_Editors/Code_Editor_Properties/Editing_Code.htm"/><meta name="brsprev" value="The_Asset_Editors/Room_Properties/FX/All_Filter_Effect_Types.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Scripts</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -129,12 +129,12 @@
       the arrows at the top right of the search window to skip from one found term to the next in the script. You can change how the search operation is carried out by toggling the following buttons:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
-        <tr style="">
+        <tr>
           <td class="icons"><img alt="Exact Word Icon" src="../assets/Images/Icons/Icon_ExactWord.png" style="margin-left: 24px;"/></td>
           <td class="text">When you toggle this, the search function will only highlight those strings that match the whole input string. For example, with it off a search for &quot;<em>random</em>&quot; will show up all words that contain this string - like <span class="inline">irandom()</span>,
             or <span class="inline">randomise()</span> - while toggling it to on would only show the function <span class="inline">random()</span>.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td class="icons"><img alt="Case Sensitive Icon" src="../assets/Images/Icons/Icon_CaseSensitive.png" style="margin-left: 24px"/></td>
           <td class="text">When this option is toggled, you are telling <span data-keyref="GameMaker Name">GameMaker</span> to check not only the contents of the search string, but the case too. For example, if you have a sprite called &quot;<span class="inline">spr_Dog</span>&quot; and do a search for
             &quot; <em>dog</em>&quot; with this toggle <em>off</em>, then the sprite string will be highlighted, however if the toggle is <em>on </em>then it won&#39;t since &quot;<em>Dog</em>&quot; is no longer considered the same as &quot;<em>dog</em>&quot;.</td>
@@ -145,12 +145,12 @@
       it. Once open, you can then enter a string that will be used to replace any given search string, using the following buttons to perform the action:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
-        <tr style="">
+        <tr>
           <td class="icons"><img alt="Replace Next Icon" src="../assets/Images/Icons/Icon_ReplaceNext.png" style="margin-left: 24px"/></td>
           <td class="text">Clicking this will replace the next search string found in the script with the given replace string. Note that the &quot;next&quot; term is considered the next one after the current cursor position, and you can skip to different ones using arrow
             buttons at the top right of the search window.</td>
         </tr>
-        <tr style="">
+        <tr>
           <td class="icons"><img alt="Replace All Icon" src="../assets/Images/Icons/Icon_ReplaceAll.png" style="margin-left: 24px"/></td>
           <td class="text">Clicking this will replace <em>all </em>examples of the search string within the script using the given replace string.</td>
         </tr>
@@ -191,7 +191,7 @@
         <div style="float:right">Next: <a href="Sequences.htm">Sequences</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Script Editor

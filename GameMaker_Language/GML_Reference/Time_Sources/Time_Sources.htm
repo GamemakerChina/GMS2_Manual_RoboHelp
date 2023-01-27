@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Time_Sources/Built_In_Time_Sources.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Maths_And_Numbers/Matrix_Functions/matrix_stack_top.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>Time Sources</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
   <div>
   </div>
   <div>
-  <h1>Time Sources</h1>
+  <h1><span data-field="title" data-format="default">Time Sources</span></h1>
   <p>A &quot;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&quot; is a custom timer you create. It runs for a given period of time, and at the end, it expires.</p>
   <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> (TS) has the ability to call a custom method (&quot;callback&quot;) on expiring.</p>
   <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Time_Sources/time_sources_flow.png"/>It&#39;s also able to repeat a certain of amount of times, or forever. Each repetition of a <span data-keyref="Type_Resource_TimeSource">Time Source</span> is known as a &quot;rep&quot;.</p>
@@ -105,6 +105,7 @@
     <li>Call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> / <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that <span data-keyref="Type_Resource_TimeSource">Time Source</span> immediately, or call it later when you need it to start</li>
   </ul>
   <p>Doing this will cause the <span data-keyref="Type_Resource_TimeSource">Time Source</span> to run, and after the specified period, it will expire and call your specified method.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> Even though <span data-field="title" data-format="default">Time Sources</span> can expire at any moment, <span data-keyref="GameMaker Name">GameMaker</span> will only &quot;know&quot; about this when the <span data-field="title" data-format="default">Time Sources</span> are updated/&quot;ticked&quot;, which happens between the Begin Step and Step event for all <span data-field="title" data-format="default">Time Sources</span>. At this moment the callback functions will also be executed for those <span data-field="title" data-format="default">Time Sources</span> that have expired or are about to expire (depending on their <a href="Time_Source_Expiry_Types.htm">expiry type</a>). See <a href="../../../The_Asset_Editors/Object_Properties/Event_Order.htm">Event Order</a> for more details.</p>
   <h2>Built-In Time Sources</h2>
   <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> can inherit from either of the two built-in <span data-keyref="Type_Resource_TimeSource">Time Source</span>s, or from a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
   <p>See: <a href="Built_In_Time_Sources.htm">Built-In Time Sources</a></p>
@@ -161,7 +162,7 @@
         <div>Next: <a href="../Physics/Physics.htm">Physics</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
 
 </div>

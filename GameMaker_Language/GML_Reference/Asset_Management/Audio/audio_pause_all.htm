@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.3.5.0_7";
+    gTopicId = "8.2.2.3.5.0_11";
   
 //]]></script>
 
@@ -55,7 +55,7 @@
   <title>audio_pause_all</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page explaining the function audio_pause_all"/>
   <meta name="rh-index-keywords" content="audio_pause_all"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_resume_sound.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_pause_sound.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>audio_pause_all</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -80,11 +80,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_pause_all</h1>
+  <h1><span data-field="title" data-format="default">audio_pause_all</span></h1>
   <p>With this function you can pause all sounds that are currently playing.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_pause_all();</p>
+  <p class="code"><span data-field="title" data-format="default">audio_pause_all</span>();</p>
   <p> </p>
   <h4>Returns:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
@@ -95,7 +95,7 @@
         global.Pause = !global.Pause;<br/>
         if global.Pause<br/>
         {<br/>
-            audio_pause_all();<br/>
+            <span data-field="title" data-format="default">audio_pause_all</span>();<br/>
         }<br/>
         else<br/>
         {<br/>
@@ -105,16 +105,14 @@
   <p>The above code checks for a press of the keyboard key &quot;P&quot; and if it detects one it sets the global variable &quot;Pause&quot; to <span class="inline">true</span> or false and then either pauses all sounds or restarts all previously paused sounds.</p>
   <p> </p>
   <p> </p>
-  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a href="audio_resume_sound.htm">audio_resume_sound</a></div>
-        
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_resume_sound.htm">audio_resume_sound</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_pause_all

@@ -55,7 +55,7 @@
   <title>Set Timeline State</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that explains the Set Timeline State action"/>
   <meta name="rh-index-keywords" content="GML Visual Action - Set Timeline State"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Drag_And_Drop/Drag_And_Drop_Reference/Game/Game_Actions.htm"/><meta name="brsprev" value="Drag_And_Drop/Drag_And_Drop_Reference/Timelines/Set_Timeline_Speed.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Set Timeline State</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -83,25 +83,25 @@
   <h1><img alt="Set Timeline State Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/i_Timelines_Set_Timeline_State.png" width="32"/> Set Timeline State</h1>
   <p>This action can be used to start, stop, pause or resume a timeline. The timeline must first have been set for the instance using the action <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a>, and then you can use this action at any time to
     change its running state from the following options</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Option</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>Start</td>
         <td>Start the timeline assigned to the instance (if the timeline was paused this will set the start position to moment 0 again).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Resume</td>
         <td>Resume a paused timeline (if the timeline was stopped and not paused this will do nothing).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Paused</td>
         <td>Pause the timeline assigned to the instance (while paused the moments in a timeline will not advance with the game frames).</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>Stop</td>
         <td>Stop the timeline assigned to the instance.</td>
       </tr>
@@ -112,13 +112,13 @@
   <p><img alt="Set Timeline State Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Timelines/a_Timelines_Set_Timeline_State.png"/></p>
   <p> </p>
   <h4>Arguments:</h4>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>State</td>
         <td>The state to put the timeline in (see the table above)</td>
       </tr>
@@ -137,7 +137,7 @@
         <div style="float:right">Next: <a href="Set_Instance_Timeline.htm">Set Instance Timeline</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Timeline State

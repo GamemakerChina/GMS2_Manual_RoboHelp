@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "8.2.2.2.0_12";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>array_contains_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content=""/>
+  <meta name="topic-comment" content=""/>
+  <meta name="rh-index-keywords" content="array_contains_ext"/>
+  <meta name="search-keywords" content="array_contains_ext"/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="array_contains_ext">
+        <span>array_contains_ext</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1><span data-field="title" data-format="default">array_contains_ext</span></h1>
+  <p>This function checks if the given array (or a part of it) contains any or all of the given values.</p>
+  <p>The <span class="inline2">matchAll</span> argument determines if <em>all</em> values should be present in the array (<span class="inline2">true</span>) or if <em>any one</em> of the values will do (<span class="inline2">false</span>).</p>
+  <p>The array of values may contain duplicates. This way you can check if there are multiple (or <em>enough</em>) occurrences of a value in an array. To avoid this, you can run <span class="inline2"><a href="array_unique.htm">array_unique</a></span> on your array first to guarantee only single occurrences.</p>
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> To check if an array not just <em>contains</em> a value but rather contains a value <em>that satisfies a certain condition</em>, use <span class="inline2"><a href="array_any.htm">array_any</a></span>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default">array_contains_ext</span>(array, values, [matchAll], [offset], [length]);</p>
+  <table>
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>array</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td>The array in which to look for the values</td>
+      </tr>
+      <tr>
+        <td>values</td>
+        <td><span data-keyref="Type_Array"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></td>
+        <td>An array containing the values to look for. Add a value multiple times with the <span class="inline2">matchAll</span> argument set to <span class="inline2">true</span> to require that a value occurs multiple times (see Example 2). Order isn&#39;t taken into account, i.e. the values don&#39;t have to occur in the array in the order they&#39;re listed here.</td>
+      </tr>
+      <tr>
+        <td>matchAll</td>
+        <td><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> Whether all values should be present in the array (<span class="inline2">true</span>) or any of the values will do (<span class="inline2">false</span>).</td>
+      </tr>
+      <tr>
+        <td>offset</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The offset, or starting index, in the array. Setting a negative value will count from the end of the array. The starting index will then be <span class="inline2">array_length(array) + offset</span>. See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
+      </tr>
+      <tr>
+        <td>length</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of elements to traverse. A negative value will traverse the array backwards (i.e. in descending order of indices, e.g. 2, 1, 0 instead of 2, 3, 4). See: <a href="Array_Functions.htm#h1">Offset And Length</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Bool"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Boolean</a></span></p>
+  <p> </p>
+  <h4>Example 1: Check if any of the given values is present in an array</h4>
+  <p class="code">hand = [&quot;1&quot;, &quot;1&quot;, &quot;4&quot;, &quot;J&quot;, &quot;J&quot;, &quot;Q&quot;, &quot;7&quot;, &quot;10&quot;, &quot;K&quot;, &quot;8&quot;, &quot;7&quot;, &quot;8&quot;, &quot;5&quot;];<br/>
+    var _high_cards = [&quot;A&quot;, &quot;K&quot;, &quot;Q&quot;, &quot;J&quot;];<br/>
+    var _any_high_cards = <span data-field="title" data-format="default">array_contains_ext</span>(hand, _high_cards);<br/>
+    show_debug_message(_any_high_cards);</p>
+  <p>The above code first creates an array <span class="inline2">hand</span> with 13 values. It then defines another array <span class="inline2">_high_cards</span> that defines which are considered &quot;high&quot; cards. Next the <span class="inline2">hand</span> array is checked for any of these using <span class="inline2"><span data-field="title" data-format="default">array_contains_ext</span></span> and the result is stored in a temporary variable <span class="inline2">_any_high_cards</span>. Finally a debug message shows the value of the variable <span class="inline2">_any_high_cards</span>.</p>
+  <p> </p>
+  <h4>Example 2: Check if all values are present in an array</h4>
+  <p class="code">inventory = [&quot;potion&quot;, &quot;elixir&quot;, &quot;potion&quot;, &quot;herb&quot;, &quot;herb&quot;, &quot;special spice&quot;];<br/>
+    var _required_items = [&quot;herb&quot;, &quot;herb&quot;];<br/>
+    var _can_make_potion = <span data-field="title" data-format="default">array_contains_ext</span>(inventory, _required_items, true);<br/>
+    show_debug_message(&quot;A potion can{0} be made using the inventory&#39;s current contents&quot;, _can_make_potion ? &quot;&quot; : &quot;not&quot;);</p>
+  <p>The above code first creates an array that stores a basic inventory of items. The items are stored as strings. It then defines a temporary array <span class="inline2">_required_items</span> that contains the items required to make a &quot;potion&quot;. Next <span class="inline2"><span data-field="title" data-format="default">array_contains_ext</span></span> is called to check if <em>all</em> values in <span class="inline2">_required_items</span> are present in <span class="inline2">inventory</span>. This is done by setting the <span class="inline2">matchAll</span> argument to <span class="inline2">true</span>. The result is stored in the variable <span class="inline2">_can_make_potion</span>. Finally a debug message is shown saying if a &quot;potion&quot; can be made or not from the inventory&#39;s current contents.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Array_Functions.htm">Array Functions</a></div>
+        <div>Next: <a href="array_sort.htm">array_sort</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+array_contains_ext
+-->
+  <!-- TAGS
+array_contains_ext
+-->
+
+</body></html>

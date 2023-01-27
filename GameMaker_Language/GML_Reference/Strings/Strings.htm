@@ -55,7 +55,7 @@
   <title>Strings</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference section for string functions"/>
   <meta name="rh-index-keywords" content="\r,\b,\f,\t,\v,\\,\a,\u,\x,\,\r,\b,\f,\t,\v,\\,\a,\u,\x,\"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Strings/ansi_char.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Data_Structures/ds_set_precision.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Strings</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -85,7 +85,7 @@
   <p>In GML, text is created as a <em>string</em>, which can be stored in a variable. &quot;String&quot; refers to a &quot;<em>string</em> of characters&quot; which makes up your text.</p>
   <p><span data-keyref="GameMaker Name">GameMaker</span> has a complete set of functions that permit you to manipulate <span data-field="title" data-format="lower-alpha">strings</span> in many ways, including the insertion of one string in another, the copying of strings and the ability to parse <span data-field="title" data-format="lower-alpha">strings</span> for the digits or the letters that they contain.</p>
   <p>It also has more advanced functions to deal with strings, including trimming, splitting into an array, concatenating from an array and iterating over characters.</p>
-  <p>Lastly, <span data-keyref="GameMaker Name">GameMaker</span> also provides a convenient way to convert <a href="../../GML_Overview/Structs.htm">structs</a> and <a href="../Asset_Management/Instances/Instances.htm">instances</a> to a string representation by assigning them a <a href="Strings.htm#h"> </a>.</p>
+  <p>Lastly, <span data-keyref="GameMaker Name">GameMaker</span> also provides a convenient way to convert <a href="../../GML_Overview/Structs.htm">structs</a> and <a href="../Asset_Management/Instances/Instances.htm">instances</a> to a string representation by assigning them a <a href="Strings.htm#h3">toString() Method</a>.</p>
   <h2>String Basics</h2>
   <p>A string is a type of <a href="../../GML_Overview/Variables_And_Variable_Scope.htm">variable</a>. The simplest way to create one is by adding text within double quotes <span class="inline2">&quot; &quot;</span>:</p>
   <p class="code">my_first_string = &quot;Hello World!&quot;;</p>
@@ -108,51 +108,51 @@
   <table style="caption-side: top">
     <caption>String Escape Characters</caption>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>\n</td>
         <td>Newline</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\r</td>
         <td>Carriage return (0x0d)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\b</td>
         <td>Backspace (0x08)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\f</td>
         <td>Form Feed (0x0c)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\t</td>
         <td>Horizontal Tab (0x09)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\v</td>
         <td>Vertical Tab (0x0b)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\\</td>
         <td>Backslash itself (0x5c)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\a</td>
         <td>Alert (0x07)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\u[Hex Digits]</td>
         <td>Insert Unicode character</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\x[Hex Digits]</td>
         <td>Insert hex literal character</td>
       </tr>
-      <tr style="">
+      <tr>
         <td>\[Octal Digits]</td>
         <td>Insert octal Unicode character</td>
       </tr>
@@ -262,7 +262,7 @@
   </ul>
   <h3>Methods</h3>
   <ul class="Disc">
-    <li> </li>
+    <li><a href="Strings.htm#h3">toString() Method</a></li>
   </ul>
   <h3>Related functions</h3>
   <ul class="Disc">
@@ -279,7 +279,7 @@
         <div style="float:right">Next: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Maths And Numbers</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings

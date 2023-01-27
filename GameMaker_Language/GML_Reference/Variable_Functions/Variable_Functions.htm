@@ -55,7 +55,7 @@
   <title>Variable Functions</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page outlining the different variable functions"/>
   <meta name="rh-index-keywords" content=""/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Variable_Functions/variable_instance_exists.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/GML_Reference.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Variable Functions</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -92,13 +92,6 @@
     <li><a href="variable_global_exists.htm">variable_global_exists</a></li>
     <li><a href="variable_global_get.htm">variable_global_get</a></li>
     <li><a href="variable_global_set.htm">variable_global_set</a></li>
-    <li><a href="variable_struct_exists.htm">variable_struct_exists</a></li>
-    <li><a href="variable_struct_get.htm">variable_struct_get</a></li>
-    <li><a href="variable_struct_set.htm">variable_struct_set</a></li>
-    <li><a href="variable_struct_remove.htm"><span>variable_struct_remove</span></a></li>
-    <li><a href="variable_struct_get_names.htm">variable_struct_get_names</a></li>
-    <li><a href="variable_struct_names_count.htm">variable_struct_names_count</a></li>
-    <li><a href="instanceof.htm">instanceof</a></li>
   </ul>
   <h2>Method Functions</h2>
   <p>These next functions are all related to using <a href="../../GML_Overview/Method_Variables.htm">Method Variables</a>:</p>
@@ -106,6 +99,21 @@
     <li><a href="method.htm">method</a></li>
     <li><a href="method_get_self.htm">method_get_self</a></li>
     <li><a href="method_get_index.htm">method_get_index</a></li>
+    <li><a href="method_call.htm">method_call</a></li>
+  </ul>
+  <h2>Struct Functions</h2>
+  <p>The following functions are for use with structs:</p>
+  <ul class="colour">
+    <li><a href="variable_struct_exists.htm">variable_struct_exists</a></li>
+    <li><a href="variable_struct_get.htm">variable_struct_get</a></li>
+    <li><a href="variable_struct_set.htm">variable_struct_set</a></li>
+    <li><a href="variable_struct_remove.htm"><span>variable_struct_remove</span></a></li>
+    <li><a href="variable_struct_get_names.htm">variable_struct_get_names</a></li>
+    <li><a href="variable_struct_names_count.htm">variable_struct_names_count</a></li>
+    <li><a href="is_instanceof.htm">is_instanceof</a></li>
+    <li><a href="static_get.htm">static_get</a></li>
+    <li><a href="static_set.htm">static_set</a></li>
+    <li><a href="instanceof.htm">instanceof</a></li>
   </ul>
   <h2>Data Type Functions</h2>
   <p>Finally, you also have the following functions for determining variable type (for more information on data types, please see <a href="../../GML_Overview/Data_Types.htm">here</a>, and see here for <a href="../../../Additional_Information/Type_Tables.htm">Type Tables</a>):</p>
@@ -142,7 +150,7 @@
         <div style="float:right">Next: <a href="Array_Functions.htm">Array Functions</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Variable Functions

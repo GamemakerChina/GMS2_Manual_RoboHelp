@@ -55,7 +55,7 @@
   <title>Number Functions</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference section for Number functions"/>
   <meta name="rh-index-keywords" content=""/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Maths_And_Numbers/Number_Functions/math_set_epsilon.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Maths_And_Numbers/Date_And_Time/get_timer.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Number Functions</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Number Functions</h1>
   <p>Real numbers in <span data-keyref="GameMaker Name">GameMaker</span> are considered <i>double-precision floating-point numbers</i> - that is to say that they have a decimal point in them with no fixed number of digits either before or after the point - or <i>integers</i> - that is to say they are whole numbers with no decimal point value. 2, for example, is an integer but 2.01 is a floating point real.</p>
-  <p class="note"><b>NOTE</b>: On the <b>HTML5</b> target, all real numbers are doubles.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> On the <b>HTML5</b> target, all real numbers are doubles.</p>
   <p>This distinction between integers and floats is very important when dealing with cross platform development as the precision of calculations made on a Windows PC is <i>not</i> the same as the precision of those same calculations when made on a mobile device. This means that you should pay particular attention when making comparisons, for example:</p>
   <p class="code">if (image_index == 1)<br/>
     {<br/>
@@ -95,7 +95,7 @@
     }</p>
   <p>It is also worth noting that when using the <b>YoYo Compiler</b> targets, all expressions and functions are <i>evaluated from left to right</i>, while on all other target platforms they are evaluated <i>from right to left</i>, meaning that this - for example - will give different results depending on the platform:</p>
   <p class="code">val = max(num, ++num, num++);</p>
-  <p class="note"><strong>NOTE</strong>: For more informaton, see the section on <a href="../../../GML_Overview/Evaluation_Order.htm">Evaluation Order</a>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> For more information, see the section on <a href="../../../GML_Overview/Evaluation_Order.htm">Evaluation Order</a>.</p>
   <p>You can also use a special function available in <span data-keyref="GameMaker Name">GameMaker</span> to set the <b>epsilon</b> value for floating point maths. When a real number is rounded to the nearest floating point number, the epsilon (also know as &quot;machine epsilon&quot;) forms an upper bound on the relative error, and you can get and set the epsilon value using the following functions:</p>
   <ul class="colour">
     <li><a href="math_set_epsilon.htm">math_set_epsilon</a></li>
@@ -103,7 +103,7 @@
   </ul>
   <p> </p>
   <p id="random">These functions all deal with using random numbers and values:</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>When using the random functions, <span data-keyref="GameMaker Name">GameMaker</span> maintains the same random seed every time you start the game. This makes debugging much easier as you are guaranteed that the random functions will always initially return the same value, however should you not wish this to happen, you must first set a new random seed at the very start of the game, either using <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span> or <span style="font-size:1px;"><a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a></span>.</p>
+  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> </b>When using the random functions, <span data-keyref="GameMaker Name">GameMaker</span> maintains the same random seed every time you start the game. This makes debugging much easier as you are guaranteed that the random functions will always initially return the same value, however should you not wish this to happen, you must first set a new random seed at the very start of the game, either using <span style="font-size:1px;"><a href="randomise.htm"><span class="inline">randomise()</span></a></span> or <span style="font-size:1px;"><a href="random_set_seed.htm"><span class="inline">random_set_seed()</span></a></span>.</p>
   <ul class="colour">
     <li><a href="choose.htm">choose</a></li>
     <li><a href="random.htm">random</a></li>
@@ -152,7 +152,7 @@
         <div style="float:right">Next: <a href="../Angles_And_Distance/Angles_And_Distance.htm">Vectors</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Number Functions

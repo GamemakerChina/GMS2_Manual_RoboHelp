@@ -55,7 +55,7 @@
   <title>string_foreach</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content=""/>
   <meta name="topic-comment" content="string_foreach"/>
   <meta name="rh-index-keywords" content="string_foreach"/>
@@ -64,7 +64,7 @@
 </head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>string_foreach</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -91,37 +91,37 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">string_foreach</span>(string, function, [pos], [length]);</p>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="">Argument</th>
-        <th style="">Type</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style="">string</td>
-        <td style=""><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
-        <td style="">The string to iterate over</td>
+      <tr>
+        <td>string</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td>The string to iterate over</td>
       </tr>
-      <tr style="">
-        <td style="">function</td>
-        <td style=""><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
-        <td style="">The function to execute for each of the characters in the range, with arguments <span class="inline2">character</span> and <span class="inline2">position</span></td>
+      <tr>
+        <td>function</td>
+        <td><span data-keyref="Type_Function"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Function</a></span></td>
+        <td>The function to execute for each of the characters in the range, with arguments <span class="inline2">character</span> and <span class="inline2">position</span></td>
       </tr>
-      <tr style="">
-        <td style="">pos</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The starting position (default is 1 for strings). Negative values count from the end of the string (e.g. -1 is the position of the last character, -2 is the position of the one before last character, etc.). 0 is treated the same as 1.</td>
+      <tr>
+        <td>pos</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The starting position (default is 1 for strings). Negative values count from the end of the string (e.g. -1 is the position of the last character, -2 is the position of the one before last character, etc.). 0 is treated the same as 1.</td>
       </tr>
-      <tr style="">
-        <td style="">length</td>
-        <td style=""><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td style=""><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of characters to iterate over and the direction in which to iterate (left-to-right (positive value) or right-to-left (negative value)).</td>
+      <tr>
+        <td>length</td>
+        <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The number of characters to iterate over and the direction in which to iterate (left-to-right (positive value) or right-to-left (negative value)).</td>
       </tr>
     </tbody>
   </table>
@@ -157,7 +157,7 @@
         <div>Next: <a href="string.htm">string</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 string_foreach

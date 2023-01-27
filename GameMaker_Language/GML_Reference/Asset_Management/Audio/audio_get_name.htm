@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../../..";
     gCommonRootRelPath = "../../../..";
-    gTopicId = "8.2.2.3.5.0_2";
+    gTopicId = "8.2.2.3.5.0_3";
   
 //]]></script>
 
@@ -55,7 +55,7 @@
   <title>audio_get_name</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page explaining the function audio_get_name"/>
   <meta name="rh-index-keywords" content="audio_get_name"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_get_type.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Asset_Management/Audio/audio_exists.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>audio_get_name</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -81,22 +81,25 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_get_name</h1>
-  <p>This function will return the name of a given audio resource as a string. The &quot;index&quot; value can be that of the resource itself (as seen in the Asset Browser) or the unique ID value that is given when you play the sound using, for example,
-    <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>. Note that the string returned is <i>not</i> the same as the resource ID and cannot be used to access the resource itself, so should only be used for displaying or error checking.</p>
+  <h1><span data-field="title" data-format="default">audio_get_name</span></h1>
+  <p>This function will return the name of a given audio asset as a string.</p>
+  <p>The &quot;index&quot; value can be that of the asset itself (as seen in <a href="../../../../Introduction/The_Asset_Browser.htm">The Asset Browser</a>) or the unique ID value that is given when you play the sound using, for example, <span class="inline2"><a href="audio_play_sound.htm">audio_play_sound</a></span>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The string returned is <i>not</i> the same as the resource ID and cannot be used to access the resource itself, so should only be used for displaying or error checking.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_get_name(index);</p>
-  <table style="">
+  <p class="code"><span data-field="title" data-format="default">audio_get_name</span>(index);</p>
+  <table>
     <tbody>
-      <tr style="">
-        <th>Argument</th><th>Type</th>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
         <th>Description</th>
-     </tr>
-      <tr style="">
-        <td>index</td><td><span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span></td>
+      </tr>
+      <tr>
+        <td>index</td>
+        <td><span data-keyref="Type_Asset_Sound"><a target="_blank" href="../../../../../The_Asset_Editors/Sounds.htm">Sound Asset</a></span></td>
         <td>The index of the sound to check.</td>
-     </tr>
+      </tr>
     </tbody>
   </table>
   <p> </p>
@@ -104,7 +107,9 @@
   <p class="code"><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var snd = audio_play_sound(choose(snd_One, snd_Two, snd_Three), 0, false);<br/> var name = audio_get_name(snd);<br/> show_debug_message(&quot;Sound = &quot; + name);</p>
+  <p class="code">var snd = audio_play_sound(choose(snd_One, snd_Two, snd_Three), 0, false);<br/>
+    var name = <span data-field="title" data-format="default">audio_get_name</span>(snd);<br/>
+    show_debug_message(&quot;Sound = &quot; + name);</p>
   <p>The above code plays a random sound chosen from three different sound resources then shows a debug message with its name.</p>
   <p> </p>
   <p> </p>
@@ -112,12 +117,11 @@
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a href="audio_get_type.htm">audio_get_type</a></div>
-        
+        <div style="float:left">Back: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Next: <a href="audio_get_type.htm">audio_get_type</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 audio_get_name

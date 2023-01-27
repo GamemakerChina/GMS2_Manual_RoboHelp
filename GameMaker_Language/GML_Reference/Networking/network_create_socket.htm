@@ -55,7 +55,7 @@
   <title>network_create_socket</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js"></script>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference page for network_create_socket"/>
   <meta name="rh-index-keywords" content="network_create_socket,network_socket_tcp,network_socket_udp,network_socket_ws,network_socket_wss"/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Networking/network_create_socket_ext.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Networking/network_create_server_raw.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>network_create_socket</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -85,34 +85,34 @@
   <p>This function is used to create a new client socket for your game to communicate over the network. You must define the socket type (see the list of constants below) and the function will return a unique <i>id</i> for that socket, which should be used in all further function calls for that socket, or a value of less than 0 if the connection fails.</p>
   <p class="note"><span class="tip">TIP</span> You can use the IP &quot;127.0.0.1&quot; to connect back to the same device that is running the game.</p>
   <div data-conref="../../../assets/snippets/network_socket_types.hts">
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Network_Socket_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Socket Type Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Network_Socket_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Socket Type Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">network_socket_tcp</span></td>
-        <td style="">Create a socket using TCP.</td>
+      <tr>
+        <td><span class="inline">network_socket_tcp</span></td>
+        <td>Create a socket using TCP.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">network_socket_udp</span></td>
-        <td style="">Create a socket using UDP.</td>
+      <tr>
+        <td><span class="inline">network_socket_udp</span></td>
+        <td>Create a socket using UDP.</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">network_socket_ws</span></td>
-        <td style="">Create a WebSocket using TCP. (<em><strong>NOTE</strong>: Use <a href="network_connect_raw_async.htm">Async</a> functions for connecting through WebSockets</em>)</td>
+      <tr>
+        <td><span class="inline">network_socket_ws</span></td>
+        <td>Create a WebSocket using TCP. (<em><strong>NOTE</strong>: Use <a href="network_connect_raw_async.htm">Async</a> functions for connecting through WebSockets</em>)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">network_socket_wss</span> *</td>
-        <td style="">Create a secure WebSocket using TCP.</td>
+      <tr>
+        <td><span class="inline">network_socket_wss</span> *</td>
+        <td>Create a secure WebSocket using TCP.</td>
       </tr>
     </tbody>
   </table>
@@ -130,14 +130,14 @@
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">network_create_socket(type);</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th>Argument</th>
         <th>Type</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td>type</td>
         <td><span data-keyref="Type_Constant_Network_Socket_Type"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Networking/network_create_socket.htm">Socket Type Constant</a></span></td>
         <td>The type of socket connection to create (see the constants listed above).</td>
@@ -170,7 +170,7 @@
         <div style="float:right">Next: <a href="network_create_socket_ext.htm">network_create_socket_ext</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 network_create_socket

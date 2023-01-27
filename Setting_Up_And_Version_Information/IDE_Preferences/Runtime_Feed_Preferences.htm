@@ -55,7 +55,7 @@
   <title>Runtime Feeds Preferences</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js"></script>
+  <script src="../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="The Runtime Feed Preferences"/>
   <meta name="rh-index-keywords" content="Prefs - Runtime Feeds"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Setting_Up_And_Version_Information/IDE_Preferences/Redefine_Keys_Preferences.htm"/><meta name="brsprev" value="Setting_Up_And_Version_Information/IDE_Preferences/Plugin_Preferences.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Runtime Feeds Preferences</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -88,23 +88,23 @@
   <h2 id="h">Remember last selection of <span><span><span></span></span></span>modules</h2>
   <p>This option changes if and how the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a> is shown.</p>
   <p>The following options can be set here: </p>
-  <table style="">
+  <table>
     <colgroup>
       <col style="width:50%"/>
       <col style="width:50%"/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="width:50%;">Option</th>
-        <th style="width:50%;">Description</th>
+      <tr>
+        <th>Option</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style="width:50%;">OK</td>
-        <td style="width:50%;">This option remembers your choice of modules and will not show the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a> each time you install any runtime. Instead, it will just automatically install those same runtime modules. It corresponds to the &quot;Remember Selection&quot; checkbox ticked in the Runtime Modules Dialog.</td>
+      <tr>
+        <td>OK</td>
+        <td>This option remembers your choice of modules and will not show the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a> each time you install any runtime. Instead, it will just automatically install those same runtime modules. It corresponds to the &quot;Remember Selection&quot; checkbox ticked in the Runtime Modules Dialog.</td>
       </tr>
-      <tr style="">
-        <td style="width:50%;">Show Message</td>
-        <td style="width:50%;">This option always show the dialog when installing a different runtime. It corresponds to the &quot;Remember Selection&quot; checkbox unticked in the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a>.<span data-sk="tooltip_parent"></span></td>
+      <tr>
+        <td>Show Message</td>
+        <td>This option always show the dialog when installing a different runtime. It corresponds to the &quot;Remember Selection&quot; checkbox unticked in the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a>.<span data-sk="tooltip_parent"></span></td>
       </tr>
     </tbody>
   </table>
@@ -129,17 +129,17 @@
   <p><img alt="The Runtime Feed Master Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Runtime_Master_Prefs.png"/>Here you can select, install and uninstall the different runtimes. At the top is the runtime currently in use, the date it was created, and its location on the hard drive.</p>
   <p>Below that is a list of all the available runtimes. You can choose any one from this list to set it as the &quot;running&quot; runtime used for compiling your projects.</p>
   <p>For each runtime you can find the version number, the date it was released, and - if it&#39;s installed - the path to where it&#39;s been installed to. The right hand side also shows the different status icons: </p>
-  <table class="icons" style="">
+  <table class="icons">
     <tbody>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Status Running" height="16" src="../../assets/Images/Icons/Icon_Running.png" width="48"/></td>
         <td class="text">This marks the current runtime that has been selected for use when building your projects.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Status Download" src="../../assets/Images/Icons/Icon_Download.png"/></td>
         <td class="text">Clicking this will initiate the download and installation of the selected runtime (a status bar will be shown in the top right of the <a class="tooltip" title="The IDE, or Integrated Development Environment, is a software application that provides comprehensive facilities to computer programmers for software development. In this case, the entire frontend of GameMaker Studio 2 is considered the IDE, and includes sections to create graphics, add sounds, and add code to make your games.">IDE</a>). If <a href="#h">Remember last selection of modules</a> is set to &quot;No&quot; or &quot;Show Message&quot; you will first be shown the <a href="../Updating_Guide.htm#h">Runtime Modules Dialog</a> where you can select the modules that should be included.</td>
       </tr>
-      <tr style="">
+      <tr>
         <td class="icons"><img alt="Status Delete" src="../../assets/Images/Icons/Icon_Delete_Runtime.png"/></td>
         <td class="text">Clicking this will remove the selected runtime from your hard drive.</td>
       </tr>
@@ -157,7 +157,7 @@
         <div style="float:right">Next: <a href="Redefine_Keys_Preferences.htm">Redefine Keys Preferences</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Runtime Feeds

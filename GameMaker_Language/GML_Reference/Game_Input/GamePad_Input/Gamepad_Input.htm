@@ -55,7 +55,7 @@
   <title>Gamepad Input</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Reference section for Gamepad Input"/>
   <meta name="rh-index-keywords" content="gp_face1,gp_face2,gp_face3,gp_face4,gp_shoulderl,gp_shoulderlb,gp_shoulderr,gp_shoulderrb,gp_select,gp_start,gp_stickl,gp_stickr,gp_padu,gp_padd,gp_padl,gp_padr,gp_axislh,gp_axislv,gp_axisrh,gp_axisrv,gp_axis_acceleration_x,gp_axis_acceleration_y,gp_axis_acceleration_z,gp_axis_angular_velocity_x,gp_axis_angular_velocity_y,gp_axis_angular_velocity_z,gp_axis_orientation_x,gp_axis_orientation_y,gp_axis_orientation_z,gp_axis_orientation_w"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_is_supported.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Game_Input/Gesture_Input/gesture_rotate_angle.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Gamepad Input</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -86,152 +86,152 @@
   <p>It is worth noting that when using DirectInput gamepads on Windows, or generic gamepads on other platforms, the constants given below <strong>may not match exactly the buttons that you expect when they are pressed</strong>, due to the fragmented and non-standardised way that the API is implemented by controller manufacturers. Because of this, it is recommend that you have some kind of gamepad setup screen in your games where people can redefine the gamepad buttons based on input from any connected device to mitigate any issues (there are gamepad &quot;mapping&quot; functions that can help with this on Windows Desktop, Ubuntu, macOS, and Android targets, while on all others you would need to do this yourself using code).</p>
   <h2>Input Constants</h2>
   <p>When working with the gamepad functions, input can come from <strong>axes</strong>, <strong>buttons</strong> or <strong>hats</strong>, which <span data-keyref="GameMaker Name">GameMaker</span> will assign to the following built-in constants (note that &quot;hats&quot; are generally only detected on non-standard controllers):</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Button"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Gamepad Button Constant</a></span></th>
       </tr>
-      <tr style="">
+      <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_face1</span></td>
         <td>Top button 1 (this maps to the <i>&quot;A&quot;</i> on an Xbox 360 controller and the <i>cross</i> on a PS controller)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_face2</span></td>
         <td>Top button 2 (this maps to the <i>&quot;B&quot;</i> on an Xbox 360 controller and the <i>circle</i> on a PS controller)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_face3</span></td>
         <td>Top button 3 (this maps to the <i>&quot;X&quot;</i> on an Xbox 360 controller and the <i>square</i> on a PS controller)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_face4</span></td>
         <td>Top button 4 (this maps to the <i>&quot;Y&quot;</i> on an Xbox 360 controller and the <i>triangle</i> on a PS controller)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_shoulderl</span></td>
         <td>Left shoulder button</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_shoulderlb</span></td>
         <td>Left shoulder trigger</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_shoulderr</span></td>
         <td>Right shoulder button</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_shoulderrb</span></td>
         <td>Right shoulder trigger</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_select</span></td>
         <td>The select button (on a DS4 controller, this triggers when you press the touchpad down)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_start</span></td>
         <td>The start button (this is the &quot;options&quot; button on a PS4 controller)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_stickl</span></td>
         <td>The left stick pressed (as a button)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_stickr</span></td>
         <td>The right stick pressed (as a button)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_padu</span></td>
         <td>D-pad up</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_padd</span></td>
         <td>D-pad down</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_padl</span></td>
         <td>D-pad left</td>
       </tr>
-      <tr style="">
+      <tr>
         <td><span class="inline">gp_padr</span></td>
         <td>D-pad right</td>
       </tr>
     </tbody>
   </table>
-  <table style="">
+  <table>
     <colgroup>
       <col/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th colspan="2" style=""><span data-keyref="Type_Constant_Gamepad_Axis"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Gamepad Axis Constant</a></span></th>
+      <tr>
+        <th colspan="2"><span data-keyref="Type_Constant_Gamepad_Axis"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Game_Input/GamePad_Input/gamepad_axis_value.htm">Gamepad Axis Constant</a></span></th>
       </tr>
-      <tr style="">
-        <th style="">Constant</th>
-        <th style="">Description</th>
+      <tr>
+        <th>Constant</th>
+        <th>Description</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axislh</span></td>
-        <td style="">Left stick horizontal axis (analog)</td>
+      <tr>
+        <td><span class="inline">gp_axislh</span></td>
+        <td>Left stick horizontal axis (analog)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axislv</span></td>
-        <td style="">Left stick vertical axis (analog)</td>
+      <tr>
+        <td><span class="inline">gp_axislv</span></td>
+        <td>Left stick vertical axis (analog)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axisrh</span></td>
-        <td style="">Right stick horizontal axis (analog)</td>
+      <tr>
+        <td><span class="inline">gp_axisrh</span></td>
+        <td>Right stick horizontal axis (analog)</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axisrv</span></td>
-        <td style="">Right stick vertical axis (analog)</td>
+      <tr>
+        <td><span class="inline">gp_axisrv</span></td>
+        <td>Right stick vertical axis (analog)</td>
       </tr>
-      <tr style="">
-        <th colspan="2" style="">The constants below can only be used with the DualSense gamepad on a PS4 or PS5</th>
+      <tr>
+        <th colspan="2">The constants below can only be used with the DualSense gamepad on a PS4 or PS5</th>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_acceleration_x</span>*</td>
-        <td style="">The gamepad&#39;s acceleration on the X axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_acceleration_x</span>*</td>
+        <td>The gamepad&#39;s acceleration on the X axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_acceleration_y</span>*</td>
-        <td style="">The gamepad&#39;s acceleration on the Y axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_acceleration_y</span>*</td>
+        <td>The gamepad&#39;s acceleration on the Y axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_acceleration_z</span>*</td>
-        <td style="">The gamepad&#39;s acceleration on the Z axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_acceleration_z</span>*</td>
+        <td>The gamepad&#39;s acceleration on the Z axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_angular_velocity_x</span>*</td>
-        <td style="">The gamepad&#39;s angular velocity on the X axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_angular_velocity_x</span>*</td>
+        <td>The gamepad&#39;s angular velocity on the X axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_angular_velocity_y</span>*</td>
-        <td style="">The gamepad&#39;s angular velocity on the Y axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_angular_velocity_y</span>*</td>
+        <td>The gamepad&#39;s angular velocity on the Y axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_angular_velocity_z</span>*</td>
-        <td style="">The gamepad&#39;s angular velocity on the Z axis</td>
+      <tr>
+        <td><span class="inline">gp_axis_angular_velocity_z</span>*</td>
+        <td>The gamepad&#39;s angular velocity on the Z axis</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_orientation_x</span>*</td>
-        <td style="">The gamepad&#39;s X orientation</td>
+      <tr>
+        <td><span class="inline">gp_axis_orientation_x</span>*</td>
+        <td>The gamepad&#39;s X orientation</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_orientation_y</span>*</td>
-        <td style="">The gamepad&#39;s Y orientation</td>
+      <tr>
+        <td><span class="inline">gp_axis_orientation_y</span>*</td>
+        <td>The gamepad&#39;s Y orientation</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_orientation_z</span>*</td>
-        <td style="">The gamepad&#39;s Z orientation</td>
+      <tr>
+        <td><span class="inline">gp_axis_orientation_z</span>*</td>
+        <td>The gamepad&#39;s Z orientation</td>
       </tr>
-      <tr style="">
-        <td style=""><span class="inline">gp_axis_orientation_w</span>*</td>
-        <td style="">The gamepad&#39;s W orientation</td>
+      <tr>
+        <td><span class="inline">gp_axis_orientation_w</span>*</td>
+        <td>The gamepad&#39;s W orientation</td>
       </tr>
     </tbody>
   </table>
@@ -312,7 +312,7 @@
         <div style="float:right">Next: <a href="../Virtual_Keys_And_Keyboards/Virtual_Keys_And_Keyboards.htm">Virtual Keys and Virtual Keyboards</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Gamepad Input Functions

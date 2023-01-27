@@ -55,7 +55,7 @@
   <title>Building via Command Line</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo"/>
   <meta name="topic-comment" content="Page that explains how your project can be compiled and tested through a CLI
 "/>
@@ -64,7 +64,7 @@
 <meta name="brsnext" value="Settings/Runner_Details/Compiler_Batch_Files.htm"/><meta name="brsprev" value="Settings/Runner_Details/Runner_Details.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -72,7 +72,7 @@
         <span>Building via Command Line</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -111,18 +111,18 @@
   </ul>
   <h2>Options</h2>
   <p>Here are the options that you can use while running the <strong>Igor </strong>executable:</p>
-  <table style="">
+  <table>
     <colgroup>
       <col style="width: 316px;"/>
       <col/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="width: 316px;">Option</th>
+      <tr>
+        <th style="">Option</th>
         <th style="">Description</th>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/lf=[licence_plist_file]</span></td>
+      <tr>
+        <td style=""><span class="inline">/lf=[licence_plist_file]</span></td>
         <td style="">The full path to the licence file, either from the IDE or from the <a href="#access_key">Access Key</a> service<br/>
           <br/>
           To retrieve the licence from the IDE, the paths are as follows:<br/>
@@ -130,63 +130,63 @@
           macOS: <span class="inline2"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;/licence.plist</span></span>
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/uf=[user_folder]<strong></strong></span></td>
+      <tr>
+        <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
         <td style="">The user folder used for retrieving licence information, alternative to <span class="inline2">/lf</span><br/>
           <br/>
           On Windows, this will be: <span class="inline2"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span></span><br/>
           On macOS, this will be: <span class="inline2"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span></span>
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/rp=[runtime_root]</span></td>
+      <tr>
+        <td style=""><span class="inline">/rp=[runtime_root]</span></td>
         <td style="">The root folder of the runtime</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/project=[project_YYP_file]</span></td>
+      <tr>
+        <td style=""><span class="inline">/project=[project_YYP_file]</span></td>
         <td style="">The full path to the project&#39;s <span class="inline2">.yyp</span> file</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/cache=[cache_dir_path]</span></td>
+      <tr>
+        <td style=""><span class="inline">/cache=[cache_dir_path]</span></td>
         <td style="">The cache directory to use (defaults to <span class="inline2">\cache</span> in the current directory)</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/temp=[temp_dir_path]</span></td>
+      <tr>
+        <td style=""><span class="inline">/temp=[temp_dir_path]</span></td>
         <td style="">The temporary directory to use (defaults to <span class="inline2">c:\temp</span>)</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/of=[output_folder_filename]</span></td>
+      <tr>
+        <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
         <td style="">The output directory where the build will be extracted; do not specify just a directory as the trailing entry is always removed (e.g.: specifying <span class="inline2">d:\game\output</span> will place the game files in <span class="inline2">d:\game</span>)<br/>
           <br/>
           If this is not specified, a directory named <span class="inline2">output</span> will be created in the same directory as the <span class="inline">.bat</span> file (or where the command is running from), containing the extracted build files
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/tf=[target_file]</span></td>
+      <tr>
+        <td style=""><span class="inline">/tf=[target_file]</span></td>
         <td style="">The actual file name of the ZIP file or NSIS installer that is created</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/config=[configName]</span></td>
+      <tr>
+        <td style=""><span class="inline">/config=[configName]</span></td>
         <td style="">The name of the configuration to use (defaults to <span class="inline">Default</span>)</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/runtime=YYC|VM</span></td>
+      <tr>
+        <td style=""><span class="inline">/runtime=YYC|VM</span></td>
         <td style="">The output type (either YYC or VM), defaults to VM</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/j=[NumCPUs]</span></td>
+      <tr>
+        <td style=""><span class="inline">/j=[NumCPUs]</span></td>
         <td style="">The number of CPUs to use during the build process</td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/df=[devices_json_file]</span></td>
+      <tr>
+        <td style=""><span class="inline">/df=[devices_json_file]</span></td>
         <td style="">The path to your <span class="inline2">devices.json</span> file, required when building to other devices.<br/>
           <br/>
           On Windows, this will be: <span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;\devices.json</span></span><br/>
           On macOS, this will be: <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;/devices.json</span></span>
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 316px;"><span class="inline">/device=[device_name_from_IDE]</span></td>
+      <tr>
+        <td style=""><span class="inline">/device=[device_name_from_IDE]</span></td>
         <td style="">The name of the target device to build to, as set up in the IDE</td>
       </tr>
     </tbody>
@@ -363,25 +363,25 @@
   <p> </p>
   <h1>Igor Runtime</h1>
   <p>Here are the options that can be used with the Igor runtime:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th style="">Option</th>
         <th style="">Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
         <td style="">Set the user folder used for retrieving licence information so <span data-keyref="GameMaker Name">GameMaker</span> knows which modules can be installed</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/lf=[license_file]</span></td>
         <td style="">Set the direct path to a licence file, can be used as an alternative to setting a user folder (<span class="inline">/uf</span>)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/ru=[runtime_url]</span></td>
         <td style="">Set the URL to fetch runtime information from (defaults to the stable release)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/rp=[runtime_root]</span></td>
         <td style="">Set the local runtime install folder to list the installed runtimes or install new runtimes</td>
       </tr>
@@ -390,91 +390,91 @@
   <p>Here are the commands that can be used with the Igor runtime:</p>
   <h4>Syntax:</h4>
   <p class="code">Igor.exe [command]</p>
-  <table style="">
+  <table>
     <colgroup>
       <col style="width: 237px;"/>
       <col style="width: 537px;"/>
     </colgroup>
     <tbody>
-      <tr style="">
-        <th style="width: 237px;">Command</th>
-        <th style="width: 537px;">Description</th>
+      <tr>
+        <th style="">Command</th>
+        <th style="">Description</th>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime List</span></td>
-        <td style="width: 537px;">Lists the runtimes available on a feed (version number, date/time of build)</td>
+      <tr>
+        <td style=""><span class="inline">Runtime List</span></td>
+        <td style="">Lists the runtimes available on a feed (version number, date/time of build)</td>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime ListInstalled [-directory]</span></td>
-        <td style="width: 537px;">Lists the runtimes available in the current folder (<span class="inline">directory</span>=full path to the folder)<br/>
+      <tr>
+        <td style=""><span class="inline">Runtime ListInstalled [-directory]</span></td>
+        <td style="">Lists the runtimes available in the current folder (<span class="inline">directory</span>=full path to the folder)<br/>
           <br/>
           You can specify a directory to look in, but if it&#39;s not specified it will default to the current directory<br/>
           <br/>
           This also checks whether there is a <span class="inline">receipt.json</span> file and a <span class="inline">manifest</span> folder inside the directory (making sure that it&#39;s actually a runtime)
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime Info [-version]</span></td>
-        <td style="width: 537px;">Prints out information about the most recent runtime on the given feed; also needs a licence file to show information regarding the modules available for the user<br/>
+      <tr>
+        <td style=""><span class="inline">Runtime Info [-version]</span></td>
+        <td style="">Prints out information about the most recent runtime on the given feed; also needs a licence file to show information regarding the modules available for the user<br/>
           <br/>
           <span class="inline">version</span> can either by a string used to search through the feed titles (e.g.: <span class="inline">&quot;739&quot;</span> would show information for all builds containing 739 in their version numbers), or it can be <span class="inline">all</span> to show information for all feeds<br/>
           <br/>
           It will list the modules with the <span class="inline">.zip</span> file names for each module
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime Install [-version]</span></td>
-        <td style="width: 537px;">Installs the latest runtime from the given feed using the given <span class="inline">version</span> as a search filter; if that is not specified, it defaults to the latest version. It will get all the modules that the user has on their licence.</td>
+      <tr>
+        <td style=""><span class="inline">Runtime Install [-version]</span></td>
+        <td style="">Installs the latest runtime from the given feed using the given <span class="inline">version</span> as a search filter; if that is not specified, it defaults to the latest version. It will get all the modules that the user has on their licence.</td>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime Verify [-folder=.]</span></td>
-        <td style="width: 537px;">Calculates the checksums for all the installed files and compares them to the checksums written into the manifest <span class="inline">folder</span>. You can specify a folder to check, however if that is not specified it will default to the current directory.<br/>
+      <tr>
+        <td style=""><span class="inline">Runtime Verify [-folder=.]</span></td>
+        <td style="">Calculates the checksums for all the installed files and compares them to the checksums written into the manifest <span class="inline">folder</span>. You can specify a folder to check, however if that is not specified it will default to the current directory.<br/>
           <br/>
           This will flag any files where the checksums don&#39;t match, files that are missing and files that should not be there.<br/>
           <br/>
           Do note that the manifest files themselves are not verified and a user can alter the manifest files to match the installed ones.
         </td>
       </tr>
-      <tr style="">
-        <td style="width: 237px;"><span class="inline">Runtime FetchLicences [-ak] [-of]</span></td>
-        <td style="width: 537px;">Generates a licence.plist file (<span class="inline2">-of</span>) from an access key (<span class="inline2">-ak</span>), see <a href="#access_key">Access Key</a></td>
+      <tr>
+        <td style=""><span class="inline">Runtime FetchLicences [-ak] [-of]</span></td>
+        <td style="">Generates a licence.plist file (<span class="inline2">-of</span>) from an access key (<span class="inline2">-ak</span>), see <a href="#access_key">Access Key</a></td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h1>Igor Testing</h1>
   <p>Here are the options that can be used for testing your builds with Igor:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <th style="">Option</th>
         <th style="">Description</th>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
         <td style="">Set the user folder used for retrieving licence information so <span data-keyref="GameMaker Name">GameMaker</span> knows which modules can be installed</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/lf=[license_file]</span></td>
         <td style="">Set a direct path to a licence file, can be used as an alternative to setting a user folder (<span class="inline">/uf</span>)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/df=[device_file]</span></td>
         <td style="">Set a direct path to a <span class="inline">devices.json</span> file, can be used as an alternative to setting a user folder (<span class="inline">/uf</span>)</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/timeout=[number_of_seconds_to_wait]</span></td>
         <td style="">The timeout to use for the test in seconds, defaults to 120 seconds; the test will be stopped after this timeout is over and will be marked as failed</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/waittime=[number_of_seconds_to_wait]</span></td>
         <td style="">Number of seconds to wait in the main loop before declaring the test as passed, defaults to 30 seconds</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/device=[device_name]</span></td>
         <td style="">Used to look up the device name in the user folder&#39;s <span class="inline">devices.json</span> file</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style=""><span class="inline">/target=[list_of_targets]</span></td>
         <td style="">Comma-separated list of targets in the <span class="inline">PLATFORM|DEVICE</span> format, e.g.: <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span><br/>
           <br/>
@@ -567,7 +567,7 @@
         <div style="float:right">Next: <a href="Runner_Details/Compiler_Batch_Files.htm">Compiler Batch Files / Scripts</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Building via Command Line

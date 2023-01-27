@@ -55,7 +55,7 @@
   <title>Type Tables</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css"/>
-  <script src="../assets/scripts/main_script.js"></script>
+  <script src="../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
   <meta name="topic-comment" content="Page that shows the type tables for different arithmetic operations"/>
   <meta name="rh-index-keywords" content="Type Tables"/>
@@ -63,7 +63,7 @@
 <meta name="brsnext" value="Additional_Information/Vectors.htm"/><meta name="brsprev" value="Additional_Information/Bitwise_Operators.htm"/></head>
 
 <body>
-  <div class="topic-header rh-hide" id="rh-topic-header" onclick="rh._.goToFullLayout()">
+  <div class="topic-header rh-hide" id="rh-topic-header">
     <div class="logo">
     </div>
     <div class="nav">
@@ -71,7 +71,7 @@
         <span>Type Tables</span>
       </div>
       <div class="gotohome" title="Click here to see this page in full context">
-        <span>Click here to see this page in full context</span>
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
       </div>
     </div>
   </div>
@@ -85,9 +85,9 @@
   <p>The tables all follow the same format, with the rows (left) showing the <em>left hand</em> side of an arithmetical operation, and the columns (right) showing the <em>right hand</em> side, eg:</p>
   <p class="code">&lt;result&gt; = &lt;LHS or row&gt; + &lt;RHS or column&gt;</p>
   <p class="note"><span data-conref="../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> Prior to GameMaker 2022.9, these tables were inverted -- the columns showed LHS and rows showed RHS. This was counter-intuitive and was changed to be the opposite.</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Add (+)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -98,18 +98,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">String</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -120,7 +120,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -131,7 +131,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -142,7 +142,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -153,7 +153,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -164,7 +164,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -175,7 +175,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -189,9 +189,9 @@
     </tbody>
   </table>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Subtract (-)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -202,18 +202,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -224,7 +224,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -235,7 +235,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -246,7 +246,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -257,7 +257,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -268,7 +268,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -279,7 +279,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -293,9 +293,9 @@
     </tbody>
   </table>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Multiply (*)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -306,18 +306,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">String</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">String</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -328,7 +328,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -339,7 +339,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -350,7 +350,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -361,7 +361,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -372,7 +372,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -383,7 +383,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -397,9 +397,9 @@
     </tbody>
   </table>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Divide (/)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -410,18 +410,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -432,7 +432,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -443,7 +443,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -454,7 +454,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -465,7 +465,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -476,7 +476,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -487,7 +487,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -501,9 +501,9 @@
     </tbody>
   </table>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Divide (div)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -514,18 +514,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -536,7 +536,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -547,7 +547,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -558,7 +558,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -569,7 +569,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -580,7 +580,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -591,7 +591,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -605,9 +605,9 @@
     </tbody>
   </table>
   <p> </p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Mod (%)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
@@ -618,18 +618,18 @@
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Real</strong></td>
-        <td align="LEFT" height="17">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT">Real</td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
-        <td align="LEFT"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" height="17" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86">Real</td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
+        <td align="LEFT" width="86"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Bool</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -640,7 +640,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>String</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -651,7 +651,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int32</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -662,7 +662,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Int64</strong></td>
         <td align="LEFT" height="17">Real</td>
         <td align="LEFT">Real</td>
@@ -673,7 +673,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Ptr</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -684,7 +684,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -695,7 +695,7 @@
         <td align="LEFT"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>Array</strong></td>
         <td align="LEFT" height="17"><span style="color:#202020">Error</span></td>
         <td align="LEFT"><span style="color:#202020">Error</span></td>
@@ -711,27 +711,27 @@
   <p> </p>
   <h2 id="h">Equality Table</h2>
   <p>There are a few special constants that may or may not be equal to themselves, as shown in the following table:</p>
-  <table style="">
+  <table>
     <tbody>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF"><span class="inline">Equality (==)</span></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>NaN</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>infinity</strong></td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>NaN</strong></td>
         <td><strong>false</strong></td>
         <td>false</td>
         <td>false</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>undefined</strong></td>
         <td>false</td>
         <td><strong>true</strong></td>
         <td>false</td>
       </tr>
-      <tr style="">
+      <tr>
         <td style="color: #FFFFFF;background-color: rgba(0, 159, 97, 0.50)"><strong>infinity</strong></td>
         <td>false</td>
         <td>false</td>
@@ -748,7 +748,7 @@
         <div style="float:right">Next: <a href="Whitespace_Characters.htm">White-space Characters</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Type Tables
