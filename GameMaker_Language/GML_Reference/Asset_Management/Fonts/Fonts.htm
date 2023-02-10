@@ -81,29 +81,29 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">Fonts</span></h1>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> has a number of functions to get information from font assets added using <a href="../../../../The_Asset_Editors/Fonts.htm">The Font Editor</a> and functions that can be used to change, add or remove fonts from your game at run-time.</p>
-  <p>The function <span class="inline3_func"><a href="font_add.htm">font_add</a></span> can be used to add non-standard fonts, like Asian glyph fonts, from a <span class="inline2">*.ttf</span> or <span class="inline2">*.otf</span> file.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> has a number of functions to get information from font assets added using <a href="../../../../The_Asset_Editors/Fonts.htm">The Font Editor</a> and functions that can be used to change, add or remove fonts from your game at <a class="tooltip" title="The runtime in GameMaker is the collection of compiler assets that is required by the program to create a final executable package for a given target platform. These are installed seperately from the IDE, and can be changed and updated at any time.">Runtime</a>.</p>
+  <p>The function <span class="inline3_func"><a href="font_add.htm">font_add</a></span> can be used to add fonts at runtime, including non-standard fonts such as Asian glyph fonts, from a <span class="inline2">*.ttf</span> or <span class="inline2">*.otf</span> file.</p>
   <div data-conref="../../../../assets/snippets/Note_Unicode_missing_glyph_replacement.hts">
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> The Unicode character 9647 (▯) is used to substitute any missing <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s that you may have in your designated font when rendering it in the draw event. So if your font doesn&#39;t have, for example, the ° symbol, then writing 90° will actually produce 90▯.</p>
 
 </div>
   <h2>Fonts and Text Rendering</h2>
-  <p>Text in <span data-keyref="GameMaker Name">GameMaker</span> is drawn using the current font set by <span class="inline3_func"><a href="../../Drawing/Text/draw_set_font.htm">draw_set_font</a></span>. Text drawn using a font will be drawn in a different way depending on whether SDF is enabled or not.</p>
+  <p>Text in <span data-keyref="GameMaker Name">GameMaker</span> is drawn using the font set with <span class="inline3_func"><a href="../../Drawing/Text/draw_set_font.htm">draw_set_font</a></span>. Text drawn using a font will be drawn in a different way depending on whether SDF is enabled or not.</p>
   <h3>Regular</h3>
-  <p>This is the normal way of drawing text in <span data-keyref="GameMaker Name">GameMaker</span>. The font&#39;s <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s for the chosen font size (<span class="inline3_func"><a href="font_get_size.htm">font_get_size</a></span>) are placed on a texture page (<span class="inline3_func"><a href="font_get_texture.htm">font_get_texture</a></span>) and each character is rendered using its <a class="tooltip" title="Texel (or texture element) is the fundamental unit of texture space, much like a pixel is the fundamental element of picture space. Textures are represented by arrays of Texels, just as pictures are represented by arrays of pixels. When texturing a 3D surface (a process known as texture mapping) the renderer maps texels to appropriate pixels in the output picture.">texel</a>s on the texture page.</p>
-  <p>A disadvantage is that the individual pixels become visible for text that is too close or scaled up too much.</p>
+  <p>This is the normal way of drawing text in <span data-keyref="GameMaker Name">GameMaker</span>. The font&#39;s <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s for the chosen font size (<span class="inline3_func"><a href="font_get_size.htm">font_get_size</a></span>) are placed on a texture page (<span class="inline3_func"><a href="font_get_texture.htm">font_get_texture</a></span>) and each character is rendered as it is from the texture page.</p>
+  <p>A disadvantage of this is that scaling up text using regular fonts makes them look pixelated. To fix this, GameMaker provides an SDF rendering option for fonts added at runtime.</p>
   <h3 id="h">SDF Rendering</h3>
   <p>This is <em>disabled by default</em> for newly added fonts and enabled <em>per font</em> by calling <span class="inline3_func"><a href="font_enable_sdf.htm">font_enable_sdf</a></span>:</p>
   <p class="code">new_font = font_add(&quot;STENCIL.TTF&quot;, 32, false, false, 32, 128);<br/>
     font_enable_sdf(new_font, true);</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> SDF rendering is currently only available for fonts added using <span class="inline3_func"><a href="font_add.htm">font_add</a></span>.</p>
-  <p>When SDF rendering is enabled, the characters in the font&#39;s range are stored differently on the texture page. Instead of an actual render of the different characters at the given font size, what&#39;s stored is an SDF: a <em>Signed Distance Field</em>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> SDF rendering is currently only available for fonts added using <span class="inline3_func"><a href="font_add.htm">font_add</a></span>. Support for font assets added through the IDE will be provided in a future version.</p>
+  <p>When SDF rendering is enabled, all characters in the given font&#39;s range are stored differently on the texture page. Instead of an actual render of the different characters at the font&#39;s set size, an SDF (<em>Signed Distance Field)</em> is stored.</p>
   <p>In this case, every texel stores the <em>signed distance</em> to the closest point on the character. All texels on this texture combined make up a <em>field</em> of signed distances.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> SDF rendering currently doesn&#39;t work with custom shaders, as drawing text using an SDF enabled font with the default passthrough <a href="../Shaders/Shaders.htm">shader</a> simply looks up the texels on the texture, which draws the distance field.</p>
-  <p>As the distance is stored, the text can be scaled up without the characters becoming pixelated.</p>
+  <p>With this feature enabled for a font, text can be scaled up without the characters becoming pixelated.</p>
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> SDF fonts are currently not supported on HTML5.<span></span></p>
   <h3>Visual Comparison</h3>
-  <p>The following table shows a visual comparison between text drawn the regular way and drawn using a font that has SDF enabled: </p>
+  <p>The following table shows a visual comparison between text drawn using a regular font, and drawn using a font that has SDF enabled: </p>
   <table>
     <colgroup>
       <col/>

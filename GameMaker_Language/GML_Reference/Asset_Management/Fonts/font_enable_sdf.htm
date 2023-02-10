@@ -55,11 +55,11 @@
   <title>font_enable_sdf</title>
   <meta name="generator" content="Adobe RoboHelp 2020"/>
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css"/>
-  <script src="../../../../assets/scripts/main_script.js"></script>
+  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content=""/>
   <meta name="topic-comment" content=""/>
-  <meta name="rh-index-keywords" content=""/>
-  <meta name="search-keywords" content=""/>
+  <meta name="rh-index-keywords" content="font_enable_sdf"/>
+  <meta name="search-keywords" content="font_enable_sdf"/>
   <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
 </head>
 
@@ -81,7 +81,7 @@
 
 
   <h1><span data-field="title" data-format="default">font_enable_sdf</span></h1>
-  <p>This function sets whether <a href="Fonts.htm#h">SDF Rendering</a> for the given font is enabled or not.</p>
+  <p>This function is used to enable or disable <a href="Fonts.htm#h">SDF Rendering</a> for the given font.</p>
   <div data-conref="../../../../assets/snippets/Note_SDF_HTML5.hts">
   <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> SDF fonts are currently not supported on HTML5.</p>
 
@@ -104,7 +104,7 @@
       <tr>
         <td>ind</td>
         <td><span data-keyref="Type_Asset_Font"><a target="_blank" href="../../../../../The_Asset_Editors/Fonts.htm">Font Asset</a></span></td>
-        <td>The index of the font for which to enable SDF rendering</td>
+        <td>The index of the font for which to enable/disable SDF rendering</td>
       </tr>
       <tr>
         <td>enable</td>
@@ -133,7 +133,9 @@
     draw_text_transformed(500, 400, &quot;Hello World! (animated version)&quot;, _scale, _scale, 0);
   </p>
   <p>The above code shows the code of an object&#39;s Create event and Draw event. In the Create event a custom font is added using <span class="inline3_func"><a href="font_add.htm">font_add</a></span> and stored in an instance variable <span class="inline2">new_font</span>. SDF rendering is enabled for the font by calling <span class="inline3_func"><span data-field="title" data-format="default">font_enable_sdf</span></span>.</p>
-  <p>In the Draw the font is set to <span class="inline2">new_font</span> and text alignment set to centered (both horizontally and vertically). Next some values are calculated to animate the text scale. Finally some text is drawn scaled using <span class="inline3_func"><a href="../../Drawing/Text/draw_text_transformed.htm">draw_text_transformed</a></span>.</p>
+  <p>In the Draw event, the font is set to <span class="inline2">new_font</span> and text alignment is set to centred (both horizontally and vertically). Next some values are calculated to animate the text scale. Finally some text is drawn scaled using <span class="inline3_func"><a href="../../Drawing/Text/draw_text_transformed.htm">draw_text_transformed</a></span>.</p>
+  <p>Because the font is SDF-enabled, this text should remain sharp as it scales up and down.</p>
+  <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
