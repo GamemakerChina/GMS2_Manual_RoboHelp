@@ -82,6 +82,10 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Particle Emitters</h1>
   <p>Particle <strong>emitters </strong>are used by <span data-keyref="GameMaker Name">GameMaker</span> to emit particles over an area of the screen which can have different forms and distributions. They can also either create a continuous stream of particles or they can burst out a number of particles all at once, depending on the way the functions are used.</p>
+  <div data-conref="../../../../../assets/snippets/Note_tip_use_particle_system_editor.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> If you prefer a more visual approach to creating particles and don&#39;t need the extensive functionality that <span data-keyref="GML_Code">GML Code</span> offers, you can also create a <span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span> using <a href="../../../../../The_Asset_Editors/Particle_Systems.htm">The Particle System Editor</a>.</p>
+
+</div>
   <p>Since a particle emitter is a dynamically created resource, you must create it and store the returned index in a variable to reference the emitter in all further function calls, and it is very important that you also destroy the emitter when it is no longer needed or else you will have a memory leak that will slow down and eventually crash your game. It is also worth noting that particle emitters will live on forever after they are created, even if the index is no longer stored. So even if you change room or restart the game, the systems and the particles will remain, and be visible, in all further rooms so you should ensure you destroy them once you no longer need them.</p>
   <p>The following functions are available to set the emitters and to let them create particles. Note that each of them gets the index of the <a href="../Particle_Systems/Particle_Systems.htm">particle system</a> to which it belongs as a first argument.</p>
   <ul class="colour">

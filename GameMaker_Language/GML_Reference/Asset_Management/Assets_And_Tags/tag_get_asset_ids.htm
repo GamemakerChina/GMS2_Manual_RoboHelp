@@ -81,9 +81,11 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tag_get_asset_ids</h1>
-  <p>With this function you can get all the assets of a given type that have the given tags assigned to them. You supply either a single tag (as a string) or an array, where each item in the array is a tag (as a string), as well as the type of asset to check. the type of asset should be one of the following constants:</p>
-  <table>
+  <h1><span data-field="title" data-format="default">tag_get_asset_ids</span></h1>
+  <p>With this function you can get all the assets of a given type that have the given tags assigned to them. You supply either a single tag (as a string) or an array, where each item in the array is a tag (as a string), as well as the type of asset to check. The type of asset should be one of the following constants:</p>
+  <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts">
+  <table style="caption-side: top">
+    <caption>Asset Type Constant</caption>
     <tbody>
       <tr>
         <th>Constant</th>
@@ -137,13 +139,22 @@
         <td><span class="inline">asset_sequence</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence</a>.</td>
       </tr>
+      <tr>
+        <td><span class="inline">asset_particlesystem</span></td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Particle_Systems.htm">Particle System</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">asset_unknown</span></td>
+        <td>The given name refers to an asset that either does not exist, or is not one of the above listed.</td>
+      </tr>
     </tbody>
   </table>
-  <p> </p>
+
+</div>
   <p>The function will return an array, where each item in the array will be a single asset index value. If there are no assets of the type that have the given tag(s), an empty array will be returned.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">tag_get_asset_ids(tags, asset_type);</p>
+  <p class="code"><span data-field="title" data-format="default">tag_get_asset_ids</span>(tags, asset_type);</p>
   <table>
     <tbody>
       <tr>
@@ -168,7 +179,7 @@
   <p class="code"><span data-keyref="Type_Array"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var _paths = tag_get_asset_ids(&quot;enemy&quot;, asset_path);<br/>
+  <p class="code">var _paths = <span data-field="title" data-format="default">tag_get_asset_ids</span>(&quot;enemy&quot;, asset_path);<br/>
     var _num = irandom(array_length(_paths) - 1);<br/>
     path_start(_paths[_num], 1, path_action_reverse, false);</p>
   <p>The above code uses the tag &quot;enemy&quot; to find all the path assets with that tag, before choosing one at random and assigning it to the instance running the code.</p>

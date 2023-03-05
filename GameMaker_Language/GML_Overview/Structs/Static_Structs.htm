@@ -147,7 +147,20 @@
   <h2 id="h1">Changing The Static Struct</h2>
   <p>The function <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/static_set.htm">static_set</a></span> is provided to let you change the static struct of a function (constructor or not). This way you can change what static variables are available to a constructor and its structs, and also change the &quot;static chain&quot; that a constructor belongs to.</p>
   <p>The recommended use-case for this function is deserialisation. If you&#39;re loading structs from JSON, those structs won&#39;t belong to any constructors, however you can change that by using <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/static_set.htm">static_set</a></span> to &quot;apply&quot; a constructor to a struct, so that that struct receives its shared static variables and you can run <span class="inline3_func"><a href="../../GML_Reference/Variable_Functions/is_instanceof.htm">is_instanceof</a></span> to check its kind.</p>
-  <div data-conref="../../../assets/snippets/static_set_example.hts"><p class="code">var _potion = <span class="misspell-word">json_parse</span>(&quot;{ \&quot;rarity\&quot;\ : 3 }&quot;);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // false (0)<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>var _static_potion = static_get(potion);<br data-tcx-user-gemerated="true"/>static_set(_potion, _static_potion);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // true (1)</p><p>In the code above, upon loading the potion struct, it&#39;s only created as a simple struct and doesn&#39;t belong to a constructor, nor does it have any static variables.</p><p>After applying the static struct for <span class="inline2">potion</span> to it, it becomes an instance of <span class="inline2">potion</span> (as tested with <span class="inline2"><span class="misspell-word">is_instanceof</span>()</span>) and also gets any static variables and static methods contained in the <span class="inline2">potion</span> constructor.</p></div>
+  <div data-conref="../../../assets/snippets/static_set_example.hts">
+  <p class="code">var _potion = json_parse(_json_string);<br/>
+    <br/>
+    show_debug_message(is_instanceof(_potion, potion)); // false (0)<br/>
+    <br/>
+    var _static_potion = static_get(potion);<br/>
+    static_set(_potion, _static_potion);<br/>
+    <br/>
+    show_debug_message(is_instanceof(_potion, potion)); // true (1)
+  </p>
+  <p>In the code above, upon loading the potion struct from a JSON string, it&#39;s only created as a simple struct and doesn&#39;t belong to a constructor, nor does it have any static variables.</p>
+  <p>After applying the static struct for <span class="inline2">potion</span> to it (which is a constructor), it becomes an instance of <span class="inline2">potion</span> (as tested with <span class="inline2">is_instanceof()</span>) and also gets any static variables and static methods contained in the <span class="inline2">potion</span> constructor.</p>
+
+</div>
   <p> </p>
   <p> </p>
   <div class="footer">

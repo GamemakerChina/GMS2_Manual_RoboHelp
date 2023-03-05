@@ -81,7 +81,8 @@
 
 
   <h1><span data-field="title" data-format="default">array_shuffle</span></h1>
-  <p>This function returns a <em>new</em> array in which the elements of the original array are randomly reordered.</p>
+  <p>This function returns a <strong>new</strong> array in which the elements of the original array <span>(or a range of it) </span>are randomly reordered.</p>
+  <p>When <a href="Array_Functions.htm#h1">Offset And Length</a> are provided, the returned array will have the same number of elements as are in the range of the original array, given by these values.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> See <span class="inline2"><a href="array_shuffle_ext.htm">array_shuffle_ext</a></span> for the function that changes the original array in place.</p>
   <div data-conref="../../../assets/snippets/Note_randomise_shuffle.hts">
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function will shuffle the items to the same positions every time the game is run afresh due to the fact that <span data-keyref="GameMaker Name">GameMaker</span> generates the same initial random seed every time to make debugging code a far easier task. To avoid this behaviour use <span class="inline2"><a href="../Maths_And_Numbers/Number_Functions/randomise.htm">randomise</a></span> at the start of your game. This is only true when testing and debugging the game, as the final executable package will not show this behaviour and will be random every play.</p>

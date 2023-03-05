@@ -87,6 +87,10 @@
   <p>Finally you can also specify the x and y <i>origin</i> for the sprite. This is the point where the sprite is &quot;fixed&quot; onto the instance that uses it, and is always calculated as relative to the 0,0 top left corner of one sprite sub-image. So, for example, a sprite that is 32 x 32 pixels with these values set to (16,16) will have its origin in the center.</p>
   <p>By default all new sprites have their bounding boxes calculated automatically (the exact bbox will depend on the size and transparency of the sprite), however you may wish to customise this, in which case you should also use the function <a href="sprite_collision_mask.htm"><span class="inline">sprite_collision_mask()</span></a>.</p>
   <p class="note"><b><span class="note">NOTE</span></b> When you create a sprite in <span data-keyref="GameMaker Name">GameMaker</span> with this method you must remember to remove it again (with <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a>) when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
+  <div data-conref="../../../../../assets/snippets/Note_surface_only_rgba8unorm.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function will only work with surfaces that use the <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline2">surface_rgba8unorm</span></a> (default) surface format.</p>
+
+</div>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>

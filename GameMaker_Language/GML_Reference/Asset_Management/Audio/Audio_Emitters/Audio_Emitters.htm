@@ -121,7 +121,7 @@
   <p><span data-keyref="GameMaker Name">GameMaker</span> automatically updates the position of such an emitter. It does not update the velocity of an audio track emitter but this is something you can do yourself by calling <a href="audio_emitter_velocity.htm">audio_emitter_velocity</a> in one of the <a href="../../Sequences/Sequence_Events_Moments_Broadcast.htm">Sequence Step Events</a>.</p>
   <h3>Playing sounds on an emitter</h3>
   <p>Sounds can be played <strong>on</strong> an emitter using <a href="audio_play_sound_on.htm">audio_play_sound_on</a>: </p>
-  <p class="code">sound_instance = audio_play_sound_on(snd_Explosion, x, y, 0, 100, 300, 1, true, 1);<br/>
+  <p class="code">sound_instance = audio_play_sound_on(emitter, snd_Explosion, false, 10);<br/>
     <span></span>
   </p>
   <h3>Keeping track of playing sound instances</h3>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../../..";
+    gCommonRootRelPath = "../../../..";
+    gTopicId = "8.2.2.16.1.0_8";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" data-condition="Export:Beta"/><script src="../../../../../assets/scripts/main_script.js" data-condition="Export:Beta"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" data-condition="Export:Beta"/>
+  <meta name="generator" content="Adobe RoboHelp 2020" data-condition="Export:Beta"/>
+  <title data-condition="Export:Beta">rollback_define_player</title>
+  <meta name="topic-status" content="Draft" data-condition="Export:Beta"/>
+  <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" data-condition="Export:Beta"/>
+  <script src="../../../../assets/scripts/main_script.js" type="module" data-condition="Export:Beta"></script>
+  <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" data-condition="Export:Beta"/>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo" data-condition="Export:Beta"/>
+  <meta name="topic-comment" content="Reference page for rollback_define_player" data-condition="Export:Beta"/>
+  <meta name="condition-tags" content="Export:Beta" data-condition="Export:Beta"/>
+  <meta name="rh-index-keywords" content="rollback_define_player" data-condition="Export:Beta"/>
+  <meta name="search-keywords" content="rollback_define_player" data-condition="Export:Beta"/>
+<meta name="brsnext" value="GameMaker_Language/GML_Reference/Rollback/Rollback_Functions/rollback_display_events.htm"/><meta name="brsprev" value="GameMaker_Language/GML_Reference/Rollback/Rollback_Functions/rollback_define_mock_input.htm"/></head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="rollback_define_player">
+        <span>rollback_define_player</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div data-condition="Export:Beta">
+  </div>
+  <div data-condition="Export:Beta">
+  <h1>rollback_define_player</h1>
+  <p>This function defines the object that should be used for players in multiplayer. This is optional, and when used, the system will automatically create instances for players that connect, and destroy instances for players that disconnect.</p>
+  <p>By default, this creates player instances in the <span class="inline2">&quot;Instances&quot;</span> layer, which must exist in your game room. If you wish to use another layer, pass its name as the second argument.</p>
+  <p>For information on creating a game with or without this function, see <a href="../Rollback_System.htm#h1">Defining A Player Object</a>. If used, this function must run before the <a href="rollback_join_game.htm">join</a>/<a href="rollback_create_game.htm">create</a> function.</p>
+  <p>Each instance created with this function gets the <a href="../Rollback_Variables/Rollback_Variables.htm">instance variables listed on this page</a>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">rollback_define_player(object, [layer_name]);</p>
+  <table>
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>object</td>
+        <td><span data-keyref="Type_Asset_Object"><a target="_blank" href="../../../../../The_Asset_Editors/Objects.htm">Object Asset</a></span></td>
+        <td>The object that will be used for creating player instances.</td>
+      </tr>
+      <tr>
+        <td>layer_name</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span class="optional">OPTIONAL</span> The name of the layer where the player instances will be created. <span class="inline2">&quot;Instances&quot;</span> by default.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Example:</h4>
+  <p class="code">rollback_define_player(obj_player);<br/>
+    var _joined = rollback_join_game();<br/>
+    <br/>
+    if (!_joined)<br/>
+    {<br/>
+        rollback_start_game(2, false);<br/>
+    }
+  </p>
+  <p>The above code defines a player object, and then attempts to join a game. If it was not joined, it starts a new game instead, with a maximum of 2 players and Sync Test disabled.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="Rollback_Functions.htm">Rollback Functions</a></div>
+        <div>Next: <a href="rollback_display_events.htm">rollback_display_events</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+rollback_define_player
+-->
+  <!-- TAGS
+rollback_define_player
+-->
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

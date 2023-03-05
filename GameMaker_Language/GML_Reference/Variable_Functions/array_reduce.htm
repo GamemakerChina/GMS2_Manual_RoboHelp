@@ -116,6 +116,11 @@
   <p>The first time this callback function is called, its <span class="inline2">previous</span> argument is set to the value of the first array element (or the element at the given <span class="inline2">offset</span>), and the first iteration of the array range is skipped, meaning callbacks start from the second element in the given range.</p>
   <p>If you supply the <span class="inline2">init</span> parameter to this function, the first iteration will not be skipped, and the <span class="inline2">previous</span> parameter for the first element&#39;s callback will be set to the <span class="inline2">init</span> value you passed.</p>
   <p>When the callback function returns a value, it&#39;s carried over into the next iteration. This process is repeated, until the given array (or the provided range) has been fully iterated. The function returns the value obtained from the final element&#39;s callback.</p>
+  <p>Finally there are a couple of special cases, which are handled as follows: </p>
+  <ul class="colour">
+    <li>If the array has one element and no initial value is given, the function returns the first array element.</li>
+    <li>If the array is empty and an initial value is supplied, the function returns that initial value. If none is given, the function throws an error.</li>
+  </ul>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">array_reduce</span>(array, function, [init], [offset], [length]);</p>

@@ -82,6 +82,10 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>Particle Types</h1>
   <p>Particles are the graphic effects that can be created by the use of particle systems in a game. The particles that you define using these functions can be used in any system that you create and the normal procedure would be to define all your particles once at the start of a game and store their index values in global variables. These global variables can then be used to burst, emit or create particles at any time throughout the game. You can also create, use and then destroy particles as needed if memory is an issue or if you wish many different types but only at specific points in your game. Whatever you choose, particles are a very versatile resource!</p>
+  <div data-conref="../../../../../assets/snippets/Note_tip_use_particle_system_editor.hts">
+  <p class="note"><span data-conref="../../../../../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> If you prefer a more visual approach to creating particles and don&#39;t need the extensive functionality that <span data-keyref="GML_Code">GML Code</span> offers, you can also create a <span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../../../../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span> using <a href="../../../../../The_Asset_Editors/Particle_Systems.htm">The Particle System Editor</a>.</p>
+
+</div>
   <p>Particles need to be created and have their index stored in a variable so that all further particle routines can access them correctly. The following functions are used to create, check for, clear and destroy particle types:</p>
   <ul class="colour">
     <li><a href="part_type_exists.htm">part_type_exists</a></li>
@@ -131,8 +135,6 @@
     <li><a href="part_type_step.htm">part_type_step</a></li>
     <li><a href="part_type_death.htm">part_type_death</a></li>
   </ul>
-  <p> </p>
-  <p>It is worth noting that creating particles through code can often be a laborious and time-consuming process due to the large number of parameters that can be changed and tweaked. For that reason it is recommended that you search around and get a hold of some type of <b>Particle Designer</b> (or make one yourself!) to take the drudgery out of particle creation.</p>
   <p> </p>
   <p> </p>
   <div class="footer">

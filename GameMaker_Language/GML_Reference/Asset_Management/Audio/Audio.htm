@@ -82,9 +82,12 @@
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">Audio</span></h1>
   <p><span data-keyref="GameMaker Name">GameMaker</span> has a complete audio engine that is based on the <span class="inline">*.ogg</span>, <span class="inline">*.mp3</span> and <span class="inline">*.wav</span> sound formats.</p>
-  <p><a href="../../../../The_Asset_Editors/Sounds.htm">The Sound Editor</a> of these types added to the IDE can then be used in your game using the audio functions shown below.</p>
+  <p>Sounds of these types <a href="../../../../The_Asset_Editors/Sounds.htm">added to the IDE</a> can be used in your game using the audio functions shown below.</p>
   <p>For things more complex than basic sound effects, or playing a single piece of music, you can refer to the advanced audio functions which let you modify how a sound is played. There is also a selection of more specialised functions dedicated to streaming audio, positioning audio (to give 3D sound), grouping audio, synchronised audio and audio effects.</p>
+  <div data-conref="../../../../assets/snippets/Note_HTML5_Web_Audio.hts">
   <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span></b> When using audio on the HTML5 target, you should be aware that not all browsers support Web Audio and so may not play any sound for your project when run. You can get a general idea of Web Audio support from the following link: <a href="https://caniuse.com/audio-api" target="_blank">Can I Use Web Audio?</a>.</p>
+
+</div>
   <div class="minitoc" data-minitoc-targetid="drop-down1" style="">
     <p class="minitoc-caption" href="#" style="">Contents</p>
     
@@ -114,6 +117,15 @@
     <li><a href="audio_sound_set_listener_mask.htm"><strong>Listener Mask</strong></a>: This is a bitmask value that determines the listeners that audio is heard on. The default value is 1 (or <span class="inline2">0x01</span>), which stands for the default listener.</li>
   </ul>
   <p>For an overview of all audio properties, levels and how their values are calculated, see <a href="Audio_Properties.htm">Audio Properties Overview</a>.</p>
+  <h3>Audio Looping</h3>
+  <p>A sound can be looped by setting it to loop. This can either be done when playing the sound using any of the <span class="inline2">audio_play_sound_</span> functions: </p>
+  <p class="code">ins_sound = audio_play_sound(snd_Engine, 100, true);</p>
+  <p>or afterwards, when the sound is already playing, using the function <span class="inline2"><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></span>: </p>
+  <p class="code">audio_sound_loop(ins_sound, true);</p>
+  <p>By default a sound loops from its start to its end. The start and end position can be changed using <span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop_start.htm">audio_sound_loop_start</a></span> and <span class="inline3_func"><a href="Audio_Loop_Points/audio_sound_loop_end.htm">audio_sound_loop_end</a></span> respectively, also while the sound is playing (i.e. <span class="inline2">ins_sound</span> refers to a sound instance for which <span class="inline3_func"><a href="audio_is_playing.htm">audio_is_playing</a></span> returns <span class="inline2">true</span>).</p>
+  <p>When the track position reaches the loop end position if a sound is set to loop, it continues playing from the start position.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> The loop end position <em>must</em> be past the loop start position. The exception to this is the value 0.0 for loop end, which marks the end of the sound (i.e. <span class="inline3_func"><a href="audio_sound_length.htm">audio_sound_length</a></span>).</p>
+  <p>See: <a href="Audio_Loop_Points/Audio_Loop_Points.htm">Audio Loop Points</a></p>
   <h3>Audio Effects</h3>
   <p>Finally you can add effects to the audio that you play, such as reverb, echo, delay, etc.</p>
   <p>Audio effects are created using <span class="inline2"><a href="Audio_Effects/audio_effect_create.htm">audio_effect_create</a></span> and then assigned to one of the effects slots of an audio bus. The audio bus that you can always assign effects to is the main audio bus <span class="inline2"><a href="Audio_Effects/audio_bus_main.htm">audio_bus_main</a></span>.</p>
@@ -177,6 +189,15 @@
     <li><a href="audio_sound_set_listener_mask.htm">audio_sound_set_listener_mask</a></li>
     <li><a href="audio_sound_get_listener_mask.htm">audio_sound_get_listener_mask</a></li>
   </ul>
+  <h3><a href="Audio_Loop_Points/Audio_Loop_Points.htm">Audio Loop Points</a></h3>
+  <ul class="Disc">
+    <li><a href="Audio_Loop_Points/audio_sound_loop.htm">audio_sound_loop</a></li>
+    <li><a href="Audio_Loop_Points/audio_sound_get_loop.htm">audio_sound_get_loop</a></li>
+    <li><a href="Audio_Loop_Points/audio_sound_loop_start.htm">audio_sound_loop_start</a></li>
+    <li><a href="Audio_Loop_Points/audio_sound_get_loop_start.htm">audio_sound_get_loop_start</a></li>
+    <li><a href="Audio_Loop_Points/audio_sound_loop_end.htm">audio_sound_loop_end</a></li>
+    <li><a href="Audio_Loop_Points/audio_sound_get_loop_end.htm">audio_sound_get_loop_end</a></li>
+  </ul>
   <h3>Configuration</h3>
   <ul class="Disc">
     <li><a href="audio_master_gain.htm">audio_master_gain</a></li>
@@ -185,6 +206,7 @@
     <li><a href="audio_channel_num.htm">audio_channel_num</a></li>
     <li><a href="audio_falloff_set_model.htm">audio_falloff_set_model</a></li>
     <li><a href="audio_system_is_available.htm">audio_system_is_available</a></li>
+    <li><a href="audio_system_is_initialised.htm">audio_system_is_initialised</a></li>
   </ul>
   <h3>Debugging</h3>
   <ul class="colour">

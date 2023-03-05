@@ -38,7 +38,7 @@
 
     gRootRelPath = "../../..";
     gCommonRootRelPath = "../../..";
-    gTopicId = "8.2.2.1.0_42";
+    gTopicId = "8.2.2.1.0_21";
   
 //]]></script>
 
@@ -116,7 +116,20 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Example:</h4>
-  <div data-conref="../../../assets/snippets/static_set_example.hts"><p class="code">var _potion = <span class="misspell-word">json_parse</span>(&quot;{ \&quot;rarity\&quot;\ : 3 }&quot;);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // false (0)<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>var _static_potion = static_get(potion);<br data-tcx-user-gemerated="true"/>static_set(_potion, _static_potion);<br data-tcx-user-gemerated="true"/><br data-tcx-user-gemerated="true"/>show_debug_message(<span class="misspell-word">is_instanceof</span>(_potion, potion)); // true (1)</p><p>In the code above, upon loading the potion struct, it&#39;s only created as a simple struct and doesn&#39;t belong to a constructor, nor does it have any static variables.</p><p>After applying the static struct for <span class="inline2">potion</span> to it, it becomes an instance of <span class="inline2">potion</span> (as tested with <span class="inline2"><span class="misspell-word">is_instanceof</span>()</span>) and also gets any static variables and static methods contained in the <span class="inline2">potion</span> constructor.</p></div>
+  <div data-conref="../../../assets/snippets/static_set_example.hts">
+  <p class="code">var _potion = json_parse(_json_string);<br/>
+    <br/>
+    show_debug_message(is_instanceof(_potion, potion)); // false (0)<br/>
+    <br/>
+    var _static_potion = static_get(potion);<br/>
+    static_set(_potion, _static_potion);<br/>
+    <br/>
+    show_debug_message(is_instanceof(_potion, potion)); // true (1)
+  </p>
+  <p>In the code above, upon loading the potion struct from a JSON string, it&#39;s only created as a simple struct and doesn&#39;t belong to a constructor, nor does it have any static variables.</p>
+  <p>After applying the static struct for <span class="inline2">potion</span> to it (which is a constructor), it becomes an instance of <span class="inline2">potion</span> (as tested with <span class="inline2">is_instanceof()</span>) and also gets any static variables and static methods contained in the <span class="inline2">potion</span> constructor.</p>
+
+</div>
   <p> </p>
   <p> </p>
   <div class="footer">

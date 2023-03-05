@@ -82,7 +82,9 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_is_playing</span></h1>
-  <p>This function will check the given sound to see if it is currently playing. The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> or <a href="audio_play_sound_at.htm"><span class="inline">audio_play_sound_at()</span></a> functions) or a sound asset, in which case <i>all</i> instances of the given sound will be checked and if any of them are playing the function will return <span class="inline">true</span> otherwise it will return <span class="inline">false</span>. Note that this function will still return <span class="inline">true</span> if the sound being checked has previously been paused using the <a href="audio_pause_sound.htm"><span class="inline">audio_pause_sound()</span></a> function.</p>
+  <p>This function will check the given sound to see if it is currently playing.</p>
+  <p>The sound can either be a single instance of a sound (the index for individual sounds being played can be stored in a variable when using the <span class="inline3_func"><a href="audio_play_sound.htm">audio_play_sound</a></span>, <span class="inline3_func"><a href="audio_play_sound_at.htm">audio_play_sound_at</a></span>, <span class="inline3_func"><a href="Audio_Emitters/audio_play_sound_on.htm">audio_play_sound_on</a></span> and <span class="inline3_func"><a href="audio_play_sound_ext.htm">audio_play_sound_ext</a></span> functions) or a sound asset, in which case <i>all</i> instances of the given sound will be checked and if any of them are playing the function will return <span class="inline2">true</span> otherwise it will return <span class="inline2">false</span>.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function will still return <span class="inline2">true</span> if the sound being checked has previously been paused using the <span class="inline3_func"><a href="audio_pause_sound.htm">audio_pause_sound</a></span> function.</p>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">audio_is_playing</span>(index);</p>
@@ -109,7 +111,7 @@
     {<br/>
         audio_play_sound_at(snd_Waterfall, x, y, 0, 300, true, 1);<br/>
     }</p>
-  <p>The above code checks to see if the sound indexed in the variable &quot;snd_Waterfall&quot; is currently playing and if it returns <span class="inline">false</span> then the sound will be looped at its room position, with a fall-off distance of 300 and a low priority.</p>
+  <p>The above code checks to see if the sound indexed in the variable &quot;snd_Waterfall&quot; is currently playing and if it returns <span class="inline2">false</span> then the sound will be looped at its room position, with a fall-off distance of 300 and a low priority.</p>
   <p> </p>
   <p> </p>
   <div class="footer">

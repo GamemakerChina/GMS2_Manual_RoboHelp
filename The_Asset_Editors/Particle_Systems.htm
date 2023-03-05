@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "..";
+    gCommonRootRelPath = "..";
+    gTopicId = "6.4";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+<link rel="stylesheet" type="text/css" href="../assets/css/default.css"/><script src="../../assets/scripts/main_script.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <title>The Particle System Editor</title>
+  <meta name="topic-status" content="Draft"/>
+  <link rel="stylesheet" type="text/css" href="../assets/css/default.css"/>
+  <meta name="rh-authors" content="Gurpreet S. Matharoo, Bart Teunis"/>
+  <meta name="topic-comment" content="Documentation page for the Particle System Editor"/>
+  <meta name="template" content="../assets/masterpages/Manual_Page.htt"/>
+  <meta name="search-keywords" content="particles,particle system,particle emitter"/>
+  <meta name="rh-index-keywords" content="Particle System Editor"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="The Particle System Editor">
+        <span>The Particle System Editor</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <div>
+  </div>
+  <div>
+  <h1><span data-field="title" data-format="default">The Particle System Editor</span></h1>
+  <p><span data-field="title" data-format="default">The Particle System Editor</span> can be used to create visual particle effects and preview them in real-time, as they would appear in-game.</p>
+  <p>Double-clicking on a Particle System asset in the Asset Browser will open this editor:</p>
+  <p><img height="862" src="../assets/Images/Asset_Editors/Editor_ParticleSystems.png" width="1476"/></p>
+  <p>A Particle System consists of various emitters, each of which &quot;emits&quot; a particular type of particle. A particle is simply an image that is animated according to its settings, and has a fixed lifespan.</p>
+  <p>By creating emitters inside systems and configuring their particle settings, you can create effects ranging from fire, explosions, etc. to complicated effects that use multiple emitters, as shown above.</p>
+  <div class="minitoc" data-minitoc-targetid="drop-down" style="">
+    <p class="minitoc-caption" href="#" style="">Contents</p>
+    
+  <ol class="minitoc-list" style=""><li><a href="#creating_a_part" class="minitoc-list-item">Creating A Particle System</a></li><li><a href="#using_a_particl" class="minitoc-list-item">Using A Particle System</a></li><li><a href="#h" class="minitoc-list-item">The Canvas</a></li><ol><li><a href="#origin_&amp;_draw_o" class="minitoc-list-item">Origin &amp; Draw Order</a></li><li><a href="#toolbox" class="minitoc-list-item">Toolbox</a></li></ol><li><a href="#emitters" class="minitoc-list-item">Emitters</a></li><li><a href="#configuring_an_" class="minitoc-list-item">Configuring an Emitter</a></li><li><a href="#h1" class="minitoc-list-item">Shared Emitters</a></li><ol><li><a href="#creating_a_pres" class="minitoc-list-item">Creating a Preset</a></li><li><a href="#linking_an_emit" class="minitoc-list-item">Linking an Emitter to a Preset</a></li><li><a href="#changing_linked" class="minitoc-list-item">Changing Linked Emitters&#39; Properties</a></li><li><a href="#unlinking_an_em" class="minitoc-list-item">Unlinking an Emitter from a Preset</a></li></ol></ol></div>
+  <h2 id="creating_a_part">Creating A Particle System</h2>
+  <p>These are the basic steps for setting up a <span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span>:</p>
+  <ul class="colour">
+    <li>Create a <span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span> and modify the default emitter (see <a href="Particle_System_Properties/Emitter_Properties.htm">Emitter Properties</a>)</li>
+    <li>Optionally, add more emitters to achieve your desired effect</li>
+    <li>Add the particle system asset to your game in any of these three ways:
+      <ul>
+        <li>Drop it inside an Asset Layer in <a href="Rooms.htm">The Room Editor</a></li>
+        <li>Drop it inside a <a href="Sequences.htm">Sequence</a> as a track</li>
+        <li>Show the effect at runtime using <span class="inline3_func"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm">part_system_create</a></span>/<span class="inline3_func"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create_layer.htm">part_system_create_layer</a></span> or the GML Visual equivalent: <a href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Create_Particle_System.htm">Create Particle System</a></li>
+      </ul>
+    </li>
+  </ul>
+  <h2 id="using_a_particl">Using A Particle System</h2>
+  <p>As briefly described above, a Particle System can be used in your game in three ways:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#"><span data-open-text="true" data-skip-index="true">Add To Room Editor</span><span data-close-text="true">Add To Room Editor</span></a></p>
+  <div class="droptext" data-targetname="drop-down1">
+    <p class="dropspot">Drag a particle system asset onto <a data-cke-saved-href="Rooms.htm" href="Rooms.htm">The Room Editor</a> canvas with an Asset Layer selected. The entire particle system, including its emitters, will be added as an element to the layer. To preview the particle system in the Room Editor, press the <strong>Play Animation</strong> button <img class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_PlayRoom.png" src="../assets/Images/Icons/Icon_PlayRoom.png"/>.</p>
+    <p class="dropspot">When the game is run, the particle system is instantiated on the layer and starts playing immediately. The layer element added is of type <span class="inline2">layerelementtype_particlesystem</span> (see <span class="inline3_func"><a data-cke-saved-href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_element_type.htm" href="../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_element_type.htm">layer_get_element_type</a></span>).</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> You cannot get the particle system ID for particle systems that you add this way.</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> As a layer element, the particle system can have rotation and a blend colour, which a particle system can&#39;t have by itself.<br/></p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#"><span data-open-text="true" data-skip-index="true">Add To Sequence Editor</span><span data-close-text="true">Add To Sequence Editor</span></a></p>
+  <div class="droptext" data-targetname="drop-down2">
+    <p class="dropspot">Drag a particle system asset onto <a data-cke-saved-href="Sequences.htm" href="Sequences.htm">The Sequence Editor</a> canvas. This adds a new sequence track of type <span class="inline2">seqtracktype_particlesystem</span> to the sequence.</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> This adds a single track for the particle <em>system</em>. Individual <em>emitters</em> in the particle system cannot currently be animated in a sequence.</p>
+    <p class="note"><span data-conref="../assets/snippets/Tag_tip.hts"><span class="tip">TIP</span></span> As a sequence track the particle system can have its position, rotation, scale, blend colour and origin changed.</p>
+  </div>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#"><span data-open-text="true" data-skip-index="true">Create At Runtime</span><span data-close-text="true">Create At Runtime</span></a></p>
+  <div class="droptext" data-targetname="drop-down3">
+    <p class="dropspot">Create the particle system yourself in <span data-keyref="GML_Code">GML Code</span> using one of the built-in functions <span class="inline3_func"><a data-cke-saved-href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm" href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create.htm">part_system_create</a></span>/<span class="inline3_func"><a data-cke-saved-href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create_layer.htm" href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_system_create_layer.htm">part_system_create_layer</a></span> or in <span data-keyref="GML_Visual">GML Visual</span> using <a data-cke-saved-href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Create_Particle_System.htm" href="../Drag_And_Drop/Drag_And_Drop_Reference/Particles/Create_Particle_System.htm">Create Particle System</a>.</p>
+    <p class="dropspot">Pass the <span data-keyref="Type_Asset_ParticleSystem"><a target="_blank" href="../../The_Asset_Editors/Particle_Systems.htm">Particle System Asset</a></span> to the function/action as the optional <span class="inline2">partsys</span> argument: </p>
+    <p class="code">p_sys = part_system_create(ps_MyBeautifulParticleEffect);</p>
+    <p class="dropspot">By passing a value for this optional <span class="inline2">partsys</span> parameter, <span data-keyref="GameMaker Name">GameMaker</span> will initialise the particle system for you according to how you set it up in the Particle System Editor.</p>
+    <p class="dropspot">This is identical to the runtime-only method of creating particles, which involves creating an empty particle system and setting up particle emitters and types:</p>
+    <p class="code">p_sys = part_system_create();<br/><br/>p_emitter = part_emitter_create(p_sys);<br/>// Configure the emitter<br/>// ...<br/><br/>p_type = part_type_create();<br/>// Configure the particle, e.g.<br/>// part_type_shape(p_type, pt_shape_disk);<br/>// part_type_colour3(p_type, c_white, c_red, c_blue);<br/>// etc.<br/><br/>part_emitter_stream(p_sys, p_emitter, p_type, 2);<br/></p>
+  </div>
+  <h2 id="h">The Canvas</h2>
+  <p>The canvas displays a preview of all particle emitters that you added to the system, and allows you to move and resize emitters.</p>
+  <p>Every emitter is shown, including a preview of its region and shape (rectangle, ellipse, diamond or line) in which it emits its particles. This preview can be disabled for each emitter separately.</p>
+  <h3 id="origin_&amp;_draw_o">Origin &amp; Draw Order</h3>
+  <p>The Origin and Draw Order settings are shown in the top-left corner of the canvas.</p>
+  <p><img class="center" height="72" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_DrawOrderOrigin.png" width="458"/>Origin indicates the position on the canvas around which transformations take place, similar to a sprite&#39;s origin. If you add a particle system asset to a sequence or to a room asset layer, its X, Y position will correspond to the origin set here.</p>
+  <p>The Draw Order determines the order in which particles are drawn (i.e. which particles are drawn on top of others).</p>
+  <table style="caption-side: top">
+    <caption>Particle Draw Order</caption>
+    <colgroup>
+      <col style="width:33.33%"/>
+      <col style="width:33.33%"/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>Default (old to new)</th>
+        <th>Reversed (new to old)</th>
+      </tr>
+      <tr>
+        <td>Older particles are drawn first and newer particles are drawn on top of them. Older particles are drawn behind newer ones.</td>
+        <td>Newer particles are drawn first and older particles are drawn on top of them. Newer particles are drawn behind older ones.</td>
+      </tr>
+      <tr>
+        <td><img class="center" src="../assets/Images/Scripting_Reference/GML/Reference/Drawing/particles_oldtonew.gif"/></td>
+        <td><img class="center" src="../assets/Images/Scripting_Reference/GML/Reference/Drawing/particles_newtoold.gif"/></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="toolbox">Toolbox</h3>
+  <p>The Toolbox is shown in the top-right corner of the canvas.</p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_Toolbox.png"/></p>
+  <p>It contains the following: </p>
+  <ul class="Disc">
+    <li><strong>Toggle Grid</strong> <img class="icon" height="24" src="../assets/Images/Icons/Icon_CanvasGrid.png" width="24"/>: This toggles the grid on the canvas. The caret contains more options, such as the grid size, enable/disable snap to grid and the grid colour.</li>
+    <li><strong>Zoom Controls</strong> <img class="icon" id="" src="../assets/Images/Icons/Icon_CanvasZoom.png"/>: Zoom in, reset zoom, zoom out, centre fit.</li>
+    <li><strong>Canvas Settings</strong> <img class="icon" src="../assets/Images/Icons/Icon_ToggleCanvas.png"/><img class="icon" src="../assets/Images/Icons/Icon_CanvasOptions.png"/>: Enable or disable the canvas frame here and set its origin and dimensions (default is 1366x768). You can also set a background image here to use as a reference.</li>
+  </ul>
+  <h2 id="emitters">Emitters</h2>
+  <p>You can create emitters inside a particle system. One emitter emits one type of particle.</p>
+  <p>An emitter has a region and a shape. Particles are created inside the shape stretched across the emitter&#39;s region.</p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_EmitterList.png"/></p>
+  <p>By default, all emitters in the particle system are listed on the left side of the canvas. Click <strong>Add</strong> <img class="icon" src="../assets/Images/Icons/Icon_AddParticleEmitter.png"/> to add a new one. Click <strong>Delete</strong> <img class="icon" src="../assets/Images/Icons/Icon_DeleteParticleEmitter.png"/> to delete the selected particle emitter(s).</p>
+  <p>Right-clicking on an emitter allows you to delete, cut, copy, duplicate and rename the emitter.</p>
+  <p>Click the Eye icon <img class="icon" src="../assets/Images/Icons/Icon_Eye.png"/> in the list to disable (pause) the emitter, and the padlock icon <img class="icon" src="../assets/Images/Icons/Icon_Padlock.png"/> to lock it. Locking prevents changes to any of its properties, both on the canvas and in <a href="../IDE_Tools/The_Inspector.htm">The Inspector</a>.</p>
+  <p>Use the Docking menu <img class="icon" src="../assets/Images/Icons/Icon_EmitterDock.png"/> to undock/dock the emitter list, or change its position around the canvas.</p>
+  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> Unlike in <span data-keyref="GML_Code">GML Code</span>, there is no way to create individual particles (e.g. using <span class="inline3_func"><a href="../GameMaker_Language/GML_Reference/Drawing/Particles/Particle_Systems/part_particles_create.htm">part_particles_create</a></span>) in <span data-field="title" data-format="default">The Particle System Editor</span>. All particles in <span data-field="title" data-format="default">The Particle System Editor</span> are created by particle emitters (or by particles themselves, as <a href="Particle_System_Properties/Emitter_Properties.htm#h2">Subparticles</a>).</p>
+  <h2 id="configuring_an_">Configuring an Emitter</h2>
+  <p>Particle emitters and the particles they create can be fully configured in <a href="../IDE_Tools/The_Inspector.htm">The Inspector</a>.</p>
+  <p>For details on configuring emitters, see: <a href="Particle_System_Properties/Emitter_Properties.htm">Emitter Properties</a></p>
+  <h2 id="h1">Shared Emitters</h2>
+  <p>Emitters that you create can be shared between particle system assets in your <span data-keyref="GameMaker Name">GameMaker</span> project. This requires them to be saved in the library as <em>presets</em>.</p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_Library.png"/></p>
+  <p>GameMaker also comes with some built-in presets you can choose from. You can load a built-in preset into an emitter, make your changes and save it as a new preset. The built-in presets themselves can&#39;t be modified, so the preset will be unlinked the moment the emitter&#39;s settings are changed.</p>
+  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> Shared emitters are stored per-project. They&#39;re only available in the project they&#39;re created in, and are not shared among different projects.</p>
+  <h3 id="creating_a_pres">Creating a Preset</h3>
+  <p>After configuring a particle emitter to your liking, click <strong>Save as Preset</strong> <img class="icon" src="../assets/Images/Icons/Icon_ParticleSystem_SavePreset.png"/> under the &quot;Library&quot; panel (seen above) and enter a name for the new preset: </p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_NewPresetPrompt.png"/>Click &quot;Save&quot; to confirm saving the emitter as a new preset.</p>
+  <p>The emitter is now <em>linked </em>to the preset. Instead of &quot;Select Particles&quot; (or &quot;Custom Particles&quot; for an emitter after unlinking), the name of the new preset is now shown under the &quot;Library&quot; panel. The Link/Unlink button <img class="icon" src="../assets/Images/Icons/Icon_Link_Unlink_Highlighted.png"/> is also highlighted, indicating that this emitter&#39;s properties are linked to the library preset (the properties under all panels that show the yellow chain icon on the right are linked to the preset).</p>
+  <h3 id="linking_an_emit">Linking an Emitter to a Preset</h3>
+  <p>Emitters in a particle system can be linked to a previously created emitter preset in the library. To do this, click &quot;Select Particles&quot; under the &quot;Library&quot; panel and select the preset you want to use for this emitter.</p>
+  <p>Doing this will override your emitter&#39;s settings with the selected preset. Click &quot;OK&quot; when asked for confirmation: </p>
+  <p><img class="center" src="../assets/Images/Asset_Editors/Editor_ParticleSystems_ApplyPresetPrompt.png"/></p>
+  <p>As with creating a preset, the Link/Unlink button <img class="icon" src="../assets/Images/Icons/Icon_Link_Unlink_Highlighted.png"/> becomes highlighted to indicate that this emitter&#39;s properties are linked to the library preset.</p>
+  <h3 id="changing_linked">Changing Linked Emitters&#39; Properties</h3>
+  <p>When you create an emitter preset, the &quot;Emitter Settings&quot; (such as the distribution, shape, region) are initially saved. However, if you change these emitter settings after creating the preset, the new settings will not be saved to the preset.</p>
+  <p>On the other hand, the rest of the emitter properties (such as textures, colour, life, scale, etc.) are saved to the preset whenever they are changed.</p>
+  <p>When a preset is modified, that change is applied to all emitters that are linked to the preset, even if they are in different particle system assets.</p>
+  <h3 id="unlinking_an_em">Unlinking an Emitter from a Preset</h3>
+  <p>Click the Link/Unlink button <img class="icon" src="../assets/Images/Icons/Icon_Link_Unlink_Highlighted.png"/> to unlink an emitter from a preset. The emitter keeps the properties it got from the preset, but these can now be changed independently. Instead of being stored in the preset, they are now stored in the emitter itself.</p>
+  <p>In this case, the Preset shows &quot;Custom Particles&quot; to indicate they are specific to this emitter.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="The_Asset_Editors.htm">The Asset Editors</a></div>
+        <div>Next: <a href="Paths.htm">The Path Editor</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+
+</div>
+  <!-- KEYWORDS
+-->
+  <!-- TAGS
+-->
+
+</body></html>

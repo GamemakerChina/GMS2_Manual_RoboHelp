@@ -38,7 +38,7 @@
 
     gRootRelPath = "../..";
     gCommonRootRelPath = "../..";
-    gTopicId = "6.7.0_3";
+    gTopicId = "6.8.0_3";
   
 //]]></script>
 
@@ -82,6 +82,7 @@
 
   <h1>Non-Bitmap Sprites</h1>
   <p><span data-keyref="GameMaker Name">GameMaker</span> has support for non-<a class="tooltip" title="A bitmap is the term used to describe any static image that is comprised of coloured pixels that are stored as bits (unlike vector images which are stored using mathematical algorithms). PNG, JPG and BMP are example of bitmap images, while SWF would be an example of a vector image.">bitmap</a> sprites in the form of <a class="tooltip" title="A vector is a mathematical construct that has a size, called the magnitude, and a direction. In GameMaker, a vector is usually used to show the distance and direction something moved in. A vector can also be used to define images and certain image formats like SWF use vector maths to define the images they contain.">vector</a> <span class="inline">SWF</span> files or <strong>Spine Skeletal Animation</strong> files. Both these formats have their pros and cons, and the two sections below explain how to import them into the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> as well as a bit of information about how they are drawn.</p>
+  <p>Note that SVGs can be imported, but they&#39;re converted to bitmaps on import.</p>
   <h2>Skeletal Animation Sprites (Spine)</h2>
   <p>A sprite made using skeletal animation, is one in which a base &quot;skeleton&quot; has been created and animated using key-frames to move the component parts of the skeleton over time. This skeleton is then skinned from a <a class="tooltip" title="Another name for a texture page, which is simply a collection of images required by one or more sprites in your game, organised in an optimal way to use as little texture memory as possible.">texture atlas</a> and the resulting animation exported in one of many file types. <span data-keyref="GameMaker Name">GameMaker</span> permits you to import this type of sprite as long as it has been exported as a <span class="inline">*.json</span> format file and has the correctly associated texture atlas file (<span class="inline">*.atlas</span>) and image file (as a <span class="inline">*.png</span>) <em>in the same directory</em>.</p>
   <p><img alt="Spine UI" class="center" src="../../assets/Images/Settings/Spine_Example.png"/>Currently <span data-keyref="GameMaker Name">GameMaker</span> can <strong>only import vector images from JSON format files made by the program <a href="http://esotericsoftware.com/">Spine</a></strong>, however the way to import them into the program is almost identical to that for adding a normal bitmap image. To add a skeletal animation, you need to create a new sprite, which will bring up the standard <strong>Load Sprite</strong> dialogue, only here you need to make sure that you have selected <span class="inline">*.json</span> from the file filter at the bottom:</p>

@@ -81,18 +81,20 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_hat_value</h1>
-  <p>With this function you can get the current value of a gamepad &quot;hat&quot;. Each hat value is a bit-mask for the different directions where:</p>
+  <h1><span data-field="title" data-format="default">gamepad_hat_value</span></h1>
+  <p>With this function you can get the current value of a gamepad &quot;hat&quot;. The returned hat value is a bitmask for the different directions where:</p>
   <ul class="colour">
-    <li>Up = 1</li>
-    <li>Right = 2</li>
-    <li>Down = 4</li>
-    <li>Left = 8</li>
+    <li>Up = 1 (binary <span class="inline2">0b0001</span>)</li>
+    <li>Right = 2 (binary <span class="inline2">0b0010</span>)</li>
+    <li>Down = 4 (binary <span class="inline2">0b0100</span>)</li>
+    <li>Left = 8 (binary <span class="inline2">0b1000</span>)</li>
   </ul>
-  <p>Note that these can be combined (for example, supplying a hat index of 3 would be checking up and right, or you can use the <span class="inline2">|</span> operator to combine the various values) but only at most 2 bits can be pressed at once. The function will return a real value between 0 and 1, where 0 is not pressed and 1 is fully pressed (and there may be values in between depending on whether the gamepad supports analog input for hats).</p>
+  <p>Note that these can be combined; e.g. a hat value of 3 would be checking up and right (the sum of 1 and 2). You can also use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise operator</a> <span class="inline2">|</span>to combine the values of various directions to get the same result, e.g. <span class="inline2">0b0001 | 0b0010</span>. A value of 0 means no direction is set.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> Only values where <em>at most 2 bits</em> are set can be returned (e.g. a value of 7 will never be returned because it is impossible to press up (1), right (2) and down (4) all at the same time).</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function also returns a bitmask for gamepads that support analog input for hats.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gamepad_hat_value(device, hatindex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_hat_value</span>(device, hatindex);</p>
   <table>
     <tbody>
       <tr>
@@ -108,16 +110,16 @@
       <tr>
         <td>hatindex</td>
         <td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
-        <td>Which gamepad hat (or hats) to check for.</td>
+        <td>Which gamepad hat (or hats) to check for (a value from 0 to <span class="inline2"><a href="gamepad_hat_count.htm">gamepad_hat_count</a>(device) - 1</span>)</td>
       </tr>
     </tbody>
   </table>
   <p> </p>
   <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></p>
+  <p class="code"><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span> (hat value as a bitmask)</p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">var _dir = gamepad_hat_value(global.PadIndex, 0);<br/>
+  <p class="code">var _dir = <span data-field="title" data-format="default">gamepad_hat_value</span>(global.PadIndex, 0);<br/>
     switch (_dir)<br/>
     {<br/>
         case 1: y -= 3; break;<br/>
@@ -129,14 +131,13 @@
         case 9: y -= 3; x -= 3; break;<br/>
         case 12: y += 3; x -= 3; break;<br/>
     }</p>
-  <p>The above code stores the state of the hat &quot;0&quot; in a local variable, then checks to see what the return value is and acts accordingly.</p>
-  <p> </p>
+  <p>The above code stores the state of the hat with index 0 on gamepad device slot <span class="inline2">global.PadIndex</span> in a local variable <span class="inline2">_dir</span>, then checks to see what the returned hat value is and acts accordingly.</p>
   <p> </p>
   <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
+        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
         <div style="float:right">Next: <a href="gamepad_get_mapping.htm">gamepad_get_mapping</a></div>
       </div>
     </div>

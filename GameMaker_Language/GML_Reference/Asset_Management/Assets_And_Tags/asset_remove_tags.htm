@@ -80,69 +80,80 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>asset_remove_tags</h1>
+  <h1><span data-field="title" data-format="default">asset_remove_tags</span></h1>
   <p>With this function you can remove one or more tag strings to any asset from the asset browser. You supply either the asset name (as a string) or its asset index, as well as either a single tag string or an array where each item is a single tag string. If you supply an asset index value, then you will need to supply the optional asset type argument (a constant), as assets of different types can have the same index, even though they cannot have the same name. The available asset types are listed in the table below:</p>
-  <table>
+  <div data-conref="../../../../assets/snippets/Asset_Type_Constants.hts">
+  <table style="caption-side: top">
+    <caption>Asset Type Constant</caption>
     <tbody>
       <tr>
         <th>Constant</th>
         <th>Description</th>
       </tr>
       <tr>
-        <td>asset_object</td>
+        <td><span class="inline">asset_object</span></td>
         <td>The given name refers to an <a href="../../../../The_Asset_Editors/Objects.htm">object</a>.</td>
       </tr>
       <tr>
-        <td>asset_sprite</td>
+        <td><span class="inline">asset_sprite</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sprites.htm">sprite</a>.</td>
       </tr>
       <tr>
-        <td>asset_sound</td>
+        <td><span class="inline">asset_sound</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sounds.htm">sound</a>.</td>
       </tr>
       <tr>
-        <td>asset_room</td>
+        <td><span class="inline">asset_room</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Rooms.htm">room</a>.</td>
       </tr>
       <tr>
-        <td>asset_tiles</td>
+        <td><span class="inline">asset_tiles</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Tile_Sets.htm">tile set</a>.</td>
       </tr>
       <tr>
-        <td>asset_path</td>
+        <td><span class="inline">asset_path</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Paths.htm">path</a>.</td>
       </tr>
       <tr>
-        <td>asset_script</td>
+        <td><span class="inline">asset_script</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Scripts.htm">script</a>.</td>
       </tr>
       <tr>
-        <td>asset_font</td>
+        <td><span class="inline">asset_font</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Fonts.htm">font</a>.</td>
       </tr>
       <tr>
-        <td>asset_timeline</td>
+        <td><span class="inline">asset_timeline</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Timelines.htm">time line</a>.</td>
       </tr>
       <tr>
-        <td>asset_shader</td>
+        <td><span class="inline">asset_shader</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Shaders.htm">shader</a>.</td>
       </tr>
       <tr>
-        <td>asset_animationcurve</td>
+        <td><span class="inline">asset_animationcurve</span></td>
         <td>The given name refers to an <a href="../../../../The_Asset_Editors/Animation_Curves.htm">Animation Curve</a>.</td>
       </tr>
       <tr>
-        <td>asset_sequence</td>
+        <td><span class="inline">asset_sequence</span></td>
         <td>The given name refers to a <a href="../../../../The_Asset_Editors/Sequences.htm">Sequence</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">asset_particlesystem</span></td>
+        <td>The given name refers to a <a href="../../../../The_Asset_Editors/Particle_Systems.htm">Particle System</a>.</td>
+      </tr>
+      <tr>
+        <td><span class="inline">asset_unknown</span></td>
+        <td>The given name refers to an asset that either does not exist, or is not one of the above listed.</td>
       </tr>
     </tbody>
   </table>
+
+</div>
   <p>If the function succeeds in removing the tag(s) it will return <span class="inline">true</span> otherwise it will return <span class="inline">false</span>.</p>
   <p> </p>
-  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">asset_remove_tags(name_or_index, tags, [asset_type]);</p>
+  <p class="code"><span data-field="title" data-format="default">asset_remove_tags</span>(name_or_index, tags, [asset_type]);</p>
   <table>
     <tbody>
       <tr>
@@ -176,9 +187,9 @@
     _a[0] = &quot;enemy&quot;;<br/>
     _a[1] = &quot;all_levels&quot;;<br/>
     _a[2] = &quot;boss&quot;;<br/>
-    asset_remove_tags(obj_Enemy_Boss_Parent, _a, asset_object);</p>
+    <span data-field="title" data-format="default">asset_remove_tags</span>(obj_Enemy_Boss_Parent, _a, asset_object);
+  </p>
   <p>The above code will create an array of tags and then remove them from the given object.</p>
-  <p> </p>
   <p> </p>
   <p> </p>
   <div class="footer">
