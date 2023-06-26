@@ -81,7 +81,11 @@
 
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1><span data-field="title" data-format="default">audio_stop_all</span></h1>
-  <p>This function will stop <i>all</i> sounds that are currently playing.</p>
+  <p>This function stops <i>all</i> sounds that are currently playing. This includes all sounds that have been paused using <span class="inline3_func"><a href="audio_pause_sound.htm">audio_pause_sound</a></span> or <span class="inline3_func"><a href="audio_pause_all.htm">audio_pause_all</a></span>.</p>
+  <div data-conref="../../../../assets/snippets/Note_Function_Triggers_Audio_Playback_Ended.hts">
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This function triggers an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback_Ended.htm">Audio Playback Ended</a> Async Event for every sound instance that is affected by it.</p>
+
+</div>
   <p> </p>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">audio_stop_all</span>();</p>
@@ -94,7 +98,7 @@
     {<br/>
         <span data-field="title" data-format="default">audio_stop_all</span>();<br/>
     }</p>
-  <p>The above code checks the global variable &quot;SFX&quot; and if it returns <span class="inline">false</span>, it will stop all sounds that are currently playing.</p>
+  <p>The above code checks the global variable <span class="inline2">SFX</span> and if it returns <span class="inline2">false</span>, it will stop all sounds that are currently playing.</p>
   <p> </p>
   <p> </p>
   <p> </p>
