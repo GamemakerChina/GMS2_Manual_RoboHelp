@@ -53,7 +53,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
   <title>Fonts</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
+  <meta name="generator" content="Adobe RoboHelp 2022"/>
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
   <script src="../../../../assets/scripts/main_script.js" type="module"></script>
   <meta name="rh-authors" content="Mark Alexander"/>
@@ -93,13 +93,14 @@
   <p>This is the normal way of drawing text in <span data-keyref="GameMaker Name">GameMaker</span>. The font&#39;s <a class="tooltip" title="A glyph is a particular visual appearance of a character. It is the appearance of a character using a given font.">glyph</a>s for the chosen font size (<span class="inline3_func"><a href="font_get_size.htm">font_get_size</a></span>) are placed on a texture page (<span class="inline3_func"><a href="font_get_texture.htm">font_get_texture</a></span>) and each character is rendered as it is from the texture page.</p>
   <p>A disadvantage of this is that scaling up text using regular fonts makes them look pixelated. To fix this, GameMaker provides an SDF rendering option for fonts added at runtime.</p>
   <h3 id="h">SDF Rendering</h3>
-  <p>This is <em>disabled by default</em> for newly added fonts and enabled <em>per font</em> by calling <span class="inline3_func"><a href="font_enable_sdf.htm">font_enable_sdf</a></span>:</p>
+  <p>This is <em>disabled by default</em> for newly added fonts and enabled <em>per font</em> through <a href="../../../../The_Asset_Editors/Fonts.htm">The Font Editor</a>, or by calling <span class="inline3_func"><a href="font_enable_sdf.htm">font_enable_sdf</a></span>:</p>
   <p class="code">new_font = font_add(&quot;STENCIL.TTF&quot;, 32, false, false, 32, 128);<br/>
     font_enable_sdf(new_font, true);</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"><span class="important">IMPORTANT</span></span> SDF rendering is currently only available for fonts added using <span class="inline3_func"><a href="font_add.htm">font_add</a></span>. Support for font assets added through the IDE will be provided in a future version.</p>
   <p>When SDF rendering is enabled, all characters in the given font&#39;s range are stored differently on the texture page. Instead of an actual render of the different characters at the font&#39;s set size, an SDF (<em>Signed Distance Field)</em> is stored.</p>
   <p>In this case, every texel stores the <em>signed distance</em> to the closest point on the character. All texels on this texture combined make up a <em>field</em> of signed distances.</p>
-  <p>With this feature enabled for a font, text can be scaled up without the characters becoming pixelated.<span></span></p>
+  <p>With this feature enabled for a font, text can be scaled up without the characters becoming pixelated.</p>
+  <p>You can also apply <a href="font_enable_effects.htm">effects</a> to SDF-enabled fonts:<span></span></p>
+  <p><img class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Fonts/font_effects.png"/></p>
   <h3>Visual Comparison</h3>
   <p>The following table shows a visual comparison between text drawn using a regular font, and drawn using a font that has SDF enabled: </p>
   <table>
@@ -126,11 +127,6 @@
       </tr>
     </tbody>
   </table>
-  <p><span></span></p>
-  <div data-conref="../../../../assets/snippets/Note_SDF_HTML5.hts">
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> SDF fonts are currently not supported on HTML5.</p>
-
-</div>
   <h2>Function Reference</h2>
   <h3>Asset Info</h3>
   <ul class="colour">
@@ -172,6 +168,7 @@
     <li><a href="font_get_sdf_enabled.htm">font_get_sdf_enabled</a></li>
     <li><a href="font_sdf_spread.htm">font_sdf_spread</a></li>
     <li><a href="font_get_sdf_spread.htm">font_get_sdf_spread</a></li>
+    <li><a href="font_enable_effects.htm">font_enable_effects</a></li>
   </ul>
   <h3>Drawing</h3>
   <ul class="Disc">

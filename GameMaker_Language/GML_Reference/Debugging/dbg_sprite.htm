@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+  <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+    function reDo() {
+      if (innerWidth != origWidth || innerHeight != origHeight)
+        location.reload();
+    }
+    if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+      origWidth = innerWidth;
+      origHeight = innerHeight;
+      onresize = reDo;
+    }
+    onerror = null;
+  //]]>
+  </script>
+  <style type="text/css">/*<![CDATA[*/
+
+    < !-- div.WebHelpPopupMenu {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      z-index: 4;
+      visibility: hidden;
+    }
+
+    p.WebHelpNavBar {
+      text-align: right;
+    }
+
+    -->
+  
+/*]]>*/</style>
+
+  <script type="text/javascript">//<![CDATA[
+
+    gRootRelPath = "../../..";
+    gCommonRootRelPath = "../../..";
+    gTopicId = "8.2.2.21.1.0_14";
+  
+//]]></script>
+
+  <script type="text/javascript" src="../../../template/scripts/rh.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/common.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topic.min.js"></script>
+  <script type="text/javascript" src="../../../template/scripts/topicwidgets.min.js"></script>
+<script type="text/javascript" src="../../../whxdata/projectsettings.js"></script>
+  <link rel="stylesheet" type="text/css" href="../../../template/styles/topic.min.css"/>
+  <link rel="stylesheet" type="text/css" href="../../../template/Charcoal_Grey/topicheader.css"/>
+  <meta name="topic-status" content="Draft"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>dbg_sprite</title>
+  <meta name="generator" content="Adobe RoboHelp 2022"/>
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
+  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <meta name="rh-authors" content=""/>
+  <meta name="topic-comment" content=""/>
+  <meta name="rh-index-keywords" content=""/>
+  <meta name="search-keywords" content=""/>
+  <meta name="template" content="assets/masterpages/Manual_Keyword_Page.htt"/>
+</head>
+
+<body>
+  <div class="topic-header rh-hide" id="rh-topic-header">
+    <div class="logo">
+    </div>
+    <div class="nav">
+      <div class="title" title="dbg_sprite">
+        <span>dbg_sprite</span>
+      </div>
+      <div class="gotohome" title="Click here to see this page in full context">
+        <a href="#" onclick="rh._.goToFullLayout()">Click here to see this page in full context</a>
+      </div>
+    </div>
+  </div>
+  <div class="topic-header-shadow rh-hide" id="rh-topic-header-shadow"></div>
+
+
+
+  <h1><span data-field="title" data-format="default">dbg_sprite</span></h1>
+  <p>This function creates a sprite view of the referenced sprite with the specified image index within the current debug section.</p>
+  <p>A reference, created using <span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span>, is passed for both the sprite and the image index.</p>
+  <div data-conref="../../../assets/snippets/Note_Debug_Control_Two_Columns.hts">
+  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"><span class="note">NOTE</span></span> This debug control spans two columns.</p>
+
+</div>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code"><span data-field="title" data-format="default">dbg_sprite</span>(<span>sprite_ref, <span>image_index_ref[, label]</span></span>);</p>
+  <table>
+    <colgroup>
+      <col/>
+      <col/>
+      <col/>
+    </colgroup>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>sprite_ref</td>
+        <td><span data-keyref="Type_DbgRef"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Debugging/ref_create.htm">Reference</a></span></td>
+        <td>A reference to a variable holding a sprite index, created using <span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span></td>
+      </tr>
+      <tr>
+        <td>image_index_ref</td>
+        <td><span data-keyref="Type_DbgRef"><a target="_blank" href="../../../../GameMaker_Language/GML_Reference/Debugging/ref_create.htm">Reference</a></span></td>
+        <td>A reference to a variable that holds the image index to show, created using <span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span></td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-conref="../../../assets/snippets/Tag_optional.hts"><span class="optional">OPTIONAL</span></span> The label to display next to the sprite view</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Returns:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Example: Sprite View for an Instance&#39;s Sprite</h4>
+  <p class="code_heading">Create Event</p>
+  <p class="code">ref_to_sprite = ref_create(self, &quot;sprite_index&quot;);<br/>
+    ref_to_image_index = ref_create(self, &quot;image_index&quot;);<br/>
+    <span data-field="title" data-format="default">dbg_sprite</span>(ref_to_sprite, ref_to_image_index);
+  </p>
+  <p>The above code sets up a basic sprite view for an instance&#39;s sprite. The code is added to an event that is only executed once, e.g. the Create event.</p>
+  <p>First, two references are created using <span class="inline3_func"><a href="../Variable_Functions/ref_create.htm">ref_create</a></span>: one to the current instance&#39;s <span class="inline2"><a href="../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span> variable (stored in <span class="inline2">ref_to_sprite</span>), the other to the instance&#39;s <span class="inline2"><a href="../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a></span> variable (stored in <span class="inline2">ref_to_image_index</span>). Next, the sprite view is created using <span class="inline3_func"><span data-field="title" data-format="default">dbg_sprite</span></span>, with arguments the two references created before.</p>
+  <p>The sprite&#39;s frame will change based on the value of <span class="inline2"><a href="../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">image_index</a></span>, and so is drawn animated in the sprite view. The sprite will also change whenever the instance&#39;s <span class="inline2"><a href="../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">sprite_index</a></span> changes.</p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div>Back: <a href="The_Debug_Overlay.htm">The Debug Overlay</a></div>
+        <div>Next: <a href="dbg_text.htm">dbg_text</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+  </div>
+  <!-- KEYWORDS
+dbg_sprite
+-->
+  <!-- TAGS
+dbg_sprite
+-->
+
+</body></html>
