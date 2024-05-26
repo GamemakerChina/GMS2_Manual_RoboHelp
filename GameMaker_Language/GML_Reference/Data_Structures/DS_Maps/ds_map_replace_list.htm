@@ -80,11 +80,12 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_replace_list</h1>
-  <p>With this function you can replace a <a href="../DS_Lists/DS_Lists.htm">DS list</a> that has been stored in the given &quot;key&quot; with another list that has been created previously. This function is designed for creating JSON compatible maps which you would then encode using <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> and should only be used in conjunction with that functionality.</p>
+  <h1><span data-field="title" data-format="default">ds_map_replace_list</span></h1>
+  <p>With this function you can replace a <a href="../DS_Lists/DS_Lists.htm">DS list</a> that has been stored in the given &quot;key&quot; with another list that has been created previously.</p>
+  <p>This function is designed for creating JSON compatible maps which you would then encode using <span class="inline3_func"><a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm">json_encode</a></span> and should only be used in conjunction with that functionality.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_map_replace_list(id, key, value)</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_replace_list</span>(id, key, value)</p>
   <table>
     <tbody>
       <tr>
@@ -94,18 +95,18 @@
       </tr>
       <tr>
         <td>id</td>
-        <td><span data-keyref="Type_ID_DS_Map"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Maps/ds_map_create.htm">DS Map</a></span></td>
-        <td>The id of the map to use.</td>
+        <td><span data-keyref="Type_ID_DS_Map"><a target="_blank" href="ds_map_create.htm">DS Map</a></span></td>
+        <td>The ID of the map to use.</td>
       </tr>
       <tr>
         <td>key</td>
-        <td><span data-keyref="Type_String"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span></td>
+        <td><span data-keyref="Type_String"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">String</a></span></td>
         <td>The key to replace.</td>
       </tr>
       <tr>
         <td>value</td>
-        <td><span data-keyref="Type_ID_DS_List"><a target="_blank" href="../../../../../GameMaker_Language/GML_Reference/Data_Structures/DS_Lists/ds_list_create.htm">DS List</a></span></td>
-        <td>The id of the ds_list to use to replace the one previously stored in the given key.</td>
+        <td><span data-keyref="Type_ID_DS_List"><a target="_blank" href="../DS_Lists/ds_list_create.htm">DS List</a></span></td>
+        <td>The ID of the DS list to use to replace the one previously stored in the given key.</td>
       </tr>
     </tbody>
   </table>
@@ -121,8 +122,7 @@
     ds_map_replace_list(j_map, &quot;list&quot;, j_list);<br/>
     var j = json_encode(j_map);<br/>
     ds_list_destroy(j_list);</p>
-  <p>The above code will create a <span class="inline">DS List</span> and populate it with the values of various global variables before replacing a previously stored list in the <span class="inline">DS Map</span> &quot;j_map&quot;.</p>
-  <p> </p>
+  <p>The above code will create a <span data-keyref="Type_ID_DS_List"><a target="_blank" href="../DS_Lists/ds_list_create.htm">DS List</a></span> and populate it with the values of various global variables before replacing a previously stored list in the <span data-keyref="Type_ID_DS_Map"><a target="_blank" href="ds_map_create.htm">DS Map</a></span> <span class="inline2">j_map</span>.</p>
   <p> </p>
   <p> </p>
   <div class="footer">
@@ -132,7 +132,7 @@
         <div style="float:right">Next: <a href="ds_map_replace_map.htm">ds_map_replace_map</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 ds_map_replace_list

@@ -60,7 +60,7 @@
   <meta name="search-keywords" content="Audio Recording,ev_async_audio_recording"/>
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css"/>
   <script src="../../../assets/scripts/main_script.js" type="module"></script>
-<meta name="brsnext" value="The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm"/><meta name="brsprev" value="The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm"/></head>
+<meta name="brsnext" value="The_Asset_Editors/Object_Properties/Async_Events/Cloud.htm"/><meta name="brsprev" value="The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback_Ended.htm"/></head>
 
 <body>
   <div class="topic-header rh-hide" id="rh-topic-header">
@@ -94,7 +94,7 @@
     audio_buffer = buffer_create(len, buffer_fast, 1);</p>
   <p>Every game step now that the recording is detected will trigger an asynchronous Audio Recording event where you can deal with the recorded input something like this:</p>
   <p class="code">var channel = async_load[? &quot;channel_index&quot;];<br/>
-    if channel == channel_index<br/>
+    if (channel == channel_index) <br/>
        {<br/>
        len = async_load[? &quot;data_len&quot;];<br/>
        buffer_copy(async_load[? &quot;buffer_id&quot;], 0, len, audio_buffer, 0);<br/>
@@ -109,7 +109,7 @@
         <div style="float:right">Next: <a href="Cloud.htm">Cloud</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Asynchronous Audio Recording Event

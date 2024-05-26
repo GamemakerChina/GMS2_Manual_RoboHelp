@@ -96,11 +96,11 @@
         <th>Description</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>device</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>Which gamepad device &quot;slot&quot; to check.</td>
      </tr>
       <tr>
-        <td>deadzone</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Real</a></span></td>
+        <td>deadzone</td><td><span data-keyref="Type_Real"><a target="_blank" href="../../../GML_Overview/Data_Types.htm">Real</a></span></td>
         <td>The dead zone value from 0 to 1.</td>
      </tr>
     </tbody>
@@ -110,8 +110,12 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Example:</h4>
-  <p class="code">if gamepad_is_connected(0) gamepad_set_axis_deadzone(0, 0.05);<br/> if gamepad_is_connected(1) gamepad_set_axis_deadzone(1, 0.05);<br/> if gamepad_is_connected(2) gamepad_set_axis_deadzone(2, 0.05);<br/> if gamepad_is_connected(3) gamepad_set_axis_deadzone(3,
-    0.05);</p>
+  <p class="code">
+    if (gamepad_is_connected(0)) gamepad_set_axis_deadzone(0, 0.05);<br/> 
+    if (gamepad_is_connected(1)) gamepad_set_axis_deadzone(1, 0.05);<br/> 
+    if (gamepad_is_connected(2)) gamepad_set_axis_deadzone(2, 0.05);<br/> 
+    if (gamepad_is_connected(3)) gamepad_set_axis_deadzone(3, 0.05);
+  </p>
   <p>The above code will set the dead zone of the joystick axis on any of 4 connected devices to 0.05.</p>
   <p> </p>
   <p> </p>
@@ -123,7 +127,7 @@
         <div style="float:right">Next: <a href="gamepad_set_vibration.htm"> gamepad_set_vibration </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2024 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_axis_deadzone
